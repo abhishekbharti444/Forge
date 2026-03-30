@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import { supabase } from './lib/supabase'
 import type { Session } from '@supabase/supabase-js'
+import { Auth } from './states/Auth'
 import { IntentCapture } from './states/IntentCapture'
 import { Suggestion } from './states/Suggestion'
 import { Focused } from './states/Focused'
 import { Completion } from './states/Completion'
 import { DoneForToday } from './states/DoneForToday'
 
-type AppState = 'loading' | 'intent' | 'suggestion' | 'focused' | 'completion' | 'done_for_today'
+type AppState = 'loading' | 'auth' | 'intent' | 'suggestion' | 'focused' | 'completion' | 'done_for_today'
 
 interface TaskData {
   task_id: string
@@ -23,29 +24,18 @@ function App() {
   const [tasksCompletedToday, setTasksCompletedToday] = useState(0)
 
   useEffect(() => {
-    initAuth()
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session)
+      if (session) checkStatus(session.access_token)
+      else setAppState('auth')
+    })
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setSession(session)
       if (session) checkStatus(session.access_token)
+      else setAppState('auth')
     })
     return () => subscription.unsubscribe()
   }, [])
-
-  async function initAuth() {
-    const { data: { session } } = await supabase.auth.getSession()
-    if (session) {
-      setSession(session)
-      checkStatus(session.access_token)
-    } else {
-      // Auto sign in anonymously
-      const { data, error } = await supabase.auth.signInAnonymously()
-      if (error) console.error('Anonymous auth failed:', error.message)
-      if (data.session) {
-        setSession(data.session)
-        checkStatus(data.session.access_token)
-      }
-    }
-  }
 
   async function checkStatus(token: string) {
     const res = await fetch('/api/status', { headers: { Authorization: `Bearer ${token}` } })
@@ -128,6 +118,10 @@ function App() {
 
   if (appState === 'loading') {
     return <div className="min-h-screen bg-zinc-950 flex items-center justify-center"><p className="text-zinc-500">Loading...</p></div>
+  }
+
+  if (appState === 'auth') {
+    return <Auth />
   }
 
   if (appState === 'intent') {
