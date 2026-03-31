@@ -248,6 +248,8 @@ Background subtly warmer. Exhale feeling.
 
 Mockups: https://venue.aws.dev/projects/e7a2d70a-8297-40af-9365-f802c7d3f566
 
+Note: Venue generated Cloudscape-based mockups. We're implementing with Tailwind + custom warm dark theme instead. The Venue project is a layout/content reference only — our Design System doc (above) is the source of truth for colors, typography, and interaction patterns.
+
 ---
 
 ## References

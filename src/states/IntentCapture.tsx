@@ -36,7 +36,6 @@ export function IntentCapture({ token, onGoalSet }: Props) {
   function handlePickCategory(category: string) {
     setText(category.replace('_', ' '))
     setUnsupported(false)
-    // Re-submit with the category name
     fetch('/api/goals/parse', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
@@ -45,10 +44,14 @@ export function IntentCapture({ token, onGoalSet }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-6">
+    <div className="min-h-screen bg-bg-primary flex items-center justify-center px-6">
       <div className="w-full max-w-md text-center">
-        <h1 className="text-2xl font-bold text-white mb-2">What do you want to get better at?</h1>
-        <p className="text-zinc-500 mb-8 text-sm">Type anything — we'll find the right tasks for you.</p>
+        <h1 className="text-2xl font-semibold text-text-primary mb-2 leading-snug">
+          What do you want to get better at?
+        </h1>
+        <p className="text-text-secondary text-sm mb-10">
+          Type anything — we'll find the right tasks for you.
+        </p>
 
         <form onSubmit={handleSubmit}>
           <input
@@ -56,21 +59,21 @@ export function IntentCapture({ token, onGoalSet }: Props) {
             value={text}
             onChange={e => setText(e.target.value)}
             placeholder="e.g. creative writing, poetry, storytelling..."
-            className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-600 mb-4"
+            className="w-full px-4 py-3.5 bg-bg-surface border border-border rounded-xl text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent-amber/50 transition-colors mb-4"
             autoFocus
           />
           <button
             type="submit"
             disabled={loading || !text.trim()}
-            className="w-full py-3 bg-white text-zinc-950 font-semibold rounded-lg hover:bg-zinc-200 transition disabled:opacity-50"
+            className="w-full py-3.5 bg-accent-amber text-bg-primary font-semibold rounded-xl hover:bg-accent-amber-hover transition-colors disabled:opacity-40"
           >
             {loading ? '...' : "Let's go"}
           </button>
         </form>
 
         {unsupported && (
-          <div className="mt-6 text-left">
-            <p className="text-zinc-400 text-sm mb-3">
+          <div className="mt-8 text-left">
+            <p className="text-text-secondary text-sm mb-3">
               We don't support that yet — but we saved your interest. For now, pick one:
             </p>
             <div className="space-y-2">
@@ -78,7 +81,7 @@ export function IntentCapture({ token, onGoalSet }: Props) {
                 <button
                   key={cat}
                   onClick={() => handlePickCategory(cat)}
-                  className="w-full py-2 px-4 bg-zinc-900 border border-zinc-800 rounded-lg text-white text-left hover:border-zinc-600 transition"
+                  className="w-full py-3 px-4 bg-bg-surface border border-border rounded-xl text-text-primary text-left hover:border-text-secondary/30 transition-colors capitalize"
                 >
                   {cat.replace('_', ' ')}
                 </button>
