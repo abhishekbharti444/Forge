@@ -121,7 +121,15 @@ function App() {
     const seqName = currentTask.sequence.name
     try {
       const data = await apiFetch<{ tasks: any[] }>(`/tasks?category=${currentTask.goal_category}`)
-      const next = data.tasks?.find((t: any) => t.sequence?.name === seqName && t.sequence?.order === nextOrder)
+      const tasks = (data.tasks || []).map((t: any) => {
+        const ref = t.reference
+        if (!ref) return t
+        const seq = t.sequence || ref.sequence
+        const song = t.song || ref.song
+        const tags = t.tags || ref.tags
+        return { ...t, sequence: seq, song, tags, bpm: t.bpm || ref.bpm, chords: t.chords || ref.chords, needs_guitar: t.needs_guitar || ref.needs_guitar }
+      })
+      const next = tasks.find((t: any) => t.sequence?.name === seqName && t.sequence?.order === nextOrder)
       if (next) {
         handleStartTask(next, 'screen')
       } else {
