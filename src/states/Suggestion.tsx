@@ -65,7 +65,17 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
   useEffect(() => {
     const cat = category ? `?category=${category}` : ''
     apiFetch<{ tasks: Task[] }>(`/tasks${cat}`)
-      .then(d => { setTasks(d.tasks || []); setLoading(false) })
+      .then(d => {
+        // Unpack extra fields from reference (sequence, song, tags etc.)
+        const unpacked = (d.tasks || []).map(t => {
+          const ref = t.reference as any
+          if (!ref) return t
+          const { sequence, song, tags, bpm, chords, needs_guitar, songSuggestions, ...cleanRef } = ref
+          return { ...t, sequence, song, tags, bpm, chords, needs_guitar, songSuggestions, reference: Object.keys(cleanRef).length ? cleanRef : undefined } as Task
+        })
+        setTasks(unpacked)
+        setLoading(false)
+      })
       .catch(() => setLoading(false))
   }, [category])
 
