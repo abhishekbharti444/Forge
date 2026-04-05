@@ -300,9 +300,7 @@ export function Dialogue({ lines }: DialogueProps) {
   )
 }
 
-function ChordDiagram({ chord }: { chord: string }) {
-  return null // replaced by ChordDiagram.tsx
-}
+// ChordDiagram moved to ChordDiagram.tsx
 
 export function ChordReference({ chords }: { chords: string[] }) {
   return (

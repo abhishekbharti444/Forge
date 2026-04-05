@@ -60,7 +60,7 @@ export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea,
       .catch(() => setLoading(false))
   }, [category])
 
-  function skip(reason: string) {
+  function skip(_reason: string) {
     if (!current) return
     const newSkipped = new Set(skippedIds).add(current.id)
     setSkippedIds(newSkipped)

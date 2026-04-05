@@ -44,7 +44,7 @@ interface TaskData {
 }
 
 const SKIP_AUTH = import.meta.env.VITE_SKIP_AUTH === 'true'
-const DONE_THRESHOLD = 3
+// const DONE_THRESHOLD = 3
 
 function App() {
   const [_session, setSession] = useState<Session | null>(null)
