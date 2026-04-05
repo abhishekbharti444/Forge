@@ -32,7 +32,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Fallback: return all tasks
-  const { data: tasks, error } = await supabaseAdmin.from('tasks').select('*')
+  const { data: tasks, error } = await supabaseAdmin.from('tasks').select('*').limit(5000)
   if (error) return res.status(500).json({ error: error.message })
   return res.status(200).json({ tasks: tasks ?? [], total: tasks?.length ?? 0 })
 }
