@@ -67,11 +67,20 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
     apiFetch<{ tasks: Task[] }>(`/tasks${cat}`)
       .then(d => {
         // Unpack extra fields from reference (sequence, song, tags etc.)
+        // These are packed into reference jsonb in Supabase but top-level in local server
         const unpacked = (d.tasks || []).map(t => {
           const ref = t.reference as any
           if (!ref) return t
           const { sequence, song, tags, bpm, chords, needs_guitar, songSuggestions, ...cleanRef } = ref
-          return { ...t, sequence, song, tags, bpm, chords, needs_guitar, songSuggestions, reference: Object.keys(cleanRef).length ? cleanRef : undefined } as Task
+          const extras: any = {}
+          if (sequence !== undefined) extras.sequence = sequence
+          if (song !== undefined) extras.song = song
+          if (tags !== undefined) extras.tags = tags
+          if (bpm !== undefined) extras.bpm = bpm
+          if (chords !== undefined) extras.chords = chords
+          if (needs_guitar !== undefined) extras.needs_guitar = needs_guitar
+          if (songSuggestions !== undefined) extras.songSuggestions = songSuggestions
+          return { ...t, ...extras, reference: Object.keys(cleanRef).length ? cleanRef : t.reference } as Task
         })
         setTasks(unpacked)
         setLoading(false)
