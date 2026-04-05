@@ -95,10 +95,10 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
     songsByGenre.set(genre, arr)
   }
 
-  // Group independent tasks by tag
+  // Group independent tasks by tag (or skill_area as fallback)
   const tagGroups = new Map<string, Task[]>()
   for (const t of independentTasks) {
-    const tag = t.tags?.[0] || 'other'
+    const tag = t.tags?.[0] || t.skill_area || 'other'
     const arr = tagGroups.get(tag) || []
     arr.push(t)
     tagGroups.set(tag, arr)
