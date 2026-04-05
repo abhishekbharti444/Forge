@@ -21,13 +21,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const taskIds = events.map(e => e.task_id)
   const { data: tasks } = await supabaseAdmin
     .from('tasks')
-    .select('id, description')
+    .select('id, description, skill_area')
     .in('id', taskIds)
 
-  const taskMap = new Map((tasks ?? []).map(t => [t.id, t.description]))
+  const taskMap = new Map((tasks ?? []).map(t => [t.id, t]))
 
   const result = events.map(e => ({
-    description: taskMap.get(e.task_id) ?? '',
+    description: taskMap.get(e.task_id)?.description ?? '',
+    skill_area: taskMap.get(e.task_id)?.skill_area ?? '',
     reflection: e.reflection_text,
     completed_at: e.created_at,
     duration_seconds: e.duration_seconds,

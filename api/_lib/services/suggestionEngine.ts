@@ -6,6 +6,11 @@ interface Task {
   type: string
   difficulty: string
   time_minutes: number
+  skill_area: string
+  action?: string
+  context?: string
+  constraint_note?: string
+  example?: string
 }
 
 interface SuggestResult {
@@ -64,7 +69,7 @@ export async function suggest(userId: string): Promise<SuggestResult> {
   const skippedIds = (skippedEvents ?? []).map(e => e.task_id)
   const recentSkipReasons = (skippedEvents ?? []).map(e => e.skip_reason).filter(Boolean)
 
-  // 5. Get last completed task type
+  // 5. Get last completed task type and skill_area
   const { data: lastCompleted } = await supabaseAdmin
     .from('user_task_events')
     .select('task_id')
@@ -74,13 +79,15 @@ export async function suggest(userId: string): Promise<SuggestResult> {
     .limit(1)
 
   let lastType: string | null = null
+  let lastSkillArea: string | null = null
   if (lastCompleted?.length) {
     const { data: lastTask } = await supabaseAdmin
       .from('tasks')
-      .select('type')
+      .select('type, skill_area')
       .eq('id', lastCompleted[0].task_id)
       .single()
     lastType = lastTask?.type ?? null
+    lastSkillArea = lastTask?.skill_area ?? null
   }
 
   // 6. Get all candidate tasks
@@ -100,20 +107,23 @@ export async function suggest(userId: string): Promise<SuggestResult> {
     // All tasks done or skipped — reset by allowing completed ones back
     const fallback = allTasks.filter(t => !skippedIds.includes(t.id))
     if (!fallback.length) return { done_for_today: false, tasks_completed: count ?? 0 }
-    return { done_for_today: false, tasks_completed: count ?? 0, task: pickBest(fallback, lastType, recentSkipReasons, completedIds.length) }
+    return { done_for_today: false, tasks_completed: count ?? 0, task: pickBest(fallback, lastType, lastSkillArea, recentSkipReasons, completedIds.length) }
   }
 
   // 7. Score and pick
-  const task = pickBest(candidates, lastType, recentSkipReasons, completedIds.length)
+  const task = pickBest(candidates, lastType, lastSkillArea, recentSkipReasons, completedIds.length)
   return { done_for_today: false, tasks_completed: count ?? 0, task }
 }
 
-function pickBest(tasks: Task[], lastType: string | null, skipReasons: string[], totalCompleted: number): Task {
+function pickBest(tasks: Task[], lastType: string | null, lastSkillArea: string | null, skipReasons: string[], totalCompleted: number): Task {
   const scored = tasks.map(t => {
     let score = 0
 
     // Type diversity: prefer different type from last
     if (lastType && t.type !== lastType) score += 2
+
+    // Skill area diversity: prefer different skill area from last
+    if (lastSkillArea && t.skill_area !== lastSkillArea) score += 3
 
     // Skip signals
     if (skipReasons.includes('too_long') && t.time_minutes <= 5) score += 2

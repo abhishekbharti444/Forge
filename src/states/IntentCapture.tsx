@@ -1,46 +1,30 @@
 import { useState } from 'react'
 
+const CATEGORIES = [
+  { id: 'learn_kannada', label: 'Learn Kannada', emoji: '🇮🇳', desc: 'Script, vocabulary, phrases, grammar' },
+  { id: 'guitar_practice', label: 'Guitar Practice', emoji: '🎸', desc: 'Chords, scales, rhythm, songs' },
+  { id: 'creative_writing', label: 'Creative Writing', emoji: '✍️', desc: 'Poetry, fiction, storytelling, observation' },
+  { id: 'public_speaking', label: 'Public Speaking', emoji: '🗣', desc: 'Clarity, storytelling, presence, persuasion' },
+  { id: 'guided_thinking', label: 'Guided Thinking', emoji: '🧠', desc: 'Mental models, decision-making, reflection' },
+  { id: 'active_listening', label: 'Active Listening', emoji: '🎧', desc: 'Focus, comprehension, empathy, recall' },
+  { id: 'philosophy', label: 'Philosophy', emoji: '📖', desc: 'Ethics, logic, thought experiments, wisdom' },
+]
+
 interface Props {
-  token: string
   onGoalSet: () => void
 }
 
-export function IntentCapture({ token, onGoalSet }: Props) {
-  const [text, setText] = useState('')
-  const [loading, setLoading] = useState(false)
-  const [unsupported, setUnsupported] = useState(false)
-  const [available, setAvailable] = useState<string[]>([])
+export function IntentCapture({ onGoalSet }: Props) {
+  const existing = JSON.parse(localStorage.getItem('activeGoals') || '[]')
+  const [selected, setSelected] = useState<string[]>(existing.length ? existing : [])
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!text.trim()) return
-    setLoading(true)
-    setUnsupported(false)
-
-    const res = await fetch('/api/goals/parse', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-      body: JSON.stringify({ text }),
-    })
-    const data = await res.json()
-    setLoading(false)
-
-    if (data.supported) {
-      onGoalSet()
-    } else {
-      setAvailable(data.available ?? [])
-      setUnsupported(true)
-    }
+  function toggle(id: string) {
+    setSelected(prev => prev.includes(id) ? prev.filter(g => g !== id) : [...prev, id])
   }
 
-  function handlePickCategory(category: string) {
-    setText(category.replace('_', ' '))
-    setUnsupported(false)
-    fetch('/api/goals/parse', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
-      body: JSON.stringify({ text: category }),
-    }).then(() => onGoalSet())
+  function save() {
+    localStorage.setItem('activeGoals', JSON.stringify(selected))
+    onGoalSet()
   }
 
   return (
@@ -50,45 +34,32 @@ export function IntentCapture({ token, onGoalSet }: Props) {
           What do you want to get better at?
         </h1>
         <p className="text-text-secondary text-sm mb-10">
-          Type anything — we'll find the right tasks for you.
+          Pick one or more — you can change these anytime.
         </p>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            value={text}
-            onChange={e => setText(e.target.value)}
-            placeholder="e.g. creative writing, poetry, storytelling..."
-            className="w-full px-4 py-3.5 bg-bg-surface border border-border rounded-xl text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent-amber/50 transition-colors mb-4"
-            autoFocus
-          />
-          <button
-            type="submit"
-            disabled={loading || !text.trim()}
-            className="w-full py-3.5 bg-accent-amber text-bg-primary font-semibold rounded-xl hover:bg-accent-amber-hover transition-colors disabled:opacity-40"
-          >
-            {loading ? '...' : "Let's go"}
-          </button>
-        </form>
+        <div className="space-y-3 mb-8">
+          {CATEGORIES.map(cat => {
+            const active = selected.includes(cat.id)
+            return (
+              <button key={cat.id} onClick={() => toggle(cat.id)}
+                className={`w-full py-4 px-5 bg-bg-surface border rounded-xl text-left transition-colors ${active ? 'border-accent-amber bg-accent-amber/5' : 'border-border'}`}>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">{cat.emoji}</span>
+                  <div className="flex-1">
+                    <p className="text-text-primary font-medium">{cat.label}</p>
+                    <p className="text-text-secondary text-xs mt-0.5">{cat.desc}</p>
+                  </div>
+                  {active && <span className="text-accent-amber text-sm">✓</span>}
+                </div>
+              </button>
+            )
+          })}
+        </div>
 
-        {unsupported && (
-          <div className="mt-8 text-left">
-            <p className="text-text-secondary text-sm mb-3">
-              We don't support that yet — but we saved your interest. For now, pick one:
-            </p>
-            <div className="space-y-2">
-              {available.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => handlePickCategory(cat)}
-                  className="w-full py-3 px-4 bg-bg-surface border border-border rounded-xl text-text-primary text-left hover:border-text-secondary/30 transition-colors capitalize"
-                >
-                  {cat.replace('_', ' ')}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        <button onClick={save} disabled={selected.length === 0}
+          className="w-full py-3.5 bg-accent-amber text-bg-primary font-semibold rounded-xl disabled:opacity-30 transition-colors">
+          {selected.length === 0 ? 'Pick at least one' : `Start with ${selected.length} goal${selected.length > 1 ? 's' : ''}`}
+        </button>
       </div>
     </div>
   )

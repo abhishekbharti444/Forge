@@ -1,0 +1,12 @@
+{
+  "name": "Forge",
+  "short_name": "Forge",
+  "description": "Small actions, real progress. Micro-task coaching for any skill.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#171412",
+  "theme_color": "#171412",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

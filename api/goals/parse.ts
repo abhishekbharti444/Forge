@@ -4,6 +4,13 @@ import { supabaseAdmin } from '../_lib/supabase.js'
 
 const GOAL_KEYWORDS: Record<string, string[]> = {
   creative_writing: ['writing', 'write', 'writer', 'poetry', 'poem', 'story', 'stories', 'fiction', 'prose', 'essay', 'songwriting', 'lyrics', 'creative', 'author', 'novel', 'journal'],
+  learn_kannada: ['kannada', 'ಕನ್ನಡ', 'karnataka', 'bengaluru', 'bangalore language'],
+  public_speaking: ['speaking', 'speak', 'speech', 'presentation', 'public speaking', 'articulate', 'communicate', 'oratory', 'debate', 'toastmaster'],
+  guitar_practice: ['guitar', 'acoustic', 'electric guitar', 'chord', 'fretboard', 'fingerpicking', 'strumming', 'riff', 'solo', 'tabs'],
+  guided_thinking: ['thinking', 'reflect', 'decision', 'mindful', 'walk', 'clarity', 'perspective', 'gratitude'],
+  active_listening: ['listening', 'comprehension', 'attention', 'focus', 'memory'],
+  philosophy: ['philosophy', 'philosopher', 'ethics', 'morality', 'stoicism', 'existentialism', 'logic', 'fallacy', 'metaphysics', 'epistemology', 'critical thinking', 'argumentation'],
+  distributed_systems: ['distributed', 'system design', 'scalability', 'consensus', 'replication', 'cap theorem', 'raft', 'paxos', 'fault tolerance', 'architecture', 'microservice', 'partitioning', 'sharding'],
 }
 
 function matchGoal(text: string): string | null {

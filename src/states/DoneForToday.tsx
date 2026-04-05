@@ -1,9 +1,10 @@
 interface Props {
   count: number
   onOneMore: () => void
+  onHistory?: () => void
 }
 
-export function DoneForToday({ count, onOneMore }: Props) {
+export function DoneForToday({ count, onOneMore, onHistory }: Props) {
   return (
     <div className="min-h-screen bg-bg-primary flex items-center justify-center px-6">
       <div className="w-full max-w-md text-center">
@@ -21,12 +22,16 @@ export function DoneForToday({ count, onOneMore }: Props) {
           ))}
         </div>
 
-        <button
-          onClick={onOneMore}
-          className="text-text-secondary/50 text-sm hover:text-text-secondary transition-colors"
-        >
-          One more
-        </button>
+        <div className="flex items-center justify-center gap-6">
+          <button onClick={onOneMore} className="text-text-secondary/50 text-sm hover:text-text-secondary transition-colors">
+            One more
+          </button>
+          {onHistory && (
+            <button onClick={onHistory} className="text-text-secondary/50 text-sm hover:text-text-secondary transition-colors">
+              View history
+            </button>
+          )}
+        </div>
       </div>
     </div>
   )
