@@ -1,0 +1,2627 @@
+[
+  {
+    "id": "cw-001",
+    "description": "Write exactly 6 sentences describing the room you're in right now. Each sentence must use a different sense: sight, sound, smell, touch, taste, and spatial awareness.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write exactly 6 sentences describing the room you're in right now. One sentence per sense.",
+    "context": "This trains sensory specificity — the ability to notice and name what each sense is picking up separately, instead of defaulting to visual description only.",
+    "constraint_note": "Each sentence must use a different sense: sight, sound, smell, touch, taste, and spatial awareness. No repeating a sense.",
+    "example": "'The hum of the fridge fills the silence between my thoughts.' (sound) — not 'The room is quiet.' Be specific to THIS room, THIS moment.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-002",
+    "description": "Pick an object within arm's reach. Write a 100-word paragraph describing it as if you're seeing it for the first time and have no idea what it's used for.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Pick an object within arm's reach. Write a 100-word paragraph describing it as if you've never seen it before.",
+    "context": "Defamiliarization — seeing ordinary things as strange — is one of the most powerful tools in creative writing. Viktor Shklovsky called it 'making the stone stony.'",
+    "constraint_note": "You have no idea what the object is used for. Describe only its physical properties: shape, weight, texture, color, temperature.",
+    "example": "A pen might become: 'A thin cylinder, cool to the touch, with a small metal tooth at one end that leaves dark traces on surfaces.'",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-003",
+    "description": "Write a 4-line poem where every line starts with the same word. The poem should describe a feeling you had today.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "imagery",
+    "action": "Write a 4-line poem where every line starts with the same word.",
+    "context": "Anaphora — repeating a word at the start of lines — creates rhythm and builds emotional intensity. It's used everywhere from poetry to speeches.",
+    "constraint_note": "The poem should describe a feeling you had today. All four lines must begin with the same word.",
+    "example": "'Maybe the morning was too bright. / Maybe I wanted to stay in bed. / Maybe the coffee didn't help. / Maybe I'm just tired of trying.' — Notice how repetition builds weight.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-004",
+    "description": "Describe a meal you ate recently in exactly 50 words. Focus only on textures and temperatures — no colors, no names of foods.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Describe a meal you ate recently in exactly 50 words.",
+    "context": "Texture and temperature are the most neglected senses in food writing. Removing color and names forces you into unfamiliar sensory territory.",
+    "constraint_note": "Focus only on textures and temperatures. No colors, no names of foods. Exactly 50 words.",
+    "example": "'The first bite was crisp on the outside, soft and almost too hot inside. Something grainy underneath, then smooth.' — The reader tastes it without knowing what it is.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-005",
+    "description": "Write 5 different opening lines for a story about someone who just received unexpected news. Each line should use a different technique: dialogue, action, setting, thought, or sensory detail.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write 5 different opening lines for a story about someone who just received unexpected news.",
+    "context": "The same premise can launch five completely different stories depending on where you start. This trains you to see multiple entry points into a single moment.",
+    "constraint_note": "Each line should use a different narrative technique: dialogue, action, setting, interiority, or sensory detail.",
+    "example": "Dialogue: '\"Sit down,\" she said.' Action: 'He read it twice, then folded the paper into a square.' — Same news, different doors in.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-006",
+    "description": "Think of a strong emotion you felt this week. Write a paragraph describing the physical sensations of that emotion without ever naming the emotion itself. A reader should be able to guess what you felt.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Think of a strong emotion you felt this week. Describe only its physical sensations.",
+    "context": "Emotions live in the body before they reach the mind. Writing the physical experience — tight chest, cold hands, buzzing skin — is more powerful than naming the feeling.",
+    "constraint_note": "Don't name the emotion. Describe only what your body did: chest, hands, stomach, breathing, temperature.",
+    "example": "'My jaw tightened. My hands went cold. Something heavy sat on my chest.' — The reader identifies the emotion without being told.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-007",
+    "description": "Write a 6-line dialogue between two people where one is lying. Don't tell the reader who's lying — let it come through in how they speak. No dialogue tags except 'said.'",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a 6-line dialogue between two people where one is lying.",
+    "context": "Dialogue reveals character through HOW people speak, not just what they say. A liar might over-explain, change the subject, or be suspiciously calm.",
+    "constraint_note": "Don't tell the reader who's lying — let it come through in speech patterns. Only dialogue tag allowed is 'said.'",
+    "example": "'I was at the office,' he said. 'Until nine?' 'There was a lot to finish.' 'On a Saturday.' 'You know how it gets,' he said. — The short responses and deflection do the work.",
+    "tags": [
+      "subtext"
+    ]
+  },
+  {
+    "id": "cw-008",
+    "description": "Rewrite this sentence 5 different ways, each with a different mood: 'She walked into the room and sat down.' Try: menacing, joyful, exhausted, suspicious, and childlike.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Rewrite this sentence 5 different ways: 'She walked into the room and sat down.'",
+    "context": "Voice is the personality of your prose. The same event described in different moods becomes a completely different story. This exercise trains you to control tone deliberately.",
+    "constraint_note": "Each rewrite must convey a different mood: menacing, joyful, exhausted, suspicious, and childlike. Same event, five different feelings.",
+    "example": "Menacing: 'She entered without knocking, surveyed the room like she owned it, and lowered herself into the chair closest to the door.' — Word choice and pacing create mood.",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-009",
+    "description": "Write a micro-story in exactly 55 words. It must have a character, a conflict, and a resolution. Count your words — the constraint is the exercise.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Write a micro-story in exactly 55 words.",
+    "context": "The 55-word story is a classic compression exercise. Every word must earn its place. Character, conflict, and resolution in the space of a paragraph.",
+    "constraint_note": "Must have a character, a conflict, and a resolution. Count your words — the constraint is the exercise.",
+    "example": "At 55 words, you can't afford a single wasted sentence. Cut every word that doesn't advance the story.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-010",
+    "description": "Look out the nearest window. Write 3 paragraphs: what you see, what you hear, and what you imagine is happening just out of sight. The third paragraph is where the creative writing lives.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Look out the nearest window. Write 3 paragraphs: what you see, what you hear, what you imagine is happening just out of sight.",
+    "context": "The third paragraph — what you imagine — is where creative writing begins. The first two are observation; the third is invention grounded in reality.",
+    "constraint_note": "Paragraph 1: visual. Paragraph 2: auditory. Paragraph 3: imagined. The third paragraph should feel like a natural extension of the first two.",
+    "example": "If you see a parked car and hear a dog barking, the third paragraph might imagine who left the car and why the dog is alone.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-011",
+    "description": "Write a character sketch in 100 words. Include: their name, one physical detail, one habit, and one thing they're afraid of. That's enough to make a person feel real.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write a character sketch in exactly 100 words.",
+    "context": "A character doesn't need a backstory to feel real. Four specific details — a name, a physical trait, a habit, and a fear — are enough to make a reader care.",
+    "constraint_note": "Must include: their name, one physical detail, one habit, and one thing they're afraid of. 100 words exactly.",
+    "example": "The physical detail should be specific ('a scar across his left thumb') not generic ('he was tall'). The fear should be revealing ('afraid of being ordinary').",
+    "tags": [
+      "micro_fiction"
+    ]
+  },
+  {
+    "id": "cw-012",
+    "description": "Take the last text message you sent. Rewrite it as the opening paragraph of a literary novel. Keep the core meaning but transform the language.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Take the last text message you sent. Rewrite it as the opening paragraph of a literary novel.",
+    "context": "This trains the gap between casual and literary register. The core meaning stays the same — only the language transforms. It reveals how much style shapes perception.",
+    "constraint_note": "Keep the core meaning of your original message but transform the language completely. It should feel like the opening of a published novel.",
+    "example": "Text: 'running late, 10 mins' → Novel: 'He composed the message with the practiced brevity of a man who had spent a lifetime arriving after the moment had passed.'",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-013",
+    "description": "Write a scene where two characters are having a conversation, but what they're really talking about is never said directly. Example: a couple discussing what to have for dinner, but they're actually deciding whether to break up.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene where two characters discuss something mundane, but the conversation is really about something else entirely.",
+    "context": "Subtext is what makes dialogue feel real. People rarely say what they mean directly. The tension between surface conversation and underlying emotion is where drama lives.",
+    "constraint_note": "The real subject is never stated. The reader should understand what's actually being discussed through tone, pauses, and word choice.",
+    "example": "A couple arguing about whose turn it is to do dishes — but they're really arguing about who cares more. The dishes are never the point.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-014",
+    "description": "Write 10 metaphors for loneliness. Not similes ('loneliness is like...') — metaphors ('loneliness is...'). Push past the first 5 obvious ones. The good ones start at #6.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write 10 metaphors for loneliness.",
+    "context": "Metaphor is the engine of original writing. The first few you think of will be clichés ('loneliness is an empty room'). The exercise is about pushing past the obvious to find something true and surprising.",
+    "constraint_note": "Not similes ('loneliness is like...') — metaphors ('loneliness is...'). Push past the first 5 obvious ones. The good ones start at #6.",
+    "example": "'Loneliness is a language everyone speaks but nobody teaches.' — The best metaphors make the reader pause and think 'yes, exactly.'",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-015",
+    "description": "Describe a thunderstorm from the perspective of a dog. Stay in the dog's experience — no human thoughts, only what the dog senses, feels, and does. 150 words.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Describe a thunderstorm from the perspective of a dog.",
+    "context": "Animal perspective strips away human interpretation. A dog doesn't know what thunder is — only that the air changed and the loud thing came. This trains radical sensory writing.",
+    "constraint_note": "Stay in the dog's experience. No human thoughts, only what the dog senses, feels, and does.",
+    "example": "'The air went wrong first. Then the sky cracked. The floor shook and the big one held me.' — No understanding, only experience.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-016",
+    "description": "Write a paragraph that starts calm and gradually builds to panic. Use sentence length as your tool: start with long, flowing sentences and end with short, choppy ones.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a paragraph that starts calm and gradually builds to panic.",
+    "context": "Pacing is controlled by sentence structure, not just content. Long sentences slow the reader down; short ones speed them up. This is one of the most powerful tools you have.",
+    "constraint_note": "Use sentence length as your primary tool: start with long, flowing sentences and end with short, choppy ones. The content should match the rhythm.",
+    "example": "Start: 'The afternoon stretched out lazily, the kind of warmth that makes you forget there's anywhere else to be.' End: 'The door. Locked. Phone dead. No one coming.'",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-017",
+    "description": "Pick a color. Write 8 lines where every line contains that color used in a different way — as a mood, a texture, a sound, a memory, a taste, a place, a person, and a time of day.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Pick a color. Write 8 lines where every line uses that color in a different way.",
+    "context": "A single word used eight different ways trains you to see language as flexible. Color can be mood, texture, sound, memory — not just visual.",
+    "constraint_note": "Same color in every line, but used as: a mood, a texture, a sound, a temperature, a memory, a metaphor, a taste, a feeling.",
+    "example": "'Blue Monday. Blue fingers. A blue note from the saxophone. The blue of almost-sleep.' — One word, eight meanings.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-018",
+    "description": "Write the same 3-sentence scene twice: once in first person ('I walked in...') and once in third person ('She walked in...'). Notice what changes in distance and intimacy.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Write the same 3-sentence scene twice: once in first person, once in third person.",
+    "context": "POV changes what the reader has access to. First person gives interiority; third person gives distance. Same scene, different emotional effect.",
+    "constraint_note": "Same scene, same events. First version: 'I walked in...' Second version: 'She walked in...' Notice what changes.",
+    "example": "'I noticed the stain on the carpet immediately.' vs 'She noticed the stain on the carpet immediately.' — First feels guilty, third feels observational.",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-019",
+    "description": "Write a 100-word scene set in a kitchen. The constraint: you cannot use the words 'kitchen,' 'cook,' 'food,' 'eat,' or 'table.' Make the reader know exactly where they are without naming it.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a 100-word scene set in a kitchen without using the words 'kitchen,' 'cook,' 'food,' 'eat,' or 'meal.'",
+    "context": "Constraint breeds creativity. When you can't use the obvious words, you're forced to evoke the space through specific sensory details instead of labels.",
+    "constraint_note": "100 words. No: kitchen, cook, food, eat, meal. Evoke the space through other details.",
+    "example": "'Steam rose from the pot. The counter was dusted with flour. A timer beeped twice and no one moved.' — The reader knows exactly where they are.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-020",
+    "description": "Write a list of 15 specific, concrete nouns from your childhood home. Not 'furniture' — specific: 'the yellow rotary phone on the hallway table.' Specificity is the engine of good writing.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write a list of 15 specific, concrete nouns from your childhood home.",
+    "context": "Specific nouns are the building blocks of vivid writing. 'The yellow rotary phone' is a world; 'telephone' is nothing. This exercise stocks your inventory of concrete detail.",
+    "constraint_note": "Not 'furniture' — specific: 'the yellow rotary phone on the hall table.' 15 items. Each one should be particular to YOUR home.",
+    "example": "'The steel almirah with the sticky lock. The pressure cooker whistle. The Godrej chair with the torn armrest.' — Specificity is memory.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-021",
+    "description": "Write a scene in exactly 3 paragraphs: paragraph 1 sets the place, paragraph 2 introduces a person, paragraph 3 something changes. Keep each paragraph under 50 words.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene in exactly 3 paragraphs: place, person, something changes.",
+    "context": "The 3-paragraph structure is a micro-story framework. Setting → character → shift. It trains you to build and turn a scene in minimal space.",
+    "constraint_note": "Paragraph 1: set the place. Paragraph 2: introduce a person. Paragraph 3: something changes. Exactly 3 paragraphs.",
+    "example": "The shift in paragraph 3 can be tiny — a phone buzzing, a door opening, a realization. Small turns are more powerful than big ones in short fiction.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-022",
+    "description": "Think about the concept of 'show, don't tell.' Write 'She was angry' in 5 different ways without using the word 'angry' or any synonym for it. Show it through action, body language, dialogue, objects, or environment.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write 'She was angry' in 5 different ways without using the word 'angry' or any synonym.",
+    "context": "This is the core of 'show, don't tell' — conveying emotion through action, body language, dialogue, objects, or environment instead of naming it.",
+    "constraint_note": "No anger words. Show it through: action, body language, dialogue, objects, or environment. 5 different versions.",
+    "example": "'She set the glass down so carefully it didn't make a sound.' — The control implies the anger.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-023",
+    "description": "Write a 6-line poem using only one-syllable words. This forces you to be concrete and direct. Read it aloud when done — single-syllable poems have a drumbeat quality.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write a 6-line poem using only one-syllable words.",
+    "context": "Single-syllable constraint forces concrete, direct language. It strips away abstraction and makes every word land with weight — like a drumbeat.",
+    "constraint_note": "Every word must be one syllable. Read it aloud when done — the rhythm is the point.",
+    "example": "'The sun fell down. / The birds went still. / I stood and watched / the light drain out / from all the hills / and thought of you.' — Notice how the constraint creates rhythm naturally.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-024",
+    "description": "Describe a person you saw today (stranger, colleague, anyone) in exactly 3 sentences. Sentence 1: what they looked like. Sentence 2: what they were doing. Sentence 3: what you imagined about their life.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Describe a person you saw today in exactly 3 sentences.",
+    "context": "Three sentences is enough to make a stranger real on the page — if each sentence does different work. Appearance, action, and one telling detail.",
+    "constraint_note": "Sentence 1: what they looked like. Sentence 2: what they were doing. Sentence 3: one detail that made them specific.",
+    "example": "'She wore a green dupatta and carried two bags. She was arguing with someone on the phone. Her left shoe was untied.' — Three sentences, a whole person.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-025",
+    "description": "Write the opening paragraph of a story that starts with the line: 'The last time I was honest was a Tuesday.' Continue for 100 words. Don't plan — just follow where the sentence leads.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write the opening paragraph of a story starting with: 'The last time I was honest was a Tuesday.'",
+    "context": "A strong first line creates a contract with the reader. This one promises a story about honesty and dishonesty — your job is to continue that promise.",
+    "constraint_note": "Continue for one paragraph. The opening line sets the tone — match it.",
+    "example": "The line implies a character who has stopped being honest. Your paragraph should deepen that mystery without resolving it.",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-026",
+    "description": "Write about a sound you heard today. Not what made the sound — the sound itself. Describe its texture, rhythm, volume, and what it reminded you of. 80 words.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write about a sound you heard today. Describe the sound itself, not what made it.",
+    "context": "Sound is the most under-described sense in writing. Describing a sound's texture, rhythm, and duration — separate from its source — trains deep listening.",
+    "constraint_note": "Not what made the sound — the sound itself. Its texture, rhythm, duration, and how it changed. 80 words.",
+    "example": "'A low hum that rose and fell, like breathing. It stuttered once, then steadied.' — The source doesn't matter; the sound does.",
+    "tags": [
+      "sensory"
+    ]
+  },
+  {
+    "id": "cw-027",
+    "description": "Write a scene where a character discovers something hidden in a book. You have 150 words. Focus on the moment of discovery — the physical actions, the breath, the pause.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene where a character discovers something hidden in a book. 150 words.",
+    "context": "The moment of discovery is one of fiction's most reliable engines. What matters isn't what they find — it's the shift in their understanding.",
+    "constraint_note": "Focus on the moment of discovery, not what comes after. 150 words.",
+    "example": "A photograph, a note, a pressed flower, a name underlined — the hidden object should raise a question the scene doesn't answer.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-028",
+    "description": "Take any nursery rhyme and rewrite it as a dark, adult short poem. Keep the rhythm and rhyme scheme but change the content entirely. This teaches you how form carries meaning.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Rewrite a nursery rhyme as a dark, adult short poem. Keep the rhythm and rhyme scheme.",
+    "context": "Subverting familiar forms creates surprise. The contrast between the innocent structure and dark content is itself a literary technique — it's how parody and satire work.",
+    "constraint_note": "Keep the original rhythm and rhyme scheme. Change the content to something adult, dark, or unsettling.",
+    "example": "'Jack and Jill went up the hill / to escape what they'd done. / Jack fell down and broke his crown / and Jill said: now we run.'",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-029",
+    "description": "Write 8 sentences that each begin with 'I remember...' Each memory should be a single, specific, sensory image — not a story, just a snapshot. This is a technique from Joe Brainard.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 8 sentences that each begin with 'I remember...' Each memory should be a single sensory snapshot.",
+    "context": "This is Joe Brainard's technique from his memoir 'I Remember.' Single sensory images — not stories, just snapshots — accumulate into something larger than any one memory.",
+    "constraint_note": "Each memory is one specific, sensory image. Not a story, just a snapshot. 8 sentences.",
+    "example": "'I remember the sound of the screen door spring.' — Not 'I remember summers at grandma's house.' Specific beats general every time.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-030",
+    "description": "Write a paragraph describing rain. Now rewrite it describing the same rain but from the perspective of someone who just received terrible news. Same rain, different meaning. Notice how emotion colors description.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a paragraph describing rain. Then rewrite it from the perspective of someone who hasn't seen rain in months.",
+    "context": "Context transforms description. The same rain is background noise to one person and a miracle to another. This trains you to see how a character's state changes what they notice.",
+    "constraint_note": "Same rain, two versions. The second should feel completely different because of the character's context.",
+    "example": "Version 1: 'It rained again.' Version 2: 'The first drop hit the dust and the smell rose like something unlocked.' — Same rain, different world.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-031",
+    "description": "Write a 200-word scene that takes place entirely in an elevator. Two strangers. Something unspoken between them. The elevator ride is 30 seconds — your scene should feel that compressed.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a 200-word scene in an elevator. Two strangers. Something unspoken between them.",
+    "context": "Elevators are pressure cookers — forced proximity, limited time, no escape. The confined space amplifies whatever tension exists between characters.",
+    "constraint_note": "Two strangers. Something unspoken. 200 words. The elevator ride is the entire scene.",
+    "example": "The unspoken thing could be attraction, recognition, fear, or shared knowledge. The doors opening is your natural ending.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-032",
+    "description": "Without thinking too hard, write 20 words that you find beautiful. Not beautiful meanings — beautiful sounds. Say each one aloud. This is your raw material for poetry.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 20 words that you find beautiful — not beautiful meanings, beautiful sounds.",
+    "context": "Writers should have a physical relationship with language. Words have texture, rhythm, and mouth-feel independent of meaning. This builds your ear for prose.",
+    "constraint_note": "Without thinking too hard. 20 words. Beautiful sounds, not beautiful meanings.",
+    "example": "'Murmur. Cinnamon. Lullaby. Dusk. Hollow.' — Say them aloud. The beauty is in the sound.",
+    "tags": [
+      "sensory"
+    ]
+  },
+  {
+    "id": "cw-033",
+    "description": "Write a character's morning routine in 10 short sentences. Through only their actions (no thoughts, no feelings), reveal whether they are happy or unhappy. The reader should know without being told.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a character's morning routine in 10 short sentences. Reveal whether they're happy or miserable through actions only.",
+    "context": "Action reveals character. A happy person and a miserable person make coffee differently. This trains you to show internal states through external behavior.",
+    "constraint_note": "No thoughts, no feelings stated. Only actions. 10 short sentences. The reader should know the character's emotional state by the end.",
+    "example": "'He set the alarm for 5:30 but lay there until 6:15. He made coffee and forgot to drink it.' — Misery, shown through inaction.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-034",
+    "description": "Write a haiku (5-7-5 syllables) about something mundane: doing dishes, waiting for a bus, charging your phone. The challenge of haiku is finding the extraordinary in the ordinary.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write a haiku (5-7-5 syllables) about something mundane: doing dishes, waiting for a bus, charging your phone.",
+    "context": "Haiku trains compression and observation. Finding poetry in the mundane — dishes, buses, phone chargers — is the foundation of noticing.",
+    "constraint_note": "5-7-5 syllables. The subject must be ordinary. Count carefully.",
+    "example": "'The charger light glows / orange then green then nothing / morning already' — Mundane subject, precise observation.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-035",
+    "description": "Write a paragraph where every sentence contradicts the one before it. Start with any statement. This exercise builds comfort with tension and ambiguity in writing.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a paragraph where every sentence contradicts the one before it.",
+    "context": "Contradiction creates tension and complexity. A narrator who contradicts themselves feels more real than one who's consistent — because people are contradictory.",
+    "constraint_note": "Start with any statement. Each following sentence must contradict the previous one.",
+    "example": "'The room was empty. It was full of her absence. She'd never been there. I could still smell her perfume.' — Each contradiction deepens the truth.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-036",
+    "description": "Recall a conversation you had today. Rewrite it as pure dialogue — no 'he said/she said,' no descriptions. Just the words spoken. Can a reader follow who's who from voice alone?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Recall a conversation you had today. Rewrite it as pure dialogue — no tags, no descriptions.",
+    "context": "Voice distinction is one of the hardest dialogue skills. If a reader can tell who's speaking without tags, your characters have real voices.",
+    "constraint_note": "Just the words spoken. No 'he said/she said,' no action beats. Can a reader follow who's who from voice alone?",
+    "example": "'Running late.' / 'Again?' / 'Traffic.' / 'You always say traffic.' — Each voice has a rhythm.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-037",
+    "description": "Write a letter from a character to someone they'll never send it to. 150 words. The unsent letter is one of the most powerful forms in fiction — it reveals what people can't say aloud.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Write a letter from a character to someone they'll never send it to. 150 words.",
+    "context": "The unsent letter is one of the most powerful forms in fiction. The writer is free to be completely honest because there's no audience — except the reader.",
+    "constraint_note": "150 words. The character knows this will never be sent. That freedom should change what they say.",
+    "example": "An unsent letter is more honest than a sent one. The character can say what they'd never say out loud.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-038",
+    "description": "Pick a verb: 'run,' 'break,' 'fall,' or 'burn.' Write 6 sentences using that verb, each time with a completely different meaning. This builds awareness of how context transforms language.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "imagery",
+    "action": "Pick a verb — 'run,' 'break,' 'fall,' or 'burn.' Write 6 sentences using it with a completely different meaning each time.",
+    "context": "English verbs carry dozens of meanings depending on context. This builds awareness of how a single word shapeshifts — essential for writing with precision and surprise.",
+    "constraint_note": "Same verb, 6 sentences, 6 different meanings. No repeating a usage.",
+    "example": "'Break': 'She broke the glass.' / 'His voice broke mid-sentence.' / 'We broke for lunch.' / 'The news broke at dawn.' — Each 'broke' means something entirely different.",
+    "tags": [
+      "metaphor"
+    ]
+  },
+  {
+    "id": "cw-039",
+    "description": "Write a scene where a character is waiting. No action happens — they're just waiting. Make it compelling in 100 words. The secret: fill the waiting with thought, memory, or sensory detail.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene where a character is waiting. Nothing happens. Make it compelling in 100 words.",
+    "context": "Waiting is one of the hardest things to make interesting on the page. If you can make a reader stay during nothing, your prose has real power.",
+    "constraint_note": "No action happens. They're just waiting. 100 words. The challenge is making the reader wait with them.",
+    "example": "'She checked the time. Looked at the door. Checked the time again. The same two minutes.' — Waiting is repetition, and repetition is rhythm.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-040",
+    "description": "Think of a place you know well (childhood home, school, workplace). Write 5 sentences about it using only what you'd experience with your eyes closed: sounds, smells, textures, temperature, taste of the air.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Think of a place you know well. Write 5 sentences about it using only what you'd experience with your eyes closed.",
+    "context": "Removing sight forces you into the other senses — sound, smell, touch, temperature, spatial awareness. Most writers over-rely on visual description.",
+    "constraint_note": "Eyes closed. No visual details. Only sound, smell, touch, temperature, and spatial sense. 5 sentences.",
+    "example": "'The floor was cold tile. Something hummed behind the wall. The air smelled like old paper and dust.' — A library, described without seeing it.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-041",
+    "description": "Write a 100-word story where the first and last sentences are identical. The meaning of that sentence should change completely by the end because of what happens in between.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a 100-word story where the first and last sentences are identical.",
+    "context": "Circular structure — the same words meaning something different by the end — is one of the most satisfying forms in short fiction. The story changes the sentence.",
+    "constraint_note": "First and last sentences must be word-for-word identical. The meaning should change completely because of what happens between them.",
+    "example": "'She left the door open.' — At the start, carelessness. At the end, invitation. Same words, transformed by context.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-042",
+    "description": "Describe your hands right now. Not poetically — precisely. Every scar, callus, nail, vein, ring. 80 words of pure observation. This is the muscle of noticing that all good writing requires.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Describe your hands right now. Precisely, not poetically. 80 words.",
+    "context": "Precision is a muscle. Describing something you see every day with forensic accuracy trains you to look — really look — at what's in front of you.",
+    "constraint_note": "Every scar, callus, nail, vein, ring. 80 words of pure observation. Not poetic — precise.",
+    "example": "'A small scar across the left thumb from a paper cut that never fully healed. The nail on my right index finger is shorter than the others.' — Precision IS poetry.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-043",
+    "description": "Write a scene in a restaurant. One character orders for the other without asking. In 150 words, reveal the power dynamic between them using only this action and dialogue.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a restaurant scene where one character orders for the other without asking. 150 words.",
+    "context": "Power dynamics in fiction are best shown through small actions, not stated. Ordering for someone reveals control, intimacy, or presumption — the reader decides which.",
+    "constraint_note": "Reveal the power dynamic using only this action and the dialogue around it. 150 words.",
+    "example": "'He turned to the waiter before she'd opened the menu. She'll have the salmon.' — One line, and the reader already knows the relationship.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-044",
+    "description": "Write 3 versions of the same event: a car pulling away from a house. Version 1: the driver's perspective. Version 2: someone watching from the window. Version 3: a neighbor who doesn't know the context. 50 words each.",
+    "type": "learning",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Write 3 versions of the same event: a car pulling away from a house. Three different perspectives.",
+    "context": "Same event, three viewpoints — this is the foundation of point of view. Each perspective notices different things and assigns different meaning.",
+    "constraint_note": "Version 1: the driver. Version 2: someone watching from the window. Version 3: a neighbour across the street.",
+    "example": "The driver sees the road ahead. The watcher sees the car shrinking. The neighbour sees a car leaving and wonders nothing. — Same moment, three stories.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-045",
+    "description": "Write a 10-line poem where each line is a question. No answers — just questions. The poem should build toward something, even without resolving it.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write a 10-line poem where every line is a question.",
+    "context": "Questions create forward momentum — each one pulls the reader deeper. A poem made entirely of questions can build tension without ever resolving it, which is a powerful emotional effect.",
+    "constraint_note": "No answers, no statements — only questions. The poem should build toward something even without resolution.",
+    "example": "'Do you remember the color of the door? / Was it already dark when you arrived? / Did you knock, or did you stand there?' — Each question narrows the focus.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-046",
+    "description": "Think of a lie you've told (small or big). Write a 100-word paragraph from the perspective of the person you lied to, at the moment they believed you. What did they feel?",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write a 100-word paragraph from the perspective of someone who was lied to, at the moment they believed the lie.",
+    "context": "Empathy is the writer's core skill. This exercise asks you to inhabit someone else's trust — the moment before betrayal, when belief is still intact.",
+    "constraint_note": "Think of a lie you've told (small or big). Write from the other person's perspective. Capture what they felt when they believed you. 100 words.",
+    "example": "Focus on the physical: did they relax? Smile? Feel relief? The moment of believing a lie often feels like comfort — that's what makes it painful later.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-047",
+    "description": "Write a scene using only short sentences. No sentence longer than 6 words. Write for 100 words. Notice how this creates urgency and tension. Now you know one tool for pacing.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write a 100-word scene using only short sentences. No sentence longer than 6 words.",
+    "context": "Short sentences create urgency, tension, and a staccato rhythm. This constraint trains you to feel how sentence length controls pacing.",
+    "constraint_note": "No sentence longer than 6 words. 100 words total. Notice how the rhythm affects the mood.",
+    "example": "'She stopped. The room was dark. A sound. She waited. Nothing. She stepped forward.' — Short sentences make the reader hold their breath.",
+    "tags": [
+      "micro_fiction"
+    ]
+  },
+  {
+    "id": "cw-048",
+    "description": "Describe a tree you've seen recently. Not 'a tree' — that specific tree. Its shape, lean, bark texture, what's at its base, how it moves. 100 words. Specificity is the difference between writing and good writing.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Describe a specific tree you've seen recently. Not 'a tree' — that tree. 80 words.",
+    "context": "Specificity is the difference between writing and good writing. 'A tree' is nothing. 'The neem tree with the split trunk outside the chai shop' is a place.",
+    "constraint_note": "Its shape, lean, bark texture, what's at its base, what's in its branches. 80 words.",
+    "example": "'The trunk split at waist height into two arms that leaned away from each other, as if mid-argument.' — One tree, fully seen.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-049",
+    "description": "Write a scene where a character enters a room and immediately knows something is wrong — but you never say what's wrong. Convey it through displaced details: a chair out of place, a smell, a silence. 150 words.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Write a scene where a character enters a room and immediately knows something is wrong. 100 words.",
+    "context": "The feeling of wrongness — before you identify what's wrong — is one of the most powerful sensory experiences. It's instinct, not analysis.",
+    "constraint_note": "Never say what's wrong. The character senses it. The reader senses it. 100 words.",
+    "example": "'The chair was in the wrong place. She didn't know how she knew, but she knew.' — Wrongness is felt before it's understood.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-050",
+    "description": "Write about a time you changed your mind about something. Not the argument — the moment of shift. What did it feel like in your body when a belief cracked? 100 words.",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write about the exact moment you changed your mind about something.",
+    "context": "Belief shifts are some of the most dramatic moments in human experience, but we rarely examine them closely. This trains you to capture internal turning points.",
+    "constraint_note": "Not the argument or the evidence — the moment of shift itself. What did it feel like in your body when a belief cracked? 100 words.",
+    "example": "It might be a physical sensation: 'Something loosened in my chest, like a knot I didn't know was there.' The best writing about thinking is actually writing about feeling.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-051",
+    "description": "Write a 150-word scene set at a bus stop at 6 AM. Include at least 3 people. Reveal something about each person through one detail only — no backstory, no thoughts, just what's visible.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene at a bus stop at 6 AM with at least 3 people. 150 words.",
+    "context": "Revealing character through small details — posture, clothing, what they carry — is the foundation of observational writing. A bus stop is a stage.",
+    "constraint_note": "Reveal something about each person through only one external detail. No backstory, no thoughts.",
+    "example": "'A woman in scrubs checked her phone without reading it. A boy in a school uniform stood too close to the curb.' — One detail per person, and they're real.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-052",
+    "description": "Write 5 similes for silence. Not 'silence is like a library' — push further. What does silence taste like? Weigh? What color is it? The best similes connect unexpected things.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write 5 similes for silence. Push past the obvious.",
+    "context": "Silence is one of the most described things in writing, and most descriptions are clichés. Pushing past 'silence like a library' into taste, weight, and texture trains original thinking.",
+    "constraint_note": "Not 'silence is like a library.' What does silence taste like? Weigh? Feel on your skin? 5 similes.",
+    "example": "'Silence like a held breath.' / 'Silence like the inside of a closed book.' — The best similes make the reader pause.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-053",
+    "description": "Write a paragraph about your morning today, but in the style of a nature documentary narrator. Describe your own actions as if observing an animal in its habitat. This builds narrative distance.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Write about your morning today in the style of a nature documentary narrator.",
+    "context": "Defamiliarization through voice — describing yourself as a specimen makes the mundane strange and funny. It trains you to control register and tone.",
+    "constraint_note": "Describe your own actions as if observing a creature in its habitat. Use the detached, observational tone of a documentary.",
+    "example": "'The subject rises slowly, drawn by an instinct toward the kettle. It performs the ritual with practiced efficiency, eyes still half-closed.'",
+    "tags": [
+      "perspective"
+    ]
+  },
+  {
+    "id": "cw-054",
+    "description": "Write a scene where two old friends meet after years apart. The first thing one says is: 'You look exactly the same.' In 150 words, make clear whether this is a compliment or not.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene where two old friends meet after years. The first line is: 'You look exactly the same.' 150 words.",
+    "context": "The same words can be a compliment or a wound depending on context. This trains you to control subtext — what's under the surface of ordinary language.",
+    "constraint_note": "Make clear whether 'You look exactly the same' is kind or cruel — without ever stating it directly. 150 words.",
+    "example": "If it's cruel: the speaker's eyes might linger too long, or the other person's smile might falter. The subtext lives in the reaction.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-055",
+    "description": "Write 10 first lines for 10 different stories. Don't continue any of them — just the opening line. A great first line contains a question the reader needs answered. Aim for that.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write 10 first lines for 10 different stories. Don't continue any of them.",
+    "context": "A great first line contains a world, a voice, and a question. Practicing openings in isolation trains you to hook a reader in one sentence.",
+    "constraint_note": "Just the opening line. Each should create a different world and make the reader want to know what happens next.",
+    "example": "'The dog came back, but the boy didn't.' — One line, and the reader is already asking questions.",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-056",
+    "description": "Pick something you do every day (brush teeth, make coffee, lock the door). Write about it in 80 words as if it's the last time you'll ever do it. Notice how stakes transform mundane actions.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Pick something you do every day. Write about it in 80 words as if it's the last time you'll ever do it.",
+    "context": "The 'last time' frame transforms the mundane into the sacred. Brushing teeth, locking a door — when it's the last time, every detail matters.",
+    "constraint_note": "80 words. The routine should feel precious because of the frame, not because you state it.",
+    "example": "'She turned the key slowly. Listened to the lock click. Touched the door once, flat-palmed, before walking away.' — The last time makes the ordinary extraordinary.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-057",
+    "description": "Write a 4-line poem about water. Line 1: where you see it. Line 2: what it sounds like. Line 3: what it reminds you of. Line 4: what it takes away.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write a 4-line poem about water.",
+    "context": "Water is one of the most versatile images in writing — it can be calm, violent, cleansing, drowning. Four lines forces you to pick one angle and commit.",
+    "constraint_note": "Line 1: where you see it. Line 2: what it sounds like. Line 3: what it reminds you of. Line 4: what it does to you.",
+    "example": "'The tap drips into the steel sink. / A metronome no one asked for. / It sounds like the clock in my grandmother's hall. / I let it run.' — Four lines, four layers.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-058",
+    "description": "Write a scene entirely in the second person ('You walk in. You notice the smell.'). 100 words. Second person creates an eerie intimacy — the reader becomes the character. Notice how it feels different.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a 100-word scene entirely in second person: 'You walk in. You notice the smell.'",
+    "context": "Second person creates uncomfortable intimacy — the reader becomes the character. It's disorienting and powerful when used deliberately.",
+    "constraint_note": "All second person ('you'). 100 words.",
+    "example": "'You open the door. The room is darker than you expected. You reach for the switch and your hand finds the wall first.' — The reader is inside the scene.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-059",
+    "description": "Recall a smell from your childhood. Write 80 words about it — not what caused the smell, but what the smell brings back. Smell is the sense most directly linked to memory. Use that.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Recall a smell from your childhood. Write 80 words about what the smell brings back.",
+    "context": "Smell is the sense most directly connected to memory. A single smell can unlock an entire world. This trains you to use scent as a narrative trigger.",
+    "constraint_note": "Not what caused the smell — what the smell brings back. Memories, feelings, places. 80 words.",
+    "example": "'Naphthalene. The almirah in my grandmother's room. Every sari folded the same way. The smell meant arrival — we were there for the summer.' — Smell unlocks place.",
+    "tags": [
+      "sensory"
+    ]
+  },
+  {
+    "id": "cw-060",
+    "description": "Write a 200-word scene where a character packs a suitcase. Through what they choose to pack (and what they leave behind), reveal where they're going and why — without ever stating it directly.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Write a scene where a character packs a suitcase. 200 words.",
+    "context": "What someone packs (and leaves behind) reveals what they value, where they're going, and whether they plan to come back. Objects carry emotional weight.",
+    "constraint_note": "Through what they choose to pack and what they leave behind, reveal where they're going and why. 200 words.",
+    "example": "'She folded the blue dress, then took it out. Put it back. Took it out again.' — Indecision about an object is never about the object.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-061",
+    "description": "Write the worst opening paragraph you can. Make it cliché, overwritten, and melodramatic on purpose. Then rewrite it well. Knowing what bad writing looks like sharpens your instinct for good writing.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write the worst opening paragraph you can — cliché, overwritten, melodramatic. Then rewrite it well.",
+    "context": "Writing badly on purpose teaches you to recognize bad instincts. The rewrite trains editing. The gap between the two versions is your taste becoming visible.",
+    "constraint_note": "First version: as terrible as possible. Second version: the same scene, written well. Both should be about the same moment.",
+    "example": "Bad: 'It was a dark and stormy night and her heart was heavy with the weight of a thousand sorrows.' Good: 'The rain started at six. She sat at the table and didn't turn on the light.'",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-062",
+    "description": "Write a 100-word scene that takes place in complete darkness. No visual descriptions allowed. Only sound, touch, smell, taste, and spatial awareness. This forces you off your most-used sense.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a 100-word scene in complete darkness. No visual descriptions.",
+    "context": "Removing sight forces you into sound, touch, smell, temperature, and spatial awareness. It's the most effective way to break the habit of visual-first writing.",
+    "constraint_note": "No visual descriptions at all. Only sound, touch, smell, temperature, spatial sense. 100 words.",
+    "example": "'The floor was cold under her feet. Something dripped. The air smelled like wet concrete.' — Darkness makes every other sense louder.",
+    "tags": [
+      "sensory"
+    ]
+  },
+  {
+    "id": "cw-063",
+    "description": "Think about a decision you're currently facing. Write about it in third person, as if it's happening to a character named something else. Does the distance change how you see it? 100 words.",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write about a decision you're currently facing — but in third person, as a character with a different name.",
+    "context": "Third-person distance changes how you see your own problems. Writers use this technique to access clarity that first-person thinking blocks. It's also the foundation of autofiction.",
+    "constraint_note": "100 words. Use a different name. Write as if observing this person, not being them. Notice if the distance changes how you see the decision.",
+    "example": "'Priya sat at the kitchen table, turning the offer letter over in her hands. The salary was better. The city was worse.' — The distance lets you see the situation more clearly.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-064",
+    "description": "Write a 6-line dialogue where one character is trying to leave and the other is trying to make them stay. No dialogue tags, no action descriptions. Just the words. The tension should be in what's said.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a 6-line dialogue: one character trying to leave, the other trying to make them stay.",
+    "context": "Opposing wants in dialogue create natural tension. Every line becomes a small negotiation — this is the engine of dramatic dialogue.",
+    "constraint_note": "No dialogue tags, no action descriptions. Just the words. The tension should be in what's said.",
+    "example": "'I should go.' / 'It's still early.' / 'It's not.' / 'One more.' / 'You always say that.' / 'Stay.' — Six lines, complete story.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-065",
+    "description": "Write about an ordinary object (a key, a mug, a shoe) as if it's evidence in a crime scene. 80 words. This exercise teaches you that any object can carry narrative weight when context shifts.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write about an ordinary object as if it's evidence in a crime scene. 80 words.",
+    "context": "Context transforms meaning. A key, a mug, a shoe — ordinary until someone examines them for clues. This trains you to see objects as carriers of story.",
+    "constraint_note": "A key, a mug, a shoe — pick one. Describe it as evidence. 80 words.",
+    "example": "'The mug was still half-full. Lipstick on the rim, left side. Whoever drank from it was left-handed and in no hurry.' — Observation becomes narrative.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-066",
+    "description": "Write a paragraph using only compound sentences (two clauses joined by 'and,' 'but,' 'or,' 'so'). Then rewrite it using only simple sentences. Read both aloud. Hear the difference in rhythm and pace.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a paragraph using only compound sentences. Then rewrite it using only simple sentences.",
+    "context": "Sentence structure controls rhythm. Compound sentences flow and connect; simple sentences punch and isolate. Hearing the difference trains your ear for prose rhythm.",
+    "constraint_note": "First version: only compound sentences (two clauses joined by 'and,' 'but,' 'or,' 'so'). Second version: only simple sentences. Same content.",
+    "example": "Compound: 'She opened the door and the room was dark.' Simple: 'She opened the door. The room was dark.' — Same facts, different feel.",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-067",
+    "description": "Write a scene at a family dinner table. 150 words. The rule: every character speaks, but no one responds to what the previous person said. Everyone is having their own conversation. This is how real families talk.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a family dinner scene where everyone speaks but no one responds to the previous person. 150 words.",
+    "context": "Real family conversation is often parallel monologues. Everyone talks, nobody listens. This captures how families actually communicate — and the loneliness inside togetherness.",
+    "constraint_note": "Every character speaks, but no one responds to what the previous person said. Each person is having their own conversation.",
+    "example": "'How was school?' / 'The dal needs salt.' / 'I might be late tomorrow.' / 'Did anyone feed the dog?' — Four people, zero connection.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-068",
+    "description": "Write 5 different endings for this setup: 'She opened the door and found ___.' Each ending should create a completely different genre: horror, comedy, romance, mystery, literary fiction.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write 5 different endings for: 'She opened the door and found ___.'",
+    "context": "The same setup can lead anywhere. This trains you to see multiple possibilities in a single moment — the foundation of creative thinking in fiction.",
+    "constraint_note": "Each ending should create a completely different genre or mood. 5 endings.",
+    "example": "Horror: '...nothing. The room was exactly as she'd left it. Except the chair had moved.' Comedy: '...her cat wearing her reading glasses.'",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-069",
+    "description": "Write a 100-word scene where a character is pretending to be fine. Don't say they're pretending. Show it through one small physical detail that betrays them — a hand tremor, a too-bright smile, a repeated phrase.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character pretending to be fine. 100 words.",
+    "context": "The gap between performance and reality is where character lives. Don't say they're pretending — show it through one small detail that betrays them.",
+    "constraint_note": "Don't state the pretense. Show it through one small action that contradicts the performance. 100 words.",
+    "example": "'She laughed at the joke and her hand went to her necklace, turning the pendant back and forth.' — The hand betrays what the laugh hides.",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-070",
+    "description": "Look at the last piece of writing you did (any kind — text, email, note). Find the weakest sentence. Rewrite it 5 different ways. Pick the best one. This is the editing muscle.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Find the weakest sentence in the last piece of writing you did. Rewrite it 5 different ways.",
+    "context": "Editing is rewriting. Seeing 5 versions of the same sentence trains you to recognize that the first draft is never the only option — and rarely the best one.",
+    "constraint_note": "Same meaning, 5 different versions. At least one should be significantly better than the original.",
+    "example": "Original: 'He was sad.' → 'His shoulders dropped.' / 'He stared at the table.' / 'Something in him went quiet.' — Each rewrite finds a different angle.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-071",
+    "description": "Write a scene where a character walks through a market. 150 words. Use at least one detail from each sense. Markets are sensory overload — your writing should be too.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene of a character walking through a market. 150 words.",
+    "context": "Markets are sensory overload — sound, smell, color, texture, movement. Your writing should be too. This trains you to layer multiple senses in a single scene.",
+    "constraint_note": "Use at least one detail from each sense. 150 words.",
+    "example": "'The fish seller shouted prices. Coriander and diesel mixed in the air. A woman's elbow brushed his arm.' — Every sense, one scene.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-072",
+    "description": "Write a 100-word monologue from the perspective of an inanimate object in your room. What has it witnessed? What does it think of you? Anthropomorphism is a powerful creative tool.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Write a 100-word monologue from the perspective of an inanimate object in your room.",
+    "context": "Object perspective forces radical empathy and defamiliarization. What has your chair witnessed? What does your mirror think about? This stretches your imaginative range.",
+    "constraint_note": "100 words. The object has opinions, memories, and observations. What has it witnessed?",
+    "example": "'I've held every version of her — the one who cries at 2 AM and the one who laughs on the phone.' — A bed's monologue.",
+    "tags": [
+      "perspective"
+    ]
+  },
+  {
+    "id": "cw-073",
+    "description": "Write about a goodbye. Not a dramatic one — a small one. Leaving a friend's house, ending a phone call, the last day at a job. 100 words. Small goodbyes carry more weight than big ones in writing.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write about a small goodbye — leaving a friend's house, ending a phone call, the last wave. 80 words.",
+    "context": "Small goodbyes are more emotionally honest than dramatic ones. The ordinary parting — 'see you' and a door closing — carries weight when observed closely.",
+    "constraint_note": "Not a dramatic goodbye. A small, ordinary one. 80 words.",
+    "example": "'She said bye and the screen went dark. The room was suddenly too quiet.' — Small goodbyes leave small silences.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-074",
+    "description": "Write a 150-word scene using no adjectives. Zero. Rely entirely on nouns, verbs, and sentence structure to create mood. This reveals how much (or how little) your adjectives are actually doing.",
+    "type": "learning",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Write a 150-word scene using zero adjectives.",
+    "context": "Removing adjectives forces you to rely on nouns, verbs, and structure to create mood. It's a constraint that reveals how much work verbs and specificity can do alone.",
+    "constraint_note": "No adjectives at all. Rely entirely on nouns, verbs, and sentence structure. 150 words.",
+    "example": "'Rain hit the window. She stood and walked to the door. The dog followed.' — Nouns and verbs carry everything.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-075",
+    "description": "Write 3 paragraphs about the same street: once at dawn, once at noon, once at midnight. Same street, same details — but the time of day changes everything. 50 words each.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write 3 paragraphs about the same street: at dawn, at noon, and at midnight. 50 words each.",
+    "context": "Same place, different time — this trains you to see how light, sound, and mood transform a setting. It's the foundation of atmospheric writing.",
+    "constraint_note": "Same street, same physical details in each version. Only the time of day changes. 50 words per paragraph.",
+    "example": "Dawn might emphasize silence and grey light. Noon brings heat and noise. Midnight brings shadows and different sounds. The street is the constant — your observation is the variable.",
+    "tags": [
+      "metaphor"
+    ]
+  },
+  {
+    "id": "cw-076",
+    "description": "Think of a person who influenced you. Write 5 sentences about them. Each sentence must contain a specific physical action you watched them do — not what they said or believed, but what their hands, face, or body did.",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write 5 sentences about a person who influenced you. Each sentence must describe a specific physical action you watched them do.",
+    "context": "Character is revealed through action, not description. What someone's hands do tells you more than what they believe. This trains you to observe and record the physical details that make people real on the page.",
+    "constraint_note": "No abstractions — not what they said or believed, but what their hands, face, or body did. 5 sentences, 5 physical actions.",
+    "example": "'She folded the newspaper into perfect quarters before reading. She tapped her ring finger on the table when she was thinking.' — Specific actions create vivid people.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-077",
+    "description": "Write a scene where a character receives a phone call. We only hear their side. In 100 words, make the reader understand what the other person is saying without ever hearing them.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character on a phone call. We only hear their side. 100 words.",
+    "context": "One-sided phone calls force the reader to infer the other half. The gaps become the story — what's unsaid is as important as what's said.",
+    "constraint_note": "Only their side of the conversation. The reader must understand what the other person is saying from the responses. 100 words.",
+    "example": "'No. No, I understand. I just thought — okay. Okay. I'll be there.' — The reader fills in the other voice.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-078",
+    "description": "Write a list poem: 12 lines, each starting with 'In my pocket I carry...' The items should start literal and gradually become abstract or emotional. This is a classic poetry exercise in escalation.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write a 12-line list poem, each line starting with 'In my pocket I carry...'",
+    "context": "List poems use repetition to build accumulation. Starting literal and moving abstract trains you to escalate — a key skill in poetry and storytelling.",
+    "constraint_note": "Start with literal, physical items and gradually shift to abstract or emotional ones. The escalation is the structure.",
+    "example": "'In my pocket I carry a house key. / In my pocket I carry a receipt from Tuesday. / ... / In my pocket I carry the weight of a conversation I didn't finish.'",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-079",
+    "description": "Write a 100-word scene set in a hospital waiting room. No one is sick — focus on the room itself, the chairs, the magazines, the clock. Make the reader feel the specific quality of that kind of waiting.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene set in a hospital waiting room. No one is sick. 100 words.",
+    "context": "Waiting rooms are liminal spaces — between before and after. The room itself (chairs, magazines, fluorescent light) carries the anxiety that the characters won't express.",
+    "constraint_note": "Focus on the room itself, not the people's conditions. The chairs, the magazines, the clock. 100 words.",
+    "example": "'The magazines were from March. The clock ticked but the second hand stuttered at the 4.' — The room tells the story.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-080",
+    "description": "Write about something you failed at. Not the lesson — the moment of failure itself. What did the air feel like? What did you do with your hands? 80 words of pure sensory memory.",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write about a moment of failure — not the lesson, but the sensory experience of the moment itself.",
+    "context": "We usually narrate failure as a story with a moral. This exercise strips that away and asks: what did failure actually feel like in your body? That raw sensory truth is more powerful than any lesson.",
+    "constraint_note": "80 words. Focus on physical sensation: the air, your hands, your stomach, the sounds around you. No lessons, no silver linings.",
+    "example": "'My mouth went dry. I could hear the fan above me. My hands were flat on the desk and I remember thinking they looked like someone else's hands.' — The body remembers what the mind edits.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-081",
+    "description": "Write a 150-word scene where a character is cooking alone. Through the cooking — what they make, how carefully or carelessly they do it — reveal their emotional state. No internal thoughts allowed.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Write a scene of a character cooking alone. 150 words.",
+    "context": "How someone cooks alone — carefully or carelessly, with love or resentment — reveals their inner state without a word of interiority.",
+    "constraint_note": "Through the cooking — what they make, how carefully or carelessly they do it — reveal whether they're content or falling apart.",
+    "example": "'He chopped the onions into uneven pieces and didn't care.' — Carelessness in cooking signals carelessness about self.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-082",
+    "description": "Write 5 sentences about the weather right now. Make each sentence do double duty: describe the weather AND suggest a human emotion. 'The clouds couldn't commit to rain' — that kind of thing.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 5 sentences about the weather right now. Each sentence should also suggest a human emotion.",
+    "context": "Pathetic fallacy — weather reflecting mood — is one of the oldest tools in writing. This trains you to make description do double duty.",
+    "constraint_note": "Each sentence describes the weather AND suggests an emotion. Don't name the emotion.",
+    "example": "'The clouds couldn't decide whether to stay or go.' — The weather is indecisive, and so is someone.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-083",
+    "description": "Write a scene where a character finds an old photograph. Don't describe the photo directly — describe the character's reaction to it. What do their hands do? Do they breathe differently? 100 words.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character finding an old photograph. Don't describe the photo. 100 words.",
+    "context": "Withholding the image and showing only the reaction is more powerful than describing the photo. The reader's imagination fills in something more personal than you could write.",
+    "constraint_note": "Don't describe the photo directly. Show the character's face, posture, breathing. 100 words.",
+    "example": "'She turned it over, then back. Her thumb covered one of the faces.' — The gesture tells us everything.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-084",
+    "description": "Write a 100-word scene that contains exactly one lie told by the narrator. Don't flag it. A reader paying close attention should catch it; a casual reader might not. Unreliable narration is a powerful tool.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Write a 100-word scene containing exactly one lie told by the narrator.",
+    "context": "The unreliable narrator is one of fiction's most powerful tools. Planting a single lie trains you to think about what narrators choose to distort — and why.",
+    "constraint_note": "Don't flag the lie. A reader paying close attention should catch it. 100 words.",
+    "example": "If the narrator says 'I didn't mind' after describing something clearly painful — that's the lie. The contradiction is the tell.",
+    "tags": [
+      "perspective"
+    ]
+  },
+  {
+    "id": "cw-085",
+    "description": "Write about a door. Not metaphorically — a real, specific door you know. Its color, weight, sound, handle. 80 words. Then write one sentence about what's on the other side. That sentence is your story seed.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write about a real, specific door you know. Its color, weight, sound, handle. 80 words.",
+    "context": "A door is a threshold — between inside and outside, before and after. Describing a specific door with physical precision grounds your writing in the real.",
+    "constraint_note": "Not metaphorical. A real door. Then write one sentence about what's on the other side. 80 words.",
+    "example": "'The green door with the brass handle that stuck in monsoon. You had to lift and push at the same time.' — A door is a place.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-086",
+    "description": "Rewrite a fairy tale in 100 words, set in modern-day India. Keep the core conflict but change everything else. Compression forces you to find the essential bones of a story.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "voice",
+    "action": "Rewrite a fairy tale in 100 words, set in modern-day India.",
+    "context": "Compression forces you to find the essential conflict. Transplanting a story to a new setting reveals what's universal about it and what's cultural.",
+    "constraint_note": "Keep the core conflict but change everything else. 100 words. The constraint is the compression.",
+    "example": "Cinderella in Mumbai: a girl who works at her aunt's shop, a wedding she's not invited to, a borrowed dupatta. Same story, new world.",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-087",
+    "description": "Write 8 lines where each line is an instruction, like a recipe or manual, but for something emotional: 'How to miss someone' or 'How to pretend you don't care.' The instructional form creates ironic distance.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write an instructional poem: a recipe or manual for something emotional. 8 lines.",
+    "context": "The instructional form creates ironic distance from emotion. 'How to miss someone' written as a recipe is more affecting than a direct confession — the gap between form and feeling is where the power lives.",
+    "constraint_note": "Choose an emotion: 'How to miss someone,' 'How to pretend you don't care,' 'How to fall out of love.' Write it as step-by-step instructions.",
+    "example": "'Step 1: Check your phone. Step 2: Put it down. Step 3: Pick it up again. Step 4: Write a message. Step 5: Delete it.' — The mundane steps carry the emotional weight.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-088",
+    "description": "Write a scene where a character is reading a letter. We never see the letter's contents. Through the character's face, posture, and what they do after — reveal whether it's good or bad news. 100 words.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene of a character reading a letter. We never see the letter's contents. 100 words.",
+    "context": "Withholding information from the reader creates tension. The character's face, posture, and breathing tell us everything — the letter itself is unnecessary.",
+    "constraint_note": "Through the character's physical reactions, reveal what the letter says without showing it. 100 words.",
+    "example": "'Her eyes stopped moving halfway down the page. She folded it once, then again, then put it in her pocket.' — The reader knows it's bad news.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-089",
+    "description": "Write about the space between two people sitting on a bench. Not the people — the space. What's in it? What crosses it? What does it feel like? 80 words. This teaches you to write negative space.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write about the space between two people sitting on a bench. Not the people — the space. 100 words.",
+    "context": "Negative space — what's between things — is as important as the things themselves. The gap between two people on a bench tells you their entire relationship.",
+    "constraint_note": "Not the people. The space. What's in it? What crosses it? What does it feel like? 100 words.",
+    "example": "'Twelve inches of wooden slat between them. A pigeon walked through it. Neither moved.' — The space is the story.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-090",
+    "description": "Write a 100-word scene that takes place in exactly one minute of story time. A character hears a knock at the door. What happens in the 60 seconds before they open it?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene that takes place in exactly one minute of story time. A knock at the door. 100 words.",
+    "context": "Compressing real-time into prose trains you to control pacing. One minute should feel like one minute — every detail slows the clock.",
+    "constraint_note": "One minute of story time. A character hears a knock. What happens in those 60 seconds? 100 words.",
+    "example": "The knock, the pause, the decision to stand, the walk to the door — each micro-action fills a second.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-091",
+    "description": "Think about what you were doing exactly one year ago. Write 5 sentences about it. Were you a different person? What's changed? What hasn't? This is raw material for a personal essay.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Think about what you were doing exactly one year ago. Write 5 sentences about it.",
+    "context": "Time-distance writing is raw material for personal essays. The gap between who you were and who you are now is where the most interesting writing lives.",
+    "constraint_note": "5 sentences. Were you a different person? What's changed? What hasn't? Be specific — dates, places, feelings.",
+    "example": "'A year ago I was still checking my phone for messages that had stopped coming. I was eating the same lunch every day.' — Specificity makes the personal universal.",
+    "tags": [
+      "memory"
+    ]
+  },
+  {
+    "id": "cw-092",
+    "description": "Write a scene where two characters are walking together but not speaking. 150 words. Convey their relationship entirely through physical proximity, pace, and small gestures. Silence between characters is never empty.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene of two characters walking together in silence. 150 words.",
+    "context": "Silence between characters is never empty — it's full of what isn't being said. Physical proximity, pace, and gesture carry the entire emotional weight.",
+    "constraint_note": "No dialogue. Convey their relationship entirely through physical proximity, pace, and small gestures.",
+    "example": "'She walked half a step ahead. He matched her pace but didn't close the gap.' — The distance IS the dialogue.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-093",
+    "description": "Write 10 'what if' questions. Not practical ones — story ones. 'What if gravity reversed for one hour?' 'What if you could hear plants?' Each one is a potential story seed. Write them fast, don't judge.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 10 'what if' questions — story ones, not practical ones.",
+    "context": "'What if' is the engine of fiction. Every story begins with a question. This exercise stocks your idea bank with premises you can return to later.",
+    "constraint_note": "Not practical questions. Story questions. 'What if gravity reversed for one hour?' 'What if you could hear plants?' 10 questions.",
+    "example": "'What if everyone woke up tomorrow speaking a language they'd never learned?' — One question, a whole novel.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-094",
+    "description": "Write a paragraph where the rhythm mimics what's being described. If describing a train, use rhythmic, chugging sentences. If describing a lazy afternoon, use long, drifting ones. Match form to content. 100 words.",
+    "type": "learning",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Write a paragraph where the rhythm mimics what's being described.",
+    "context": "Prose rhythm is an advanced tool — the sentence structure mirrors the content. A train scene uses chugging rhythm. A lazy afternoon uses long, drifting sentences.",
+    "constraint_note": "If describing a train, use rhythmic, chugging sentences. If describing stillness, use long, slow ones. The form matches the content.",
+    "example": "'Click-clack. Click-clack. The train pushed forward, pushed forward, pushed forward through the dark.' — The rhythm IS the train.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-095",
+    "description": "Write a 100-word scene in a bookshop. A character picks up a book, reads one line, and puts it back. That one line changes something for them. What was the line? What shifted?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene in a bookshop. A character picks up a book, reads one line, and puts it back. That line changes something. 100 words.",
+    "context": "A single line from a book can land like a message meant for you. This trains you to write moments of unexpected impact — small triggers, big shifts.",
+    "constraint_note": "The one line they read should change something in them. 100 words.",
+    "example": "You don't need to write the line from the book — or you can. Either way, the character's reaction is the story.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-096",
+    "description": "Write about your relationship with writing itself. When did you start? Why do you do it? What scares you about it? 100 words. Be honest — this isn't for anyone else.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about your relationship with writing itself. 100 words.",
+    "context": "Meta-writing — writing about writing — is one of the most honest exercises you can do. It surfaces your fears, motivations, and assumptions about the craft.",
+    "constraint_note": "When did you start? Why do you do it? What scares you about it? Be honest — this isn't for anyone else.",
+    "example": "'I write because I can't think clearly without it. I'm scared that everything I write sounds like everything else.' — The most honest version is usually the best version.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-097",
+    "description": "Write a scene where a character apologizes. But the apology makes things worse, not better. 150 words. The best conflict in fiction comes from good intentions with bad execution.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene where a character apologizes, but the apology makes things worse. 150 words.",
+    "context": "The best conflict comes from good intentions with bad execution. A sincere apology that lands wrong is more dramatic than a fight — because both people are trying.",
+    "constraint_note": "The apology is genuine. It still makes things worse. 150 words.",
+    "example": "'I'm sorry I said that.' / 'Which part?' — The apology opens a door the apologizer didn't mean to open.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-098",
+    "description": "Write 6 two-word sentences in a row. Then one long sentence (30+ words). Then 6 more two-word sentences. Read it aloud. You just learned how to create emphasis through sentence length variation.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write 6 two-word sentences, then one long sentence (30+ words), then 6 more two-word sentences.",
+    "context": "You just learned a rhythm technique. Short-long-short creates a wave — tension, release, tension. Read it aloud to hear the effect.",
+    "constraint_note": "Exactly this pattern: 6 short (2 words each), 1 long (30+ words), 6 short. Read it aloud when done.",
+    "example": "'Rain fell. Wind rose. Trees bent. Dogs hid. Lights flickered. Power died. And in the sudden darkness the whole street went quiet, as if the city itself had taken a breath and was holding it. Cars stopped. Doors closed. Voices dropped. Children listened. Candles appeared. Night settled.'",
+    "tags": [
+      "micro_fiction"
+    ]
+  },
+  {
+    "id": "cw-099",
+    "description": "Describe the light in the room you're in right now. Not 'it's bright' or 'it's dim' — describe the quality of the light. Where does it fall? What does it miss? What color is it really? 80 words.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Describe the quality of light in the room you're in right now. 80 words.",
+    "context": "Light quality sets mood more than any other environmental detail. 'Bright' and 'dim' are useless — where the light comes from, what it hits, what it misses — that's writing.",
+    "constraint_note": "Not 'bright' or 'dim.' Where does the light come from? What does it hit? What's in shadow? 80 words.",
+    "example": "'The tube light buzzed and cast everything in flat white. No shadows. The room looked like a photocopy of itself.' — Light quality IS mood.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-100",
+    "description": "Write a 200-word scene where a character returns to a place they haven't been in years. Layer past and present: what they see now vs. what they remember. Let the two versions collide.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a scene of a character returning to a place they haven't been in years. 200 words.",
+    "context": "Return scenes layer past and present — what they see now vs what they remember. The gap between memory and reality is where the emotion lives.",
+    "constraint_note": "Layer past and present: what they see now and what they remember. 200 words.",
+    "example": "'The tree was smaller than she remembered. Or she was bigger.' — Memory distorts scale, and that distortion is the story.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-101",
+    "description": "Write a 100-word scene set on a train. The character is watching the landscape pass. Through what they notice outside, reveal what they're feeling inside. Landscape as emotional mirror.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene on a train. A character watches the landscape pass. 100 words.",
+    "context": "What a character notices through a train window reveals their inner state. Someone in love sees beauty; someone grieving sees emptiness. The landscape is a mirror.",
+    "constraint_note": "Through what they notice outside, reveal something about their inner state. 100 words.",
+    "example": "'Fields. A temple. More fields. A boy waving from a crossing. She didn't wave back.' — What they notice (and don't) is the character.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-102",
+    "description": "Write 5 sentences about your mother's (or father's) hands. Not their personality — their hands. Scars, rings, gestures, what they held. Hands tell a life story in miniature.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 5 sentences about your mother's (or father's) hands.",
+    "context": "Hands are the most character-revealing body part. Scars, rings, gestures, strength, gentleness — a person's hands tell their whole story.",
+    "constraint_note": "Not their personality — their hands. Scars, rings, gestures, what they do. 5 sentences.",
+    "example": "'Her right thumb had a callus from the pressure cooker handle. She cracked her knuckles when she was thinking.' — Hands are biography.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-103",
+    "description": "Write a scene where a character tells a joke. The joke isn't funny. What happens in the silence after? 100 words. Failed humor reveals character better than successful humor.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene where a character tells a joke that isn't funny. 100 words.",
+    "context": "Failed humor reveals character. The silence after a bad joke — and what the teller does in that silence — is one of the most human moments you can write.",
+    "constraint_note": "Focus on the silence after. What happens in the gap? 100 words.",
+    "example": "'Nobody laughed. He smiled anyway and looked at his plate.' — The recovery attempt is the character.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-104",
+    "description": "Write a 150-word scene using only present tense ('She walks. She opens. She sees.'). Present tense creates immediacy — the reader is there as it happens. Notice how it changes the energy.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a 150-word scene using only present tense.",
+    "context": "Present tense creates immediacy — the reader experiences events as they happen, with no safety of hindsight. It's more intense but harder to sustain.",
+    "constraint_note": "'She walks. She opens. She sees.' All present tense. 150 words.",
+    "example": "'He opens the drawer. Inside, a letter. He picks it up. His hands are steady.' — Present tense puts the reader in the room.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-105",
+    "description": "Write about a scar you have. How you got it, what it looks like now, what you think when you see it. 80 words. Scars are stories written on the body.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about a scar you have — how you got it, what it looks like now, what you think when you see it. 80 words.",
+    "context": "Scars are stories written on the body. This exercise connects physical detail to memory and meaning — the core skill of personal writing.",
+    "constraint_note": "80 words. Describe the scar physically first, then the story, then the present. Three layers in one short piece.",
+    "example": "'A thin white line across my left thumb from a kitchen knife at fourteen. I was trying to cut a mango the way my mother did.' — The physical detail anchors the memory.",
+    "tags": [
+      "memory"
+    ]
+  },
+  {
+    "id": "cw-106",
+    "description": "Write a scene where a character is trying to fall asleep but can't. 100 words. No dramatic reason — just the ordinary insomnia of a restless mind. What do they think about at 2 AM?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character trying to fall asleep. 100 words.",
+    "context": "Insomnia is universal and deeply interior. No dramatic reason needed — just the ordinary inability to stop thinking. The mundane version is more relatable than the dramatic one.",
+    "constraint_note": "No dramatic reason for the insomnia. Just the ordinary experience of a mind that won't quiet. 100 words.",
+    "example": "'She turned the pillow to the cool side. Counted backwards from 100. Got to 73 and started thinking about the email again.' — Everyone has been here.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-107",
+    "description": "Write a 150-word scene that begins mid-action. No setup, no context. Drop the reader into the middle of something happening. They'll catch up. This is called 'in medias res' — the strongest way to open.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a 150-word scene that begins mid-action. No setup, no context.",
+    "context": "In medias res — starting in the middle — drops the reader into a moving story. They catch up by reading forward, not by being told. It's the most engaging way to open.",
+    "constraint_note": "No setup. No context. Drop the reader into the middle of something happening. 150 words.",
+    "example": "'She was already running when the rain started.' — The reader doesn't know why she's running. They read on to find out.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-108",
+    "description": "Write 8 things a character might carry in their wallet or bag. Not generic items — specific ones that reveal who this person is. A expired gym membership. A photo with someone's face scratched out. A bus ticket from 2019.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Write 8 things a character might carry in their wallet or bag. Make each item reveal something about them.",
+    "context": "Specific objects build character faster than description. A wallet's contents are a portrait — what someone carries tells you who they are.",
+    "constraint_note": "Not generic items. Specific ones that reveal personality, history, or secrets. 8 items.",
+    "example": "'A library card from a city she no longer lives in. A receipt from a restaurant she went to alone.' — Each item is a story.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-109",
+    "description": "Write a scene where a character says 'I'm fine' and means the opposite. 100 words. The gap between what people say and what they mean is where all interesting fiction lives.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a scene where a character says 'I'm fine' and means the opposite. 100 words.",
+    "context": "The gap between what people say and what they mean is where all interesting fiction lives. This trains you to write subtext — the most important dialogue skill.",
+    "constraint_note": "100 words. The reader must understand the character is not fine. Show it through everything except the words.",
+    "example": "'I'm fine,' she said, reorganizing the already-organized shelf. — The action contradicts the words.",
+    "tags": [
+      "subtext"
+    ]
+  },
+  {
+    "id": "cw-110",
+    "description": "Write a 100-word scene set during a power cut. No electricity, no screens. What do the characters do? What sounds emerge when the hum of electronics stops? What becomes visible in candlelight?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene during a power cut. No electricity, no screens. 100 words.",
+    "context": "Power cuts strip away the modern world and return you to basic senses — candlelight, silence, heat, the sounds a house makes when the hum stops.",
+    "constraint_note": "What do the characters do? What sounds emerge? What does the darkness feel like? 100 words.",
+    "example": "'The fan slowed and stopped. The silence was sudden and total. Then the insects started.' — A power cut reveals what electricity was hiding.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-111",
+    "description": "Write a paragraph about jealousy without using the word 'jealousy' or any synonym. Show it through a character's actions at a party where their ex has arrived with someone new. 100 words.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a paragraph about jealousy without using the word or any synonym. Show it through action.",
+    "context": "Naming an emotion kills it on the page. Showing it through behavior — what a character does, watches, avoids — makes the reader feel it instead of being told.",
+    "constraint_note": "No jealousy words. Show it through a character's actions, attention, or body language.",
+    "example": "'She scrolled past the photo three times, then went back to it. Zoomed in on the background.' — The behavior IS the jealousy.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-112",
+    "description": "Write a 4-line poem about tea or coffee. Line 1: the ritual of making it. Line 2: the first sip. Line 3: what you think about while drinking it. Line 4: the empty cup.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "imagery",
+    "action": "Write a 4-line poem about tea or coffee.",
+    "context": "Small rituals are rich material. A cup of tea contains a whole world — the making, the tasting, the thinking, the ending. This trains you to find depth in the everyday.",
+    "constraint_note": "Line 1: the ritual of making it. Line 2: the first sip. Line 3: what you think about while drinking. Line 4: the empty cup.",
+    "example": "'The kettle screams and I pour slow. / The first sip burns the tip of my tongue. / I think about the email I haven't sent. / The cup cools before I finish.' — Each line is a micro-moment.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-113",
+    "description": "Write a scene where a character cleans out a dead relative's closet. 150 words. Each item they touch should trigger a flash of memory — but keep each memory to one sentence. Accumulation creates emotion.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Write a scene of a character cleaning out a dead relative's closet. 150 words.",
+    "context": "Objects left behind carry the weight of a person's life. Each item touched is a memory surfaced. This is one of the most emotionally rich scenarios in personal writing.",
+    "constraint_note": "Each item they touch should trigger a brief memory or feeling. 150 words.",
+    "example": "'A shirt she'd never seen him wear. A receipt from a restaurant she didn't recognize.' — Unknown objects are more haunting than familiar ones.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-114",
+    "description": "Write 10 verbs that describe how different people walk: a soldier, a toddler, a bride, a thief, a drunk, a dancer, a doctor in a hurry, an old man, a teenager, a monk. One verb each. Precision in verbs is the fastest way to improve your prose.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 10 verbs that describe how different people walk.",
+    "context": "Movement verbs are character shortcuts. 'Strode' and 'shuffled' create two completely different people in one word. This builds your verb vocabulary.",
+    "constraint_note": "A soldier, a toddler, a bride, a thief, a drunk, a dancer, a doctor, a student, an old man, a teenager. One verb each.",
+    "example": "'The soldier marched. The toddler tottered. The thief slipped.' — One verb per person, and they're alive.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-115",
+    "description": "Write a scene where two strangers share an umbrella in the rain. 150 words. No romance — just the awkwardness and small kindness of proximity between people who don't know each other.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene of two strangers sharing an umbrella in the rain. 150 words.",
+    "context": "Forced proximity between strangers creates natural tension. The umbrella is a tiny shared space — the awkwardness of bodies too close, the negotiation of pace.",
+    "constraint_note": "No romance. Just the awkwardness and small kindness of sharing space with a stranger. 150 words.",
+    "example": "'He tilted it toward her without asking. She walked faster to match his stride. Neither spoke.' — Kindness without words.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-116",
+    "description": "Write about a sound that makes you feel safe. Not why it makes you feel safe — just the sound itself, described in enough detail that a reader could almost hear it. 60 words.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about a sound that makes you feel safe. 60 words.",
+    "context": "Sound is the most emotionally direct sense — it bypasses analysis and goes straight to feeling. Writing about a safe sound trains you to access emotion through sensory specificity.",
+    "constraint_note": "60 words. Describe the sound itself in enough detail that a reader could almost hear it. Don't explain why it's safe — let the description do the work.",
+    "example": "'The low hum of the fridge at 2 AM, the house asleep around it.' — The reader feels the safety without being told.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-117",
+    "description": "Write a 100-word scene where a character is underwater. Describe the distortion: muffled sounds, blurred vision, pressure, the strange slowness. Unusual physical states force unusual language — that's the exercise.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene of a character underwater. 100 words.",
+    "context": "Underwater distorts everything — sound is muffled, vision blurs, time slows. It's one of the most sensory-rich environments you can write.",
+    "constraint_note": "Describe the distortion: muffled sounds, blurred vision, the pressure, the silence. 100 words.",
+    "example": "'Everything went blue and quiet. Her own heartbeat was the loudest sound.' — Underwater strips the world to essentials.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-118",
+    "description": "Write a scene where a character gives a gift. The gift is wrong — not what the other person wanted. 100 words. The wrong gift reveals more about a relationship than the right one.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene where a character gives a wrong gift. 100 words.",
+    "context": "The wrong gift reveals a gap between how someone sees you and who you actually are. It's a small betrayal of understanding — and rich dramatic material.",
+    "constraint_note": "The gift is wrong — not what the other person wanted. Show the moment of receiving. 100 words.",
+    "example": "'She unwrapped it slowly. A cookbook. She hadn't cooked in three years. She said thank you.' — The wrong gift says more than the right one.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-119",
+    "description": "Write a 150-word scene that takes place entirely in a moving car. Two people. One is driving, one is a passenger. The power dynamic of driver vs. passenger shapes every conversation. Use it.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene in a moving car. Two people — driver and passenger. 150 words.",
+    "context": "Cars create forced intimacy. The driver has power (controls the space), the passenger is captive. Eye contact is optional. This shapes every conversation that happens inside.",
+    "constraint_note": "Use the driver/passenger dynamic. 150 words.",
+    "example": "'He kept his eyes on the road. She watched the buildings pass. Neither reached for the radio.' — The car is a pressure cooker.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-120",
+    "description": "Write about the last dream you remember. Not interpreted — just described. Dreams have their own logic: impossible transitions, emotional non-sequiturs, familiar places that look wrong. Capture that strangeness. 100 words.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write about the last dream you remember. Not interpreted — just described.",
+    "context": "Dreams have their own logic: impossible transitions, familiar strangers, emotions without cause. Describing a dream without interpreting it trains you to write surreal scenes.",
+    "constraint_note": "Just describe what happened. Don't interpret or analyze. Let the dream logic stand on its own. 100 words.",
+    "example": "'I was in my school but it was also a hospital. My mother was there but she was younger than me.' — Dream logic needs no explanation.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-121",
+    "description": "Write a scene where a character is eating alone in a restaurant. 100 words. Make the reader feel either the peace of solitude or the sting of loneliness — your choice — without ever naming either.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character eating alone in a restaurant. 100 words.",
+    "context": "Eating alone can be peaceful or lonely — same action, different framing. Your job is to make the reader feel one or the other without stating it.",
+    "constraint_note": "Make the reader feel either the peace of solitude or the ache of loneliness. Don't state which. 100 words.",
+    "example": "Peace: 'She ordered without looking at the menu and opened her book.' Loneliness: 'She ordered without looking at the menu and checked her phone.'",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-122",
+    "description": "Write 5 different ways to describe a character crying. No tears, no sobbing — find 5 other physical manifestations. A jaw tightening. Breathing through the mouth. Blinking too fast. Push past the cliché.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Write 5 different ways to describe a character crying — without tears or sobbing.",
+    "context": "Crying is one of the most over-described emotions in fiction. Finding other physical manifestations — jaw tightening, breathing changing, hands gripping — makes it feel real instead of performed.",
+    "constraint_note": "No tears, no sobbing. Find 5 other physical manifestations of crying.",
+    "example": "'Her jaw locked. She pressed her thumbnail into her palm until it left a mark.' — The body finds other ways to express what the eyes won't.",
+    "tags": [
+      "rewriting"
+    ]
+  },
+  {
+    "id": "cw-123",
+    "description": "Write a 100-word scene set in a queue. Any queue — grocery store, temple, ticket counter. Capture the specific boredom and micro-dramas of waiting in line with strangers.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write a scene set in a queue. 100 words.",
+    "context": "Queues are micro-societies. The specific boredom, the small observations, the unspoken rules — there's a whole world in waiting.",
+    "constraint_note": "Any queue — grocery, temple, ticket counter. Capture the specific boredom and the small human details. 100 words.",
+    "example": "'The man ahead counted his coins twice. The woman behind sighed at exactly the right volume to be heard.' — Queues reveal people.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-124",
+    "description": "Write a scene where a character lies to protect someone. 150 words. The lie should be small but the stakes should feel large. Good fiction finds the weight in small moments.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a scene where a character lies to protect someone. 150 words.",
+    "context": "Protective lies are morally complex — the liar is doing something wrong for a right reason. This ambiguity is the engine of compelling fiction.",
+    "constraint_note": "The lie should be small but the stakes should feel large. 150 words.",
+    "example": "'It wasn't that bad,' she said, putting the report card in her bag before he could see it. — Small lie, big love.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-125",
+    "description": "Write a paragraph that is one single sentence. 80+ words, grammatically correct, flowing from clause to clause. This builds your ability to sustain rhythm and control complex syntax. Read it aloud to check the flow.",
+    "type": "learning",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a paragraph that is one single sentence. 80+ words, grammatically correct.",
+    "context": "The long sentence builds a wave — clause flowing into clause, carrying the reader forward without a place to stop. It's a rhythm tool for building momentum or breathlessness.",
+    "constraint_note": "One sentence, 80+ words, grammatically correct. Flow from clause to clause.",
+    "example": "Think of it as a river — each clause feeds into the next, and the reader can't stop until the period arrives.",
+    "tags": [
+      "micro_fiction"
+    ]
+  },
+  {
+    "id": "cw-126",
+    "description": "Write a scene set at a wedding where one guest is deeply unhappy. 150 words. Everyone else is celebrating. Show the contrast through what this character notices that no one else does.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a wedding scene where one guest is deeply unhappy. 150 words.",
+    "context": "Contrast is one of fiction's most powerful tools. Joy surrounding sadness — or sadness inside joy — amplifies both. The celebration makes the unhappiness sharper.",
+    "constraint_note": "Everyone else is celebrating. Show the contrast between the event and the one person's inner state. 150 words.",
+    "example": "'She clapped when everyone clapped. She smiled when the camera turned.' — Performing happiness at a celebration is its own kind of loneliness.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-127",
+    "description": "Write 6 sentences about a city you've visited. Each sentence must use a different verb of movement: 'The traffic crawled. The pigeons scattered. The crowd surged.' Verbs of movement bring places alive.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "imagery",
+    "action": "Write 6 sentences about a city you've visited. Each sentence must use a different verb of movement.",
+    "context": "Verbs of movement bring places alive. 'The traffic crawled' is more vivid than 'there was traffic.' This trains you to reach for specific, kinetic verbs instead of static description.",
+    "constraint_note": "6 sentences, 6 different movement verbs. Think: crawled, scattered, surged, drifted, stumbled, rushed.",
+    "example": "'The autorickshaws weaved through gaps that didn't exist. The chai wallah's hand darted between glasses.' — Movement verbs make the reader feel present.",
+    "tags": [
+      "metaphor"
+    ]
+  },
+  {
+    "id": "cw-128",
+    "description": "Write a 100-word scene where a character is hiding. Where are they? What can they hear? What are they afraid of? The reader should feel the confinement and the fear of being found.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character hiding. 100 words.",
+    "context": "Hiding activates all the senses — hearing sharpens, breathing becomes conscious, every sound is a threat. It's one of the most physically immersive scenarios you can write.",
+    "constraint_note": "Where are they? What can they hear? What are they afraid of? 100 words.",
+    "example": "'She pressed her back against the wall and held her breath. Footsteps. Then nothing. Then footsteps again.' — Hiding is pure sensory writing.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-129",
+    "description": "Think of a teacher who affected you. Write 80 words about one specific moment with them — not a summary of their impact, but one scene. What did they say? Where were you standing?",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about one specific moment with a teacher who affected you. 80 words.",
+    "context": "One scene is more powerful than a summary. 'She changed my life' means nothing. 'She handed back my essay with one sentence circled and said, this is the real you' — that means everything.",
+    "constraint_note": "Not a summary of their impact — one scene. What did they say? Where were you standing? What did the room look like?",
+    "example": "'He stopped mid-lecture, looked at me, and said: read that last line again, but slower. The room went quiet.' — One moment, fully rendered.",
+    "tags": [
+      "memory"
+    ]
+  },
+  {
+    "id": "cw-130",
+    "description": "Write a 100-word scene where two characters are assembling furniture together. Through how they collaborate (or don't), reveal whether their relationship is strong or falling apart. No dialogue about the relationship itself.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a scene of two characters assembling furniture together. 100 words.",
+    "context": "Collaborative tasks reveal relationships. How people work together — patient or impatient, leading or following — shows more than any conversation about the relationship.",
+    "constraint_note": "Through how they collaborate (or don't), reveal whether the relationship is strong or falling apart. No dialogue about the relationship itself.",
+    "example": "'She held the shelf while he searched for the right screw. He handed her the wrong one. She didn't correct him.' — The small failures tell the story.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-131",
+    "description": "Write 10 sentences that each contain a color, but the color is doing unexpected work: 'a grey kind of Tuesday,' 'her voice went white,' 'the argument turned a deep orange.' Colors as emotional shorthand.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write 10 sentences where a color does unexpected emotional work.",
+    "context": "Colors as emotional shorthand — 'a grey kind of Tuesday,' 'her voice went white' — expand your descriptive palette beyond the literal.",
+    "constraint_note": "Each sentence must use a color, but not to describe a visual. Use color as mood, sound, feeling, or atmosphere.",
+    "example": "'The argument turned a deep orange.' / 'It was a beige kind of sadness — not dramatic, just flat.' — Color becomes emotion.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-132",
+    "description": "Write a scene where a character is lost — physically lost in an unfamiliar place. 100 words. Focus on the sensory disorientation: nothing looks familiar, signs are unreadable, distances feel wrong.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene of a character physically lost in an unfamiliar place. 100 words.",
+    "context": "Being lost activates every sense — you notice everything because nothing is familiar. The sensory hyperawareness of lostness is rich writing material.",
+    "constraint_note": "Focus on the sensory experience of not knowing where you are. 100 words.",
+    "example": "'Every street looked the same. The signs were in a script she couldn't read. She turned left because left felt right.' — Lost is a sensory state.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-133",
+    "description": "Write a 150-word scene that ends with a single-word sentence. Build toward it. That final word should land like a punch. This teaches you the power of ending on impact.",
+    "type": "learning",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a 150-word scene that ends with a single-word sentence.",
+    "context": "A single-word ending lands like a punch — but only if you build toward it. The preceding sentences should create momentum that the final word stops dead.",
+    "constraint_note": "Build toward the final word. It should feel both surprising and inevitable. 150 words.",
+    "example": "'She packed her bags. She called a cab. She looked at the apartment one last time. She left the key on the table. Gone.' — The single word carries the weight of everything before it.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-134",
+    "description": "Describe the oldest person you know. Not their age — their oldness. The way they move, pause, remember. The texture of their skin, the pace of their speech. 100 words of pure observation.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Describe the oldest person you know. Not their age — their oldness. 80 words.",
+    "context": "Age is not a number — it's a way of moving, pausing, remembering. The texture of oldness is in the body, the pace, the hands.",
+    "constraint_note": "The way they move, pause, remember. The texture of age. 80 words.",
+    "example": "'She lowered herself into the chair in stages, as if negotiating with her knees.' — Oldness is physical, not numerical.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-135",
+    "description": "Write a scene where a character is swimming. 100 words. Capture the physical experience: the resistance of water, the rhythm of breathing, the muffled world below the surface. Physical writing is underrated.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character swimming. 100 words.",
+    "context": "Swimming is one of the most physical experiences you can write — resistance, rhythm, breath, temperature. It forces you into the body.",
+    "constraint_note": "Capture the physical experience: resistance of water, rhythm of strokes, breathing. 100 words.",
+    "example": "'She pushed off the wall and the water closed over her. For three strokes, no sound.' — Swimming is sensory immersion.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-136",
+    "description": "Write a 4-line poem where each line is a lie. The poem should still feel emotionally true. This is the paradox of fiction: invented facts can carry real feeling.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write a 4-line poem where every line is a lie.",
+    "context": "The paradox of fiction: invented facts can carry real feeling. A poem of lies that feels emotionally true reveals something about how truth works in writing — it's not about accuracy, it's about resonance.",
+    "constraint_note": "Every line must be factually untrue. But the poem as a whole should feel emotionally honest.",
+    "example": "'I never think about you. / The house was always this quiet. / I chose this. / I'm fine.' — Every line is a lie, but the poem tells the truth.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-137",
+    "description": "Write about an act of kindness you witnessed between strangers. 80 words. Don't editorialize — just describe what happened. Let the reader feel it without being told how to feel.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about an act of kindness you witnessed between strangers. 80 words.",
+    "context": "Observed kindness is powerful writing material because it's unperformed — people being good when they don't know they're being watched. This trains you to notice and record without editorializing.",
+    "constraint_note": "Just describe what happened. No commentary, no 'it restored my faith in humanity.' Let the reader feel it without being told how to feel.",
+    "example": "'The man in front of me at the counter turned around and paid for the woman behind him. She started to protest. He shook his head and left.' — Show, don't tell.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-138",
+    "description": "Write a scene where a character is packing lunch for someone else. 100 words. Through what they pack and how they pack it, reveal how they feel about the person. No thoughts, no dialogue.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a scene of a character packing lunch for someone else. 100 words.",
+    "context": "Care is best shown through small, specific actions. What someone packs and how they pack it reveals love, resentment, obligation, or indifference — without a word spoken.",
+    "constraint_note": "Through what they pack and how they pack it, reveal how they feel about the person. No thoughts, no dialogue.",
+    "example": "'She cut the crusts off, then stopped. He was thirty-four. She left them on.' — One gesture, a whole relationship.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-139",
+    "description": "Write 5 opening lines that each start with a number. 'Three things I know about my sister.' 'It took eleven minutes.' 'There were forty-two steps to the roof.' Numbers create instant specificity and intrigue.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write 5 opening lines that each start with a number.",
+    "context": "Numbers in opening lines create instant specificity. They promise precision and make the reader trust the narrator — someone who counts is someone who pays attention.",
+    "constraint_note": "Each line starts with a number. Each should feel like the opening of a different story.",
+    "example": "'Three things I know about my sister.' / 'It took eleven minutes.' / 'There were forty-two steps to the roof.' — Numbers ground fiction in reality.",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-140",
+    "description": "Write a 150-word scene set in a library. But something is wrong — the library is too quiet, or a book is missing, or someone is watching. Build unease without anything overtly threatening happening.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a scene set in a library where something is wrong. 150 words.",
+    "context": "Disrupting a familiar, safe space creates unease. A library that's too quiet, a missing book, a stranger — the wrongness is amplified by the setting's expected calm.",
+    "constraint_note": "Something is off — too quiet, a book missing, someone who shouldn't be there. 150 words.",
+    "example": "'Every shelf was full except one. A single gap, eye-level, where something had been removed recently.' — Small wrongness in a calm space is more unsettling than chaos.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-141",
+    "description": "Write about the gap between who you are at home and who you are in public. Not an essay — a scene. Show both versions through action. 100 words.",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write about the gap between who you are at home and who you are in public. Show both versions through action. 100 words.",
+    "context": "Everyone performs a version of themselves in public. The gap between the performed self and the private self is one of the richest territories in personal writing.",
+    "constraint_note": "Not an essay — a scene. Show both versions through what you do, not what you think. 100 words.",
+    "example": "'In the meeting I nodded and said, great idea. At home I stood in the kitchen eating cold rice from the pot with my hands.' — The contrast does the work.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-142",
+    "description": "Write a scene where a character is bargaining at a street market. 100 words. The negotiation should reveal something about both the buyer and the seller beyond the transaction.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene of a character bargaining at a street market. 100 words.",
+    "context": "Negotiation reveals character. How someone bargains — aggressive, apologetic, playful — tells you about their relationship with money, power, and other people.",
+    "constraint_note": "The negotiation should reveal something about the character beyond the transaction. 100 words.",
+    "example": "'He named a price he knew was too low. The seller didn't blink. He raised it before she had to.' — The bargaining style IS the character.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-143",
+    "description": "Write 3 different descriptions of the moon. One romantic, one scientific, one menacing. Same moon — three completely different moods. This is tone control, the most underrated writing skill.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "voice",
+    "action": "Write 3 different descriptions of the moon: romantic, scientific, and menacing.",
+    "context": "Same object, three tones. This trains you to control register deliberately — the moon doesn't change, your lens does. Tone is a choice, not an accident.",
+    "constraint_note": "Same moon, three completely different emotional registers. Each should feel like a different genre.",
+    "example": "Romantic: 'The moon hung low, close enough to touch.' Scientific: 'A waning gibbous, 94% illuminated.' Menacing: 'The moon watched from behind the clouds.'",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-144",
+    "description": "Write a 100-word scene where a character is watching someone sleep. Not creepy — tender. A parent watching a child, a lover watching a partner. What do people look like when they're unguarded?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character watching someone sleep. Tender, not creepy. 100 words.",
+    "context": "Watching someone sleep is an act of unguarded attention. A parent watching a child, a lover watching a partner — the vulnerability of the sleeper and the tenderness of the watcher.",
+    "constraint_note": "A parent and child, or a couple. Tender. 100 words.",
+    "example": "'She counted his breaths without meaning to. His hand was curled around the edge of the blanket.' — Tenderness is in the small observations.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-145",
+    "description": "Write a scene where a character accidentally breaks something that belongs to someone else. 100 words. The object matters less than the moment of breakage and the decision that follows: confess or hide it?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene where a character accidentally breaks something that belongs to someone else. 100 words.",
+    "context": "The moment of breaking — and the instant after — reveals character. Do they confess? Hide it? The object matters because it belongs to someone else.",
+    "constraint_note": "The object matters. The reaction matters more. 100 words.",
+    "example": "'The handle came off in her hand. She stood there holding it, listening for footsteps.' — The pause after breaking is the story.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-146",
+    "description": "Write a 150-word scene set at a funeral. But focus on one small, inappropriate detail: someone's phone ringing, a child laughing, an ugly tie. The small wrong thing at a funeral says more than grief described directly.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a funeral scene focused on one small, inappropriate detail. 150 words.",
+    "context": "The small wrong thing at a funeral — a phone ringing, a child laughing — says more than grief described directly. Disruption reveals what formality tries to contain.",
+    "constraint_note": "Focus on the inappropriate detail, not the grief. A phone ringing, an ugly tie, someone laughing. 150 words.",
+    "example": "'Halfway through the eulogy, a phone rang. Everyone knew whose it was. No one looked.' — The disruption IS the emotion.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-147",
+    "description": "Write 5 sentences where each one zooms in closer, like a camera. Start wide (the city), then the street, then the building, then the room, then a hand holding a pen. This is cinematic writing.",
+    "type": "learning",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "imagery",
+    "action": "Write 5 sentences that zoom in like a camera — from wide shot to extreme close-up.",
+    "context": "Cinematic writing controls the reader's attention by narrowing focus. Wide → close is one of the most effective ways to draw a reader into a scene.",
+    "constraint_note": "Start wide (city), then street, then building, then room, then a specific detail (a hand holding a pen). Each sentence tightens the frame.",
+    "example": "'The city hummed under grey clouds. On Residency Road, a bus lurched to a stop. Behind a second-floor window, a desk lamp flickered. A notebook lay open. A hand paused mid-sentence.' — Each sentence zooms in.",
+    "tags": [
+      "metaphor"
+    ]
+  },
+  {
+    "id": "cw-148",
+    "description": "Write a scene where a character is dancing alone in their room. 100 words. What song? How do they move? What do they look like when no one is watching? Solitary joy is hard to write well.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character dancing alone in their room. 100 words.",
+    "context": "Dancing alone is one of the most private, joyful, unperformed things a person can do. It's a character at their most authentic.",
+    "constraint_note": "What song? How do they move? What do they look like when no one's watching? 100 words.",
+    "example": "'She turned the volume up and closed her eyes. Her movements were nothing like dancing and entirely like dancing.' — Private joy is hard to write and worth the effort.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-149",
+    "description": "Write about a word you love. Not its meaning — its sound, shape, the way your mouth moves when you say it. 60 words. Writers should have a physical relationship with language.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about a word you love — not its meaning, but its sound and shape. 60 words.",
+    "context": "Writers should have a physical relationship with language. Words are not just meaning-carriers — they have texture, rhythm, and mouth-feel. This trains you to notice the material quality of language.",
+    "constraint_note": "60 words. Focus on: how your mouth moves when you say it, what it sounds like, what it looks like on the page.",
+    "example": "'Murmur. The lips close twice. It sounds like what it means — a low, private sound that doesn't want to be heard.' — The word becomes a sensory experience.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-150",
+    "description": "Write a 200-word scene where nothing happens. A character sits on a bench. People pass. The light changes. Make the reader want to keep reading anyway. If you can make stillness compelling, you can write anything.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Write a 200-word scene where nothing happens. A character sits on a bench. People pass. The light changes.",
+    "context": "Making nothing feel like something is one of the hardest skills in writing. If the reader keeps reading when nothing is happening, your prose has earned their attention.",
+    "constraint_note": "No events, no conflict, no dialogue. Just a person, a bench, and time passing. 200 words. Make the reader stay.",
+    "example": "'A pigeon landed near his foot, considered him, and left.' — When nothing happens, every small detail becomes significant.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-151",
+    "description": "Write a scene where a character receives a compliment they don't believe. 100 words. How do they deflect? What does their body do? Discomfort with praise reveals deep character.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a scene where a character receives a compliment they don't believe. 100 words.",
+    "context": "Discomfort with praise reveals deep character. How someone deflects — humor, dismissal, subject change — tells you what they believe about themselves.",
+    "constraint_note": "Show the deflection. What does their body do? How do they redirect? 100 words.",
+    "example": "'You're really talented.' She laughed and looked at her hands. 'I just got lucky with the prompt.' — The deflection is the character.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-152",
+    "description": "Write 8 lines that each start with 'Before I knew...' Each line should reveal something the speaker has since learned. The accumulation builds a portrait of experience. This is a list poem structure.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "imagery",
+    "action": "Write 8 lines that each start with 'Before I knew...'",
+    "context": "This is a list poem structure that builds a portrait of experience through accumulation. Each line reveals something learned — the repetition creates rhythm and the content creates depth.",
+    "constraint_note": "Each line should reveal something the speaker has since learned. The accumulation should build a portrait of who they've become.",
+    "example": "'Before I knew that silence could be a choice. / Before I knew that some doors close quietly.' — Each line implies a story without telling it.",
+    "tags": [
+      "poetry"
+    ]
+  },
+  {
+    "id": "cw-153",
+    "description": "Write a scene set in heavy fog. 100 words. Fog removes the visual — you're forced to write with sound, touch, and spatial disorientation. What does a familiar place feel like when you can't see it?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene set in heavy fog. 100 words.",
+    "context": "Fog removes the visual and forces you into sound, touch, and spatial disorientation. It's a natural constraint that produces atmospheric writing.",
+    "constraint_note": "No clear visuals. Write with sound, touch, and the feeling of not being able to see. 100 words.",
+    "example": "'The road disappeared three meters ahead. A horn sounded from somewhere she couldn't place.' — Fog makes the familiar alien.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-154",
+    "description": "Write a 100-word scene where a character is eavesdropping. What do they hear? Do they wish they hadn't? Eavesdropping is a natural story engine — overheard information creates instant conflict.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a scene of a character eavesdropping. 100 words.",
+    "context": "Overheard information creates instant conflict. Eavesdropping is a natural story engine — the character learns something they can't un-hear.",
+    "constraint_note": "What do they hear? Do they wish they hadn't? 100 words.",
+    "example": "'She wasn't trying to listen. But the wall was thin and her name came through clearly.' — Accidental eavesdropping is more dramatic than intentional.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-155",
+    "description": "Write about the first time you remember being aware of money — having it, not having it, wanting something you couldn't afford. One specific scene. 100 words.",
+    "type": "reflection",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "reflection",
+    "action": "Write about the first time you remember being aware of money. One specific scene. 100 words.",
+    "context": "Money memories are deeply personal and culturally specific. The first awareness of having or not having is a formative moment that most people have never written about. It's rich, untapped material.",
+    "constraint_note": "One scene, not a summary. Having it, not having it, wanting something you couldn't afford. 100 words.",
+    "example": "'I was eight, standing outside a bookshop, counting coins in my palm. The book was forty rupees. I had thirty-two.' — Specific numbers make money memories real.",
+    "tags": [
+      "memory"
+    ]
+  },
+  {
+    "id": "cw-156",
+    "description": "Write a scene where a character is trying to keep a secret during a conversation. 150 words. The reader knows the secret. The other character doesn't. This dramatic irony creates tension on every line.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene where a character hides a secret during a conversation. 150 words.",
+    "context": "Dramatic irony — the reader knows what the character is hiding. Every innocent question from the other person becomes loaded. This creates tension on every line.",
+    "constraint_note": "The reader knows the secret. The other character doesn't. 150 words.",
+    "example": "'How was your day?' becomes terrifying when the reader knows what the character did that afternoon.",
+    "tags": [
+      "subtext"
+    ]
+  },
+  {
+    "id": "cw-157",
+    "description": "Write 5 sentences about fire. Each sentence should use fire differently: as destruction, as warmth, as light, as memory, as metaphor. One element, five meanings.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "imagery",
+    "action": "Write 5 sentences about fire, each using it differently.",
+    "context": "One element, five meanings — this trains you to see how a single image can carry completely different emotional weight depending on context. It's the foundation of symbolic writing.",
+    "constraint_note": "Use fire as: destruction, warmth, light, memory, and metaphor. One sentence per meaning.",
+    "example": "Destruction: 'The fire ate through the curtains in seconds.' Memory: 'I can still smell the bonfire from that November.' — Same word, different worlds.",
+    "tags": [
+      "metaphor"
+    ]
+  },
+  {
+    "id": "cw-158",
+    "description": "Write a scene where a character is looking at themselves in a mirror. 100 words. The trap: don't use it to describe their appearance. Use it to show how they feel about themselves.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write a scene of a character looking in a mirror. 100 words.",
+    "context": "The mirror scene is a trap in fiction — writers use it to describe appearance. The real opportunity is to show what the character thinks about themselves.",
+    "constraint_note": "Don't use it to describe their appearance. Use it to reveal their relationship with themselves. 100 words.",
+    "example": "'She looked at her reflection and looked away. Looked back. Adjusted nothing.' — The mirror reveals self-perception, not appearance.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-159",
+    "description": "Write a 100-word scene set at a chai stall. Capture the specific atmosphere: the hiss of the stove, the clatter of glass cups, the conversations overlapping. Make a reader who's never been to India smell the cardamom.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene at a chai stall. 100 words.",
+    "context": "Chai stalls are sensory-rich, culturally specific settings. The hiss of the stove, the clatter of glass cups, the conversations — it's a world in a few square meters.",
+    "constraint_note": "Capture the specific atmosphere: sounds, smells, the rhythm of the place. 100 words.",
+    "example": "'The stove hissed. He poured from a height, the tea arcing brown and steaming into the glass. Two rupees. No change.' — Specificity makes it real.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-160",
+    "description": "Write a scene where a character deletes a message before sending it. 80 words. What did the message say? Why didn't they send it? The unsent message is more interesting than the sent one.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write a scene of a character deleting a message before sending it. 80 words.",
+    "context": "The unsent message is a window into what someone wants to say but won't. The gap between the typed words and the silence that replaces them is pure character.",
+    "constraint_note": "What did the message say? Why didn't they send it? 80 words.",
+    "example": "'She typed: I miss you. Stared at it. Deleted it letter by letter.' — Deleting letter by letter is different from hitting backspace once.",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-161",
+    "description": "Write a 150-word scene where a parent and adult child have a conversation where both are being careful. Neither says what they really mean. The politeness is the conflict.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write a scene between a parent and adult child where both are being careful. 150 words.",
+    "context": "Politeness as conflict. When family members are too careful with each other, the courtesy itself becomes the problem — it signals distance where closeness should be.",
+    "constraint_note": "Neither says what they really mean. The politeness IS the conflict. 150 words.",
+    "example": "'Would you like more rice?' / 'I'm okay, thanks.' / 'You're sure?' / 'I'm sure.' — Every exchange is a negotiation disguised as manners.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-162",
+    "description": "Write 10 nouns that are specific to your life — not 'car' but 'the dented Maruti with the broken AC.' Not 'house' but 'the second-floor flat with the blue gate.' Specificity is your signature.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "observation",
+    "action": "Write 10 nouns that are specific to YOUR life.",
+    "context": "Generic nouns ('car,' 'house') are invisible on the page. Specific nouns ('the dented Maruti with the broken AC') are alive. This stocks your personal inventory.",
+    "constraint_note": "Not 'car' but 'the dented Maruti with the broken AC.' Not 'house' but 'the second-floor flat with the leaking balcony.' 10 nouns.",
+    "example": "'The steel tiffin with the dent on the lid. The Bata slippers that everyone in the house wore.' — Your nouns are your world.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-163",
+    "description": "Write a scene where a character is running late. 100 words. Capture the specific panic: the wrong keys, the missed auto, the phone at 2%. Urgency in writing comes from concrete obstacles, not abstract stress.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write a scene of a character running late. 100 words.",
+    "context": "Running late is controlled chaos — the wrong keys, the missed auto, the phone at 2%. The specific details of someone's lateness reveal their life.",
+    "constraint_note": "Capture the specific panic. The details should be particular to this character's life. 100 words.",
+    "example": "'She grabbed the wrong keys, realized at the door, went back, couldn't find the right ones.' — Lateness is a cascade of small failures.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-164",
+    "description": "Write a 100-word scene where two characters are watching the same sunset but seeing completely different things. Same sky, two inner worlds. This is point of view in its purest form.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene of two characters watching the same sunset but seeing completely different things. 100 words.",
+    "context": "Point of view in its purest form — same stimulus, different inner worlds. What a character notices reveals who they are.",
+    "constraint_note": "Same sky, two perspectives. 100 words. The difference should reveal something about each character.",
+    "example": "One sees beauty and feels peace. The other sees the day ending and feels dread. Same sunset — the difference is the character.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-165",
+    "description": "Write about a habit you have that no one else knows about. Not a secret — just something private. The small rituals people perform when alone are the most honest material for writing. 80 words.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about a private habit — something you do when no one's watching. 80 words.",
+    "context": "The small rituals people perform when alone are the most honest material for writing. They reveal character without performance. This is what makes fictional characters feel real too.",
+    "constraint_note": "Not a secret — just something private. A habit, a ritual, a small thing you do. 80 words.",
+    "example": "'I talk to the plants when I water them. Not words exactly — just a low sound, like I'm letting them know I'm here.' — Private habits are character in its purest form.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-166",
+    "description": "Write a scene where a character is teaching someone something. 150 words. The way a person teaches — patient or impatient, detailed or vague — reveals everything about them.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "voice",
+    "action": "Write a scene of a character teaching someone something. 150 words.",
+    "context": "How a person teaches — patient or impatient, detailed or vague — reveals their character more than what they teach. Teaching is a power dynamic.",
+    "constraint_note": "The way they teach should reveal who they are. 150 words.",
+    "example": "'She said it once, clearly, then waited. She didn't repeat herself.' — Patient authority, shown through restraint.",
+    "tags": [
+      "style"
+    ]
+  },
+  {
+    "id": "cw-167",
+    "description": "Write a 100-word scene that takes place in the 30 seconds after a glass breaks. The sound, the freeze, the shards, the reaction. Slow a fast moment down. This is how you write action.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write the 30 seconds after a glass breaks. 100 words.",
+    "context": "The moment after a sudden event — the freeze, the shards, the silence — is more dramatic than the event itself. Slow motion in prose.",
+    "constraint_note": "The sound, the freeze, the shards, the reaction. 100 words. Slow the moment down.",
+    "example": "'The sound was louder than it should have been. Nobody moved. A shard spun on the tile, then stopped.' — Stretch 30 seconds into a scene.",
+    "tags": [
+      "moments"
+    ]
+  },
+  {
+    "id": "cw-168",
+    "description": "Write a scene where a character is choosing between two things at a shop — but the choice is really about something bigger in their life. 100 words. Small decisions as metaphors for large ones.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "dialogue",
+    "action": "Write a scene of a character choosing between two things at a shop. 100 words.",
+    "context": "Small decisions as metaphors for large ones. The character isn't really choosing between two shirts — they're choosing between two versions of themselves.",
+    "constraint_note": "The choice is really about something bigger in their life. 100 words. Don't state the metaphor — let the reader feel it.",
+    "example": "'She held the red one in her left hand and the grey one in her right. The red one was nothing she'd normally wear.' — The choice is about more than color.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-169",
+    "description": "Write 5 closing lines for 5 different stories. A great last line should feel both surprising and inevitable. It should make the reader sit still for a moment after reading it.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Write 5 closing lines for 5 different stories.",
+    "context": "A great last line should feel both surprising and inevitable. It should make the reader want to reread the story — or sit quietly for a moment.",
+    "constraint_note": "5 different stories, 5 last lines. Each should land with finality.",
+    "example": "'She never went back, and she never stopped wanting to.' — A great closing line contains the whole story in one sentence.",
+    "tags": [
+      "openings_endings"
+    ]
+  },
+  {
+    "id": "cw-170",
+    "description": "Write a scene where a character is walking home at night. 100 words. Not a thriller — just the ordinary experience of darkness, footsteps, shadows, and the relief of reaching your own door.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Write a scene of a character walking home at night. 100 words.",
+    "context": "Night walking is ordinary but sensory-rich — darkness, footsteps, shadows, the feeling of being alone in a familiar place that looks different after dark.",
+    "constraint_note": "Not a thriller. Just the ordinary experience of darkness, footsteps, and familiar streets made strange by night. 100 words.",
+    "example": "'The streetlight buzzed. His shadow stretched ahead of him, then disappeared, then stretched again.' — Night makes the familiar unfamiliar.",
+    "tags": [
+      "scene_craft"
+    ]
+  },
+  {
+    "id": "cw-171",
+    "description": "Write about something you're grateful for today. But write it as a scene, not a statement. Show the thing, the moment, the sensory detail. Gratitude in writing is showing, not telling. 80 words.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write about something you're grateful for today — but as a scene, not a statement. 80 words.",
+    "context": "Gratitude in writing is showing, not telling. 'I'm grateful for my morning coffee' is a statement. Describing the steam, the warmth, the quiet — that's writing that makes a reader feel gratitude too.",
+    "constraint_note": "No statements of gratitude. Show the thing, the moment, the sensory detail. 80 words.",
+    "example": "'The balcony was warm at 7 AM. The chai was too hot to drink so I held it and watched the street wake up.' — The reader feels the gratitude without being told.",
+    "tags": [
+      "personal"
+    ]
+  },
+  {
+    "id": "cw-172",
+    "description": "Write a 150-word scene where a character discovers that a friend has been talking about them behind their back. Don't write the confrontation — write the 5 minutes after they find out, alone.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "dialogue",
+    "action": "Write the 5 minutes after a character discovers a friend has been talking about them behind their back. 150 words.",
+    "context": "The aftermath is more dramatic than the confrontation. What someone does alone with a betrayal — before they decide how to respond — is raw, unperformed emotion.",
+    "constraint_note": "Don't write the confrontation. Write the 5 minutes after they find out, alone. 150 words.",
+    "example": "'She put the phone down. Picked it up. Put it down again. Opened the fridge, closed it without taking anything.' — The body processes betrayal before the mind does.",
+    "tags": [
+      "conversation"
+    ]
+  },
+  {
+    "id": "cw-173",
+    "description": "Write a scene using only dialogue — no tags, no action, no description. Two characters, 10 lines each. The reader should know who's who from voice alone. If they can't, your characters sound the same.",
+    "type": "learning",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "observation",
+    "action": "Write a scene using only dialogue — no tags, no action, no description. Two characters, 10 lines each.",
+    "context": "Pure dialogue is the ultimate test of voice distinction. If the reader can tell who's speaking without any help, your characters have real voices.",
+    "constraint_note": "No 'he said,' no action beats, no description. Just words. The reader should know who's who.",
+    "example": "'You're late.' / 'I know.' / 'Again.' / 'I know.' — Even two words can carry a distinct voice.",
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "id": "cw-174",
+    "description": "Write a 100-word scene set at the exact moment day turns to night. That 10-minute window when the sky changes. Capture the transition — not day, not night, but the becoming.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "observation",
+    "action": "Write a scene at the exact moment day turns to night. That 10-minute window. 100 words.",
+    "context": "Twilight is a liminal space — between day and night, between certainty and uncertainty. The sky changes faster than you can describe it, which makes it perfect practice.",
+    "constraint_note": "The 10-minute window when the sky changes. Capture the transition. 100 words.",
+    "example": "'The sky went from blue to orange to something that wasn't a color. The streetlights came on one by one, as if waking up.' — Twilight is a verb, not a noun.",
+    "tags": [
+      "places"
+    ]
+  },
+  {
+    "id": "cw-175",
+    "description": "Write a letter to yourself one year from now. Not goals or plans — tell future-you what today felt like. The weather, your mood, what you ate, what you're worried about. 100 words. This is time-capsule writing.",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "reflection",
+    "action": "Write a letter to yourself one year from now. 100 words.",
+    "context": "Time-capsule writing captures the texture of a specific day. Not goals or plans — the weather, your mood, what you ate, what you're worried about. Future-you will find this more valuable than any resolution.",
+    "constraint_note": "Tell future-you what today felt like. Be specific and mundane — the details you'll forget are the ones worth recording.",
+    "example": "'It rained today and I forgot my umbrella. I'm eating too much sugar. The neighbour's dog barked all morning. I'm thinking about whether to call.' — Mundane specificity is the point.",
+    "tags": [
+      "personal"
+    ]
+  }
+]

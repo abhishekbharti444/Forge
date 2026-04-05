@@ -153,98 +153,31 @@ Background: #171412
 ```
 
 ### Screen 4: Focused (Task in Progress)
-
-The Focused screen adapts based on the task's `reference` type and `tools`. It assembles itself from composable primitives. See [Architecture.md → Composable Task Format](../Architecture.md#composable-task-format) for the full spec.
-
-**Default layout (text prompt, no tools)** — creative writing, drawing, photography:
 ```
 ┌─────────────────────────┐
-│  observation · easy · 5m│  ← skill area + difficulty + time
 │                         │
-│   Write exactly 6       │  ← action (18-20px, warm white)
-│   sentences describing  │
-│   the room you're in.   │
+│  This usually takes     │  ← 13px, warm grey
+│  about 10 minutes       │
 │                         │
-│   Each sentence must    │  ← constraint (14px, warm grey)
-│   use a different sense.│
 │                         │
-│   This trains sensory   │  ← context (12px, subtle italic)
-│   specificity...        │
 │                         │
-│  ┌───────────────────┐  │  ← example (in surface card)
-│  │ "The hum of the   │  │
-│  │ fridge fills..."   │  │
-│  └───────────────────┘  │
+│   Write exactly 6       │  ← 18-20px, warm white
+│   sentences describing  │     same book-like typography
+│   the room you're in    │
+│   right now. Each       │
+│   sentence must use a   │
+│   different sense.      │
 │                         │
-│  ┌───────────────────┐  │
-│  │    I'm done        │  │  ← completion: self_report
-│  └───────────────────┘  │
-└─────────────────────────┘
-```
-
-**Structured list + reveal/hide** — vocabulary, memory:
-```
-┌─────────────────────────┐
-│  vocabulary · easy · 5m │
 │                         │
-│   Learn 10 body parts   │  ← action
 │                         │
-│  ┌───────────────────┐  │  ← structured_list reference
-│  │ ಕಣ್ಣು  Kannu  [tap] │  │     tap to reveal meaning
-│  │ ಮೂಗು  Moogu  [tap] │  │     revealed: "eye", "nose"
-│  │ ಬಾಯಿ  Baayi  [tap] │  │
-│  │ ...                │  │
-│  └───────────────────┘  │
 │                         │
 │  ┌───────────────────┐  │
-│  │    I'm done        │  │
+│  │    I'm done        │  │  ← Amber button
 │  └───────────────────┘  │
+│                         │
 └─────────────────────────┘
+Maximum whitespace. Quiet room feeling.
 ```
-
-**Text + timer** — public speaking, meditation, fitness:
-```
-┌─────────────────────────┐
-│  impromptu · medium·10m │
-│                         │
-│   Speak for 90 seconds  │  ← action
-│   about why this object │
-│   is the most important │
-│   invention in history. │
-│                         │
-│        1:12             │  ← timer (large, centered)
-│                         │
-│   Commit fully to the   │  ← constraint
-│   absurd premise...     │
-│                         │
-│  ┌───────────────────┐  │
-│  │   ■ Stop / Done    │  │  ← completion: timer_end
-│  └───────────────────┘  │
-└─────────────────────────┘
-```
-
-**Steps + checklist** — cooking, multi-step exercises:
-```
-┌─────────────────────────┐
-│  grammar · medium · 10m │
-│                         │
-│   Build a Kannada       │  ← action
-│   sentence step by step │
-│                         │
-│  ┌───────────────────┐  │  ← steps reference + checklist tool
-│  │ ☑ Subject: ನಾನು   │  │
-│  │ ☑ Object: ನೀರು    │  │
-│  │ ☐ Verb: ಕುಡಿಯುತ್ತೇನೆ│  │
-│  │ ☐ Full sentence    │  │
-│  └───────────────────┘  │
-│                         │
-│  ┌───────────────────┐  │
-│  │    I'm done        │  │  ← enabled when all checked
-│  └───────────────────┘  │
-└─────────────────────────┘
-```
-
-Tasks without `reference` or `tools` fields render the default layout. Fully backward compatible.
 
 ### Screen 5: Completion (Reflection)
 ```
@@ -331,4 +264,3 @@ Note: Venue generated Cloudscape-based mockups. We're implementing with Tailwind
 ---
 
 *Document created: March 31, 2026*
-*Last updated: April 3, 2026*

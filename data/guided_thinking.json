@@ -1,0 +1,171 @@
+[
+  {
+    "id": "gt-001", "type": "reflection", "difficulty": "easy", "time_minutes": 10, "skill_area": "decision_making",
+    "action": "A guided walk through a decision you're currently facing.",
+    "description": "Audio-guided decision-making exercise. The app walks you through analyzing a real decision step by step.",
+    "context": "Walking improves decision-making by reducing emotional reactivity. This exercise uses movement + structured thinking.",
+    "constraint_note": "Think of a real decision before starting. Speak aloud or think silently.",
+    "example": "Works for any decision: career moves, purchases, relationship choices, project priorities.",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think of a decision you're currently facing. Something real. Hold it in your mind.", "pauseAfter": 10},
+        {"text": "Now, what's the best possible outcome if you say yes?", "pauseAfter": 15},
+        {"text": "And what's the worst possible outcome if you say yes?", "pauseAfter": 15},
+        {"text": "Now flip it. What happens if you say no? What's the best case?", "pauseAfter": 15},
+        {"text": "And the worst case of saying no?", "pauseAfter": 15},
+        {"text": "Here's the real question: which outcome would you regret more — trying and failing, or never trying?", "pauseAfter": 20},
+        {"text": "What's the smallest step you could take this week to move toward your answer?", "pauseAfter": 15},
+        {"text": "Hold that step in your mind. That's your next action.", "pauseAfter": 5}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-002", "type": "reflection", "difficulty": "easy", "time_minutes": 10, "skill_area": "goal_setting",
+    "action": "A guided walk to clarify what you actually want.",
+    "description": "Audio-guided goal clarification. Cuts through vague aspirations to find specific, actionable goals.",
+    "context": "Most people have fuzzy goals. This exercise forces specificity through structured questions.",
+    "constraint_note": "Be honest with yourself. The goal is clarity, not ambition.",
+    "example": "Turns 'I want to be healthier' into 'I will walk 30 minutes every morning before work.'",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think of something you want to achieve. Not something you should do — something you actually want.", "pauseAfter": 15},
+        {"text": "Now ask yourself: why do I want this? What changes in my life when I have it?", "pauseAfter": 15},
+        {"text": "If you achieved this goal tomorrow, what would be different about next Monday morning?", "pauseAfter": 15},
+        {"text": "Here's the hard question: what have you already tried? Why didn't it work?", "pauseAfter": 15},
+        {"text": "What's the one thing that's actually stopping you? Not the excuse — the real blocker.", "pauseAfter": 20},
+        {"text": "Now make it tiny. What's a version of this goal you could do in 10 minutes today?", "pauseAfter": 15},
+        {"text": "That tiny version — commit to it right now. Say it aloud if you can.", "pauseAfter": 10}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-003", "type": "reflection", "difficulty": "medium", "time_minutes": 10, "skill_area": "creative_ideation",
+    "action": "A guided walk to generate creative ideas for a problem you're stuck on.",
+    "description": "Audio-guided brainstorming. Uses walking + structured prompts to unlock creative thinking.",
+    "context": "Stanford research shows walking increases creative output by 60%. This exercise channels that boost.",
+    "constraint_note": "Pick a real problem before starting. Quantity over quality — don't judge ideas yet.",
+    "example": "Works for: project ideas, gift ideas, career options, content ideas, solutions to any stuck problem.",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think of a problem you're stuck on. Something you've been going back and forth about.", "pauseAfter": 10},
+        {"text": "Now, come up with 3 obvious solutions. The ones anyone would suggest.", "pauseAfter": 20},
+        {"text": "Good. Now forget those. Come up with 3 ridiculous solutions. Solutions that would never work.", "pauseAfter": 20},
+        {"text": "Now here's the trick: what's one element from a ridiculous solution that could actually work if you modified it?", "pauseAfter": 20},
+        {"text": "Think about someone you admire. How would they approach this problem?", "pauseAfter": 15},
+        {"text": "What if you had unlimited money? What would you do?", "pauseAfter": 10},
+        {"text": "What if you had no money but unlimited time?", "pauseAfter": 10},
+        {"text": "Of everything you've thought about, which idea excites you most? That's your signal.", "pauseAfter": 10}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-004", "type": "reflection", "difficulty": "easy", "time_minutes": 5, "skill_area": "self_awareness",
+    "action": "A guided walk to check in with yourself. How are you actually doing?",
+    "description": "Audio-guided self check-in. A structured way to notice your physical and emotional state.",
+    "context": "Most people go through the day without checking in with themselves. This 5-minute exercise builds self-awareness.",
+    "constraint_note": "No judgment. Just notice.",
+    "example": "Do this daily and you'll start catching stress, fatigue, and emotions before they catch you.",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "As you walk, notice your body. Where is there tension? Shoulders? Jaw? Stomach?", "pauseAfter": 15},
+        {"text": "Now notice your breathing. Is it shallow or deep? Fast or slow? Don't change it — just notice.", "pauseAfter": 10},
+        {"text": "What emotion are you carrying right now? Name it. Not 'fine' — the real one.", "pauseAfter": 15},
+        {"text": "When did that emotion start? Was there a moment today that triggered it?", "pauseAfter": 15},
+        {"text": "What do you need right now? Not what you should do — what do you actually need?", "pauseAfter": 15},
+        {"text": "Take one deep breath. You noticed. That's enough.", "pauseAfter": 5}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-005", "type": "reflection", "difficulty": "medium", "time_minutes": 10, "skill_area": "problem_solving",
+    "action": "A guided walk to think through a work problem using first principles.",
+    "description": "Audio-guided first-principles thinking. Breaks a problem down to its fundamentals.",
+    "context": "First principles thinking strips away assumptions and gets to the core of a problem. Walking helps you think without distraction.",
+    "constraint_note": "Pick a real work problem. Be willing to question your assumptions.",
+    "example": "Works for: technical decisions, process improvements, strategy questions, team challenges.",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think of a problem at work that feels complicated. Hold it in your mind.", "pauseAfter": 10},
+        {"text": "Now, what are you assuming is true about this problem? List 3 assumptions.", "pauseAfter": 20},
+        {"text": "Challenge each one. What if assumption 1 is wrong? What changes?", "pauseAfter": 15},
+        {"text": "What if assumption 2 is wrong?", "pauseAfter": 15},
+        {"text": "What if assumption 3 is wrong?", "pauseAfter": 15},
+        {"text": "Strip everything away. What is the actual core problem in one sentence?", "pauseAfter": 15},
+        {"text": "If you were starting from scratch with no history, how would you solve that one-sentence problem?", "pauseAfter": 20},
+        {"text": "What's stopping you from doing that? Is it a real constraint or an inherited assumption?", "pauseAfter": 15}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-006", "type": "reflection", "difficulty": "easy", "time_minutes": 5, "skill_area": "gratitude",
+    "action": "A guided walk to notice what's going well.",
+    "description": "Audio-guided gratitude practice. Not generic thankfulness — specific, sensory, present-moment gratitude.",
+    "context": "Gratitude practice rewires the brain toward noticing positives. Walking makes it embodied, not just intellectual.",
+    "constraint_note": "Be specific. Not 'I'm grateful for my family' but 'I'm grateful my daughter laughed at breakfast today.'",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think of one thing that went well today. Something specific. A moment, not a category.", "pauseAfter": 15},
+        {"text": "Now think of one person who made your day slightly better. What did they do?", "pauseAfter": 15},
+        {"text": "Look around you right now. Find one thing that's beautiful. Describe it in your mind.", "pauseAfter": 15},
+        {"text": "Think of something your body did for you today without you asking. Breathing. Walking. Healing.", "pauseAfter": 10},
+        {"text": "One last one: what's something you're looking forward to? Even something small.", "pauseAfter": 10},
+        {"text": "Five things. That's a good walk.", "pauseAfter": 3}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-007", "type": "reflection", "difficulty": "medium", "time_minutes": 10, "skill_area": "perspective",
+    "action": "A guided walk to see a conflict from the other person's perspective.",
+    "description": "Audio-guided perspective-shifting. Walk through a disagreement from the other side.",
+    "context": "Perspective-taking is the foundation of empathy and conflict resolution. Walking creates the mental distance needed to see another viewpoint.",
+    "constraint_note": "Think of a real disagreement or tension with someone. Be willing to genuinely consider their side.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think of someone you disagree with or have tension with right now.", "pauseAfter": 10},
+        {"text": "First, your side. What do you want? What are you feeling? Say it clearly in your mind.", "pauseAfter": 15},
+        {"text": "Now step into their shoes. What do THEY want? Not what you think they should want — what do they actually want?", "pauseAfter": 20},
+        {"text": "What are they afraid of? What's at stake for them?", "pauseAfter": 15},
+        {"text": "Here's the hard one: what are they right about? Even partially?", "pauseAfter": 20},
+        {"text": "If they could hear one sentence from you that would change everything, what would it be?", "pauseAfter": 15},
+        {"text": "Would you be willing to say it?", "pauseAfter": 10}
+      ]
+    },
+    "tools": ["timer"]
+  },
+  {
+    "id": "gt-008", "type": "reflection", "difficulty": "medium", "time_minutes": 10, "skill_area": "career",
+    "action": "A guided walk to think about where your career is heading.",
+    "description": "Audio-guided career reflection. Not planning — feeling. What do you actually want from work?",
+    "context": "Career decisions are often made reactively. This exercise creates space for intentional reflection.",
+    "constraint_note": "Be honest. The right answer might be uncomfortable.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Think about your work this past week. What moment made you feel most alive?", "pauseAfter": 15},
+        {"text": "What moment drained you the most?", "pauseAfter": 15},
+        {"text": "If you could design your perfect workday — not job title, but actual day — what would it look like?", "pauseAfter": 20},
+        {"text": "How different is that from your current day?", "pauseAfter": 15},
+        {"text": "What skill do you have that you're not using enough?", "pauseAfter": 15},
+        {"text": "If money wasn't a factor for 2 years, what would you spend your time learning or building?", "pauseAfter": 20},
+        {"text": "What's one small shift you could make this month to move closer to that?", "pauseAfter": 15}
+      ]
+    },
+    "tools": ["timer"]
+  }
+]

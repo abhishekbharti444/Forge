@@ -1,0 +1,2401 @@
+[
+  {
+    "id": "ps-001",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Count from 1 to 20 out loud. Each number should be louder than the last. Start at a whisper, end at full projection.",
+    "description": "Practice volume control by counting from 1 to 20, gradually increasing volume from whisper to full projection.",
+    "context": "Volume control is the most basic vocal skill. Most people speak at one volume. Learning to scale up (and down) gives you range and authority.",
+    "constraint_note": "Start barely audible. By 10, you should be at normal conversation volume. By 20, you're projecting to the back of a room. Do it twice.",
+    "example": "1 (whisper)... 5 (soft)... 10 (normal)... 15 (strong)... 20 (full projection, from your diaphragm, not your throat).",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-002",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Read any paragraph aloud. Then read it again at half the speed. Then again at double speed. Notice how pace changes meaning.",
+    "description": "Practice pace control by reading the same text at three different speeds.",
+    "context": "Pace is how you control attention. Slowing down signals importance. Speeding up signals excitement or urgency. Most nervous speakers rush — this trains you to choose your speed.",
+    "constraint_note": "Use any text — a news article, a book page, even a food label. Three reads: normal, half speed, double speed.",
+    "example": "Slow: 'The... most... important... thing...' (each word lands). Fast: 'The-most-important-thing-is-that-we-act-now' (urgency). Same words, different impact.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-003",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "impromptu",
+    "action": "Look at the nearest object. Speak for exactly 60 seconds about why it's the most underrated invention in history. No preparation — start immediately.",
+    "description": "60-second impromptu speech about a random object. No prep time. Just start talking.",
+    "context": "Impromptu speaking is the skill that matters most in real life — meetings, conversations, interviews. The ability to start talking before you're ready is a superpower.",
+    "constraint_note": "No thinking time. Start speaking within 3 seconds of reading this. 60 seconds. Commit to the argument even if it's absurd.",
+    "example": "A water bottle: 'The water bottle is humanity's most underrated invention because it solved the fundamental problem of portable hydration...'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "quick_response"
+    ]
+  },
+  {
+    "id": "ps-004",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Explain what you do for work to an imaginary 10-year-old. Speak aloud for 60 seconds. No jargon, no acronyms.",
+    "description": "Explain your job to a child. This forces you to strip away jargon and find the simple truth of what you do.",
+    "context": "If you can't explain it simply, you don't understand it well enough. This is the foundation of clear communication — finding the core idea beneath the complexity.",
+    "constraint_note": "60 seconds. No technical terms. Use analogies a child would understand. If you catch yourself using jargon, stop and rephrase.",
+    "example": "Instead of 'I optimize cloud infrastructure for distributed systems,' try 'I help computers talk to each other faster so websites don't break when lots of people use them.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-005",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell the story of your morning today as if it were the opening scene of a movie. Speak aloud for 2 minutes. Include a hook, rising tension, and a resolution.",
+    "description": "Turn your mundane morning into a compelling 2-minute story with narrative structure.",
+    "context": "Storytelling transforms ordinary experiences into engaging content. If you can make your morning interesting, you can make any presentation interesting.",
+    "constraint_note": "2 minutes aloud. Must have: a hook (first 10 seconds that grabs attention), rising tension (something at stake), and a resolution. Your morning has all three — find them.",
+    "example": "Hook: 'At 7:03 AM, my alarm didn't go off.' Tension: 'I had exactly 22 minutes to get to the most important meeting of the quarter.' Resolution: 'I made it. Barely. With my shirt inside out.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "personal_stories"
+    ]
+  },
+  {
+    "id": "ps-006",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Say the sentence 'I didn't say she stole the money' 7 times. Each time, emphasize a different word. Notice how the meaning changes completely.",
+    "description": "Practice word emphasis. The same sentence means 7 different things depending on which word you stress.",
+    "context": "Emphasis is how you control meaning without changing words. In presentations, the wrong emphasis can reverse your message. This trains deliberate stress.",
+    "constraint_note": "7 times, 7 different emphasized words: I, didn't, say, she, stole, the, money. Say each version clearly and notice the meaning shift.",
+    "example": "'I didn't say she stole the money' (someone else said it). 'I didn't say SHE stole the money' (someone else stole it). Same words, different story.",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-007",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Pick something you genuinely believe. Argue AGAINST it for 2 minutes. Speak aloud, making the strongest possible case for the opposing view.",
+    "description": "Argue against your own belief. This builds the ability to see and articulate opposing perspectives — essential for persuasion.",
+    "context": "The best persuaders understand the other side better than their opponents do. Arguing against yourself trains empathy, flexibility, and the ability to anticipate objections.",
+    "constraint_note": "2 minutes aloud. Pick a real belief (not trivial). Make the opposing case as strong as you can. If you convince yourself even slightly, you've done it right.",
+    "example": "If you believe remote work is better: argue passionately for 2 minutes that offices are superior. Find the real reasons, not strawmen.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-008",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Stand up. Plant your feet shoulder-width apart. Hands at your sides (not in pockets, not crossed). Hold this position for 60 seconds in silence. Notice the discomfort.",
+    "description": "Practice the neutral standing position — the foundation of physical presence. Most people can't stand still without fidgeting.",
+    "context": "Presence starts with stillness. Fidgeting, swaying, and hand-wringing signal nervousness. Learning to be still and comfortable in silence is the foundation of commanding a room.",
+    "constraint_note": "60 seconds of complete stillness. No phone, no fidgeting, no shifting weight. Just stand. Notice where the discomfort is — that's what you're training through.",
+    "example": "If you feel the urge to check your phone, cross your arms, or shift your weight — that's the fidget impulse. Acknowledge it and stay still.",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-009",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Use the PREP framework: Point, Reason, Example, Point. Pick any topic (your favorite food, a recent movie, why sleep matters). Deliver a 90-second structured response.",
+    "description": "Practice the PREP framework — the most reliable structure for impromptu speaking. Point → Reason → Example → Point.",
+    "context": "PREP gives you instant structure when you have no preparation time. It works for interview questions, meeting contributions, and any 'what do you think?' moment.",
+    "constraint_note": "90 seconds. Follow PREP strictly: state your point, give one reason, support with one example, restate your point. Time yourself.",
+    "example": "Point: 'Sleep is the most important health habit.' Reason: 'It affects every other system.' Example: 'When I slept 5 hours last week, I couldn't focus in a single meeting.' Point: 'Prioritize sleep above exercise and diet.'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-010",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Pick a concept you understand well (a hobby, a work process, a recipe). Explain it in 3 layers: 1 sentence, then 1 paragraph, then 2 minutes. Each layer adds detail without losing clarity.",
+    "description": "Practice the pyramid explanation — start with the simplest version and expand. This is how the best communicators structure information.",
+    "context": "The pyramid structure (headline → summary → detail) is used by consultants, journalists, and executives. It ensures your audience gets the point even if they stop listening early.",
+    "constraint_note": "Layer 1: one sentence. Layer 2: one paragraph (30 seconds). Layer 3: full 2-minute explanation. Each layer should stand alone.",
+    "example": "Layer 1: 'Sourdough bread uses wild yeast instead of commercial yeast.' Layer 2: adds how the starter works. Layer 3: adds the full process, timing, and why it tastes different.",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-011",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a story about a time you failed at something. 2 minutes. Structure: what you tried, what went wrong, what you learned. Make the failure vivid, not the lesson.",
+    "description": "Tell a personal failure story in 2 minutes with vivid detail on the failure itself.",
+    "context": "Failure stories are the most relatable content in any speech. Audiences connect with vulnerability, not perfection. The best speakers lead with what went wrong.",
+    "constraint_note": "2 minutes aloud. Spend 70% on the failure (make it vivid, specific, sensory) and 30% on the lesson. Don't rush to the redemption.",
+    "example": "Bad: 'I failed a test and learned to study harder.' Good: 'I walked into the exam room, opened the paper, and couldn't read a single question. My hands went cold. I wrote my name and stared at the ceiling for 45 minutes.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "personal_stories"
+    ]
+  },
+  {
+    "id": "ps-012",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Say 'um' and 'uh' out loud 10 times each. Now speak for 60 seconds about your weekend plans WITHOUT saying either. Replace filler words with silence.",
+    "description": "Filler word elimination drill. First make the fillers conscious, then practice replacing them with pauses.",
+    "context": "Filler words ('um,' 'uh,' 'like,' 'you know') signal uncertainty. Replacing them with silence makes you sound confident and thoughtful. Silence is not empty — it's powerful.",
+    "constraint_note": "60 seconds about any topic. Every time you catch an 'um' or 'uh,' stop. Pause. Then continue. The pause IS the replacement.",
+    "example": "'I'm planning to... [pause] ...visit my parents this weekend. We'll probably... [pause] ...cook together.' The pauses feel long to you but sound confident to listeners.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-013",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "You have 3 minutes to convince someone to read your favorite book. Structure: hook (why should they care?), 3 reasons, close (specific call to action).",
+    "description": "Deliver a 3-minute persuasive pitch for your favorite book. Practice the full persuasion arc: hook → reasons → close.",
+    "context": "Persuasion follows a structure: grab attention, build the case, ask for action. This is the same structure for selling an idea in a meeting, pitching a project, or convincing a friend.",
+    "constraint_note": "3 minutes aloud. Must include: a hook in the first 15 seconds, exactly 3 reasons (not 2, not 5), and a specific call to action at the end ('Buy it today' not 'you should read it sometime').",
+    "example": "Hook: 'What if I told you there's a book that changed how I make every decision?' Reasons: 1, 2, 3. Close: 'Order it tonight. Read the first chapter before bed. You'll finish it by Sunday.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-014",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Record yourself on your phone camera saying 'Hello, my name is ___, and I'm here to talk about ___.' Watch it back. Notice: where are your eyes? What are your hands doing?",
+    "description": "Record a 10-second introduction and watch it back. Self-observation is the fastest way to improve physical presence.",
+    "context": "You can't fix what you can't see. Most people have no idea what they look like when speaking. Recording yourself — even for 10 seconds — reveals habits you didn't know you had.",
+    "constraint_note": "Record on your phone. Watch it back immediately. Note 3 things: eye direction, hand position, facial expression. Do it again with those 3 things corrected.",
+    "example": "Common discoveries: eyes drift up-left when thinking, hands go to pockets, face goes neutral (resting serious face). All fixable once you see them.",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-015",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Open any news app. Read the first headline you see. Immediately give a 90-second opinion on it. You don't need to be an expert — you need to have a structured take.",
+    "description": "React to a random news headline with a structured 90-second opinion. Practices forming and articulating views on the spot.",
+    "context": "In meetings and conversations, you're constantly asked 'what do you think about X?' This trains you to form a coherent position quickly, even on topics you haven't thought about.",
+    "constraint_note": "90 seconds. Use PREP or any structure. It's okay to say 'I don't know much about this, but here's my initial take...' — framing uncertainty is a skill too.",
+    "example": "Headline: 'AI to replace 30% of jobs by 2030.' Your take: 'I think that number is high, and here's why... [reason]... For example... [example]... So my view is... [restate].'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-016",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a story using the 'But & Therefore' technique. Replace every 'and then' with 'but' or 'therefore.' Speak for 2 minutes about anything that happened to you recently.",
+    "description": "Practice the But & Therefore storytelling technique from South Park creators Trey Parker and Matt Stone.",
+    "context": "'And then' creates a list. 'But' and 'therefore' create cause and effect — which is what makes stories compelling. This one technique transforms flat narratives into engaging ones.",
+    "constraint_note": "2 minutes. Every transition must be 'but' (conflict) or 'therefore' (consequence). If you catch yourself saying 'and then,' stop and rephrase.",
+    "example": "Flat: 'I went to work and then had a meeting and then went home.' Story: 'I went to work, BUT my laptop died. THEREFORE I had to present from memory. BUT I actually knew the material better than I thought.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-017",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Pick any process you know (making coffee, booking a cab, sending an email). Explain it in exactly 5 steps. No more, no less. Speak aloud.",
+    "description": "Explain a process in exactly 5 steps. This trains you to chunk information into digestible pieces.",
+    "context": "The human brain handles 3-5 chunks of information well. Forcing yourself to compress any process into 5 steps trains you to find the essential structure in complexity.",
+    "constraint_note": "Exactly 5 steps. If the process has 12 steps, group them. If it has 3, break them down. The constraint is the exercise. Speak aloud.",
+    "example": "Making filter coffee in 5 steps: 1) Boil water. 2) Add coffee powder to filter. 3) Pour water and wait 10 minutes. 4) Heat milk. 5) Mix decoction and milk. Done — 5 steps, complete process.",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-018",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "presence",
+    "action": "Give a 2-minute speech about anything — but every 30 seconds, deliberately pause for 3 full seconds of silence. Don't fill the silence. Own it.",
+    "description": "Practice deliberate pausing. Insert 3-second silences into a speech and resist the urge to fill them.",
+    "context": "Silence is the most underused tool in speaking. A 3-second pause feels eternal to the speaker but signals confidence to the audience. It gives your words weight.",
+    "constraint_note": "2 minutes total. Pause for 3 seconds at the 30-second, 60-second, and 90-second marks. During the pause: breathe, make eye contact (real or imagined), stay still.",
+    "example": "'The most important lesson I learned this year... [1... 2... 3...] ...is that saying no is harder than saying yes.' The pause before the key point makes it land.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "id": "ps-019",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Pick a mundane object (a pen, a chair, a shoe). Deliver a 3-minute sales pitch for it. Make the audience WANT it. Use: problem → solution → benefit → urgency.",
+    "description": "Sell a mundane object in 3 minutes. This is the classic persuasion exercise — if you can sell a pen, you can sell any idea.",
+    "context": "The persuasion structure (problem → solution → benefit → urgency) works for everything: selling products, pitching ideas, proposing changes at work. A pen is just the training ground.",
+    "constraint_note": "3 minutes. Must include: a problem the audience has, how this object solves it, the specific benefit, and why they should act now. Make it genuine, not sarcastic.",
+    "example": "Problem: 'How many times have you had a great idea and lost it because you couldn't write it down fast enough?' Solution: 'This pen...' Benefit: 'Never lose an idea again.' Urgency: 'Ideas don't wait.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-020",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Hum for 30 seconds to warm up your voice. Then say 'Hello, I'm glad to be here today' 5 times — each time with a different emotion: confident, excited, serious, warm, urgent.",
+    "description": "Vocal warm-up + emotional range practice. The same greeting delivered 5 ways.",
+    "context": "Your voice carries emotion before your words do. The audience decides how to feel about you in the first 3 seconds — before they process what you're saying.",
+    "constraint_note": "Hum first (30 seconds, feel the vibration in your chest). Then 5 versions of the same greeting. Each should sound genuinely different.",
+    "example": "Confident: deep, steady, measured. Excited: higher pitch, faster, smile in voice. Serious: lower, slower, no smile. Warm: soft, gentle, like greeting a friend. Urgent: fast, clipped, leaning forward.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-021",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Think of the last question someone asked you at work. Now give a 90-second answer — but start with your conclusion, not your reasoning. Bottom-line up front.",
+    "description": "Practice BLUF (Bottom Line Up Front). Answer a question by stating your conclusion first, then supporting it.",
+    "context": "Most people build up to their point. Executives and clear thinkers lead with it. BLUF respects the listener's time and signals confidence.",
+    "constraint_note": "90 seconds. First sentence IS your answer. Everything after supports it. If someone stopped listening after 10 seconds, they'd still have your main point.",
+    "example": "Bad: 'Well, I looked at the data, and there were several factors, and after considering...' Good: 'We should delay the launch by two weeks. Here's why...'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-022",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story about someone who influenced you. Use the 'specific moment' technique: don't summarize their impact — describe ONE scene in detail.",
+    "description": "Tell a story about an influential person using one specific moment, not a summary.",
+    "context": "Specific moments are more powerful than summaries. 'She changed my life' means nothing. 'She handed back my essay with one sentence circled and said: this is the real you' — that means everything.",
+    "constraint_note": "2 minutes. ONE scene only. Include: where you were, what they did (physical action), what they said (exact words if possible), how it felt.",
+    "example": "Not: 'My grandfather taught me patience.' Instead: 'My grandfather sat at the kitchen table every morning at 5 AM, sorting lentils by hand. I asked him why. He said: some things deserve your full attention.'",
+    "tags": [
+      "personal_stories"
+    ]
+  },
+  {
+    "id": "ps-023",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Pick a word you use often at work (strategy, leverage, synergy, optimize, alignment). Define it in one sentence without using any other jargon. Speak aloud.",
+    "description": "Define a jargon word in plain language. If you can't define it simply, you might be using it as a placeholder for thinking.",
+    "context": "Jargon often hides vague thinking. When you force yourself to define 'strategy' in plain words, you discover whether you actually know what you mean.",
+    "constraint_note": "One sentence. No other jargon in the definition. If your definition uses words like 'framework' or 'paradigm,' try again.",
+    "example": "'Strategy' → 'A plan for how to win, including what you'll say no to.' 'Leverage' → 'Using something you already have to get something you don't.' Simple = clear.",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-024",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "presence",
+    "action": "Stand up and deliver a 3-minute speech about something you care about. But: no pacing, no swaying, no touching your face, no crossing arms. Just stand and speak.",
+    "description": "Deliver a speech with full body awareness. Eliminate all nervous physical habits.",
+    "context": "Physical stillness communicates authority. Every fidget, sway, and face-touch is a signal of discomfort that the audience reads unconsciously.",
+    "constraint_note": "3 minutes. Stand in one spot. Hands at sides or gesturing deliberately (not fidgeting). If you catch a nervous habit, pause, reset, continue.",
+    "example": "Common habits to watch for: weight shifting side to side, touching nose/hair, clasping hands, pacing. Pick your biggest one and focus on eliminating just that.",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-025",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Think of a change you want at work (process, tool, policy). Pitch it in 2 minutes using the 'What → So What → Now What' framework.",
+    "description": "Pitch a real work change using What → So What → Now What. This is the simplest persuasion framework that works in any professional context.",
+    "context": "What (the situation) → So What (why it matters) → Now What (what to do about it). Three parts, clear logic, easy to follow. Works for emails, presentations, and hallway conversations.",
+    "constraint_note": "2 minutes. Real change you actually want. What: describe the current situation. So What: why it's a problem. Now What: your specific proposal.",
+    "example": "What: 'Our deploy process takes 4 hours.' So What: 'We ship half as often as we could, and engineers waste afternoons waiting.' Now What: 'Let's invest 2 sprints in CI/CD automation.'",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-026",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Say the alphabet (A to Z) out loud. But: pause for 2 seconds after every 5th letter. The pauses should feel deliberate, not awkward.",
+    "description": "Practice deliberate pausing within a simple sequence. Pausing on command is harder than it sounds.",
+    "context": "Pausing is a skill, not an absence of speech. Training yourself to pause at predetermined points builds the muscle for pausing at impactful moments in real speeches.",
+    "constraint_note": "A-B-C-D-E [pause 2 sec] F-G-H-I-J [pause 2 sec]... Keep the pauses clean — no 'um,' no breath sounds, just silence.",
+    "example": "The pause should feel like a period at the end of a sentence — complete, intentional, unhurried.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-027",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story that starts with the ending. 'It ended with me standing in the rain, laughing.' Then go back and explain how you got there.",
+    "description": "Practice non-linear storytelling. Start with the ending, then rewind. This creates instant curiosity.",
+    "context": "Starting with the ending is a hook technique used by the best storytellers. The audience immediately wants to know: how did they get there? You've earned their attention before the story even begins.",
+    "constraint_note": "2 minutes. First sentence is the ending. Then rewind to the beginning and tell the story forward. The ending should land differently the second time.",
+    "example": "'It ended with me missing the flight and being grateful for it. Let me tell you how that happened...' — The audience is hooked by the paradox.",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-028",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "impromptu",
+    "action": "Set a timer for 3 minutes. Open your phone's photo gallery. Pick the 3rd photo. Give a 3-minute talk about the story behind it — what was happening, why it matters, what you'd tell someone about that moment.",
+    "description": "Give a 3-minute talk prompted by a random photo from your gallery. Real memories make the best impromptu material.",
+    "context": "Your photo gallery is full of stories you've never told. This exercise trains you to find narrative in personal moments — the same skill that makes presentations feel authentic.",
+    "constraint_note": "3 minutes. The 3rd photo — no choosing. Include: what was happening, who was there, why you took the photo, what it means to you now.",
+    "example": "Even a mundane photo (a meal, a street, a sunset) has a story. The exercise is finding it and telling it with structure.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-029",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice the 'power pause' — walk to the center of a room, stand still, look forward for 5 seconds of silence, THEN start speaking. Do this 3 times with different opening lines.",
+    "description": "Practice the power pause — the silence before you speak. This is how confident speakers command attention before saying a word.",
+    "context": "Most nervous speakers start talking the moment they reach the front. The power pause — standing in silence for 3-5 seconds — signals that you own the room and you'll speak when you're ready.",
+    "constraint_note": "3 rounds. Each time: walk to your spot, plant feet, look forward, count 5 seconds of silence, then deliver your opening line. The silence should feel uncomfortable — that's the point.",
+    "example": "Walk. Stop. [1... 2... 3... 4... 5...] 'Good morning. I'm going to tell you something that changed how I think about failure.' — The pause makes the opening land.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-030",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Pick a complex topic you know well. Explain it using ONLY analogies — no technical language at all. 2 minutes. Every concept must be compared to something familiar.",
+    "description": "Explain a complex topic using only analogies. No jargon, no technical terms — only comparisons to everyday things.",
+    "context": "Analogies are the most powerful explanation tool. 'A database is like a filing cabinet' communicates more in 6 words than a paragraph of technical description.",
+    "constraint_note": "2 minutes. Every concept must be an analogy. If you catch yourself using a technical term, stop and find a comparison instead.",
+    "example": "'Machine learning is like teaching a child to sort laundry. You show them enough examples of darks and lights, and eventually they figure out the pattern without you explaining the rules.'",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-031",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Think about the last time you spoke in a meeting or group. What did your body do? Were you sitting or standing? Where were your hands? Did you make eye contact? Write 3 observations.",
+    "description": "Reflect on your physical habits during your last group speaking moment.",
+    "context": "Self-awareness is the first step to improvement. Most people have no idea what their body does when they speak. Noticing is the beginning of changing.",
+    "constraint_note": "3 specific physical observations. Not 'I was nervous' — what did nervous LOOK like? Hands fidgeting? Eyes on the table? Voice trailing off?",
+    "example": "'I was sitting, leaning back, looking at my laptop instead of the people. My voice got quieter toward the end of my point.' — Specific observations you can work on.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-032",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "vocal_delivery",
+    "action": "Read a paragraph aloud in a monotone — completely flat, no variation. Then read it again with maximum variation — exaggerate every rise, fall, pause, and emphasis. Then a third time: find the natural middle.",
+    "description": "Calibrate your vocal range by hitting both extremes (monotone and exaggerated) then finding the natural sweet spot.",
+    "context": "Most people think they're expressive but actually speak in a narrow range. By hitting both extremes, you discover how much range you actually have — and learn to use more of it.",
+    "constraint_note": "Same paragraph, 3 reads. Monotone (robot). Exaggerated (theater). Natural (the middle). The third read should sound noticeably more dynamic than your normal voice.",
+    "example": "Monotone: every word same pitch, same speed. Exaggerated: whisper some words, shout others, pause dramatically. Natural: the version that sounds like a great podcast host.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-033",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Pick a controversial topic you have a mild opinion on. Deliver two 90-second speeches: one for, one against. Both should be equally convincing.",
+    "description": "Argue both sides of a controversial topic with equal conviction. This is the ultimate persuasion exercise.",
+    "context": "If you can only argue one side, you're an advocate. If you can argue both sides equally well, you're a communicator. The ability to steel-man any position is rare and powerful.",
+    "constraint_note": "90 seconds each side. Both must be genuinely convincing — not a strawman on one side. If a listener couldn't tell which side you actually believe, you've succeeded.",
+    "example": "Topic: 'Social media is good for society.' Argue FOR with real evidence and passion. Then argue AGAINST with equal evidence and passion. Both should feel true.",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-034",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "impromptu",
+    "action": "Someone asks you: 'Tell me about yourself.' Give a 60-second answer that's NOT your resume. Make it memorable. What would you want someone to remember about you?",
+    "description": "Practice the 'tell me about yourself' answer — but make it a story, not a CV recitation.",
+    "context": "'Tell me about yourself' is the most common and most wasted question. Everyone recites their resume. A memorable answer tells a story about who you are, not what you've done.",
+    "constraint_note": "60 seconds. No job titles, no company names, no chronological career history. Instead: what drives you, what you care about, one specific detail that makes you memorable.",
+    "example": "Instead of 'I'm a software engineer at Amazon,' try: 'I'm someone who gets unreasonably excited about making complicated things simple. Last week I spent 3 hours making a 1-page document because the 10-page version was lazy.'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-035",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story using the 'rule of three.' Three attempts, three examples, or three characters. The pattern of three creates rhythm and satisfaction.",
+    "description": "Practice the rule of three in storytelling — the most reliable pattern for creating rhythm and memorability.",
+    "context": "Three is the magic number in communication. 'Life, liberty, and the pursuit of happiness.' 'Blood, sweat, and tears.' Three items create a pattern that the brain finds satisfying and memorable.",
+    "constraint_note": "2 minutes. The number three must be structural: three attempts at something, three examples of a point, or three characters in a scene. Not just mentioning three things.",
+    "example": "'The first time I tried, I failed completely. The second time, I failed slightly less. The third time...' — The pattern creates anticipation. The audience leans in for the third.",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-036",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Take the last email you sent. Read it aloud. Now say the same message in half the words. Speak it, don't write it. Compression forces clarity.",
+    "description": "Compress a real message to half its length by speaking it aloud. Verbal compression trains you to find the essential point.",
+    "context": "Most communication is 50% filler. If you can say it in half the words, the original was too long. This trains you to find the core message and cut everything else.",
+    "constraint_note": "Read the original aloud (count the time). Then deliver the same message in half the time. What did you cut? Was anything important lost?",
+    "example": "Original (30 sec): 'Hi team, I wanted to follow up on our discussion from yesterday's meeting regarding the timeline...' Compressed (15 sec): 'The timeline needs to move up two weeks. Here's why.'",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-037",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "presence",
+    "action": "Practice 'triangle eye contact.' Pick 3 spots in the room (or imagine 3 people). Deliver a 2-minute speech, switching your gaze between the 3 points every 5-10 seconds.",
+    "description": "Practice structured eye contact using the triangle technique — look at 3 points in rotation.",
+    "context": "Eye contact is the strongest connection tool in speaking. But staring at one person is intense and ignoring everyone else is disconnecting. The triangle gives you a natural pattern.",
+    "constraint_note": "2 minutes. 3 points (real or imagined). Switch every 5-10 seconds. Hold each gaze — don't dart. Finish a thought at one point before moving to the next.",
+    "example": "Point 1 (left): 'The biggest challenge we face...' Point 2 (center): '...is not the technology...' Point 3 (right): '...it's the communication gap between teams.' Each point gets a complete thought.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-038",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "From memory, list the speaking frameworks you've learned: PREP, BLUF, What/So What/Now What, Rule of Three, Pyramid. Can you explain each in one sentence?",
+    "description": "Recall all the speaking frameworks you've practiced. If you can name and explain them from memory, they're available to you in real situations.",
+    "context": "Frameworks are only useful if you can recall them under pressure. Testing yourself now means they'll be there when you need them in a meeting or presentation.",
+    "constraint_note": "List every framework from memory. For each, give a one-sentence explanation. Check which ones you forgot — those need more practice.",
+    "example": "PREP: Point, Reason, Example, Point. BLUF: Lead with your conclusion. What/So What/Now What: Situation, why it matters, what to do. Can you recall them all?",
+    "tools": [
+      "text_input"
+    ],
+    "tags": [
+      "frameworks"
+    ]
+  },
+  {
+    "id": "ps-039",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "impromptu",
+    "action": "Ask someone near you (or text a friend) to give you a random topic. Immediately deliver a 2-minute structured talk on it. No preparation beyond the 10 seconds it takes to hear the topic.",
+    "description": "True impromptu: get a topic from another person and speak for 2 minutes immediately. This is the real test.",
+    "context": "Practicing with self-chosen topics is training wheels. Real impromptu means someone else picks the topic and you perform. This is what happens in Q&A sessions, interviews, and meetings.",
+    "constraint_note": "2 minutes. Topic from someone else (not you). 10 seconds max to think. Use any framework (PREP is safest). It's okay to be imperfect — fluency matters more than perfection.",
+    "example": "If they say 'pineapple on pizza,' you have 10 seconds, then: 'I believe pineapple on pizza is [point]. Here's why [reason]. For example [example]. So [restate point].' Done.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-040",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "vocal_delivery",
+    "action": "Pick a tongue twister: 'She sells seashells by the seashore.' Say it 10 times, getting faster each time. Then immediately deliver a 60-second speech. Notice how much clearer your articulation is.",
+    "description": "Tongue twister warm-up followed by a speech. Tongue twisters are the vocal equivalent of stretching before exercise.",
+    "context": "Tongue twisters train your mouth muscles for precise articulation. After 10 repetitions, your speech is noticeably crisper — like how stretching makes movement easier.",
+    "constraint_note": "10 repetitions of the tongue twister, increasing speed. Then immediately speak for 60 seconds on any topic. Notice the difference in clarity.",
+    "example": "Other tongue twisters: 'Red lorry, yellow lorry.' 'Unique New York.' 'Peter Piper picked a peck of pickled peppers.' Pick whichever trips you up most.",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-041",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story where the first and last lines are the same sentence — but the meaning has changed because of the story between them.",
+    "description": "Circular storytelling — same sentence opens and closes, but the story transforms its meaning.",
+    "context": "Circular structure is deeply satisfying. The audience hears the same words but understands them differently. It creates a feeling of completeness and insight.",
+    "constraint_note": "2 minutes. First and last sentences must be identical words. The story between them must change what those words mean.",
+    "example": "Opens: 'I don't need anyone's help.' [Story about a time you did need help and it changed everything.] Closes: 'I don't need anyone's help.' — Same words, now ironic or wistful.",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-042",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice smiling while speaking. Say 'Good morning, it's great to be here' with a genuine smile. Then say it with a neutral face. Record both. Watch the difference.",
+    "description": "Practice the impact of facial expression on vocal warmth. A smile changes your voice even when people can't see you.",
+    "context": "Smiling physically changes your vocal tone — it lifts the soft palate and brightens the sound. Phone salespeople are trained to smile while talking. It works.",
+    "constraint_note": "Record both versions. Listen back. The smiling version will sound warmer, more approachable, and more confident. This works even on phone calls.",
+    "example": "Try it on a phone call today. Smile while speaking for 30 seconds. The other person won't see it, but they'll hear it.",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-043",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "clarity",
+    "action": "Pick a topic you could talk about for 30 minutes. Now explain it in exactly 60 seconds. Then 30 seconds. Then 15 seconds. Each compression must still be complete and clear.",
+    "description": "Progressive compression — explain the same topic at 4 decreasing time limits. Each version must stand alone.",
+    "context": "The ability to compress is the ability to prioritize. If you can explain something in 15 seconds, you truly understand what matters most about it.",
+    "constraint_note": "4 versions: 60 sec, 30 sec, 15 sec. Time yourself. Each version must be a complete explanation, not a truncated one. What do you cut at each level?",
+    "example": "60 sec: full explanation with context. 30 sec: core concept + one example. 15 sec: one sentence that captures the essence. The 15-second version is your elevator pitch.",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-044",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Think of the last time someone disagreed with you. Reconstruct their argument — make it as strong as possible. Then respond to THAT version, not the weak version you argued against at the time.",
+    "description": "Practice steel-manning — reconstructing the strongest version of an opposing argument before responding to it.",
+    "context": "Most people argue against strawmen — weak versions of the other side. Steel-manning (making the opposing argument as strong as possible) makes your response more credible and persuasive.",
+    "constraint_note": "2 minutes total. First minute: state their argument in the strongest possible form. Second minute: respond to that strong version. If your response still holds, it's a good argument.",
+    "example": "Weak version: 'They just don't like change.' Steel-man: 'They're concerned that moving fast will break trust with existing customers who depend on stability.' Now respond to THAT.",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-045",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Breathe in for 4 counts, hold for 4, out for 4. Repeat 5 times. Then speak for 60 seconds. Notice how much more controlled your voice is after box breathing.",
+    "description": "Box breathing warm-up before speaking. This calms the nervous system and gives you vocal control.",
+    "context": "Nervousness lives in the breath. Shallow breathing = shaky voice, fast pace, filler words. Box breathing resets your nervous system in 60 seconds. Do it before any important speaking moment.",
+    "constraint_note": "5 rounds of box breathing (in 4, hold 4, out 4, hold 4). Then immediately speak for 60 seconds. Notice: steadier voice, slower pace, fewer fillers.",
+    "example": "Before a meeting, a presentation, or a difficult conversation: 60 seconds of box breathing. Nobody will notice. Everyone will notice the difference in how you sound.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-046",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Pick 3 random words (open a dictionary, use a word generator, or ask someone). Connect all 3 into a coherent 90-second talk. The connection can be creative — it doesn't have to be obvious.",
+    "description": "Three random words, one coherent talk. This trains creative connection-making under pressure.",
+    "context": "The ability to connect unrelated ideas is what makes speakers interesting. TED talks, comedy, and great presentations all rely on unexpected connections.",
+    "constraint_note": "90 seconds. All 3 words must appear in your talk. The connection should feel natural by the end, even if it wasn't obvious at the start.",
+    "example": "Words: 'umbrella, democracy, breakfast.' 'Every morning at breakfast, I make a small democratic decision — cereal or toast. It seems trivial, but the freedom to choose... like carrying an umbrella on a sunny day, it's about being prepared for possibility.'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-047",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story with a twist ending. Build the audience's expectation in one direction, then reveal something that reframes everything they heard.",
+    "description": "Practice the twist ending — build expectation, then subvert it. The reframe should make the audience rethink the entire story.",
+    "context": "Twist endings work because they reward attention. The audience replays the story in their mind with new understanding. This is the most memorable storytelling technique.",
+    "constraint_note": "3 minutes. The twist must be earned — plant subtle clues earlier that make sense in retrospect. Don't cheat with 'and then I woke up.'",
+    "example": "Build a story about a terrible boss. Specific details, frustrating moments. Twist: 'That boss was me. I was describing myself from my team's perspective.' — Reframes everything.",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-048",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Think about a speaker you admire (TED talk, podcast host, colleague). What specifically do they do with their voice that you don't? Write 3 specific vocal techniques you want to adopt.",
+    "description": "Analyze a speaker you admire. Identify specific vocal techniques, not vague qualities like 'they're engaging.'",
+    "context": "Admiration without analysis doesn't lead to improvement. Breaking down what a great speaker does into specific, imitable techniques gives you a practice target.",
+    "constraint_note": "3 specific techniques. Not 'they're confident' — HOW? Do they pause before key points? Vary volume? Use a lower register? Speak slowly? Be specific.",
+    "example": "'Barack Obama: 1) Pauses for 2-3 seconds before important words. 2) Drops to a near-whisper for emphasis. 3) Speeds up during lists, slows down for conclusions.'",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-049",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "presence",
+    "action": "Deliver a 2-minute speech while walking slowly around the room. Use movement deliberately — walk to a new spot when you transition to a new point. Stop when you make a key statement.",
+    "description": "Practice deliberate movement — using physical space to reinforce your message structure.",
+    "context": "Movement should be purposeful, not nervous. Walking to a new spot signals a new idea. Stopping signals importance. Random pacing signals anxiety.",
+    "constraint_note": "2 minutes. Move to a new position for each new point (2-3 positions total). Stop completely for your most important statement. No pacing or swaying.",
+    "example": "Position 1 (left): 'Here's the problem...' Walk to Position 2 (center): 'Here's what I propose...' Walk to Position 3 (right): 'Here's what happens if we don't act.' Stop: 'The choice is ours.'",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-050",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "clarity",
+    "action": "Teach someone (real or imaginary) a skill you have in exactly 5 minutes. Structure: why it matters (30 sec), the 3 key steps (3 min), common mistakes (1 min), one tip to remember (30 sec).",
+    "description": "Deliver a 5-minute micro-lesson on any skill you have. This is the ultimate clarity exercise — teaching forces understanding.",
+    "context": "Teaching is the highest form of understanding. If you can teach something in 5 minutes with clear structure, you truly own that knowledge. This is also the format of the best conference talks.",
+    "constraint_note": "5 minutes total. Strict structure: why (30s), 3 steps (3min), mistakes (1min), one tip (30s). Time each section. The structure IS the lesson.",
+    "example": "Teaching how to make pour-over coffee: Why: 'Because life's too short for bad coffee.' Steps: 1) Grind, 2) Bloom, 3) Pour. Mistakes: 'Too hot water burns it.' Tip: 'Count to 30 during the bloom.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "self_report",
+    "tags": [
+      "frameworks"
+    ]
+  },
+  {
+    "id": "ps-051",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "vocal_delivery",
+    "action": "Pick any song you know. Speak the lyrics (don't sing) as if delivering a speech. Use the rhythm and emotion of the song but with a speaking voice.",
+    "description": "Speak song lyrics as a speech. This transfers musical rhythm and emotion into your speaking voice.",
+    "context": "Songs have built-in rhythm, pauses, and emotional arcs. Speaking lyrics teaches you to borrow that musicality for your natural speech.",
+    "constraint_note": "2 minutes. Speak, don't sing. Keep the emotional arc of the song. Pause where the music would pause.",
+    "example": "Take 'Imagine' by John Lennon. Speak: 'Imagine... there's no heaven. [pause] It's easy... if you try.' The pauses and emphasis come naturally from the song's rhythm.",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-052",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "impromptu",
+    "action": "Complete this sentence and keep talking for 60 seconds: 'The one thing most people get wrong about ___ is...' Fill the blank with your area of expertise.",
+    "description": "The 'most people get wrong' opener. This instantly positions you as someone with insight — a powerful impromptu framework.",
+    "context": "Starting with a contrarian take grabs attention immediately. It signals you have a perspective worth hearing. This works in meetings, interviews, and conversations.",
+    "constraint_note": "60 seconds. Fill the blank with something you know well. State what people get wrong, explain why, give one example.",
+    "example": "'The one thing most people get wrong about cooking is that you need recipes. You don't. You need to understand 5 base techniques, and then you can improvise anything.'",
+    "tags": [
+      "quick_response"
+    ]
+  },
+  {
+    "id": "ps-053",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story about a stranger you observed — on a bus, in a café, on the street. You don't know their story, so invent one. Make the audience care about this person.",
+    "description": "Invent a story about a real stranger you observed. This trains empathetic imagination — the core of compelling storytelling.",
+    "context": "The best storytellers see stories everywhere. A stranger on a bus has a life, a problem, a hope. Inventing their story trains you to find narrative in the ordinary.",
+    "constraint_note": "3 minutes. Based on a real person you observed. Invent their story from the details you noticed. Make the audience feel something about this stranger.",
+    "example": "'There was a woman on the metro yesterday holding a cake box very carefully. She was dressed up but her shoes were old. I think she was going to a birthday party she couldn't really afford to attend.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-054",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "You have 2 minutes to convince your team to take a 15-minute break right now. Use emotional appeal, not logical argument. Make them FEEL why they need a break.",
+    "description": "Persuade through emotion, not logic. Make people feel the need for a break rather than explaining why breaks are productive.",
+    "context": "Logic convinces the mind. Emotion moves people to action. The best persuaders use both, but most people default to logic only. This trains the emotional muscle.",
+    "constraint_note": "2 minutes. No statistics, no studies, no productivity arguments. Only: how does it feel right now? What would a break feel like? Paint the picture.",
+    "example": "'Close your eyes for a second. Feel your shoulders. They're up near your ears, aren't they? When was the last time you looked out a window? Not at a screen — out a window?'",
+    "tags": [
+      "emotional_appeal"
+    ]
+  },
+  {
+    "id": "ps-055",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice your handshake greeting. Stand, extend hand, make eye contact, say 'Hi, I'm ___. Great to meet you.' Do it 5 times. Each time, be more deliberate with the eye contact.",
+    "description": "Practice the handshake introduction — the most common first impression moment. Most people rush it.",
+    "context": "First impressions are formed in 7 seconds. Your handshake, eye contact, and greeting set the tone for every relationship. Practicing it makes it natural instead of awkward.",
+    "constraint_note": "5 repetitions. Each time, hold eye contact for one beat longer. The handshake should be firm (not crushing), and your name should be clear (not mumbled).",
+    "example": "Common mistakes: looking away while saying your name, limp handshake, saying your name too fast. Fix: eyes locked, firm grip, name spoken clearly and slowly.",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-056",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Explain a recent decision you made using the 'Because' chain. State the decision, then say 'because...' 5 times, each going one level deeper into your reasoning.",
+    "description": "The 'Because' chain — dig 5 levels deep into your reasoning. This reveals whether your thinking is solid or shallow.",
+    "context": "Most people can explain one level of 'why.' Five levels deep is where real insight lives. This is the '5 Whys' technique applied to your own thinking.",
+    "constraint_note": "State a decision. Then 5 'because' statements, each deeper than the last. Speak aloud. If you get stuck, that's where your thinking is unclear.",
+    "example": "'I switched to morning workouts. Because I have more energy in the morning. Because I sleep better when I exercise early. Because evening exercise keeps me wired. Because...'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-057",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "vocal_delivery",
+    "action": "Record yourself giving a 3-minute speech. Listen back and count: filler words, pace changes, volume drops, and moments where you trailed off. Write down the numbers.",
+    "description": "Quantitative self-assessment. Record, listen, and count specific vocal habits. Numbers don't lie.",
+    "context": "Subjective self-assessment ('I think I did okay') is unreliable. Counting specific occurrences gives you a baseline to improve against.",
+    "constraint_note": "3-minute recording. Count: total 'um/uh,' moments you spoke too fast, moments your volume dropped, sentences you didn't finish. Write the numbers down.",
+    "example": "Results might be: 12 filler words, 3 pace rushes, 2 volume drops, 1 unfinished sentence. Next time, aim for: 8 fillers, 2 rushes, 1 drop, 0 unfinished.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-058",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "You're in an elevator with someone you admire (real person). You have 60 seconds. What do you say? Not a pitch — a genuine human connection. Practice aloud.",
+    "description": "The elevator encounter — not an elevator pitch. Practice making a genuine human connection in 60 seconds.",
+    "context": "Most 'elevator pitch' advice is about selling yourself. But real connection comes from being genuinely interested, asking a good question, or sharing something authentic.",
+    "constraint_note": "60 seconds. Pick a real person you admire. Don't pitch yourself. Instead: acknowledge something specific about their work, share a brief personal connection, ask one genuine question.",
+    "example": "'I read your piece on ___. It changed how I think about ___. I'm curious — what made you start exploring that topic?' — Specific, genuine, ends with a question.",
+    "tags": [
+      "quick_response"
+    ]
+  },
+  {
+    "id": "ps-059",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story where you are NOT the hero. Someone else saved the day, had the insight, or made the difference. Give them the spotlight.",
+    "description": "Tell a story where someone else is the hero. This trains generosity in storytelling — a rare and powerful skill.",
+    "context": "Most people tell stories where they're the hero. Telling stories where others shine makes you more likeable, more trustworthy, and a better leader. It's counterintuitively more impressive.",
+    "constraint_note": "2 minutes. You're in the story but not the hero. Someone else had the key moment. Give them specific credit — name, action, impact.",
+    "example": "'I was stuck on this problem for days. Then my junior colleague Priya said one sentence that reframed everything: what if we're solving the wrong problem? That changed the entire project.'",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-060",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Say 'Thank you' 10 different ways: grateful, formal, casual, surprised, emotional, sarcastic, warm, professional, heartfelt, and as a closing statement. Each should sound genuinely different.",
+    "description": "Practice emotional range with two simple words. 'Thank you' can carry 10 different meanings depending on delivery.",
+    "context": "Two words, ten emotions. This proves that HOW you say something matters more than WHAT you say. Vocal variety is emotional intelligence made audible.",
+    "constraint_note": "10 versions. Each must sound genuinely different. If they all sound the same, you need more vocal range practice.",
+    "example": "Grateful: slow, soft, eye contact. Sarcastic: flat, quick, eyebrow raised. Heartfelt: voice cracks slightly, pause before and after. Professional: crisp, nodding, moving on.",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-061",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Deliver a 3-minute speech proposing a change to something in your daily life (commute, diet, routine). Use the Monroe's Motivated Sequence: Attention → Need → Satisfaction → Visualization → Action.",
+    "description": "Practice Monroe's Motivated Sequence — the most proven persuasion structure for speeches that call for action.",
+    "context": "Monroe's sequence has been used in advertising, politics, and sales for decades. It works because it follows the brain's natural decision-making process.",
+    "constraint_note": "3 minutes. 5 parts: grab attention (hook), establish the need (problem), present your solution, help them visualize the result, call to action.",
+    "example": "Attention: 'I waste 90 minutes every day.' Need: 'My commute is killing my productivity.' Satisfaction: 'Remote Wednesdays.' Visualization: 'Imagine starting work at 9 AM already focused.' Action: 'Let's try it for one month.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-062",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice the 'confident walk.' Walk across a room in 10 steps: shoulders back, chin level, arms swinging naturally, pace steady. Do it 3 times. Then walk to an imaginary podium and begin speaking.",
+    "description": "Practice walking with confidence. How you approach the stage sets the audience's expectation before you say a word.",
+    "context": "The walk to the front of the room is your first impression. Rushed = nervous. Slow and steady = confident. The audience reads your body before they hear your voice.",
+    "constraint_note": "3 walks across the room. Shoulders back, chin level (not up — that's arrogant, not confident), steady pace. Then walk to your 'stage' and deliver one opening line.",
+    "example": "Bad: shuffling, looking at floor, hands in pockets. Good: steady pace, eyes forward, arms relaxed, slight smile. The walk says 'I belong here.'",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-063",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Take a paragraph from any article or book. Read it once. Close it. Now explain the main idea in your own words in 60 seconds. No jargon from the original.",
+    "description": "Read-and-rephrase: absorb information and immediately explain it in your own words. This is how you internalize and communicate ideas.",
+    "context": "Rephrasing in your own words is the test of understanding. If you can only repeat the original words, you've memorized, not understood.",
+    "constraint_note": "Read once only. Close the source. 60 seconds in your own words. If you catch yourself quoting the original, rephrase.",
+    "example": "Read a paragraph about climate change. Close it. Explain: 'Basically, the ocean absorbs most of the extra heat, which is why...' — your words, their idea.",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-064",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Finish these 3 sentences, speaking for 30 seconds on each: 'The best advice I ever received was...' 'If I could change one thing about my industry...' 'The most underrated skill in life is...'",
+    "description": "Three sentence starters, 30 seconds each. Sentence starters remove the hardest part of impromptu speaking — the first word.",
+    "context": "The blank page is terrifying. A sentence starter gives you momentum. In real life, questions are sentence starters — 'What do you think about...?' This trains you to run with them.",
+    "constraint_note": "30 seconds per prompt. Start speaking immediately — don't plan. The sentence starter IS your plan. Let it carry you.",
+    "example": "'The most underrated skill in life is... listening. Not the polite kind where you wait for your turn. The kind where you actually change your mind based on what you hear.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "quick_response"
+    ]
+  },
+  {
+    "id": "ps-065",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story that teaches a lesson — but never state the lesson. The audience should understand the moral without you saying it. Show, don't tell.",
+    "description": "Tell a story with an implicit moral. The lesson should be obvious from the story but never stated directly.",
+    "context": "The most powerful stories don't end with 'and the lesson is...' They end and the audience sits with the meaning. Stating the moral insults the audience's intelligence.",
+    "constraint_note": "3 minutes. The story must have a clear lesson. You must NOT state it. If someone asked 'what's the point?' they should be able to answer it themselves.",
+    "example": "Instead of ending with 'and that's why you should always be kind,' end with the moment of kindness and its impact. Let the silence after the story carry the lesson.",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-066",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Practice projection. Stand at one end of a room. Speak to the far wall as if someone is standing there. Your voice should reach them without shouting. Use your diaphragm, not your throat.",
+    "description": "Practice vocal projection — speaking loudly without shouting. The difference is where the power comes from: diaphragm vs throat.",
+    "context": "Projection is not volume — it's resonance. A projected voice fills a room without strain. A shouted voice is loud but thin. The difference is breath support from the diaphragm.",
+    "constraint_note": "Stand far from a wall. Speak a sentence to the wall. It should feel like the sound is coming from your chest, not your throat. If your throat hurts, you're shouting, not projecting.",
+    "example": "Put your hand on your stomach. When you project, you should feel your abs engage. Say 'Good morning everyone' and feel the push from your core, not your throat.",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-067",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Think of something you want someone to do (a friend, a colleague, a family member). Write and deliver a 90-second request that makes it easy for them to say yes. Remove every barrier.",
+    "description": "Practice making requests that are easy to say yes to. The best persuaders remove friction, not add pressure.",
+    "context": "Most requests fail because they're vague, inconvenient, or create too much commitment. Making it specific, easy, and low-risk dramatically increases yes rates.",
+    "constraint_note": "90 seconds. Be specific (not 'help me sometime' but 'can you review this 1-page doc by Thursday?'). Address their likely objection before they raise it.",
+    "example": "Bad: 'We should hang out sometime.' Good: 'Are you free Saturday at 11? There's a coffee shop near your place. 30 minutes, my treat. I want to hear about your new project.'",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-068",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "impromptu",
+    "action": "Think about the last meeting you were in. Was there a moment you wanted to speak but didn't? Write what you would have said. Then say it aloud now.",
+    "description": "Recover an unsaid contribution. Most people have thoughts they don't voice in meetings. Practice saying them after the fact.",
+    "context": "The gap between thinking and speaking is where most people lose. You had the thought — you just didn't say it. Practicing after the fact builds the muscle for next time.",
+    "constraint_note": "Write what you would have said. Then say it aloud as if you're in that meeting. Notice: was it worth saying? Would it have added value? If yes, say it next time.",
+    "example": "'When they discussed the timeline, I wanted to say: I think we're underestimating the testing phase. Last time we cut testing, we spent 3 weeks on bugs.' — Say it now. Out loud.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-069",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "presence",
+    "action": "Deliver a 2-minute speech to your phone camera. Watch it back with the sound OFF. What does your body language say without words? Write 3 observations.",
+    "description": "Watch yourself speak with the sound off. Your body tells a story independent of your words — what story is it telling?",
+    "context": "55% of communication is body language (Mehrabian). Watching yourself on mute reveals what your audience sees when they're not listening to your words.",
+    "constraint_note": "Record 2 minutes. Watch on mute. Note: posture, hand gestures, facial expressions, eye movement, stillness vs fidgeting. 3 specific observations.",
+    "example": "You might discover: your hands are always in the same position, your face goes neutral when thinking, you look down when making important points. All fixable.",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-070",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "clarity",
+    "action": "Pick a topic with two opposing views (remote vs office, iOS vs Android, tea vs coffee). Present BOTH sides fairly in 3 minutes, then state your position in the final 30 seconds.",
+    "description": "Present both sides of a debate fairly before revealing your position. This is the structure of the most persuasive arguments.",
+    "context": "Presenting both sides before your conclusion makes you credible. The audience trusts you because you've shown you understand the full picture, not just your side.",
+    "constraint_note": "3 minutes total. First 2.5 minutes: both sides, equally strong. Final 30 seconds: your position and why. The audience should be surprised by which side you choose.",
+    "example": "'Remote work offers flexibility and deep focus. Office work offers collaboration and spontaneous connection. Both are real. Here's where I land...'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-071",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story using only dialogue. No narration, no 'he said/she said.' Two voices, one scene. The audience should understand the situation from the words alone.",
+    "description": "Tell a story entirely through dialogue — two characters speaking. No narration. This trains you to create distinct voices.",
+    "context": "Dialogue-only storytelling forces you to give each character a distinct voice. It's also incredibly engaging — the audience leans in because they're piecing the story together.",
+    "constraint_note": "2 minutes. Two characters. Only their words — no 'and then he said.' Change your voice slightly for each character so the audience can follow.",
+    "example": "'Are you leaving?' 'I have to.' 'You always have to.' 'That's not fair.' 'Neither is this.' — The story is in the gaps between the words.",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-072",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Whisper a sentence. Then say it at normal volume. Then project it to the back of a room. Same sentence, three volumes. The whisper should be as clear as the projection.",
+    "description": "Practice the full volume spectrum: whisper → normal → projection. Clarity should be consistent across all three.",
+    "context": "Great speakers use the full volume range. A whisper can be more powerful than a shout if the audience can hear every word. This trains clarity at all volumes.",
+    "constraint_note": "Same sentence, 3 volumes. The whisper must be audible and clear (not breathy mumbling). The projection must be clear (not shouting). Do 3 different sentences.",
+    "example": "Whisper: 'This is the most important thing I'll say today.' Normal: same. Projected: same. Each should be equally clear and equally compelling.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-073",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "impromptu",
+    "action": "Give a 3-minute 'TED-style' talk on something you learned recently — a podcast episode, an article, a conversation. Structure: what you learned, why it surprised you, how it changed your thinking.",
+    "description": "Deliver a mini-TED talk about a recent learning. This practices turning consumption (reading/listening) into production (speaking).",
+    "context": "Most people consume information passively. Turning a recent learning into a 3-minute talk forces you to process, structure, and own the idea. This is how knowledge becomes yours.",
+    "constraint_note": "3 minutes. Something you learned in the last week. Structure: what (30 sec), why it surprised you (1 min), how it changed your thinking (1 min), one takeaway for the audience (30 sec).",
+    "example": "'Last week I learned that octopuses have 9 brains. That surprised me because... It changed how I think about intelligence because... The takeaway: intelligence doesn't have to look like ours.'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-074",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Deliver a 2-minute speech where you acknowledge the strongest counterargument FIRST, then make your case. 'I know what you're thinking... and you're partially right. But here's what that misses.'",
+    "description": "Lead with the counterargument. Acknowledging objections before they're raised disarms the audience and builds trust.",
+    "context": "When you voice the audience's objection before they do, two things happen: they feel heard, and they can't use that objection against you anymore. It's the most sophisticated persuasion move.",
+    "constraint_note": "2 minutes. First 30 seconds: state the strongest objection to your position. Acknowledge its validity. Then: 'But here's what that perspective misses...' and make your case.",
+    "example": "'I know remote work can feel isolating. That's real. And for some roles, being in person matters. But here's what the office-first argument misses...'",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-075",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice the 'reset.' Mid-sentence, stop. Take a breath. Start the sentence over. Do this 5 times with different sentences. The reset should feel deliberate, not panicked.",
+    "description": "Practice the mid-speech reset — stopping, breathing, and restarting. This is your recovery tool when you lose your place or say something wrong.",
+    "context": "Every speaker loses their place sometimes. The difference between amateur and professional is the recovery. A deliberate reset looks confident. A panicked 'um, where was I' looks nervous.",
+    "constraint_note": "5 sentences. Start each one, stop mid-way, pause for a breath, restart from the beginning. The pause should look intentional to an observer.",
+    "example": "'The most important thing about— [stop, breathe] The most important thing about leadership is listening.' The restart looks like emphasis, not a mistake.",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "id": "ps-076",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Explain a process you know well, but backwards — start with the result and work back to the beginning. 'You end up with a perfect cup of coffee. Before that, you poured the water. Before that...'",
+    "description": "Reverse explanation — start with the end result and work backwards. This reveals whether you understand the causal chain.",
+    "context": "Reverse explanation tests deep understanding. If you can explain something backwards, you truly understand the cause-and-effect chain, not just the sequence.",
+    "constraint_note": "2 minutes. Start with the final result. Each step goes one step earlier. The audience should be able to reconstruct the forward process from your reverse explanation.",
+    "example": "'You have a deployed website. Before that, the code was reviewed. Before that, it was tested. Before that, it was written. Before that, someone understood the problem. That's where it all starts.'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-077",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story from two perspectives. First minute: your perspective. Second minute: the other person's perspective. Third minute: what you both missed.",
+    "description": "Dual-perspective storytelling. Tell the same event from two viewpoints, then reveal what both missed.",
+    "context": "Perspective-shifting is the highest form of storytelling empathy. It shows the audience that every story has multiple truths — and the most interesting truth is often the one nobody saw.",
+    "constraint_note": "3 minutes. Same event, two perspectives, then the meta-view. The third minute should surprise — reveal something neither perspective captured alone.",
+    "example": "Minute 1: 'I thought she was ignoring me.' Minute 2: 'She was dealing with a family emergency.' Minute 3: 'What we both missed was that a 30-second conversation would have fixed everything.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-078",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Read any text aloud and replace every period with a 2-second pause and every comma with a 1-second pause. Exaggerate the punctuation. Notice how it changes the rhythm.",
+    "description": "Make punctuation audible. Periods become long pauses, commas become short ones. This trains you to let your sentences breathe.",
+    "context": "Written punctuation exists because speech has natural pauses. Most speakers ignore them and run sentences together. Making punctuation audible restores natural rhythm.",
+    "constraint_note": "Any text. Exaggerate: period = 2 seconds of silence, comma = 1 second. It will feel slow. That's the point — you're probably too fast normally.",
+    "example": "'The rain started at six. [1...2...] She sat at the table, [1...] and didn't turn on the light. [1...2...]' — Feel how the pauses create atmosphere.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-079",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Someone asks: 'What's the most important lesson you've learned in the last year?' Answer in 90 seconds using the 'Before/After' structure: what you believed before, what happened, what you believe now.",
+    "description": "Answer a reflective question using Before/After structure. This creates a natural narrative arc in an impromptu answer.",
+    "context": "Before/After is the simplest story structure: I used to think X, then Y happened, now I think Z. It works for any reflective question and sounds thoughtful without preparation.",
+    "constraint_note": "90 seconds. Three parts: Before (what you used to believe), the moment (what changed), After (what you believe now). The contrast between before and after IS the lesson.",
+    "example": "Before: 'I used to think working harder was always the answer.' Moment: 'Then I burned out and my best work came during recovery.' After: 'Now I think rest is a productivity tool, not a reward.'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-080",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "presence",
+    "action": "Deliver a 3-minute speech while maintaining eye contact with your phone camera the entire time. No looking away, no looking down at notes. Pure eye contact for 3 minutes.",
+    "description": "Sustained eye contact practice. 3 minutes of looking directly into a camera (simulating an audience) while speaking coherently.",
+    "context": "Sustained eye contact is uncomfortable and powerful. Most speakers break eye contact when thinking, when nervous, or when making important points — exactly when they should hold it.",
+    "constraint_note": "3 minutes. Camera = audience. No looking away. If you lose your train of thought, maintain eye contact through the pause. The discomfort is the training.",
+    "example": "You'll notice the urge to look away is strongest when you're thinking of what to say next. That's exactly when the audience needs your eye contact most — it signals confidence.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-081",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Deliver a 2-minute speech where every sentence is a question. Persuade the audience by asking, not telling. Lead them to your conclusion through questions alone.",
+    "description": "Persuade using only questions. Questions engage the audience's own reasoning — they persuade themselves.",
+    "context": "Questions are more persuasive than statements because the audience generates the answer internally. A question like 'Is that really the best we can do?' is more powerful than 'We can do better.'",
+    "constraint_note": "2 minutes. Every sentence must be a question. No statements. The questions should build toward your conclusion logically.",
+    "example": "'What if we could cut meeting time in half? What would you do with those extra hours? Would your work improve? Would your team be happier? So why aren't we trying?'",
+    "tags": [
+      "emotional_appeal"
+    ]
+  },
+  {
+    "id": "ps-082",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Pick any number between 100 and 10,000. Make it meaningful in 30 seconds. Don't just state it — contextualize it so the audience feels its significance.",
+    "description": "Make a number meaningful. Raw numbers are forgettable. Contextualized numbers are powerful.",
+    "context": "'We waste 2,000 hours a year in meetings' means nothing. '2,000 hours — that's 83 full days, or almost 3 months of your life, sitting in rooms talking about work instead of doing it.' Now it means something.",
+    "constraint_note": "30 seconds. Pick a number. Make the audience feel its size through comparison, visualization, or personal impact.",
+    "example": "'10,000 steps is about 8 kilometers. That's walking from your house to the airport. Every day. For the rest of your life. That's what the health app is asking.'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-083",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story where the setting is a character. The place should feel alive — it should have mood, personality, and influence on what happens.",
+    "description": "Tell a story where the setting does as much work as the characters. The place should feel like a presence, not a backdrop.",
+    "context": "Great storytellers make settings come alive. 'The office' is a backdrop. 'The office at 11 PM, humming fluorescent lights, one other person three rows away' is a character.",
+    "constraint_note": "2 minutes. The setting must be described with sensory detail and must influence the story. If you removed the setting, the story should feel incomplete.",
+    "example": "'The chai stall was the size of a closet. Steam made everything blurry. You couldn't have a private conversation there — everyone heard everything. Which is exactly why he chose it to tell me.'",
+    "tags": [
+      "personal_stories"
+    ]
+  },
+  {
+    "id": "ps-084",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "vocal_delivery",
+    "action": "Deliver a 3-minute speech where you deliberately use 5 different vocal techniques: a whisper, a pause, a volume increase, a pace change, and a rhetorical question. Plan where each goes.",
+    "description": "Orchestrate 5 vocal techniques in one speech. This is the vocal equivalent of a musician using dynamics, tempo, and rests.",
+    "context": "Individual vocal techniques are useful. Combining them deliberately in one speech is mastery. This trains you to think of your voice as an instrument with multiple controls.",
+    "constraint_note": "3 minutes. Must include all 5: whisper (for intimacy), pause (for weight), volume increase (for emphasis), pace change (for energy), rhetorical question (for engagement). Plan their placement.",
+    "example": "'[normal] Last year I almost quit. [pause 3 sec] [whisper] I was that close. [volume up] But then something happened. [fast pace] Everything changed in one conversation, one sentence, one word. [rhetorical] Do you know what that word was?'",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-085",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "impromptu",
+    "action": "Complete and speak for 30 seconds on each: 'I changed my mind about ___ when...' 'The hardest part of ___ is...' 'Nobody talks about ___ but...'",
+    "description": "Three more sentence starters for impromptu practice. Each one opens a different type of insight.",
+    "context": "These starters work because they promise insight: a mind-change, a hidden difficulty, an unspoken truth. Starting with these frames makes anything you say sound thoughtful.",
+    "constraint_note": "30 seconds each. No planning. The starter IS your plan. Let it carry you into genuine reflection.",
+    "example": "'Nobody talks about how lonely leadership is. Everyone sees the title, the decisions, the authority. Nobody sees the 11 PM doubt, the weight of other people's livelihoods...'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "quick_response"
+    ]
+  },
+  {
+    "id": "ps-086",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "presence",
+    "action": "Deliver a 2-minute speech while sitting down. No standing, no walking. Use only your upper body, face, and voice to command attention. This is your meeting presence.",
+    "description": "Practice seated presence. Most of your speaking happens sitting in meetings — train for that context specifically.",
+    "context": "Standing presence gets all the attention, but most professionals speak while seated 90% of the time. Seated presence uses posture, hand gestures, facial expression, and voice — no walking or staging.",
+    "constraint_note": "2 minutes seated. Sit upright (not leaning back). Use hand gestures deliberately. Maintain eye contact with camera or imagined colleagues. Your voice does more work when you can't move.",
+    "example": "Sit at your desk. Imagine 5 colleagues around a table. Deliver your speech to them. Notice: do you lean back? Do your hands disappear under the table? Do you look at the table?",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-087",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "clarity",
+    "action": "Take something you explained badly recently (a confusing email, a muddled meeting contribution). Re-explain it now in 2 minutes, clearly. What was wrong the first time? What's better now?",
+    "description": "Redo a failed explanation. This is the most practical clarity exercise — fixing a real communication failure.",
+    "context": "Everyone has moments where they explained something badly. Redoing it — with time to think — trains you to recognize what went wrong and builds better habits for next time.",
+    "constraint_note": "2 minutes. Think of a specific moment you communicated poorly. Redo it clearly. Then reflect: what was different? What made the first version confusing?",
+    "example": "Maybe you over-explained, buried the point, used jargon, or started with context instead of the conclusion. Identify the pattern — it's probably a habit.",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-088",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "From memory, list every persuasion technique you've practiced: Monroe's Sequence, steel-manning, both sides, questions-only, counterargument-first, problem-solution-benefit. Explain each in one sentence.",
+    "description": "Recall all persuasion frameworks from memory. If you can name and explain them, they're available to you in real situations.",
+    "context": "Persuasion frameworks are tools in a toolbox. The more you can recall under pressure, the more flexible you are in real conversations.",
+    "constraint_note": "List every technique from memory. One-sentence explanation each. Check which ones you forgot — those need more practice.",
+    "example": "Steel-manning: make the opposing argument as strong as possible before responding. Monroe's: Attention → Need → Satisfaction → Visualization → Action. How many can you recall?",
+    "tools": [
+      "text_input"
+    ],
+    "tags": [
+      "emotional_appeal"
+    ]
+  },
+  {
+    "id": "ps-089",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story that starts with a sound. Not 'I heard a sound' — start WITH the sound. 'BANG. The door slammed...' or 'Drip. Drip. Drip. The tap in the kitchen...'",
+    "description": "Open a story with a sound. Sensory openings are more engaging than narrative openings because they put the audience in the scene immediately.",
+    "context": "Sound openings bypass the analytical brain and go straight to experience. The audience is IN the scene before they know what the story is about.",
+    "constraint_note": "2 minutes. First word(s) must be a sound — onomatopoeia or a sound description. The sound should be relevant to the story, not just a gimmick.",
+    "example": "'Ding. The elevator opened on the wrong floor. I knew it was wrong because the carpet was red, and our floor had grey carpet. But the doors were already closing behind me.'",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-090",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Say the word 'No' in 10 different ways: firm, gentle, questioning, angry, sad, playful, shocked, resigned, defiant, and whispered. Each should be unmistakably different.",
+    "description": "One word, ten emotions. 'No' is the simplest word — if you can make it carry 10 different meanings, your vocal range is strong.",
+    "context": "Vocal variety isn't about big speeches — it's about single words carrying the right weight. If your 'no' always sounds the same, your emotional range is limited.",
+    "constraint_note": "10 versions. Each must be clearly different. If someone heard them without context, they should be able to name the emotion.",
+    "example": "Firm: 'No.' (period, full stop). Gentle: 'No...' (trailing, soft). Defiant: 'NO.' (sharp, loud, chin up). Resigned: 'No.' (quiet, exhale, looking down).",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-091",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "You just got asked 'Any questions?' at the end of a presentation. Ask one good question. Speak it aloud. A good question shows you listened, adds value, and makes the speaker think.",
+    "description": "Practice asking good questions. Asking is as important as answering — a great question makes you memorable.",
+    "context": "The person who asks the best question in a meeting is often remembered more than the presenter. Good questions show listening, insight, and curiosity.",
+    "constraint_note": "Imagine a presentation you recently attended. Formulate and ask one question aloud. It should be specific (not 'can you elaborate?'), insightful, and brief.",
+    "example": "Bad: 'Can you tell us more about that?' Good: 'You mentioned adoption dropped 30% after the redesign. Did you look at whether that was a learning curve issue or a fundamental usability problem?'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-092",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Deliver a 3-minute speech where you change your position mid-speech. Start arguing one side, then say 'But as I was preparing this, I realized...' and argue the other side. End with your real position.",
+    "description": "The mid-speech pivot. Start one direction, then genuinely change course. This is the most authentic form of persuasion — thinking in real time.",
+    "context": "Audiences trust speakers who think in front of them more than speakers who deliver polished certainty. A genuine pivot says 'I'm honest enough to change my mind.'",
+    "constraint_note": "3 minutes. The pivot must feel genuine, not scripted. Start with a real position, then find the real doubt, then land on your actual conclusion.",
+    "example": "'I came here to argue that AI will replace most jobs. But as I prepared... I realized every technology revolution created more jobs than it destroyed. So my real position is...'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-093",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice the 'open posture.' Uncross everything — arms, legs, ankles. Open your chest. Relax your shoulders. Hold for 60 seconds. This is the posture of someone who has nothing to hide.",
+    "description": "Practice open body posture — the physical signal of confidence and approachability.",
+    "context": "Crossed arms, hunched shoulders, and closed posture signal defensiveness. Open posture signals confidence and invites connection. It also actually makes you feel more confident (embodied cognition).",
+    "constraint_note": "60 seconds. Uncross everything. Shoulders back and down. Chest open. Hands visible. Notice the vulnerability — that's what confidence feels like from the inside.",
+    "example": "Try this before your next meeting: 30 seconds of open posture. You'll walk in feeling different. Your body changes your mind, not just the other way around.",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-094",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Pick a topic and explain it using the 'What, How, Why' structure (Simon Sinek's Golden Circle, reversed for teaching). What is it? How does it work? Why does it matter? 2 minutes.",
+    "description": "Explain something using What → How → Why. This is the natural teaching structure — definition, mechanism, significance.",
+    "context": "What/How/Why works for any explanation. It moves from concrete to abstract, which matches how the brain processes new information.",
+    "constraint_note": "2 minutes. Equal time on each part (~40 seconds). What: define it simply. How: explain the mechanism. Why: explain why anyone should care.",
+    "example": "What: 'Compound interest is earning interest on your interest.' How: '₹1000 at 10% becomes ₹1100, then ₹1210, then ₹1331...' Why: 'This is why starting to invest at 25 vs 35 can mean lakhs of difference.'",
+    "tags": [
+      "frameworks"
+    ]
+  },
+  {
+    "id": "ps-095",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story where you build tension by withholding one key piece of information. The audience should be asking 'but what was it?' throughout. Reveal it at the end.",
+    "description": "Practice information withholding — the most powerful tension-building technique in storytelling.",
+    "context": "Curiosity is created by gaps. When the audience knows something is missing, they lean in. The reveal at the end is satisfying precisely because they had to wait.",
+    "constraint_note": "3 minutes. One key detail is withheld until the final 15 seconds. Everything else is specific and vivid. The withheld detail should reframe the entire story.",
+    "example": "Tell a story about 'the message' without revealing what it said. Describe receiving it, your reaction, what you did next. Reveal the content only at the very end.",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-096",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Practice the 'landing.' Say 5 sentences. End each one with a downward inflection — your voice drops at the period. Don't let sentences trail up like questions.",
+    "description": "Practice downward inflection at the end of statements. Upward inflection (uptalk) makes statements sound like questions and undermines authority.",
+    "context": "Uptalk — ending statements with rising pitch — is one of the most common confidence killers. It makes everything sound uncertain. Downward inflection signals conviction.",
+    "constraint_note": "5 declarative sentences. Each must end with your voice going DOWN, not up. Record yourself to check — uptalk is often invisible to the speaker.",
+    "example": "Uptalk: 'We should launch next week?' (sounds uncertain). Landing: 'We should launch next week.' (sounds decided). Same words, opposite impression.",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-097",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Explain why your favorite movie/show is great — but you can only talk about ONE scene. Not the plot, not the acting in general. One specific scene and why it works. 90 seconds.",
+    "description": "Analyze one scene from your favorite movie/show. Specificity is more compelling than generality.",
+    "context": "'It's a great movie' is boring. 'There's a scene where he sits in the rain for 3 minutes and doesn't say a word, and it's the most powerful moment in the film' — that's interesting.",
+    "constraint_note": "90 seconds. ONE scene only. Describe what happens, then explain why it works. Be specific about the filmmaking choices that make it effective.",
+    "example": "'In The Pursuit of Happyness, there's a scene where Will Smith is locked in a bathroom with his son for the night. He puts his foot against the door and cries silently. No music. No dialogue. Just a father trying not to wake his child.'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-098",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Think about the last time you explained something and the other person didn't understand. What went wrong? Was it too much jargon? Too much detail? Wrong starting point? Write 3 things you'd do differently.",
+    "description": "Analyze a recent communication failure. Understanding why you were unclear is more valuable than practicing clarity exercises.",
+    "context": "Most clarity problems have patterns: too much context before the point, assumed knowledge, jargon, or starting at the wrong level. Identifying YOUR pattern is the fastest path to improvement.",
+    "constraint_note": "One specific moment. 3 specific things you'd change. Be honest about what went wrong — not 'they didn't listen' but 'I buried the point in context.'",
+    "example": "'I started with 5 minutes of background before getting to the ask. I used 3 acronyms without defining them. I assumed they knew the previous decision.' — Now you know what to fix.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-099",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "presence",
+    "action": "Deliver a 3-minute speech to a mirror. Maintain eye contact with your own reflection. Use hand gestures deliberately. This is the most uncomfortable and most effective presence exercise.",
+    "description": "Speech to a mirror — the classic actor's exercise. Watching yourself in real-time is more uncomfortable and more revealing than watching a recording.",
+    "context": "A mirror gives you real-time feedback. You see every fidget, every eye-dart, every uncertain expression AS it happens. It's uncomfortable because you can't hide from yourself.",
+    "constraint_note": "3 minutes. Mirror eye contact throughout. Use 3-5 deliberate hand gestures. Notice: do you like what you see? Where do you look away? That's where the work is.",
+    "example": "Most people discover they avoid their own eyes when making important points. The mirror forces you to confront that — and fix it.",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-100",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "vocal_delivery",
+    "action": "Record a 3-minute speech. Listen back and grade yourself 1-5 on: pace variety, volume variety, pause usage, filler words, and clarity of ending sentences. Total score out of 25. Write your scores.",
+    "description": "Quantitative self-assessment across 5 vocal dimensions. This gives you a baseline score to improve against over time.",
+    "context": "A score gives you something to beat. 'I got 14/25 last time, aiming for 17 this time' is more motivating than 'I want to sound better.'",
+    "constraint_note": "Record 3 minutes. Listen back with a scorecard. Be honest. 1=poor, 3=average, 5=excellent. Write the scores. Repeat this exercise monthly to track progress.",
+    "example": "Pace: 3, Volume: 2, Pauses: 4, Fillers: 2, Endings: 3 = 14/25. Focus areas: volume variety and filler words. Retest in 2 weeks.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-101",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "vocal_delivery",
+    "action": "Read a children's book aloud (or recite a nursery rhyme) with full dramatic expression. Different voices for characters, exaggerated emotions, theatrical pauses.",
+    "description": "Read a children's story with full theatrical expression. This unlocks vocal range you'd never use in 'serious' speaking.",
+    "context": "Children's stories demand vocal extremes — whispers, shouts, silly voices, dramatic pauses. Practicing these extremes expands the range you use in normal speech.",
+    "constraint_note": "2 minutes. Go big — exaggerate every emotion, every character voice, every pause. If you feel ridiculous, you're doing it right.",
+    "example": "'And the big bad wolf said [deep voice] I'LL HUFF... AND I'LL PUFF... [pause, whisper] and I'll blow your house down.' — The range transfers to real speaking.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-102",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "impromptu",
+    "action": "Give a 3-minute acceptance speech for an imaginary award. You just won 'Best ___' (pick anything — best neighbor, best debugger, best chai maker). Be genuine, funny, and gracious.",
+    "description": "Deliver an acceptance speech for a fictional award. This practices gratitude, humor, and grace under (imaginary) spotlight.",
+    "context": "Acceptance speeches combine storytelling, gratitude, humor, and brevity. They're also surprisingly common — awards at work, toasts at dinners, recognition moments.",
+    "constraint_note": "3 minutes. Must include: genuine surprise, thanking specific people (real names), one funny moment, and a gracious close. Don't be falsely humble.",
+    "example": "'Best Chai Maker? I... honestly didn't see this coming. I want to thank my mother, who taught me that the secret is patience — and too much sugar. And my colleague Raj, who drinks 4 cups a day and is basically my quality assurance team.'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-103",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Pick something free (a park, a podcast, a public library). Deliver a 2-minute speech about its value as if you're defending its funding. Make the audience feel what would be lost without it.",
+    "description": "Defend something free. Arguing for the value of something people take for granted is advanced persuasion — you're making the invisible visible.",
+    "context": "The hardest things to argue for are things people already have. 'Why do we need parks?' seems obvious until the budget meeting. This trains you to articulate value that's usually assumed.",
+    "constraint_note": "2 minutes. Pick something free that people take for granted. Make the audience feel its absence — what would life be like without it?",
+    "example": "'Imagine your neighborhood without the park. Where do the kids play? Where do the old couples walk? Where do you go when your apartment feels too small? That patch of green is holding your community together.'",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-104",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice the 'grounding' technique. Before speaking, press your feet into the floor, feel the contact, take one deep breath. Then speak your first sentence. Do this 5 times.",
+    "description": "Physical grounding before speaking. This anchors you in your body and prevents the 'floating' feeling of nervousness.",
+    "context": "Nervousness makes you feel disconnected from your body. Grounding — feeling your feet on the floor — brings you back. It's a 5-second technique that works every time.",
+    "constraint_note": "5 rounds. Press feet into floor, feel the contact, one deep breath, then speak. The first sentence should come from a place of physical stability.",
+    "example": "Before any speaking moment: feet → floor → breath → speak. It takes 5 seconds and nobody notices. But you'll feel the difference immediately.",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-105",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Explain the same concept to 3 different audiences in 60 seconds each: a child, a peer, and an expert. Each version should be appropriate for that audience's level.",
+    "description": "Audience-adaptive explanation. The same concept explained three ways for three levels of understanding.",
+    "context": "The best communicators adjust automatically to their audience. A doctor explains differently to a patient, a colleague, and a specialist. This trains that flexibility.",
+    "constraint_note": "60 seconds per audience. Child: simple, concrete, fun. Peer: practical, relevant. Expert: precise, nuanced, assumes knowledge. Same core concept, three registers.",
+    "example": "Concept: how the internet works. Child: 'It's like a giant post office that delivers letters in one second.' Peer: 'Packets of data routed through servers.' Expert: 'TCP/IP stack with DNS resolution and CDN caching.'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-106",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story about an ordinary day that changed your life. The day itself should sound normal — the significance should emerge gradually, not be announced.",
+    "description": "Tell the story of an ordinary day that turned out to be pivotal. The power is in the contrast between the mundane surface and the deep impact.",
+    "context": "The best life stories aren't about dramatic events — they're about ordinary moments that turned out to matter. 'I walked into a coffee shop' can be the beginning of a life-changing story.",
+    "constraint_note": "3 minutes. The day should sound ordinary for the first 2 minutes. The significance should dawn on the audience gradually, not be stated upfront.",
+    "example": "'It was a Tuesday. I was running late, as usual. I grabbed coffee from the place I never go to because my usual place was closed. The barista said something...' — The ordinary details make the pivot powerful.",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-107",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Practice breathing from your diaphragm. Place one hand on your chest, one on your belly. Breathe so only the belly hand moves. Do 10 breaths. Then speak for 30 seconds from that breath support.",
+    "description": "Diaphragmatic breathing practice — the foundation of vocal power, projection, and calm.",
+    "context": "Chest breathing = shallow, nervous voice. Belly breathing = deep, supported, powerful voice. Every singer, actor, and professional speaker breathes from the diaphragm.",
+    "constraint_note": "10 belly breaths (chest hand stays still, belly hand rises). Then immediately speak for 30 seconds. Notice: your voice is deeper, steadier, and more resonant.",
+    "example": "If your chest hand moves, you're chest breathing. Reset. Only the belly should expand. Think of inflating a balloon in your stomach.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-108",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "You're introducing a colleague at an event. You know 3 things about them: their name, their role, and one personal fact. Deliver a 60-second introduction that makes the audience want to listen to them.",
+    "description": "Practice introducing someone else. A great introduction sets the speaker up for success — it's a generous act of speaking.",
+    "context": "Introductions are an overlooked speaking skill. A bad intro ('Here's John, he works in engineering') wastes the moment. A great intro creates anticipation.",
+    "constraint_note": "60 seconds. Include: their name (said clearly), why the audience should care, and one human detail that makes them relatable. End with energy.",
+    "example": "'You're about to hear from someone who turned a 3-person team into a 30-person department in 18 months. She also makes the best filter coffee in the office. Please welcome Priya.'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-109",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Deliver a 2-minute speech where you use exactly ONE statistic. Build the entire argument around that single number. Make it unforgettable.",
+    "description": "One-statistic persuasion. A single well-chosen number is more persuasive than a slide full of data.",
+    "context": "Data overload numbs the audience. One powerful statistic, well-contextualized, is remembered. 'We waste 2,000 hours a year in meetings' is more powerful than a 10-slide deck of meeting analytics.",
+    "constraint_note": "2 minutes. ONE number only. Introduce it, contextualize it (make it feel real), and build your argument around it. The number should be the thing the audience remembers.",
+    "example": "'37%. That's the percentage of meetings that end without a clear next step. Think about your last week. How many meetings did you leave thinking: what was that for? 37% of them — that's the answer.'",
+    "tags": [
+      "emotional_appeal"
+    ]
+  },
+  {
+    "id": "ps-110",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "presence",
+    "action": "Deliver a 3-minute speech while standing on one spot, using ONLY hand gestures and facial expressions for emphasis. No walking, no swaying. Your hands and face do all the physical work.",
+    "description": "Gesture-focused delivery. With movement restricted, your hands and face become your primary physical communication tools.",
+    "context": "In video calls, seated meetings, and small rooms, your hands and face ARE your body language. Training them specifically prepares you for the contexts where you actually speak most.",
+    "constraint_note": "3 minutes. Feet planted. Use 5+ deliberate hand gestures (counting, expanding, pointing, contrasting, emphasizing). Facial expressions should match your words.",
+    "example": "Counting: hold up fingers. Expanding: hands move apart ('the opportunity is huge'). Contrasting: one hand then the other ('on one hand... on the other'). Each gesture should add meaning.",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-111",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Take the last message you sent (text, Slack, email). Say it aloud in half the words. Then say it in a quarter of the words. What's the absolute minimum needed?",
+    "description": "Extreme compression of a real message. Find the minimum viable communication.",
+    "context": "Most messages contain 50-75% filler. Finding the minimum viable version trains you to lead with what matters and cut what doesn't.",
+    "constraint_note": "Original → half → quarter. Each version must still communicate the core message. What did you cut? Was anything important lost?",
+    "example": "Original (40 words): 'Hey, I wanted to check in about the project timeline. I think we might need to push the deadline back a week because of the testing issues we discussed.' Quarter (10 words): 'Timeline needs one more week. Testing issues. Thoughts?'",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-112",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story where the punchline or key moment is a single word. Build toward it. The word should land with impact because of everything that came before.",
+    "description": "Build a story toward a single-word payoff. The power of one word depends entirely on the setup.",
+    "context": "In comedy, the punchline is one word. In drama, the revelation is one word. The setup is everything — it gives that single word its weight.",
+    "constraint_note": "2 minutes of setup, ending with one word that carries the entire meaning. The word should feel inevitable in retrospect but surprising in the moment.",
+    "example": "Build a story about waiting for test results, the anxiety, the phone call, the doctor's voice... and end with: 'Negative.' One word. The entire story collapses into relief.",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-113",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Explain your biggest professional achievement — but you can only talk about what OTHER people did. Your role must be implied, never stated.",
+    "description": "Describe an achievement by crediting others. Your contribution should be obvious from context without you claiming it.",
+    "context": "The most impressive people describe achievements by talking about their team. The audience infers their leadership. This is more credible than self-promotion.",
+    "constraint_note": "90 seconds. Talk only about what others did. Your role should be clear from context (you organized, led, enabled) without you saying 'I did.'",
+    "example": "'Priya redesigned the entire data pipeline in 3 weeks. Rahul convinced the skeptical VP to give us runway. The team shipped on a Sunday because they believed in it.' — The listener knows who led this team.",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-114",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "vocal_delivery",
+    "action": "Deliver a 3-minute speech where you use silence as a tool at least 5 times. Each silence should be at least 3 seconds. Plan where they go: before a key point, after a question, during a transition.",
+    "description": "Orchestrated silence. Plan 5 deliberate silences into a speech and execute them. Silence is your most powerful vocal tool.",
+    "context": "Silence does what words can't: it creates anticipation, lets ideas land, signals confidence, and gives the audience time to think. Five planned silences in 3 minutes transforms a speech.",
+    "constraint_note": "3 minutes. 5 silences of 3+ seconds each. Plan their placement: before reveals, after questions, during transitions. Count in your head. Don't rush.",
+    "example": "'The answer... [1...2...3...] ...was no. [pause] And that no... [1...2...3...] ...was the best thing that ever happened to me.' — Silence before and after the key word.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-115",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Deliver a 2-minute speech that ends with a question, not a statement. The question should be the most powerful moment — it should stay with the audience after you stop speaking.",
+    "description": "End with a question. The most memorable speeches often end not with an answer but with a question the audience takes home.",
+    "context": "A closing question turns the audience from passive listeners into active thinkers. They leave your speech still processing. That's more powerful than a neat conclusion.",
+    "constraint_note": "2 minutes. Build your argument. End with one question. The question should be genuine (not rhetorical fluff) and should make the audience think after you stop.",
+    "example": "Build a speech about taking risks. End with: 'So here's what I want to leave you with: what's the thing you'd do tomorrow if you knew you couldn't fail?' — The audience takes that question home.",
+    "tags": [
+      "emotional_appeal"
+    ]
+  },
+  {
+    "id": "ps-116",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice your 'listening face.' Have someone talk to you (or watch a video) for 60 seconds. Be aware of your face: are you nodding? Is your expression engaged? Or are you blank?",
+    "description": "Practice active listening body language. Your face while listening is as important as your face while speaking.",
+    "context": "Presence isn't just about speaking — it's about how you look when others speak. An engaged listening face (nodding, eye contact, responsive expressions) makes you a better communicator.",
+    "constraint_note": "60 seconds of listening. Notice: are you nodding? Making eye contact? Showing reactions? Or are you blank-faced, looking at your phone, or preparing your response?",
+    "example": "Watch a 1-minute video. Notice your face. Are you reacting? Or are you a statue? Practice: nod at key points, raise eyebrows at surprises, smile at humor.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-117",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Pick a decision your team made recently. Explain the decision AND the reasoning in exactly 3 sentences. Sentence 1: what was decided. Sentence 2: the main reason. Sentence 3: what happens next.",
+    "description": "The 3-sentence decision summary. This is the format executives use — and expect — for communicating decisions.",
+    "context": "Most people take 5 minutes to explain a decision. Three sentences forces you to find the essential: what, why, what next. This is how senior leaders communicate.",
+    "constraint_note": "Exactly 3 sentences. No more. Sentence 1: the decision. Sentence 2: the primary reason. Sentence 3: the next action. Practice with 3 different decisions.",
+    "example": "'We're delaying launch by two weeks. Testing found 3 critical bugs that would affect 40% of users. Engineering will fix them by Friday, and we'll retest next week.'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-118",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story that uses a physical object as a metaphor throughout. Hold the object (or describe holding it). The object should represent something abstract — time, trust, opportunity.",
+    "description": "Object-as-metaphor storytelling. A physical object becomes a symbol that carries the story's meaning.",
+    "context": "Objects make abstract ideas concrete. Holding a key while talking about opportunity, or a broken cup while talking about trust — the physical grounds the abstract.",
+    "constraint_note": "3 minutes. Pick a real object. It must represent something abstract. Reference it at least 3 times during the story. The object should deepen in meaning each time.",
+    "example": "Hold a coin: 'This coin has two sides. [flip it] Every decision has two sides. [hold it up] But here's the thing about coins — you can't see both sides at once. And that's exactly the problem with decisions.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-119",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Practice the 'vocal reset.' Speak for 30 seconds in your normal voice. Then hum for 10 seconds. Then speak again. Notice how the hum centers and warms your voice.",
+    "description": "The vocal reset — humming between speaking segments to recenter your voice. A quick technique for any speaking situation.",
+    "context": "Humming resets your vocal cords to their natural resonance. It's why singers hum before performing. A 10-second hum between segments keeps your voice warm and centered.",
+    "constraint_note": "Speak 30 sec → hum 10 sec → speak 30 sec. Notice the difference in the second speaking segment: warmer, more resonant, more centered.",
+    "example": "Use this before meetings, presentations, or phone calls. 10 seconds of humming in the hallway. Nobody notices. Your voice will thank you.",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-120",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "You have 2 minutes to give a toast at a friend's birthday. Include: one specific memory, one quality you admire, one wish for their future. Make it warm, not generic.",
+    "description": "Practice giving a toast — one of the most common real-world speaking situations. Specificity makes it memorable.",
+    "context": "Toasts are the speaking skill everyone needs and nobody practices. A great toast is specific, warm, and brief. A bad toast is generic, rambling, and awkward.",
+    "constraint_note": "2 minutes. Real friend (use their name). One specific memory (not 'we've had great times' but 'remember when...'). One quality. One wish. End by raising your glass.",
+    "example": "'Rahul. Remember the night we got lost in Coorg and you navigated us home using the stars — and Google Maps, but mostly the stars. That's who you are: someone who finds the way. Here's to many more adventures. Cheers.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-121",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Deliver a 3-minute speech where you persuade the audience to do something uncomfortable: cold showers, waking up at 5 AM, deleting social media for a week. Make the discomfort sound appealing.",
+    "description": "Sell discomfort. Persuading someone to do something unpleasant is the hardest persuasion challenge — you can't rely on the appeal of the thing itself.",
+    "context": "Most persuasion sells something desirable. Selling discomfort requires reframing — making the pain the point, the difficulty the benefit. This is how coaches, trainers, and leaders motivate.",
+    "constraint_note": "3 minutes. Pick something genuinely uncomfortable. Don't minimize the discomfort — acknowledge it and reframe it as the source of the benefit.",
+    "example": "'Cold showers are terrible. I'm not going to pretend they're not. The first 10 seconds feel like a mistake. But here's what happens in second 11...'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-122",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "storytelling",
+    "action": "Think of 3 stories from your life that you could tell in any speaking situation: one funny, one meaningful, one about failure. Write a one-sentence summary of each. These are your 'back pocket' stories.",
+    "description": "Build your story bank — 3 go-to stories you can deploy in any situation. Every good speaker has these ready.",
+    "context": "Professional speakers have 5-10 stories they've told hundreds of times. Having even 3 'back pocket' stories means you're never caught without material.",
+    "constraint_note": "3 stories: funny, meaningful, failure. One sentence each. These should be real, personal, and tested (you've told them before and they landed).",
+    "example": "Funny: 'The time I showed up to a client meeting with my shirt inside out.' Meaningful: 'The conversation with my father that changed how I see ambition.' Failure: 'The product launch that taught me to listen.'",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "personal_stories"
+    ]
+  },
+  {
+    "id": "ps-123",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Explain a recent mistake you made at work. But explain it so clearly that the listener could avoid making the same mistake. Structure: what happened, why it happened, what to do instead.",
+    "description": "Turn a mistake into a clear lesson. The best post-mortems are clear enough that others can learn from them without experiencing the failure.",
+    "context": "Explaining mistakes clearly is a leadership skill. 'I messed up' is useless. 'Here's exactly what went wrong, why, and how to prevent it' is valuable to everyone.",
+    "constraint_note": "2 minutes. What happened (specific), why it happened (root cause, not surface), what to do instead (actionable). The listener should be able to avoid this mistake.",
+    "example": "'I shipped without testing the edge case where users have no profile photo. Why: I assumed all users had one because I always do. Fix: always test with a blank/default state.'",
+    "tags": [
+      "frameworks"
+    ]
+  },
+  {
+    "id": "ps-124",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "presence",
+    "action": "Deliver a 3-minute speech while walking slowly toward the camera/mirror. Start far away, end close. Your voice and energy should build as you approach. The walk IS the crescendo.",
+    "description": "Walking crescendo — physical approach mirrors emotional build. This is a theatrical technique that works in presentations and pitches.",
+    "context": "Physical approach creates psychological intensity. Starting far and moving closer mirrors how a speech should build — from broad context to personal, intimate conclusion.",
+    "constraint_note": "3 minutes. Start 3-4 meters from camera/mirror. Walk slowly forward as you speak. Voice and energy build with proximity. End close, making your final point at full intensity.",
+    "example": "Start (far): 'There's a problem nobody's talking about.' [walk closer] Middle: 'It affects every one of us.' [closer still] End (close): 'And the solution starts with you. Today.'",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-125",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "vocal_delivery",
+    "action": "Pick a paragraph and read it aloud 3 times: once as a news anchor (authoritative, measured), once as a sports commentator (excited, fast), once as a bedtime storyteller (soft, slow). Same words, three personas.",
+    "description": "Three-persona reading. Adopting different speaker personas unlocks vocal range you don't normally access.",
+    "context": "Each persona uses a different part of your vocal range. The news anchor uses authority. The commentator uses energy. The storyteller uses warmth. You need all three.",
+    "constraint_note": "Same paragraph, 3 reads. Commit fully to each persona — don't half-do it. The bigger the contrast between the three, the more range you're building.",
+    "example": "News anchor: measured pace, clear diction, authoritative tone. Sports commentator: fast, excited, rising pitch. Storyteller: slow, warm, gentle pauses. Same words, three worlds.",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-126",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "You're asked: 'What would you change about your company/school/industry if you had unlimited power for one day?' Answer in 90 seconds. Be specific and bold.",
+    "description": "The 'unlimited power' question. This tests whether you can articulate a vision quickly and specifically.",
+    "context": "Vision questions reveal how deeply you think about the systems you're part of. A vague answer ('make things better') shows surface thinking. A specific answer shows insight.",
+    "constraint_note": "90 seconds. One specific change (not a list). Why this change matters. What would be different after. Be bold — the constraint is imaginary power, so dream big.",
+    "example": "'I'd eliminate all meetings under 5 people and replace them with async documents. Here's why: 80% of our meetings are status updates that could be a 2-paragraph write-up...'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-127",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story where you describe a place so vividly that the audience feels they've been there. Use all 5 senses. The place should be real — somewhere you know well.",
+    "description": "Immersive place description. Make the audience feel they're standing in a place they've never been, using all 5 senses.",
+    "context": "Setting is the most underused storytelling tool. When the audience can see, hear, smell, and feel the place, they're inside the story — not just listening to it.",
+    "constraint_note": "3 minutes. Real place you know well. All 5 senses must appear. The place should feel alive — not a photograph but a living, breathing environment.",
+    "example": "'My grandmother's kitchen at 6 AM. The pressure cooker hissing. Mustard seeds popping in oil — that sharp, nose-clearing smell. The stone floor cold under bare feet. Light coming through the window in one yellow stripe.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-128",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Pick any acronym you use at work (API, OKR, KPI, MVP, SLA). Explain what it stands for AND why it matters in 30 seconds. If you can't explain why it matters, question whether you should be using it.",
+    "description": "Acronym accountability. If you use an acronym, you should be able to explain it and justify its existence in 30 seconds.",
+    "context": "Acronyms are the laziest form of jargon. They exclude newcomers and often hide vague thinking. If you can't explain an acronym's value in 30 seconds, it might be meaningless.",
+    "constraint_note": "30 seconds. What it stands for + why it matters. If you struggle with 'why it matters,' that's a signal.",
+    "example": "'SLA — Service Level Agreement. It's a promise about how reliable something will be. It matters because without it, there's no accountability when things break.'",
+    "tags": [
+      "simplification"
+    ]
+  },
+  {
+    "id": "ps-129",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "presence",
+    "action": "Deliver a 2-minute speech using only your left hand for gestures (if right-handed) or right hand (if left-handed). This breaks your gesture habits and creates new patterns.",
+    "description": "Non-dominant hand gestures. Breaking your habitual gesture patterns creates new, more deliberate physical expression.",
+    "context": "Most people gesture with one hand in one pattern. Switching to the non-dominant hand forces deliberate, conscious gesturing — which looks more intentional to the audience.",
+    "constraint_note": "2 minutes. Non-dominant hand only. The other hand stays at your side. Notice how much more deliberate your gestures become when they're not automatic.",
+    "example": "If you're right-handed, gesture only with your left. It will feel awkward — that's the point. Awkwardness forces consciousness, and consciousness creates deliberate movement.",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "id": "ps-130",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Deliver a 3-minute speech where you make the audience care about something they currently don't care about. Pick something obscure: soil health, typography, bus route design, library funding.",
+    "description": "Make the audience care about something boring. If you can make soil health interesting, you can make any presentation compelling.",
+    "context": "The ultimate persuasion test isn't selling something desirable — it's making something invisible feel urgent. This is the skill that separates good speakers from great ones.",
+    "constraint_note": "3 minutes. Pick something genuinely obscure or boring. By the end, the audience should care. Use: personal connection, surprising facts, stakes they didn't know existed.",
+    "example": "'You've never thought about bus route design. But the route your bus takes determines whether you get to work in 20 minutes or 50. Someone designed that route. And they might have gotten it wrong.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-131",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Say the days of the week, but give each day a different emotion: Monday (tired), Tuesday (hopeful), Wednesday (frustrated), Thursday (excited), Friday (relieved), Saturday (joyful), Sunday (peaceful).",
+    "description": "Emotional coloring of neutral words. Each day of the week gets a different emotional delivery.",
+    "context": "If you can make 'Wednesday' sound frustrated and 'Saturday' sound joyful, you can color any word with any emotion. This is the foundation of expressive speaking.",
+    "constraint_note": "7 days, 7 emotions. Each word should unmistakably carry its assigned emotion. If they all sound the same, try bigger contrasts.",
+    "example": "Monday: [heavy sigh] 'Monday...' Saturday: [bright, fast] 'Saturday!' Sunday: [slow, soft, exhale] 'Sunday.' — Same word type, completely different energy.",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-132",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "You're at a dinner party. Someone asks: 'What's the most interesting thing you've learned recently?' Answer in 90 seconds. Make it genuinely interesting — not a humble brag, not a lecture.",
+    "description": "The dinner party answer. This is the most common social speaking situation — being interesting without being overbearing.",
+    "context": "Social speaking is different from professional speaking. It should be conversational, curious, and inviting — not a presentation. The goal is connection, not impression.",
+    "constraint_note": "90 seconds. Conversational tone (not presentation voice). Share something genuinely interesting. End with a question back to them — conversation, not monologue.",
+    "example": "'I learned that trees communicate through underground fungal networks — they share nutrients with sick trees nearby. It completely changed how I think about competition vs cooperation. Have you read anything that shifted your thinking lately?'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-133",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "clarity",
+    "action": "Give a 5-minute presentation on any topic with NO slides, NO notes, NO props. Just you and your words. Structure it: opening hook, 3 main points, memorable close.",
+    "description": "The naked presentation — no slides, no notes, no props. This is the purest test of speaking ability.",
+    "context": "Slides are a crutch. Notes are a safety net. Without them, you must truly know your material and trust your structure. This is how the best speakers practice.",
+    "constraint_note": "5 minutes. No aids of any kind. Opening hook (30 sec), 3 points (1 min each), transitions between points, memorable close (30 sec). If you lose your place, pause and find it.",
+    "example": "This is terrifying and transformative. If you can deliver 5 minutes with nothing but your voice and your structure, you can handle any speaking situation.",
+    "tags": [
+      "frameworks"
+    ]
+  },
+  {
+    "id": "ps-134",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Rate yourself 1-5 on these presence dimensions: eye contact, stillness, posture, hand gestures, facial expression, voice projection. Which is your strongest? Which needs the most work?",
+    "description": "Self-assessment across 6 presence dimensions. Knowing your strengths and weaknesses focuses your practice.",
+    "context": "You can't improve everything at once. Identifying your weakest presence dimension and focusing on it for a week produces faster results than general practice.",
+    "constraint_note": "Rate honestly. 1=poor, 5=excellent. Pick your lowest score — that's your focus for the next 5 speaking tasks.",
+    "example": "Eye contact: 3, Stillness: 2, Posture: 4, Gestures: 3, Face: 2, Projection: 4. Focus area: stillness and facial expression. Work on those specifically.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "eye_contact"
+    ]
+  },
+  {
+    "id": "ps-135",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story where the ending circles back to an image or detail from the opening. The callback should give the opening detail new meaning.",
+    "description": "Practice the callback — referencing an early detail at the end with new meaning. This creates the most satisfying story structure.",
+    "context": "Callbacks reward attentive listeners. When an early detail returns with new significance, the audience feels the story click into place. It's the most satisfying ending technique.",
+    "constraint_note": "2 minutes. Plant a specific detail in the first 15 seconds. Return to it in the last 15 seconds. It should mean something different the second time.",
+    "example": "Open: 'She always left the porch light on.' [tell the story] Close: 'I drove past the house last week. The porch light was off.' — Same detail, transformed by the story.",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-136",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Practice the 'vocal siren.' Hum from your lowest comfortable note to your highest, then back down. Do 5 rounds. This warms up your full vocal range.",
+    "description": "Vocal siren warm-up — slide from low to high and back. This is the standard vocal warm-up used by singers and actors.",
+    "context": "Your speaking voice uses a fraction of your range. The vocal siren reminds your voice that it has more range available. Do it before any important speaking moment.",
+    "constraint_note": "5 rounds. Low → high → low. Smooth glide, not steps. If your voice cracks, that's the edge of your range — practice there.",
+    "example": "Start with a low hum in your chest. Slide up smoothly until you feel it in your head. Slide back down. 5 times. Your voice will feel more flexible immediately.",
+    "tags": [
+      "warm_ups"
+    ]
+  },
+  {
+    "id": "ps-137",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Explain your favorite hobby to someone who's never heard of it. 90 seconds. Assume zero knowledge. Make them want to try it.",
+    "description": "Explain and sell your hobby to a complete beginner. This combines clarity (explaining) with persuasion (making it appealing).",
+    "context": "Explaining something you love to someone who knows nothing about it is the intersection of clarity and passion. If you can make someone curious about your hobby, you can make anyone curious about anything.",
+    "constraint_note": "90 seconds. Assume zero knowledge. No insider terms. Make it sound appealing, not intimidating. End with: 'You should try it because...'",
+    "example": "'Bouldering is rock climbing without ropes, on walls about 4 meters high. You fall onto soft mats. It's like solving a puzzle with your body — each route is a problem with one solution. You should try it because the first time you solve a problem you thought was impossible, you'll be hooked.'",
+    "tags": [
+      "storytelling"
+    ]
+  },
+  {
+    "id": "ps-138",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "persuasion",
+    "action": "Deliver a 3-minute speech arguing that a common practice should be abolished: homework, tipping, annual reviews, daylight saving time. Build a genuine case with evidence and emotion.",
+    "description": "Argue for abolishing something widely accepted. This tests your ability to challenge the status quo persuasively.",
+    "context": "Challenging accepted norms requires courage and skill. You need to acknowledge why the practice exists, then systematically dismantle the reasons. This is how change happens.",
+    "constraint_note": "3 minutes. Pick something real and widely practiced. Acknowledge why it exists (show you understand). Then argue why it should end. Use evidence AND emotion.",
+    "example": "'Annual performance reviews have existed since the 1950s. They made sense when jobs were stable and predictable. But today... [evidence that they don't work]... [what to do instead].'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-139",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "presence",
+    "action": "Practice the 'confident sit.' Sit in a chair: feet flat, back straight (not rigid), hands on the table or armrests (not under the table), chin level. Hold for 60 seconds. This is your meeting posture.",
+    "description": "Practice seated confidence posture. This is how you should sit in every meeting — it signals engagement and authority.",
+    "context": "Most people slouch, lean back, or hide their hands in meetings. A confident sit — upright, open, hands visible — changes how people perceive your contributions.",
+    "constraint_note": "60 seconds. Feet flat. Back straight but relaxed. Hands visible. Chin level (not looking down at laptop). This should feel slightly more upright than your default.",
+    "example": "Notice your current sitting posture right now. Adjust: feet flat, sit up 2 inches, bring hands onto the table. Feel the difference? That's the meeting version of you.",
+    "tags": [
+      "body_language"
+    ]
+  },
+  {
+    "id": "ps-140",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "clarity",
+    "action": "Take a complex chart or graph you've seen recently (at work, in news). Explain what it shows in 60 seconds to someone who can't see it. Make the data tell a story.",
+    "description": "Verbal data visualization — describe a chart so clearly that someone who can't see it understands the insight.",
+    "context": "Most people show charts and say 'as you can see.' But what if they can't see? Describing data verbally forces you to find the story in the numbers — which is what the chart should communicate anyway.",
+    "constraint_note": "60 seconds. Describe: what's being measured, the key trend, the surprising finding, and what it means. No 'as you can see' — they can't see it.",
+    "example": "'This chart shows our user growth over 12 months. It was flat for 8 months — barely moving. Then in September, something changed. Growth doubled in 4 weeks. What happened in September? We launched the referral program.'",
+    "tools": [
+      "timer"
+    ],
+    "completion": "timer_end",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-141",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "storytelling",
+    "action": "Tell a 3-minute story that makes the audience laugh AND think. The humor should serve the message, not distract from it. The laugh should lead to an insight.",
+    "description": "Humor with purpose. The hardest storytelling skill — making people laugh in service of a deeper point.",
+    "context": "Humor disarms the audience and opens them to ideas they might resist. But humor without substance is entertainment, not communication. The best speakers make you laugh, then make you think.",
+    "constraint_note": "3 minutes. Must get at least one genuine laugh. The laugh must connect to a deeper point. The audience should remember the insight, not just the joke.",
+    "example": "'I once spent 3 hours writing a 2-sentence email. [laugh] But here's the thing — those 2 sentences saved a 45-minute meeting. [insight] Brevity isn't laziness. It's the hardest kind of work.'",
+    "tags": [
+      "advanced"
+    ]
+  },
+  {
+    "id": "ps-142",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Record yourself saying 'I believe this is the right decision' in your normal voice. Listen back. Now say it with 20% more conviction — slower, deeper, more deliberate. Record again. Compare.",
+    "description": "The conviction dial. Most people speak at 60% conviction. Turning it up to 80% transforms how your statements land.",
+    "context": "Conviction is not volume — it's commitment. A convicted voice is slower, more deliberate, and doesn't trail off. Most people don't realize how uncommitted their normal voice sounds until they hear the comparison.",
+    "constraint_note": "Two recordings of the same sentence. Normal voice, then 20% more conviction. Listen to both. The difference is usually dramatic.",
+    "example": "Normal: 'I believe this is the right decision.' (fast, slightly rising at end). Convicted: 'I believe... this is the right decision.' (slower, pause, downward inflection, period).",
+    "tags": [
+      "pace_volume"
+    ]
+  },
+  {
+    "id": "ps-143",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "impromptu",
+    "action": "Someone says: 'Tell me something I don't know.' Deliver a 90-second response that's genuinely surprising, well-structured, and leaves them wanting more.",
+    "description": "The 'tell me something I don't know' challenge. This tests your ability to be interesting on demand.",
+    "context": "Being interesting on demand is the ultimate social speaking skill. It requires: a bank of interesting knowledge, the ability to structure it quickly, and the confidence to deliver it.",
+    "constraint_note": "90 seconds. Must be genuinely surprising (not common knowledge). Structure: the surprising fact, why it's surprising, what it means. End with something that makes them think.",
+    "example": "'Your brain uses 20% of your body's energy but is only 2% of your body weight. That means your brain is 10x more energy-hungry than any other organ. Which raises a question: what is it doing with all that energy? Mostly, it's predicting the future.'",
+    "tags": [
+      "structured"
+    ]
+  },
+  {
+    "id": "ps-144",
+    "type": "retrieval",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "clarity",
+    "action": "From memory, list every speaking framework and technique you've learned. For each, give a one-sentence explanation and one situation where you'd use it. How many can you recall?",
+    "description": "Complete framework recall — every technique across all skill areas. This is the final clarity test: can you access your full toolkit?",
+    "context": "Your speaking toolkit is only as good as your ability to recall it under pressure. This exercise surfaces what's truly internalized vs what you've only practiced once.",
+    "constraint_note": "List everything: PREP, BLUF, What/So What/Now What, Monroe's Sequence, Rule of Three, Pyramid, Before/After, Golden Circle, steel-manning, etc. One sentence + one use case each.",
+    "example": "PREP: Point-Reason-Example-Point. Use: answering any question in a meeting. BLUF: Lead with conclusion. Use: email writing and status updates. How many total can you recall?",
+    "tools": [
+      "text_input"
+    ],
+    "tags": [
+      "frameworks"
+    ]
+  },
+  {
+    "id": "ps-145",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "presence",
+    "action": "Deliver a 3-minute speech as if you're speaking to 500 people in an auditorium. Project your voice, use big gestures, own the space. Then deliver the same speech as if to 3 people across a table. Adjust everything.",
+    "description": "Audience-size adaptation. The same speech delivered to 500 vs 3 requires completely different energy, volume, and gesture scale.",
+    "context": "Great speakers adjust automatically to room size. A boardroom speech and an auditorium speech use different tools. Training both extremes gives you the full range.",
+    "constraint_note": "Same speech, two deliveries. Auditorium: big voice, big gestures, slow pace, dramatic pauses. Table: conversational, smaller gestures, eye contact, warmth. Both should be compelling.",
+    "example": "Auditorium: 'GOOD MORNING. [pause] I'm here to talk about something that affects EVERY person in this room.' Table: 'Hey. So, I've been thinking about something that I think matters to all of us.'",
+    "tags": [
+      "confidence"
+    ]
+  },
+  {
+    "id": "ps-146",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "persuasion",
+    "action": "Write and deliver a 2-minute speech that asks for ONE specific thing. Not awareness, not consideration — a specific action. 'I need you to ___ by ___.' Make the ask impossible to misunderstand.",
+    "description": "The specific ask. Most speeches fail because they don't ask for anything specific. This trains you to end with a clear, actionable request.",
+    "context": "'Think about it' is not an ask. 'Send me your top 3 priorities by Friday 5 PM' is an ask. Specificity is respect — it tells the audience exactly what you need.",
+    "constraint_note": "2 minutes. Build your case. End with ONE specific ask: what, who, by when. The ask should be so clear that the audience can do it immediately.",
+    "example": "Build case for better documentation. Ask: 'I need each team lead to write a one-page README for their service by next Friday. One page. That's it. Can I count on you?'",
+    "tags": [
+      "argument_structure"
+    ]
+  },
+  {
+    "id": "ps-147",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "clarity",
+    "action": "Summarize your day so far in exactly 3 sentences. Then 2 sentences. Then 1 sentence. Each version must be complete and clear.",
+    "description": "Progressive day summary — compress your day into fewer and fewer sentences. The single-sentence version is your headline.",
+    "context": "If you can summarize a complex day in one sentence, you can summarize anything. This is the skill behind executive summaries, subject lines, and elevator pitches.",
+    "constraint_note": "3 sentences → 2 sentences → 1 sentence. Each must stand alone as a complete summary. What do you cut at each level?",
+    "example": "3: 'Had a productive morning. Hit a blocker after lunch. Resolved it by end of day.' 2: 'Productive day despite a mid-day blocker.' 1: 'Solved the hard problem today.'",
+    "tags": [
+      "audience"
+    ]
+  },
+  {
+    "id": "ps-148",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "storytelling",
+    "action": "Tell a 2-minute story where you describe a person entirely through their actions — no adjectives, no 'she was kind/smart/funny.' Only what they DID. Let the audience decide what kind of person they are.",
+    "description": "Action-only character description. Show who someone is through what they do, not what you say about them.",
+    "context": "'She was kind' tells the audience nothing. 'She always ordered extra food in case someone at the table couldn't afford their own' — now the audience KNOWS she's kind, and they decided it themselves.",
+    "constraint_note": "2 minutes. Real person. Only actions — no adjectives describing personality. The audience should be able to describe this person's character from the actions alone.",
+    "example": "'Every morning he made two cups of coffee — one for himself and one for whoever arrived next. He never asked if they wanted it. He just placed it on their desk and walked away.'",
+    "tags": [
+      "techniques"
+    ]
+  },
+  {
+    "id": "ps-149",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "vocal_delivery",
+    "action": "Deliver a 3-minute speech that uses the full emotional spectrum: start calm, build to passion, drop to vulnerability, rise to determination, end with quiet confidence. Plan the emotional arc.",
+    "description": "Full emotional arc in one speech. This is the vocal equivalent of a symphony — multiple movements, each with different energy.",
+    "context": "The best speeches take the audience on an emotional journey. Staying at one emotional level — even a high one — becomes monotonous. The arc is what makes it compelling.",
+    "constraint_note": "3 minutes. 5 emotional beats: calm → passion → vulnerability → determination → quiet confidence. Plan where each transition happens. The transitions should feel natural, not forced.",
+    "example": "Calm: 'A year ago, I was comfortable.' Passion: 'Then I realized comfortable was another word for stuck!' Vulnerability: 'I was terrified to change.' Determination: 'But I did it anyway.' Quiet confidence: 'And I'd do it again.'",
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "ps-150",
+    "type": "reflection",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "vocal_delivery",
+    "action": "Record yourself giving a 60-second speech today. Compare it to how you sounded when you started these exercises. What's changed? What still needs work? Write 3 improvements and 3 goals.",
+    "description": "Progress reflection. Compare your current speaking to where you started. Celebrate improvements and set new targets.",
+    "context": "Progress in speaking is gradual and hard to notice day-to-day. Comparing recordings over time makes improvement visible and motivating.",
+    "constraint_note": "Record 60 seconds now. If you have an earlier recording, compare. 3 things that improved. 3 things to work on next. Be specific.",
+    "example": "Improved: fewer fillers, better pauses, more eye contact. Next: volume variety, hand gestures, ending sentences with downward inflection. Specific targets beat vague goals.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "expression"
+    ]
+  }
+]

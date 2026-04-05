@@ -1,0 +1,124 @@
+[
+  {
+    "id": "al-001", "type": "practice", "difficulty": "easy", "time_minutes": 5, "skill_area": "comprehension",
+    "action": "Listen to this passage, then answer the questions from memory.",
+    "description": "A short passage about the science of habits, followed by comprehension questions.",
+    "context": "Active listening — absorbing and retaining spoken information — is a skill that improves with practice.",
+    "constraint_note": "Read (or listen to) the passage once. Don't re-read before answering.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Every habit follows the same loop: cue, routine, reward.", "pauseAfter": 2},
+        {"text": "The cue is a trigger — a time, a place, an emotion. Your phone buzzing is a cue.", "pauseAfter": 2},
+        {"text": "The routine is the behavior itself — checking the notification.", "pauseAfter": 2},
+        {"text": "The reward is what your brain gets — a hit of novelty, connection, or information.", "pauseAfter": 2},
+        {"text": "To change a habit, you don't fight the cue or the reward. You replace the routine.", "pauseAfter": 2},
+        {"text": "Keep the same trigger, get the same reward, but change what you do in between.", "pauseAfter": 2}
+      ],
+      "questions": [
+        {"prompt": "What are the 3 parts of the habit loop?", "answer": "Cue, routine, reward"},
+        {"prompt": "What example of a cue was given?", "answer": "Phone buzzing"},
+        {"prompt": "To change a habit, which part do you replace?", "answer": "The routine (keep cue and reward the same)"}
+      ]
+    }
+  },
+  {
+    "id": "al-002", "type": "practice", "difficulty": "medium", "time_minutes": 10, "skill_area": "comprehension",
+    "action": "Listen to this passage about decision fatigue, then answer from memory.",
+    "description": "A passage about why we make worse decisions as the day goes on.",
+    "context": "Longer passages test sustained attention. The questions require you to connect ideas, not just recall facts.",
+    "constraint_note": "Listen once. Answer without re-reading.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "A study of Israeli judges found something disturbing. Prisoners who appeared before the board in the morning received parole 70% of the time.", "pauseAfter": 2},
+        {"text": "Those who appeared in the afternoon? Only 10%. Same crimes, same records. Different time of day.", "pauseAfter": 2},
+        {"text": "This is decision fatigue. Every decision you make uses mental energy. By afternoon, the brain defaults to the easiest option — which for judges was denial.", "pauseAfter": 3},
+        {"text": "This is why Steve Jobs wore the same outfit every day. One less decision. It's why you should make important decisions in the morning.", "pauseAfter": 2},
+        {"text": "The solution isn't willpower. It's design. Reduce the number of decisions you make about things that don't matter, so you have energy for things that do.", "pauseAfter": 2}
+      ],
+      "questions": [
+        {"prompt": "What was the parole rate in the morning vs afternoon?", "answer": "70% morning, 10% afternoon"},
+        {"prompt": "Why did Steve Jobs wear the same outfit?", "answer": "To eliminate one daily decision and save mental energy"},
+        {"prompt": "What's the solution to decision fatigue?", "answer": "Design — reduce unimportant decisions to save energy for important ones"},
+        {"prompt": "What does the brain default to when fatigued?", "answer": "The easiest option (path of least resistance)"}
+      ]
+    }
+  },
+  {
+    "id": "al-003", "type": "practice", "difficulty": "medium", "time_minutes": 10, "skill_area": "comprehension",
+    "action": "Listen to this passage about how memory works, then answer from memory.",
+    "description": "A passage about the science of memory formation and retrieval.",
+    "context": "Ironic: this passage about memory tests your memory. The meta-awareness makes it stick better.",
+    "constraint_note": "Listen once. The questions test both facts and understanding.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Your brain doesn't store memories like a computer stores files. It reconstructs them every time you remember.", "pauseAfter": 2},
+        {"text": "This means every act of remembering slightly changes the memory. The more you recall something, the more it shifts from the original.", "pauseAfter": 3},
+        {"text": "There are three stages: encoding, storage, and retrieval. Most people fail at encoding — they never paid attention in the first place.", "pauseAfter": 2},
+        {"text": "The most effective memory technique is spaced repetition — reviewing information at increasing intervals. Day 1, day 3, day 7, day 21.", "pauseAfter": 2},
+        {"text": "Sleep is when memories consolidate. Learning something and then sleeping on it is literally how your brain files it away.", "pauseAfter": 2},
+        {"text": "The worst way to study? Re-reading. The best way? Testing yourself. The struggle to recall is the learning.", "pauseAfter": 2}
+      ],
+      "questions": [
+        {"prompt": "How does the brain store memories differently from a computer?", "answer": "It reconstructs them each time (doesn't store fixed files)"},
+        {"prompt": "What are the 3 stages of memory?", "answer": "Encoding, storage, retrieval"},
+        {"prompt": "What is spaced repetition?", "answer": "Reviewing at increasing intervals (day 1, 3, 7, 21)"},
+        {"prompt": "What's the worst way to study? The best?", "answer": "Worst: re-reading. Best: testing yourself"},
+        {"prompt": "When do memories consolidate?", "answer": "During sleep"}
+      ]
+    }
+  },
+  {
+    "id": "al-004", "type": "practice", "difficulty": "easy", "time_minutes": 5, "skill_area": "comprehension",
+    "action": "Listen to this passage about the 80/20 rule, then answer from memory.",
+    "description": "A passage about the Pareto principle and how it applies to productivity.",
+    "context": "Short, idea-dense passages train you to extract key concepts quickly.",
+    "constraint_note": "Listen once. Focus on the core idea and the examples.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "In 1896, Italian economist Vilfredo Pareto noticed that 80% of Italy's land was owned by 20% of the population.", "pauseAfter": 2},
+        {"text": "This pattern appears everywhere. 80% of your results come from 20% of your efforts. 80% of complaints come from 20% of customers.", "pauseAfter": 2},
+        {"text": "For productivity, this means: find the 20% of your work that produces 80% of your impact. Do more of that. Eliminate or delegate the rest.", "pauseAfter": 3},
+        {"text": "Most people spend their day on the 80% that barely matters. The skill is identifying and protecting the vital 20%.", "pauseAfter": 2}
+      ],
+      "questions": [
+        {"prompt": "Who discovered the 80/20 pattern?", "answer": "Vilfredo Pareto (Italian economist, 1896)"},
+        {"prompt": "What does the 80/20 rule say about productivity?", "answer": "80% of results come from 20% of efforts"},
+        {"prompt": "What should you do with the vital 20%?", "answer": "Do more of it. Eliminate or delegate the rest."}
+      ]
+    }
+  },
+  {
+    "id": "al-005", "type": "practice", "difficulty": "stretch", "time_minutes": 10, "skill_area": "comprehension",
+    "action": "Listen to this passage about feedback loops, then answer from memory.",
+    "description": "A more complex passage about positive and negative feedback loops in systems.",
+    "context": "Complex passages with multiple concepts test your ability to hold and organize information.",
+    "constraint_note": "This one is harder. Try to identify the structure: two types, examples of each, and the key insight.",
+    "example": "",
+    "reference": {
+      "type": "narration",
+      "segments": [
+        {"text": "Every system runs on feedback loops. There are two types: positive and negative. The names are misleading — positive doesn't mean good.", "pauseAfter": 2},
+        {"text": "A positive feedback loop amplifies change. Think of a microphone pointed at a speaker — the sound gets louder and louder until it screams. That's positive feedback.", "pauseAfter": 3},
+        {"text": "In business: success attracts attention, which attracts customers, which creates more success. Social media works this way — viral content gets shown to more people, making it more viral.", "pauseAfter": 3},
+        {"text": "A negative feedback loop stabilizes. Your thermostat is a negative feedback loop — when the room gets too hot, it turns off the heater. When it gets too cold, it turns it back on.", "pauseAfter": 3},
+        {"text": "In your body: when blood sugar rises, insulin brings it down. When it drops, glucagon brings it up. Constant balancing.", "pauseAfter": 2},
+        {"text": "The key insight: most problems come from positive feedback loops that nobody noticed. And most solutions come from adding a negative feedback loop — a check, a limit, a balancing force.", "pauseAfter": 3}
+      ],
+      "questions": [
+        {"prompt": "What does a positive feedback loop do?", "answer": "Amplifies change (makes things bigger/louder/more)"},
+        {"prompt": "What does a negative feedback loop do?", "answer": "Stabilizes (brings things back to balance)"},
+        {"prompt": "Give one example of a positive feedback loop.", "answer": "Microphone + speaker, viral content, success attracting more success"},
+        {"prompt": "Give one example of a negative feedback loop.", "answer": "Thermostat, blood sugar regulation (insulin/glucagon)"},
+        {"prompt": "What's the key insight about problems and solutions?", "answer": "Problems come from unnoticed positive loops; solutions come from adding negative (balancing) loops"}
+      ]
+    }
+  }
+]
