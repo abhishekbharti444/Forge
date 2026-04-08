@@ -142,7 +142,7 @@ See [Architecture.md](./Architecture.md) for full system design, tech choices, a
 
 ## Progress
 
-*Last updated: April 5, 2026*
+*Last updated: April 7, 2026*
 
 ### What's Built
 
@@ -199,78 +199,64 @@ See [Architecture.md](./Architecture.md) for full system design, tech choices, a
 
 ---
 
-## Current State (as of April 5, 2026)
+## Current State (as of April 7, 2026)
 
-**Live URL:** https://app-mu-nine-97.vercel.app
+**Live URL:** https://app-mu-nine-97.vercel.app (stale — local is ahead)
 
-**What's built:**
+**What's built (local):**
 - 1,036 tasks across 8 categories:
-  - Creative Writing (175), Learn Kannada (160), Public Speaking (150)
-  - Guitar Practice (219 — with journeys + practice drills)
-  - Philosophy (146), Distributed Systems (173)
-  - Guided Thinking (8), Active Listening (5)
+  - Creative Writing: 175 | Learn Kannada: 160 | Public Speaking: 150
+  - Guitar Practice: 219 | Philosophy: 146 | Distributed Systems: 173
+  - Guided Thinking: 8 | Active Listening: 5
 - 30+ skill areas across all categories
-- 7 reference types: text, structured_list, steps, pairs, fill_blank, dialogue, narration
-- 6 workspace tools: timer, reveal_hide, text_input, checklist, quiz mode, tab_player
-- Step-based Focused screen (instruction → reference → exercise → reflect)
-- Audio mode: Screen / Listen+Speak / Listen only (Web Speech API)
-- Browsable task catalog with dynamic categories + skill area filters
-- Dynamic `/api/categories` endpoint (categories auto-discovered from DB)
-- Landing page, Auth (Google), History screen, Concept Bank, PWA, mobile-ready
-- Journey sequences (guitar practice: Open Chords, Barre Chords, etc.)
-- Gateway narrations per skill area (self-sufficient learning without external reading)
-- Deployment guide: DEPLOYMENT.md
+- 8 reference types: text, structured_list, steps, pairs, fill_blank, dialogue, narration, (media future)
+- 6 workspace tools: timer, reveal_hide, text_input, checklist, quiz mode, chord diagram
+- 12 screens: Landing, Auth, IntentCapture, GoalHome, Coach, Suggestion (catalog), Focused (step-based), AudioPlayer, WhatsNext, DoneForToday, History, ConceptBank, TaskReview
+- Audio mode: Screen / Listen+Speak / Listen only (Web Speech API + SpeechEngine)
+- Level sequencing: tasks gated by completed level per skill area
+- Concept tracking: concepts field on tasks, ConceptBank screen
+- Body enrichment: 328+ structured_list items with body text
+- ChordDiagram component (SVG chord rendering for guitar)
+- TabPlayer component (guitar tab playback with Soundfont)
+- Momentum tracking (localStorage-based weekly activity)
+- PWA, mobile-ready
 
-**Distributed Systems category (new):**
-- 173 tasks across 7 skill areas: Fundamentals, Replication, Partitioning, Transactions, Consensus, Fault Tolerance, Estimation & Design
-- 7 gateway narrations ("why does this topic exist?" stories)
-- 10 real system deep dives (Kafka, Spanner, DynamoDB, Redis Cluster, PostgreSQL MVCC, Cassandra, Kubernetes+etcd, S3 outage, Netflix chaos, Redlock controversy)
-- 13 protocol walkthroughs (Raft election, Raft log replication, Paxos, 2PC, saga, Lamport timestamps, vector clocks, consistent hashing, LSM tree, chain replication, circuit breaker, exponential backoff)
-- 5 system design exercises (URL shortener, rate limiter, notification system, distributed cache, chat system)
-- 7 interview dialogues
-- All content reviewed for technical accuracy (136 fill-blank items, 10 system narrations, 13 protocol walkthroughs verified)
-
-**Architecture decisions captured in:**
-- Architecture.md → Composable Task Format, Product Principles (Coach + Practice Ground, Practice Tool First but Self-Sufficient), Audio Mode
-- Design-System.md → Adaptive Focused screen layouts
-- MVP-Plan.md → Session log, progress tracking
-- DEPLOYMENT.md → Deployment process, gotchas, adding new categories
+**New components not in earlier docs:**
+- `GoalHome.tsx` — goal dashboard with momentum, practice button, history link
+- `Coach.tsx` — smart task recommendation after completing a task
+- `WhatsNext.tsx` — post-completion suggestion for next task
+- `ConceptBank.tsx` — concepts encountered, grouped by skill area
+- `ChordDiagram.tsx` — SVG chord diagram renderer
+- `TabPlayer.tsx` — guitar tab playback with audio
+- `momentum.ts` — localStorage-based weekly activity tracking
 
 **What's intentionally NOT built yet:**
-- User progress tracking (no DB writes from user flow)
-- Personalized suggestions (same tasks for everyone)
-- Completion history (no events saved)
-- Goal state per user (catalog shows all categories)
+- Server-side user progress tracking (no DB writes from user flow)
+- Personalized suggestions server-side (local momentum only)
+- Deployed version is stale (475 tasks, missing new categories/features)
+
+**Architecture decisions captured in:**
+- Architecture.md → Composable Task Format, Product Principle, Audio Mode, Audio-Native Task Types
+- Design-System.md → Adaptive Focused screen layouts
+- MVP-Plan.md → Session log, What's Left
 
 ---
 
 ## Next Action Items
 
-### Priority 1 — User Progress Flow
-The app is read-only content right now. To close the core loop (practice → track → improve), we need:
-- Enable DB writes for task events (started, completed, skipped)
-- Track completions per user per category
-- Show progress on GoalHome (tasks completed, skill area coverage)
-- "Done for today" state based on actual completions (not hardcoded)
+### Immediate
+1. **Sync deployment** — re-seed Supabase with all 1,036 tasks (8 categories), update seed script, add new Vercel API routes for /api/concepts, redeploy
+2. **Update Architecture.md** — add Guitar Practice (ChordDiagram, TabPlayer), Distributed Systems, Philosophy (level sequencing, concepts), GoalHome/Coach/WhatsNext flow
+3. **Update Design-System.md** — new screens (GoalHome, Coach, WhatsNext, ConceptBank)
 
-### Priority 2 — Personalized Suggestions
-Replace the catalog-browse model with the original suggestion engine:
-- Suggestion engine scores tasks based on: skill area diversity, skip signals, difficulty ramp, completion history
-- "Open app → see one task → do it → come back" core loop
-- Momentum score (weekly activity tracking)
-
-### Priority 3 — Content Enrichment
-- Enrich remaining Kannada tasks (126 missing structured references)
-- Enrich remaining Public Speaking tasks (112 missing structured references)
-- Add `resources` links to distributed systems tasks (point to DDIA chapters, papers, videos)
-- Create more audio-native content (story-based learning, guided thinking walks)
-
-### Priority 4 — Polish & Growth
-- Google Cloud TTS for Kannada audio (browser TTS quality is poor for Kannada)
-- Email reminders (Resend, free tier)
-- Structured feedback per completion ("What was hardest?")
-- More goal categories based on demand data from unsupported goal inputs
-- Native mobile app (React Native, same API)
+### After sync
+- **Google Cloud TTS** — pre-generate Kannada audio for natural pronunciation
+- **User progress flow design** — server-side completion tracking, personalized suggestions
+- **More audio-native content** — story-based tasks for distributed systems, guitar ear training
+- **Guitar Practice task bank** — ~150 tasks with chord references, practice routines
+- **User progress flow design** — what gets saved, streaks/momentum, completion tracking
+- **Enrich remaining tasks** — 126 Kannada + 112 public speaking tasks missing structured references
+- **Add `resources` and `level` fields** — external links, progressive difficulty
 
 ---
 
@@ -518,41 +504,6 @@ Changes:
 - [x] Fixed 401 on /api/tasks (made public read)
 - [x] Added category picker to catalog (All / Creative Writing / Learn Kannada / Public Speaking)
 - [x] Removed all DB writes from user flow (read-only content experience)
-
-### Session 20 — Apr 5 (Distributed Systems Category + Deployment Overhaul)
-
-Plan:
-- [x] Research distributed systems skill decomposition (DDIA, MIT 6.824, industry roadmaps)
-- [x] Design 7 skill areas with content plan (173 tasks across all reference types)
-- [x] Generate all 7 skill areas: Fundamentals, Replication, Partitioning, Transactions, Consensus, Fault Tolerance, Estimation & Design
-- [x] Review all content: 136 fill-blank items, 10 system narrations, 13 protocol walkthroughs, tool assignments
-- [x] Add 7 gateway narrations (one per skill area — "why does this topic exist?")
-- [x] Enrich 23 concept cards with vocabulary definitions, mechanism explanations, concrete examples
-- [x] Update Architecture.md with "Practice Tool First, but Self-Sufficient" principle
-- [x] Make categories dynamic (GoalHome + Suggestion fetch from /api/categories)
-- [x] Create /api/categories Vercel endpoint
-- [x] Update goal parser with all 8 category keywords
-- [x] Update seed script for all 8 task banks (with extra fields packed into reference jsonb)
-- [x] Seed 1,036 tasks to Supabase
-- [x] Deploy to Vercel (manual via CLI)
-- [x] Fix Supabase 1000-row default limit in categories API
-- [x] Fix task grouping (use skill_area as fallback when tags missing)
-- [x] Fix sequence/song/tags unpack from reference jsonb (local + production)
-- [x] Fix handleNextInSequence for production (unpack sequence from reference)
-- [x] Create DEPLOYMENT.md with full deployment guide and gotchas
-
-Changes:
-- `data/distributed_systems.json` — new file: 173 tasks, 433 KB, 7 skill areas
-- `app/server.local.ts` — loads distributed_systems, dynamic categories, updated goal parser
-- `app/api/categories.ts` — new file: dynamic categories endpoint with Supabase pagination
-- `app/api/tasks.ts` — added 5000-row limit for all-tasks fallback
-- `app/api/goals/parse.ts` — added keywords for all 8 categories
-- `app/src/states/GoalHome.tsx` — fetches categories from API (no hardcoded list)
-- `app/src/states/Suggestion.tsx` — fetches categories from API, unpacks extra fields from reference, skill_area fallback for grouping
-- `app/src/App.tsx` — unpacks sequence from reference in handleNextInSequence
-- `app/Architecture.md` — added "Practice Tool First, but Self-Sufficient" principle
-- `app/DEPLOYMENT.md` — new file: deployment guide with gotchas
-- `scripts/seed-tasks.mjs` — updated for all 8 banks with extra field packing
 - [x] Removed IntentCapture dependency — catalog shows all categories directly
 
 Live: https://app-mu-nine-97.vercel.app
@@ -771,5 +722,5 @@ Products integrated into habits achieve 94% higher retention than those requirin
 ---
 
 *Document created: March 29, 2026*
-*Last updated: April 5, 2026*
+*Last updated: April 7, 2026*
 *Repository: [github.com/abhishekbharti444/Forge](https://github.com/abhishekbharti444/Forge)*

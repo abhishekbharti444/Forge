@@ -6,28 +6,28 @@ const app = express()
 app.use(express.json())
 
 // Load task banks from JSON
-const creativeTasks = JSON.parse(readFileSync('../data/creative_writing.json', 'utf-8')).map((t: any, i: number) => ({
+const creativeTasks = JSON.parse(readFileSync('./data/creative_writing.json', 'utf-8')).map((t: any, i: number) => ({
   id: `cw-task-${i}`, goal_category: 'creative_writing', ...t,
 }))
-const kannadaTasks = JSON.parse(readFileSync('../data/learn_kannada.json', 'utf-8')).map((t: any, i: number) => ({
+const kannadaTasks = JSON.parse(readFileSync('./data/learn_kannada.json', 'utf-8')).map((t: any, i: number) => ({
   id: `kn-task-${i}`, goal_category: 'learn_kannada', ...t,
 }))
-const speakingTasks = JSON.parse(readFileSync('../data/public_speaking.json', 'utf-8')).map((t: any, i: number) => ({
+const speakingTasks = JSON.parse(readFileSync('./data/public_speaking.json', 'utf-8')).map((t: any, i: number) => ({
   id: `ps-task-${i}`, goal_category: 'public_speaking', ...t,
 }))
-const guitarTasks = JSON.parse(readFileSync('../data/guitar_practice.json', 'utf-8')).map((t: any, i: number) => ({
+const guitarTasks = JSON.parse(readFileSync('./data/guitar_practice.json', 'utf-8')).map((t: any, i: number) => ({
   id: `gp-task-${i}`, goal_category: 'guitar_practice', ...t,
 }))
-const thinkingTasks = JSON.parse(readFileSync('../data/guided_thinking.json', 'utf-8')).map((t: any, i: number) => ({
+const thinkingTasks = JSON.parse(readFileSync('./data/guided_thinking.json', 'utf-8')).map((t: any, i: number) => ({
   id: `gt-task-${i}`, goal_category: 'guided_thinking', ...t,
 }))
-const listeningTasks = JSON.parse(readFileSync('../data/active_listening.json', 'utf-8')).map((t: any, i: number) => ({
+const listeningTasks = JSON.parse(readFileSync('./data/active_listening.json', 'utf-8')).map((t: any, i: number) => ({
   id: `al-task-${i}`, goal_category: 'active_listening', ...t,
 }))
-const philosophyTasks = JSON.parse(readFileSync('../data/philosophy.json', 'utf-8')).map((t: any, i: number) => ({
+const philosophyTasks = JSON.parse(readFileSync('./data/philosophy.json', 'utf-8')).map((t: any, i: number) => ({
   id: `pl-task-${i}`, goal_category: 'philosophy', ...t,
 }))
-const distributedTasks = JSON.parse(readFileSync('../data/distributed_systems.json', 'utf-8')).map((t: any, i: number) => ({
+const distributedTasks = JSON.parse(readFileSync('./data/distributed_systems.json', 'utf-8')).map((t: any, i: number) => ({
   id: `ds-task-${i}`, goal_category: 'distributed_systems', ...t,
 }))
 const tasks = [...creativeTasks, ...kannadaTasks, ...speakingTasks, ...guitarTasks, ...thinkingTasks, ...listeningTasks, ...philosophyTasks, ...distributedTasks]

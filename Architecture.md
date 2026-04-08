@@ -157,7 +157,7 @@ CREATE INDEX idx_daily_user_date ON daily_summary(user_id, date);
 
 ## API Endpoints
 
-All endpoints require a valid Supabase JWT in the `Authorization: Bearer <token>` header.
+All endpoints require a valid Supabase JWT in the `Authorization: Bearer <token>` header (except `/api/tasks` and `/api/categories` which allow public read).
 
 ### `POST /api/goals/parse`
 
@@ -168,30 +168,48 @@ Request:  { "text": "I want to write better songs" }
 Response: { "category": "creative_writing", "supported": true }
     — or —
 Response: { "category": null, "supported": false, "input_saved": true,
-            "available": ["creative_writing", "learn_kannada"] }
+            "available": ["creative_writing", "learn_kannada", ...] }
 ```
 
-MVP implementation: keyword matching. No LLM needed for 2 categories.
+Keyword matching across 8 categories.
+
+### `GET /api/categories`
+
+Returns all available goal categories with task counts.
+
+```
+Response: { "categories": [
+  { "id": "creative_writing", "emoji": "✍️", "label": "Creative Writing", "count": 175 },
+  { "id": "learn_kannada", "emoji": "🇮🇳", "label": "Learn Kannada", "count": 160 },
+  ...
+]}
+```
+
+### `GET /api/tasks`
+
+Returns tasks, optionally filtered by category. Public read (no auth required).
+
+```
+GET /api/tasks                    → all tasks (or user's active goal)
+GET /api/tasks?category=learn_kannada → tasks for specific category
+Response: { "tasks": [...], "total": 160 }
+```
 
 ### `GET /api/suggest`
 
-Returns one task recommendation.
+Returns one task recommendation with level sequencing.
 
 ```
-Response: { "task_id": "...", "description": "Write 4 lines describing a childhood memory using sensory detail." }
+Response: { "task": { ... }, "tasks_completed": 2 }
     — or —
 Response: { "done_for_today": true, "tasks_completed": 3 }
 ```
 
+Level sequencing: computes max completed level per skill area, gates tasks at level > maxCompleted + 1.
+
 ### `POST /api/events`
 
-Logs a user-task interaction.
-
-```
-Request: { "task_id": "...", "event": "completed", "reflection_text": "Noticed I default to visual imagery", "duration_seconds": 540 }
-    — or —
-Request: { "task_id": "...", "event": "skipped", "skip_reason": "too_long" }
-```
+Logs a user-task interaction (currently disabled in production — read-only mode).
 
 ### `GET /api/momentum`
 
@@ -203,10 +221,14 @@ Response: { "level": "building", "days_active": 3, "tasks_completed": 7, "week_s
 
 ### `GET /api/history`
 
-Returns recent completed tasks with reflections.
+Returns recent completed tasks with reflections and skill_area.
+
+### `GET /api/concepts`
+
+Returns concepts encountered by the user, grouped by skill area.
 
 ```
-Response: { "tasks": [{ "description": "...", "reflection": "...", "completed_at": "...", "duration_seconds": 480 }, ...] }
+Response: { "concepts": { "ethics": ["utilitarianism", "deontology", ...], "fundamentals": ["CAP theorem", ...] } }
 ```
 
 ### `GET /api/status`
@@ -734,6 +756,108 @@ The audio plays segments with pauses, then switches to interactive quiz mode for
 | Guided thinking prompts | Browser Web Speech API | English, conversational, browser TTS is adequate |
 
 Pre-generated audio stored as static files in `/public/audio/` or Supabase Storage. Referenced in task data as URLs. Falls back to browser TTS if audio file unavailable.
+
+---
+
+## App Flow
+
+*Updated April 7, 2026*
+
+```
+Landing → Auth (Google) → GoalHome
+                              ↓
+                    ┌─── Practice ───┐
+                    ↓                ↓
+                  Coach          Suggestion (catalog)
+                    ↓                ↓
+              ┌─────┴─────┐    mode picker
+              ↓           ↓        ↓
+           Focused    AudioPlayer  Focused
+           (steps)    (speak/listen) (steps)
+              ↓           ↓        ↓
+           WhatsNext ←────┘────────┘
+              ↓
+        ┌─────┴─────┐
+        ↓           ↓
+    Next task    DoneForNow → GoalHome
+```
+
+### Screens
+
+| Screen | Purpose | Key features |
+|---|---|---|
+| `Landing` | Marketing page for unauthenticated users | Hero, how it works, categories, features, CTA |
+| `Auth` | Google sign-in | Supabase Auth SDK |
+| `IntentCapture` | Goal selection | Category cards with descriptions |
+| `GoalHome` | Dashboard after login | Greeting, active goals, momentum, practice button, history link |
+| `Coach` | Smart task recommendation | Suggests next task based on last completed skill area, avoids repetition |
+| `Suggestion` | Browsable task catalog | Category picker, skill area filter, pagination, expandable cards, mode selector |
+| `Focused` | Step-based task execution | Instruction → Reference → Exercise → Reflect, with navigation dots |
+| `AudioPlayerScreen` | Audio mode task execution | Play/pause, progress bar, skip, current utterance display |
+| `WhatsNext` | Post-completion suggestion | Suggests next task in same category, different skill area |
+| `DoneForToday` | Rest state | Completion count, green dots, one-more option |
+| `History` | Completed tasks list | Date-grouped, skill area, reflection text |
+| `ConceptBank` | Concepts encountered | Grouped by skill area as tag chips |
+| `TaskReview` | Dev tool (`?review`) | All tasks browsable, expandable, paginated |
+
+### Domain-Specific Components
+
+| Component | Purpose |
+|---|---|
+| `ReferenceRenderer` | Dispatches to type-specific renderers (structured_list, fill_blank, dialogue, narration, steps, pairs) |
+| `WorkspaceTools` | Timer, TextInput, Checklist components |
+| `ChordDiagram` | SVG guitar chord diagram renderer (6-string, 5-fret grid, finger dots, muted/open markers) |
+| `TabPlayer` | Guitar tablature playback using Soundfont audio |
+
+### Client-Side State
+
+| System | Storage | Purpose |
+|---|---|---|
+| `momentum.ts` | localStorage | Weekly activity tracking (recordCompletion, getWeeklyMomentum) |
+| `activeGoals` | localStorage | User's selected goal categories |
+| App state | React useState | Current screen, current task, audio mode, tasks completed today |
+
+---
+
+## Task Categories
+
+*Updated April 7, 2026*
+
+| Category | Tasks | Skill Areas | Special features |
+|---|---|---|---|
+| Creative Writing | 175 | observation, structure, voice, dialogue, reflection, imagery | Text prompts, self_report |
+| Learn Kannada | 160 | vocabulary, grammar, script, phrases, pronunciation, culture | structured_list + quiz, fill_blank, dialogue, narration stories |
+| Public Speaking | 150 | vocal_delivery, clarity, impromptu, presence, storytelling, persuasion | Timer, speaking prompts |
+| Guitar Practice | 219 | technique, chords, scales_fretboard, rhythm, fingerpicking, ear_training | ChordDiagram, TabPlayer, bpm, needs_guitar flag |
+| Philosophy | 146 | philosophical_literacy, ethics, argumentation, critical_thinking, applied_philosophy | Level sequencing (1-3), concepts array, teach-then-test |
+| Distributed Systems | 173 | fundamentals, replication, partitioning, transactions, consensus, fault_tolerance, estimation | sequence field, tags, fill_blank, structured_list |
+| Guided Thinking | 8 | decision_making, goal_setting, creative_ideation, self_awareness, problem_solving, gratitude, perspective, career | Narration with long pauses (10-20s), audio-native |
+| Active Listening | 5 | comprehension | Narration passages + comprehension questions, audio-native |
+| **Total** | **1,036** | **30+** | |
+
+### Task Data Fields
+
+| Field | Type | Required | Description |
+|---|---|---|---|
+| id | string | ✓ | Unique identifier |
+| description | string | ✓ | Full original description |
+| type | string | ✓ | practice / learning / reflection / retrieval |
+| difficulty | string | ✓ | easy / medium / stretch |
+| time_minutes | number | ✓ | 5 / 10 / 15 |
+| skill_area | string | ✓ | Sub-skill within the goal |
+| action | string | | Clear instruction |
+| context | string | | Why this exercise matters |
+| constraint_note | string | | Rules/boundaries |
+| example | string | | What good looks like |
+| reference | jsonb | | Structured content (see Composable Task Format) |
+| tools | string[] | | Workspace tools needed |
+| completion | string | | How the task ends (default: self_report) |
+| level | number | | Progressive difficulty (1-3), used by philosophy |
+| concepts | string[] | | Concepts taught, used by philosophy |
+| sequence | number | | Ordering within skill area, used by distributed_systems |
+| tags | string[] | | Searchable tags |
+| bpm | number | | Tempo for guitar tasks |
+| needs_guitar | boolean | | Whether physical guitar is required |
 
 ---
 
