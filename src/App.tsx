@@ -49,13 +49,23 @@ const SKIP_AUTH = import.meta.env.VITE_SKIP_AUTH === 'true'
 
 function App() {
   const [_session, setSession] = useState<Session | null>(null)
-  const [appState, setAppState] = useState<AppState>('loading')
-  const [currentTask, setCurrentTask] = useState<TaskData | null>(null)
+  const [appState, setAppState] = useState<AppState>(() => {
+    const saved = sessionStorage.getItem('forge_appState')
+    return (saved as AppState) || 'loading'
+  })
+  const [currentTask, setCurrentTask] = useState<TaskData | null>(() => {
+    const saved = sessionStorage.getItem('forge_currentTask')
+    return saved ? JSON.parse(saved) : null
+  })
   const [audioMode, setAudioMode] = useState<'speak' | 'listen'>('speak')
   const [tasksCompletedToday, setTasksCompletedToday] = useState(getProgressToday)
   const [lastCategory, setLastCategory] = useState(getProgressLastCategory)
 
+  useEffect(() => { sessionStorage.setItem('forge_appState', appState) }, [appState])
+  useEffect(() => { sessionStorage.setItem('forge_currentTask', JSON.stringify(currentTask)) }, [currentTask])
+
   useEffect(() => {
+    if (appState !== 'loading') return // restored from sessionStorage
     if (SKIP_AUTH) { checkStatus(); return }
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session)
