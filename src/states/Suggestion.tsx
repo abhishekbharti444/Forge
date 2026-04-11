@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { apiFetch } from '../lib/api'
+import { getLevelProgress } from '../lib/progress'
 
 interface Task {
   id: string
@@ -31,6 +32,7 @@ interface Props {
   onHome?: () => void
   tasksCompletedToday: number
   initialCategory?: string
+  completedIds?: Set<string>
 }
 
 const SEQ_ICONS: Record<string, string> = {
@@ -46,7 +48,7 @@ const SEQ_ICONS: Record<string, string> = {
   'Philosophical Literacy': '📚', 'Ethics Foundations': '⚖️', 'Logic & Arguments': '🧩',
 }
 
-export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday, initialCategory }: Props) {
+export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday, initialCategory, completedIds }: Props) {
   const [tasks, setTasks] = useState<Task[]>([])
   const [expandedSeq, setExpandedSeq] = useState<string | null>(null)
   const [expandedTag, setExpandedTag] = useState<string | null>(null)
@@ -123,6 +125,14 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
     tagGroups.set(tag, arr)
   }
 
+  // Level gating — compute max unlocked level per skill area
+  const levelProg = category ? getLevelProgress(category) : {}
+  function isLocked(t: Task): boolean {
+    if (!t.level) return false
+    const maxDone = levelProg[t.skill_area || ''] || 0
+    return t.level > maxDone + 1
+  }
+
   function changeCategory(c: string) {
     setCategory(c); setExpandedSeq(null); setExpandedTag(null); setExpandedTask(null); setLoading(true)
   }
@@ -189,11 +199,11 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
                         <div key={t.id} className="flex gap-3">
                           <div className="flex flex-col items-center w-4 shrink-0">
                             {i > 0 && <div className="w-px flex-1 bg-border" />}
-                            <div className={`w-3 h-3 rounded-full shrink-0 ${i === 0 ? 'bg-accent-amber ring-2 ring-accent-amber/30' : 'border-2 border-border bg-bg-primary'}`} />
+                            <div className={`w-3 h-3 rounded-full shrink-0 ${completedIds?.has(t.id) ? 'bg-green-500' : i === 0 ? 'bg-accent-amber ring-2 ring-accent-amber/30' : 'border-2 border-border bg-bg-primary'}`} />
                             {i < seqTasks.length - 1 && <div className="w-px flex-1 bg-border" />}
                           </div>
                           <button onClick={() => onStartTask(t, 'screen')}
-                            className={`flex-1 text-left py-2 ${i === 0 ? '' : 'opacity-60'} hover:opacity-100 transition-opacity`}>
+                            className={`flex-1 text-left py-2 ${completedIds?.has(t.id) ? 'opacity-40' : i === 0 ? '' : 'opacity-60'} hover:opacity-100 transition-opacity`}>
                             <p className={`text-sm leading-relaxed ${i === 0 ? 'text-text-primary font-medium' : 'text-text-secondary'}`}>
                               {t.action || t.description}
                             </p>
@@ -221,7 +231,7 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
                 <div className="space-y-1">
                   {songs.map(t => (
                     <button key={t.id} onClick={() => onStartTask(t, 'screen')}
-                      className="w-full bg-bg-surface border border-border rounded-lg px-4 py-2.5 text-left hover:border-accent-amber/30 transition-colors">
+                      className={`w-full bg-bg-surface border border-border rounded-lg px-4 py-2.5 text-left hover:border-accent-amber/30 transition-colors ${completedIds?.has(t.id) ? 'opacity-40' : ''}`}>
                       <div className="flex items-center justify-between">
                         <div className="min-w-0">
                           <p className="text-text-primary text-sm font-medium">{t.song!.title}</p>
@@ -262,10 +272,12 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
                     <div className="border-t border-border">
                       {tagTasks.map(t => {
                         const taskOpen = expandedTask === t.id
+                        const locked = isLocked(t)
                         return (
-                          <div key={t.id} className="border-b border-border last:border-b-0">
+                          <div key={t.id} className={`border-b border-border last:border-b-0 ${completedIds?.has(t.id) ? 'opacity-40' : locked ? 'opacity-30 pointer-events-none' : ''}`}>
                             <button onClick={() => setExpandedTask(taskOpen ? null : t.id)}
                               className="w-full px-4 py-2.5 text-left flex items-center gap-2">
+                              {locked ? <span className="text-text-secondary/30 text-xs shrink-0">🔒</span> : completedIds?.has(t.id) ? <span className="text-green-500 text-xs shrink-0">✓</span> : null}
                               <p className="text-text-secondary text-sm flex-1 leading-relaxed">{t.action || t.description}</p>
                               <span className="text-text-secondary/30 text-xs shrink-0">{t.time_minutes}m</span>
                             </button>

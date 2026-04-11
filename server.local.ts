@@ -165,10 +165,11 @@ const EMOJI_MAP: Record<string, string> = {
 }
 
 app.get('/api/categories', (_req, res) => {
+  const HIDDEN = new Set(['creative_writing', 'guided_thinking', 'active_listening'])
   const cats = new Map<string, number>()
   for (const t of tasks) {
     const c = (t as any).goal_category
-    if (c) cats.set(c, (cats.get(c) || 0) + 1)
+    if (c && !HIDDEN.has(c)) cats.set(c, (cats.get(c) || 0) + 1)
   }
   const result = [...cats.entries()].map(([id, count]) => ({
     id,

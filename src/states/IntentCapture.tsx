@@ -3,11 +3,9 @@ import { useState } from 'react'
 const CATEGORIES = [
   { id: 'learn_kannada', label: 'Learn Kannada', emoji: '🇮🇳', desc: 'Script, vocabulary, phrases, grammar' },
   { id: 'guitar_practice', label: 'Guitar Practice', emoji: '🎸', desc: 'Chords, scales, rhythm, songs' },
-  { id: 'creative_writing', label: 'Creative Writing', emoji: '✍️', desc: 'Poetry, fiction, storytelling, observation' },
   { id: 'public_speaking', label: 'Public Speaking', emoji: '🗣', desc: 'Clarity, storytelling, presence, persuasion' },
-  { id: 'guided_thinking', label: 'Guided Thinking', emoji: '🧠', desc: 'Mental models, decision-making, reflection' },
-  { id: 'active_listening', label: 'Active Listening', emoji: '🎧', desc: 'Focus, comprehension, empathy, recall' },
   { id: 'philosophy', label: 'Philosophy', emoji: '📖', desc: 'Ethics, logic, thought experiments, wisdom' },
+  { id: 'distributed_systems', label: 'Distributed Systems', emoji: '📡', desc: 'Consensus, replication, fault tolerance' },
 ]
 
 interface Props {

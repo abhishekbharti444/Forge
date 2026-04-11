@@ -1,31 +1,13 @@
-import { useState, useEffect } from 'react'
-import { apiFetch } from '../lib/api'
-
-interface ConceptGroup {
-  skill_area: string
-  concepts: string[]
-}
+import { getConcepts } from '../lib/progress'
 
 interface Props {
   onBack: () => void
 }
 
 export function ConceptBank({ onBack }: Props) {
-  const [groups, setGroups] = useState<ConceptGroup[]>([])
-  const [total, setTotal] = useState(0)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    apiFetch<{ groups: ConceptGroup[]; total: number }>('/concepts')
-      .then(d => { setGroups(d.groups); setTotal(d.total); setLoading(false) })
-      .catch(() => setLoading(false))
-  }, [])
-
-  if (loading) return (
-    <div className="min-h-screen bg-bg-primary flex items-center justify-center">
-      <p className="text-text-secondary text-sm">Loading concepts...</p>
-    </div>
-  )
+  const conceptMap = getConcepts()
+  const groups = Object.entries(conceptMap).map(([skill_area, concepts]) => ({ skill_area, concepts }))
+  const total = groups.reduce((sum, g) => sum + g.concepts.length, 0)
 
   return (
     <div className="min-h-screen bg-bg-primary px-6 py-8 max-w-md mx-auto">

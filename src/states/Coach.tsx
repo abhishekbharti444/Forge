@@ -28,6 +28,7 @@ interface Props {
   onStartTask: (task: Task, mode: 'screen' | 'speak' | 'listen') => void
   onBrowseAll: () => void
   onHome: () => void
+  completedIds?: Set<string>
 }
 
 function pickTask(tasks: Task[], skippedIds: Set<string>, lastCompletedId?: string, lastSkillArea?: string): Task | null {
@@ -42,7 +43,7 @@ function pickTask(tasks: Task[], skippedIds: Set<string>, lastCompletedId?: stri
   return pool[Math.floor(Math.random() * pool.length)]
 }
 
-export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea, onStartTask, onBrowseAll, onHome }: Props) {
+export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea, onStartTask, onBrowseAll, onHome, completedIds }: Props) {
   const [tasks, setTasks] = useState<Task[]>([])
   const [current, setCurrent] = useState<Task | null>(null)
   const [skippedIds, setSkippedIds] = useState<Set<string>>(new Set())
@@ -54,7 +55,7 @@ export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea,
       .then(d => {
         const t = d.tasks || []
         setTasks(t)
-        setCurrent(pickTask(t, skippedIds, lastCompletedId, lastSkillArea))
+        setCurrent(pickTask(t, new Set([...skippedIds, ...(completedIds || [])]), lastCompletedId, lastSkillArea))
         setLoading(false)
       })
       .catch(() => setLoading(false))
@@ -65,7 +66,7 @@ export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea,
     const newSkipped = new Set(skippedIds).add(current.id)
     setSkippedIds(newSkipped)
     setShowReasons(false)
-    setCurrent(pickTask(tasks, newSkipped, lastCompletedId, current.skill_area))
+    setCurrent(pickTask(tasks, new Set([...newSkipped, ...(completedIds || [])]), lastCompletedId, current.skill_area))
   }
 
   if (loading) return (
