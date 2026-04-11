@@ -83,6 +83,7 @@ function App() {
   }
 
   function handleStartTask(task: any, mode: 'screen' | 'speak' | 'listen') {
+    const ref = task.reference || {} as any
     setCurrentTask({
       task_id: task.id || task.task_id,
       description: task.description,
@@ -97,13 +98,13 @@ function App() {
       reference: task.reference,
       tools: task.tools,
       completion: task.completion,
-      needs_guitar: task.needs_guitar,
-      bpm: task.bpm,
-      chords: task.chords,
-      tags: task.tags,
-      sequence: task.sequence,
-      song: task.song,
-      songSuggestions: task.songSuggestions,
+      needs_guitar: task.needs_guitar || ref.needs_guitar,
+      bpm: task.bpm || ref.bpm,
+      chords: task.chords || ref.chords,
+      tags: task.tags || ref.tags,
+      sequence: task.sequence || ref.sequence,
+      song: task.song || ref.song,
+      songSuggestions: task.songSuggestions || ref.songSuggestions,
     })
     if (mode === 'screen') setAppState('focused')
     else { setAudioMode(mode); setAppState('audio') }
