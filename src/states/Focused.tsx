@@ -124,7 +124,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-bg-primary flex flex-col px-6 py-8 max-w-md mx-auto">
+    <div className="min-h-screen bg-bg-primary flex flex-col px-6 pt-8 pb-44 max-w-md mx-auto">
       {/* Top bar */}
       <div className="flex items-center justify-between mb-6">
         {onHome && (
@@ -141,7 +141,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
       <p className="text-accent-amber text-xs font-semibold uppercase tracking-wide mb-4">{step.title}</p>
 
       {/* Step content */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1">
         {step.type === 'instruction' && (
           <div className="space-y-5">
             <p className="text-text-primary text-lg leading-[1.7]">{task.action || task.description}</p>
@@ -219,8 +219,9 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         )}
       </div>
 
-      {/* Navigation */}
-      <div className="mt-6 space-y-3">
+      {/* Navigation — fixed bottom */}
+      <div className="fixed bottom-0 left-0 right-0 bg-bg-primary border-t border-border/30 px-6 py-4">
+        <div className="max-w-md mx-auto space-y-3">
         {/* Dots */}
         <div className="flex items-center justify-center gap-2">
           {steps.map((_, i) => (
@@ -254,6 +255,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
             ← Back
           </button>
         )}
+        </div>
       </div>
     </div>
   )
