@@ -417,7 +417,8 @@ function TextReference({ body, mono, bpm }: { body: string; mono?: boolean; bpm?
 export function ReferenceRenderer({ reference, tools, bpm }: ReferenceRendererProps) {
   const revealEnabled = tools?.includes('reveal_hide')
   const hasBody = reference.type === 'structured_list' && reference.items?.some((i: any) => i.body)
-  const [mode, setMode] = useState<'learn' | 'review' | 'quiz' | 'reverse'>(hasBody ? 'learn' : 'review')
+  const hasReveal = reference.type === 'structured_list' && reference.items?.some((i: any) => i.reveal)
+  const [mode, setMode] = useState<'learn' | 'review' | 'quiz' | 'reverse'>(hasReveal ? 'quiz' : hasBody ? 'learn' : 'review')
 
   const showModeToggle = reference.type === 'structured_list' && reference.items?.some((i: any) => i.reveal)
 

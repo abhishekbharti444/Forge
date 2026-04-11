@@ -6,20 +6,20 @@ import { Auth } from './states/Auth'
 import { Landing } from './states/Landing'
 import { IntentCapture } from './states/IntentCapture'
 import { GoalHome } from './states/GoalHome'
-import { Suggestion } from './states/Suggestion'
+import { Journeys } from './states/Journeys'
 import { Focused } from './states/Focused'
 import { AudioPlayerScreen } from './states/AudioPlayerScreen'
 import { WhatsNext } from './states/WhatsNext'
 import { DoneForToday } from './states/DoneForToday'
-import { Coach } from './states/Coach'
 import { History } from './states/History'
 import { TaskReview } from './states/TaskReview'
 
 import { recordCompletion } from './lib/momentum'
+import { recordCompletion as recordProgress, getTasksCompletedToday as getProgressToday, getLastCategory as getProgressLastCategory } from './lib/progress'
 
 const IS_REVIEW = new URLSearchParams(window.location.search).has('review')
 
-type AppState = 'loading' | 'auth' | 'intent' | 'home' | 'coach' | 'suggestion' | 'focused' | 'audio' | 'whatsnext' | 'donefortoday' | 'history' | 'error'
+type AppState = 'loading' | 'auth' | 'intent' | 'home' | 'journeys' | 'focused' | 'audio' | 'whatsnext' | 'donefortoday' | 'history' | 'error'
 
 interface TaskData {
   task_id: string
@@ -27,6 +27,7 @@ interface TaskData {
   time_minutes: number
   skill_area?: string
   goal_category?: string
+  type?: string
   action?: string
   context?: string
   constraint_note?: string
@@ -51,8 +52,8 @@ function App() {
   const [appState, setAppState] = useState<AppState>('loading')
   const [currentTask, setCurrentTask] = useState<TaskData | null>(null)
   const [audioMode, setAudioMode] = useState<'speak' | 'listen'>('speak')
-  const [tasksCompletedToday, setTasksCompletedToday] = useState(0)
-  const [lastCategory, setLastCategory] = useState('')
+  const [tasksCompletedToday, setTasksCompletedToday] = useState(getProgressToday)
+  const [lastCategory, setLastCategory] = useState(getProgressLastCategory)
 
   useEffect(() => {
     if (SKIP_AUTH) { checkStatus(); return }
@@ -78,7 +79,7 @@ function App() {
 
   function handlePractice(category: string) {
     setLastCategory(category)
-    setAppState('coach')
+    setAppState('journeys')
   }
 
   function handleStartTask(task: any, mode: 'screen' | 'speak' | 'listen') {
@@ -88,6 +89,7 @@ function App() {
       time_minutes: task.time_minutes,
       skill_area: task.skill_area,
       goal_category: task.goal_category || lastCategory,
+      type: task.type,
       action: task.action,
       context: task.context,
       constraint_note: task.constraint_note,
@@ -109,6 +111,7 @@ function App() {
 
   function handleDone() {
     recordCompletion()
+    if (currentTask) recordProgress(currentTask)
     const newCount = tasksCompletedToday + 1
     setTasksCompletedToday(newCount)
     setLastCategory(currentTask?.goal_category || lastCategory)
@@ -133,10 +136,10 @@ function App() {
       if (next) {
         handleStartTask(next, 'screen')
       } else {
-        setAppState('suggestion')
+        setAppState('journeys')
       }
     } catch {
-      setAppState('suggestion')
+      setAppState('journeys')
     }
   }
 
@@ -159,30 +162,29 @@ function App() {
   if (appState === 'auth') return <Landing onGetStarted={() => setAppState('auth_form' as AppState)} />
   if (appState === 'auth_form' as AppState) return <Auth />
 
+  const catLabels: Record<string, string> = {
+    learn_kannada: 'Learn Kannada', public_speaking: 'Public Speaking',
+    guitar_practice: 'Guitar Practice', philosophy: 'Philosophy',
+    distributed_systems: 'Distributed Systems',
+  }
+
   function renderState() {
     if (appState === 'intent') return <IntentCapture onGoalSet={handleGoalSet} />
 
     if (appState === 'home')
       return <GoalHome tasksCompletedToday={tasksCompletedToday} onPractice={handlePractice} onHistory={() => setAppState('history')} onEditGoals={() => setAppState('intent')} />
 
-    if (appState === 'coach') {
-      const catLabels: Record<string, string> = { creative_writing: 'Creative Writing', learn_kannada: 'Learn Kannada', public_speaking: 'Public Speaking', guitar_practice: 'Guitar Practice', guided_thinking: 'Guided Thinking', active_listening: 'Active Listening', philosophy: 'Philosophy' }
-      return <Coach category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} lastCompletedId={currentTask?.task_id} lastSkillArea={currentTask?.skill_area} onStartTask={handleStartTask} onBrowseAll={() => setAppState('suggestion')} onHome={() => setAppState('home')} />
-    }
-
-    if (appState === 'suggestion')
-      return <Suggestion onStartTask={handleStartTask} tasksCompletedToday={tasksCompletedToday} onHistory={() => setAppState('history')} initialCategory={lastCategory} onHome={() => setAppState('home')} />
+    if (appState === 'journeys')
+      return <Journeys category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} onStartTask={handleStartTask} onHome={() => setAppState('home')} />
 
     if (appState === 'focused' && currentTask)
-      return <Focused task={currentTask} onDone={handleDone} onHome={() => setAppState('home')} onNextInSequence={handleNextInSequence} />
+      return <Focused task={currentTask} onDone={handleDone} onHome={() => setAppState('journeys')} onNextInSequence={handleNextInSequence} />
 
     if (appState === 'audio' && currentTask)
-      return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => setAppState('home')} />
+      return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => setAppState('journeys')} />
 
-    if (appState === 'whatsnext') {
-      const catLabels: Record<string, string> = { creative_writing: 'Creative Writing', learn_kannada: 'Learn Kannada', public_speaking: 'Public Speaking', guitar_practice: 'Guitar Practice', guided_thinking: 'Guided Thinking', active_listening: 'Active Listening', philosophy: 'Philosophy' }
-      return <WhatsNext completedSkillArea={currentTask?.skill_area} category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} tasksCompletedToday={tasksCompletedToday} onStartTask={handleStartTask} onDoneForNow={() => setAppState('home')} />
-    }
+    if (appState === 'whatsnext')
+      return <WhatsNext completedSkillArea={currentTask?.skill_area} category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} tasksCompletedToday={tasksCompletedToday} onStartTask={handleStartTask} onDoneForNow={() => setAppState('journeys')} />
 
     if (appState === 'donefortoday')
       return <DoneForToday count={tasksCompletedToday} onOneMore={() => setAppState('whatsnext')} onHistory={() => setAppState('history')} />

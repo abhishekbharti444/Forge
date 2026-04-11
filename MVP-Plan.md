@@ -721,6 +721,125 @@ Products integrated into habits achieve 94% higher retention than those requirin
 
 ---
 
+### Priority 5 — Progress Migration to Supabase
+
+**What:** Move progress tracking from localStorage (`momentum.ts`, `progress.ts`) to Supabase. The schema already exists — `user_task_events` and `daily_summary` tables are defined in `001_schema.sql` but the frontend never writes to them.
+
+**Why it matters:**
+- Progress doesn't sync across devices
+- Progress is lost on browser clear
+- Server-side intelligence (SRS scheduling, adaptive recommendations) is impossible without server-side progress data
+- The `user_task_events` table already tracks `shown`, `started`, `skipped`, `completed` — the schema is ready
+
+**Implementation:** Dual-write (localStorage + Supabase) during transition. Read from localStorage for speed, sync to Supabase in background. Eventually read from Supabase as source of truth.
+
+**Not P0.** localStorage works for single-device MVP. This becomes critical when SRS or cross-device sync is needed.
+
+---
+
+### Priority 6 — Intelligent Task Selection Engine
+
+**What:** Replace the random next-task picker in `WhatsNext.tsx` with an intelligent recommendation engine.
+
+**Current state:** `WhatsNext.tsx` line 37 picks a random task from the entire category: `tasks[Math.floor(Math.random() * tasks.length)]`. The journey system has careful sequencing, but the "keep going" suggestion after completing a task ignores it entirely.
+
+**What it should do:**
+1. Respect journey sequence — suggest the next uncompleted task in the current journey
+2. Balance across skill areas — if you've done 5 vocabulary tasks, suggest grammar
+3. Factor in SRS due items (once SRS exists) — review items take priority over new material
+4. Consider time of day / session length — shorter tasks for quick sessions
+
+**Not P0.** Random selection is acceptable for early usage. This becomes important when users have 100+ completed tasks and need intelligent guidance on what to do next. Depends on Priority 5 (server-side progress) for full implementation.
+
+---
+
+## UX Audit Findings (April 2026)
+
+> Full audit in `UX-Audit.md`. Summary of infrastructure gaps and implementation paths below.
+
+### Context
+
+A full UX walkthrough + research synthesis (habit-forming app design, evidence-based learning, gamification psychology) revealed that the engagement layer is solid but the **learning effectiveness layer** has critical gaps. The task data is well-designed with goal-specific metadata (BPM for guitar, dialogues for Kannada, text_input for philosophy), but the rendering in `buildSteps()` treats all tasks identically.
+
+### Infrastructure Gap 1: Spaced Repetition (Effort: 2-3 days)
+
+**Problem:** No mechanism to resurface forgotten material at optimal intervals. "1/39 completed" tracks exposure, not retention.
+
+**What exists:** `structured_list` items already have individual reviewable units (each Kannada word, each philosopher, each chord) with consistent shape (`primary`, `secondary`, `reveal`, `details`, `body`). Quiz mode in `ReferenceRenderer` already shows items one at a time.
+
+**Implementation path:**
+1. New table: `user_item_reviews(user_id, task_id, item_index, correct, reviewed_at, next_review_at, interval_days)`
+2. Modify Quiz mode to record right/wrong per item ("Got it" / "Missed it" buttons)
+3. Leitner 3-box algorithm: new → 1 day, correct → double interval, wrong → reset
+4. New dynamic "Review" task type that queries due items across tasks for a goal
+
+**Risk:** Low. SRS is a solved problem. Data shape supports it.
+
+### Infrastructure Gap 2: Audio (Effort: 0.5-3 days depending on scope)
+
+**Problem:** Kannada pronunciation (16 tasks), guitar ear training (25 tasks), and public speaking (150 tasks) need audio.
+
+**What already exists (surprise finding):**
+- `speechEngine.ts` — generates utterance scripts with `lang` field supporting `kn-IN` for Kannada
+- `speechPlayer.ts` — wraps browser `SpeechSynthesis` API with play/pause/progress
+- `AudioPlayerScreen.tsx` — full screen component with controls
+- The 🗣 and 🎧 buttons on Completion screen already link to these modes
+
+**What's still missing:**
+- Audio recording for public speaking: `MediaRecorder` API wrapper (~1 day)
+- Guitar tone synthesis for ear training: Tone.js integration (~2-3 days)
+- Surfacing audio more prominently in the task flow (🗣/🎧 are on Completion screen but should be in Study step)
+
+**Risk:** Medium. Browser Kannada TTS quality varies by device. Guitar audio synthesis is real work.
+
+### Infrastructure Gap 3: Progressive Difficulty (Effort: ~1 day for guitar)
+
+**Problem:** Guitar tasks have static `bpm` fields. Practice at 60 BPM forever = stagnation.
+
+**Implementation path:**
+1. New table: `user_skill_levels(user_id, goal_category, skill_area, param_name, current_value)`
+2. After guitar task: "Could you play this cleanly?" → Yes: bump BPM by 5-10
+3. Override static `bpm` with user's current level when rendering
+
+**For non-guitar goals:** Journey sequencing already handles progressive difficulty. Tasks get harder as you advance through sequences. No additional infrastructure needed.
+
+**Risk:** Low for guitar. Non-issue for other goals.
+
+### Infrastructure Gap 4: Metadata-Driven Rendering (Effort: ~2 hours)
+
+**Problem:** `buildSteps()` in `Focused.tsx` builds the same step flow for every task. The task data already encodes different practice needs through `type`, `tools`, `reference.type`, and `completion`.
+
+**Implementation path:** Make `buildSteps()` branch on task metadata:
+- `tools: ['metronome']` + `bpm` → lead with metronome-guided drill
+- `tools: ['text_input']` → lead with writing prompt
+- `reference.type: 'dialogue'` → interactive dialogue rendering
+- `reference.type: 'fill_blank'` → fill-in-the-blank quiz
+- `type: 'retrieval'` → quiz-first (no Learn mode)
+
+**Risk:** Low. One function refactor. Components already exist.
+
+### Revised Priority Stack
+
+| Priority | Change | Type | Effort |
+|---|---|---|---|
+| P0 | Default to retrieval practice (Quiz first) | Learning | 30 min |
+| P0 | Make `buildSteps()` metadata-driven | Learning | 2 hr |
+| P0 | Lead home screen with next task | Engagement | 2 hr |
+| P0 | Add streak counter | Engagement | 1 hr |
+| P1 | Implement basic spaced repetition | Learning | 2-3 days |
+| P1 | Surface audio (🗣/🎧) in Study step, not just Completion | Infrastructure | 1 hr |
+| P1 | Add audio recording for public speaking | Infrastructure | 1 day |
+| P1 | Progressive BPM tracking for guitar | Learning | 1 day |
+| P1 | Variable completion messages | Engagement | 30 min |
+| P1 | Collapse journey tasks (show next 3-5) | Engagement | 2 hr |
+| P1 | Structured reflect prompts per task type | Learning | 1 hr |
+| P2 | Guitar ear training audio (Tone.js) | Infrastructure | 2-3 days |
+| P2 | Session-opening recall checks | Learning | 1 day |
+| P2 | Stats on completion screen | Engagement | 1 hr |
+| P2 | Social sharing | Engagement | 2 hr |
+
+---
+
 *Document created: March 29, 2026*
-*Last updated: April 7, 2026*
+*Last updated: April 11, 2026*
 *Repository: [github.com/abhishekbharti444/Forge](https://github.com/abhishekbharti444/Forge)*

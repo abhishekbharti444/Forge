@@ -371,3 +371,26 @@ Note: Venue generated Cloudscape-based mockups. We're implementing with Tailwind
 ---
 
 *Document created: March 31, 2026*
+*Updated: April 11, 2026 — Learning effectiveness findings from UX Audit*
+
+---
+
+## Appendix: Learning Effectiveness Notes
+
+> See `UX-Audit.md` for the full audit. Key findings that affect the Design System:
+
+### Principle #6 Amendment: Immediate Payoff Must Be Variable
+
+The current completion screen shows "Nice work." every time. Research on habit-forming apps (thisisglance.com, xqa.io) is emphatic: **variable rewards sustain engagement far better than predictable ones.** The completion screen should draw from a pool of 15-20 warm, varied messages and include specific stats (time spent, items learned, streak count). This doesn't conflict with the "warm pulse, not confetti" principle — it's about *content variety*, not visual excess.
+
+### Principle #3 Amendment: Progressive Discovery Applies to Journey Tasks
+
+The GoalHome screen currently shows all tasks in a journey (e.g., 39 vocabulary tasks at once). This violates progressive discovery. Show the next 3-5 tasks with a progress bar; reveal more as the user advances. The "Endowed Progress Effect" research shows people are more motivated when they see a partially-filled progress bar.
+
+### New Principle: Retrieval Before Presentation
+
+The flashcard Study step defaults to "Learn" mode (show answer). Decades of retrieval practice research (Roediger & Karpicke, 2006) show that **testing yourself produces dramatically better retention than re-reading.** The default should be Quiz mode (hide answer, attempt recall). Users can opt into Learn mode if stuck. This is a one-line change in `ReferenceRenderer` but a fundamental shift in learning effectiveness.
+
+### New Principle: Practice Mode Must Match Skill Type
+
+The `buildSteps()` function in `Focused.tsx` builds the same step flow for every task. But the task data already encodes different practice needs through `type`, `tools`, `reference.type`, and `completion` fields. A guitar task with `tools: ['metronome']` should lead with the metronome. A philosophy task with `tools: ['text_input']` should lead with the writing prompt. A Kannada dialogue task should render as interactive conversation. The rendering layer should be metadata-driven, not one-size-fits-all.

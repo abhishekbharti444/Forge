@@ -29,9 +29,21 @@ interface Props {
   onDoneForNow: () => void
 }
 
+const COMPLETION_MESSAGES = [
+  'Nice work.', 'Solid session.', "That's progress.", 'Well done.', 'Another one down.',
+  'You showed up.', 'Consistency wins.', 'Keep stacking.', 'Momentum building.',
+  'Sharp work.', 'That counts.', 'One more in the bank.', 'Locked in.',
+  'Good rep.', 'Discipline > motivation.', 'Small steps, big gains.',
+]
+
+function pickMessage() {
+  return COMPLETION_MESSAGES[Math.floor(Math.random() * COMPLETION_MESSAGES.length)]
+}
+
 export function WhatsNext({ completedSkillArea, category, categoryLabel, tasksCompletedToday, onStartTask, onDoneForNow }: Props) {
   const [nextTask, setNextTask] = useState<Task | null>(null)
   const [loading, setLoading] = useState(true)
+  const [message] = useState(pickMessage)
 
   useEffect(() => {
     apiFetch<{ tasks: Task[] }>(`/tasks?category=${category}`)
@@ -54,7 +66,7 @@ export function WhatsNext({ completedSkillArea, category, categoryLabel, tasksCo
               <div key={i} className="w-2.5 h-2.5 rounded-full bg-accent-green" />
             ))}
           </div>
-          <p className="text-text-primary text-xl font-semibold mb-1">Nice work.</p>
+          <p className="text-text-primary text-xl font-semibold mb-1">{message}</p>
           <p className="text-text-secondary text-sm">
             {completedSkillArea
               ? `You just practiced ${completedSkillArea.replace(/_/g, ' ')}.`

@@ -22,6 +22,7 @@ interface Step {
 interface Props {
   task: {
     description: string; time_minutes: number; skill_area?: string
+    type?: string
     action?: string; context?: string; constraint_note?: string; example?: string
     reference?: { type: string; [key: string]: any }
     tools?: string[]
@@ -38,32 +39,77 @@ interface Props {
 
 function buildSteps(task: Props['task']): Step[] {
   const steps: Step[] = []
+  const tools = task.tools || []
+  const refType = task.reference?.type
 
-  // Step 1: Instruction
-  steps.push({ type: 'instruction', title: 'What to do' })
+  // Retrieval tasks: quiz first, no study step
+  if (task.type === 'retrieval') {
+    steps.push({ type: 'instruction', title: 'What to do' })
+    if (refType) steps.push({ type: 'reference', title: 'Quiz' })
+    steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
+  }
 
-  // Step 2: Reference (if task has structured content)
-  if (task.reference) {
+  // Metronome-led practice (guitar technique, rhythm)
+  if (tools.includes('metronome')) {
+    steps.push({ type: 'instruction', title: 'What to do' })
+    steps.push({ type: 'exercise', title: 'Practice' })
+    steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
+  }
+
+  // Writing-led practice (philosophy, reflection-heavy)
+  if (tools.includes('text_input') && !task.reference) {
+    steps.push({ type: 'instruction', title: 'What to do' })
+    steps.push({ type: 'reflect', title: 'Write' })
+    return steps
+  }
+
+  // Interactive exercises: dialogue, fill_blank — reference IS the exercise
+  if (refType === 'fill_blank' || refType === 'dialogue') {
+    steps.push({ type: 'instruction', title: 'What to do' })
+    steps.push({ type: 'reference', title: refType === 'dialogue' ? 'Practice' : 'Exercise' })
+    steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
+  }
+
+  // Structured list with reveal — study then quiz
+  if (refType === 'structured_list' && tools.includes('reveal_hide')) {
+    steps.push({ type: 'instruction', title: 'What to do' })
     steps.push({ type: 'reference', title: 'Study' })
+    steps.push({ type: 'exercise', title: 'Practice' })
+    steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
   }
 
-  // Step 3: Exercise (if task has interactive tools — quiz lives inside reference renderer)
-  if (task.reference?.type === 'fill_blank' || task.reference?.type === 'dialogue') {
-    // reference step IS the exercise
-  } else if (task.reference?.type === 'structured_list' && task.tools?.includes('reveal_hide')) {
+  // Timer-based practice (public speaking, timed drills)
+  if (tools.includes('timer')) {
+    steps.push({ type: 'instruction', title: 'What to do' })
     steps.push({ type: 'exercise', title: 'Practice' })
-  } else if (task.tools?.includes('timer') || task.tools?.includes('metronome')) {
-    steps.push({ type: 'exercise', title: 'Practice' })
+    steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
   }
 
-  // Step 4: Reflect
+  // Default: instruction → study (if reference has renderable content) → reflect
+  steps.push({ type: 'instruction', title: 'What to do' })
+  if (refType) steps.push({ type: 'reference', title: 'Study' })
   steps.push({ type: 'reflect', title: 'Reflect' })
-
   return steps
+}
+
+function reflectPrompt(task: Props['task']): { question: string; hint: string } {
+  const tools = task.tools || []
+  if (tools.includes('metronome')) return { question: 'Could you keep tempo cleanly?', hint: 'Where did you stumble? What BPM felt comfortable?' }
+  if (tools.includes('text_input') && !task.reference) return { question: 'Read back what you wrote.', hint: 'Does it hold up? What would you change?' }
+  if (task.type === 'retrieval') return { question: 'Which items did you miss?', hint: 'What tripped you up? Any patterns?' }
+  if (task.reference?.type === 'dialogue') return { question: 'Could you say your lines without looking?', hint: 'Try once from memory. What stuck, what didn\'t?' }
+  if (task.reference?.type === 'fill_blank') return { question: 'Which blanks were hardest?', hint: 'What made them tricky? How would you remember next time?' }
+  return { question: 'What did you notice?', hint: 'What was easy, what was hard, what surprised you.' }
 }
 
 export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
   const steps = buildSteps(task)
+  const prompt = reflectPrompt(task)
   const [current, setCurrent] = useState(0)
   const [reflection, setReflection] = useState('')
   const step = steps[current]
@@ -148,8 +194,8 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
 
         {step.type === 'reflect' && (
           <div className="space-y-4">
-            <p className="text-text-primary text-lg">What did you notice?</p>
-            <p className="text-text-secondary text-sm">Jot a quick thought — what was easy, what was hard, what surprised you.</p>
+            <p className="text-text-primary text-lg">{prompt.question}</p>
+            <p className="text-text-secondary text-sm">{prompt.hint}</p>
             <textarea
               value={reflection}
               onChange={e => setReflection(e.target.value)}
