@@ -35,7 +35,7 @@ export function StructuredList({ items, revealEnabled, mode = 'learn' }: Structu
     return (
       <div className="w-full text-center py-4">
         <p className="text-text-secondary/40 text-xs mb-4">{quizIndex + 1} / {items.length}</p>
-        <p className="text-text-primary text-2xl mb-1">{shown}</p>
+        <p className="text-text-primary text-2xl leading-loose mb-1">{shown}</p>
         {mode === 'quiz' && item.secondary && <p className="text-text-secondary text-sm mb-4">{item.secondary}</p>}
         {answered ? (
           <div className="space-y-3 mt-4">
@@ -204,7 +204,7 @@ export function Pairs({ pairs }: PairsProps) {
   )
 }
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { TabPlayer } from './TabPlayer'
 import { ChordDiagramSVG as _ChordDiagramSVG, lookupChord as _lookupChord } from './ChordDiagram'
 
@@ -282,7 +282,10 @@ export function Dialogue({ lines }: DialogueProps) {
           <div key={i} className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
             <div className={`max-w-[80%] px-4 py-2.5 rounded-xl ${isUser ? 'bg-accent-amber/15 border border-accent-amber/30' : 'bg-bg-surface border border-border'}`}>
               <p className={`text-xs mb-1 ${isUser ? 'text-accent-amber' : 'text-text-secondary/50'}`}>{line.speaker}</p>
-              <p className="text-text-primary text-sm leading-relaxed">{line.text}</p>
+              <div className="flex items-center gap-1">
+                <p className="text-text-primary text-sm leading-relaxed">{line.text}</p>
+                <PlayButton url={(line as any).audio_url} />
+              </div>
             </div>
           </div>
         )
@@ -340,9 +343,10 @@ export function Narration({ segments, questions }: NarrationProps) {
       <div className="w-full space-y-4">
         {/* Show segments up to current index */}
         {segments.slice(0, segIndex + 1).map((seg, i) => (
-          <p key={i} className={`text-sm leading-relaxed ${i === segIndex ? 'text-text-primary' : 'text-text-secondary/50'}`}>
-            {seg.text}
-          </p>
+          <div key={i} className={`text-sm leading-relaxed ${i === segIndex ? 'text-text-primary' : 'text-text-secondary/50'}`}>
+            <span>{seg.text}</span>
+            <PlayButton url={(seg as any).audio_url} />
+          </div>
         ))}
         <div className="flex justify-center pt-2">
           {segIndex < segments.length - 1 ? (
@@ -403,13 +407,210 @@ interface ReferenceRendererProps {
   bpm?: number
 }
 
-function TextReference({ body, mono, bpm }: { body: string; mono?: boolean; bpm?: number }) {
+function PlayButton({ url }: { url?: string }) {
+  const ref = useRef<HTMLAudioElement | null>(null)
+  const [playing, setPlaying] = useState(false)
+  if (!url) return null
+  return (
+    <button onClick={() => {
+      if (ref.current) { ref.current.pause(); ref.current = null; setPlaying(false); return }
+      const a = new Audio(url)
+      ref.current = a
+      setPlaying(true)
+      a.onended = () => { ref.current = null; setPlaying(false) }
+      a.play()
+    }} className="text-accent-amber text-xs ml-2">{playing ? '⏸' : '🔊'}</button>
+  )
+}
+
+function SoundExercise({ reference }: { reference: any }) {
+  const [revealed, setRevealed] = useState<Set<number>>(new Set())
+  const items = reference.pairs || reference.examples || []
+  return (
+    <div className="w-full space-y-3">
+      <p className="text-accent-amber text-xs font-semibold uppercase tracking-wide mb-2">{reference.focus?.replace('_', ' ')}</p>
+      {items.map((item: any, i: number) => {
+        const show = revealed.has(i)
+        // Pairs have two sides (short/long, dental/retroflex, plain/aspirated, word_a/word_b, statement/question/exclamation)
+        const sides = Object.entries(item).filter(([_k, v]) => typeof v === 'object' && v !== null && 'audio_text' in (v as any)) as [string, any][]
+        // Simple examples (rhythm, connected_speech)
+        if (sides.length === 0 && item.text) {
+          return (
+            <div key={i} className="bg-bg-surface border border-border rounded-xl px-4 py-3">
+              <div className="flex items-center gap-2">
+                <p className="text-text-primary text-lg">{item.text}</p>
+                <PlayButton url={item.audio_url} />
+              </div>
+              {item.transliteration && <p className="text-text-secondary text-sm">{item.transliteration}</p>}
+              {item.meaning && <p className="text-text-secondary/50 text-xs">{item.meaning}</p>}
+              {item.note && <p className="text-text-secondary/40 text-xs mt-1 italic">{item.note}</p>}
+            </div>
+          )
+        }
+        return (
+          <button key={i} onClick={() => setRevealed(s => { const n = new Set(s); n.has(i) ? n.delete(i) : n.add(i); return n })}
+            className="w-full bg-bg-surface border border-border rounded-xl px-4 py-3 text-left">
+            <div className="flex gap-4">
+              {sides.map(([label, val]) => (
+                <div key={label} className="flex-1">
+                  <p className="text-text-secondary/40 text-xs mb-1">{label}</p>
+                  <div className="flex items-center gap-1">
+                    <p className="text-text-primary text-base">{val.sound || val.text}</p>
+                    <PlayButton url={val.audio_url} />
+                  </div>
+                  {show && val.word && <p className="text-text-secondary text-sm mt-1">{val.word}</p>}
+                  {show && val.meaning && <p className="text-text-secondary/50 text-xs">{val.meaning}</p>}
+                </div>
+              ))}
+            </div>
+            {show && item.difference && <p className="text-accent-amber text-xs mt-2">Difference: {item.difference}</p>}
+          </button>
+        )
+      })}
+    </div>
+  )
+}
+
+function GraduatedRecall({ prompts }: { prompts: any[] }) {
+  const [index, setIndex] = useState(0)
+  const [showAnswer, setShowAnswer] = useState(false)
+  if (index >= prompts.length) {
+    return (
+      <div className="w-full text-center py-6">
+        <p className="text-accent-green text-lg font-semibold">Done! 🎉</p>
+        <button onClick={() => { setIndex(0); setShowAnswer(false) }} className="text-accent-amber text-sm mt-3">Try again</button>
+      </div>
+    )
+  }
+  const p = prompts[index]
+  return (
+    <div className="w-full text-center py-4">
+      <p className="text-text-secondary/40 text-xs mb-4">{index + 1} / {prompts.length}</p>
+      <p className="text-text-primary text-lg mb-6 leading-relaxed">{p.prompt}</p>
+      {!showAnswer ? (
+        <button onClick={() => setShowAnswer(true)}
+          className="px-6 py-2.5 bg-accent-amber text-bg-primary rounded-lg text-sm font-semibold">Show answer</button>
+      ) : (
+        <div className="space-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <p className="text-accent-amber text-lg">{p.answer_audio}</p>
+            <PlayButton url={p.audio_url} />
+          </div>
+          <button onClick={() => { setShowAnswer(false); setIndex(i => i + 1) }}
+            className="px-4 py-2 bg-bg-surface text-text-secondary rounded-lg text-sm border border-border">Next →</button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function Circling({ prompts, target }: { prompts: any[]; target?: string }) {
+  const [index, setIndex] = useState(0)
+  if (index >= prompts.length) {
+    return (
+      <div className="w-full text-center py-6">
+        <p className="text-accent-green text-lg font-semibold">Done! 🎉</p>
+        <button onClick={() => setIndex(0)} className="text-accent-amber text-sm mt-3">Try again</button>
+      </div>
+    )
+  }
+  const p = prompts[index]
+  const typeLabel = p.type?.replace('_', ' ') || ''
+  return (
+    <div className="w-full text-center py-4">
+      {target && <p className="text-text-secondary/40 text-xs mb-2">{target}</p>}
+      <p className="text-text-secondary/40 text-xs mb-4">{index + 1} / {prompts.length} · {typeLabel}</p>
+      <p className="text-text-primary text-lg mb-4 leading-relaxed">{p.text}</p>
+      <div className="flex items-center justify-center gap-2 mb-4">
+        <PlayButton url={p.audio_url} />
+      </div>
+      {p.answer && <p className="text-accent-amber text-base mb-4">{p.answer}</p>}
+      <button onClick={() => setIndex(i => i + 1)}
+        className="px-4 py-2 bg-bg-surface text-text-secondary rounded-lg text-sm border border-border">Next →</button>
+    </div>
+  )
+}
+
+function Shadowing({ phrases }: { phrases: any[] }) {
+  const [index, setIndex] = useState(0)
+  const [speed, setSpeed] = useState<'slow' | 'normal' | 'fast'>('slow')
+  if (index >= phrases.length) {
+    return (
+      <div className="w-full text-center py-6">
+        <p className="text-accent-green text-lg font-semibold">Done! 🎉</p>
+        <button onClick={() => { setIndex(0); setSpeed('slow') }} className="text-accent-amber text-sm mt-3">Try again</button>
+      </div>
+    )
+  }
+  const p = phrases[index]
+  const audioUrl = speed === 'slow' ? p.audio_slow_url : speed === 'normal' ? p.audio_normal_url : p.audio_fast_url
+  return (
+    <div className="w-full text-center py-4">
+      <p className="text-text-secondary/40 text-xs mb-4">{index + 1} / {phrases.length}</p>
+      <p className="text-text-primary text-2xl leading-loose mb-2">{p.text}</p>
+      <p className="text-text-secondary text-sm mb-1">{p.transliteration}</p>
+      <p className="text-text-secondary/50 text-xs mb-4">{p.meaning}</p>
+      <div className="flex gap-2 justify-center mb-4">
+        {(['slow', 'normal', 'fast'] as const).map(s => (
+          <button key={s} onClick={() => setSpeed(s)}
+            className={`px-3 py-1 rounded-lg text-xs ${speed === s ? 'bg-accent-amber/20 text-accent-amber border border-accent-amber/30' : 'bg-bg-surface text-text-secondary border border-border'}`}>
+            {s}
+          </button>
+        ))}
+      </div>
+      <PlayButton url={audioUrl} />
+      <div className="mt-4">
+        <button onClick={() => { setIndex(i => i + 1); setSpeed('slow') }}
+          className="px-4 py-2 bg-bg-surface text-text-secondary rounded-lg text-sm border border-border">Next →</button>
+      </div>
+    </div>
+  )
+}
+
+function ContextGuess({ items }: { items: any[] }) {
+  const [index, setIndex] = useState(0)
+  const [showAnswer, setShowAnswer] = useState(false)
+  if (index >= items.length) {
+    return (
+      <div className="w-full text-center py-6">
+        <p className="text-accent-green text-lg font-semibold">Done! 🎉</p>
+        <button onClick={() => { setIndex(0); setShowAnswer(false) }} className="text-accent-amber text-sm mt-3">Try again</button>
+      </div>
+    )
+  }
+  const item = items[index]
+  return (
+    <div className="w-full py-4">
+      <p className="text-text-secondary/40 text-xs mb-4 text-center">{index + 1} / {items.length}</p>
+      <p className="text-text-primary text-sm leading-relaxed mb-4">{item.sentence}</p>
+      <p className="text-accent-amber text-sm mb-2">Unknown word: <span className="font-semibold">{item.unknown_word}</span></p>
+      {item.hint && <p className="text-text-secondary/50 text-xs mb-4 italic">{item.hint}</p>}
+      {!showAnswer ? (
+        <div className="text-center">
+          <button onClick={() => setShowAnswer(true)}
+            className="px-6 py-2.5 bg-accent-amber text-bg-primary rounded-lg text-sm font-semibold">Reveal meaning</button>
+        </div>
+      ) : (
+        <div className="text-center space-y-3">
+          <div className="flex items-center justify-center gap-2">
+            <p className="text-accent-green text-lg font-semibold">{item.answer}</p>
+            <PlayButton url={item.audio_url} />
+          </div>
+          <button onClick={() => { setShowAnswer(false); setIndex(i => i + 1) }}
+            className="px-4 py-2 bg-bg-surface text-text-secondary rounded-lg text-sm border border-border">Next →</button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function TextReference({ body, mono, bpm, subdivision }: { body: string; mono?: boolean; bpm?: number; subdivision?: number }) {
   return (
     <div className="w-full">
       <div className={mono ? 'font-mono text-sm bg-bg-surface border border-border rounded-xl px-4 py-3 overflow-x-auto whitespace-pre' : ''}>
         <p className={`text-text-primary leading-relaxed ${mono ? '' : 'text-base'}`}>{body}</p>
       </div>
-      {mono && <TabPlayer tabText={body} bpm={bpm} />}
+      {mono && <TabPlayer tabText={body} bpm={bpm} subdivision={subdivision} />}
     </div>
   )
 }
@@ -434,7 +635,7 @@ export function ReferenceRenderer({ reference, tools, bpm }: ReferenceRendererPr
           ))}
         </div>
       )}
-      {reference.type === 'text' && <TextReference body={reference.body} mono={reference.mono} bpm={bpm} />}
+      {reference.type === 'text' && <TextReference body={reference.body} mono={reference.mono} bpm={bpm} subdivision={reference.subdivision} />}
       {reference.type === 'structured_list' && (
         <StructuredList items={reference.items} revealEnabled={revealEnabled} mode={mode} />
       )}
@@ -443,6 +644,11 @@ export function ReferenceRenderer({ reference, tools, bpm }: ReferenceRendererPr
       {reference.type === 'fill_blank' && <FillBlank items={reference.items} />}
       {reference.type === 'dialogue' && <Dialogue lines={reference.lines} />}
       {reference.type === 'narration' && <Narration segments={reference.segments} questions={reference.questions} />}
+      {reference.type === 'sound_exercise' && <SoundExercise reference={reference} />}
+      {reference.type === 'graduated_recall' && <GraduatedRecall prompts={reference.prompts} />}
+      {reference.type === 'circling' && <Circling prompts={reference.prompts} target={reference.target_structure} />}
+      {reference.type === 'shadowing' && <Shadowing phrases={reference.phrases} />}
+      {reference.type === 'context_guess' && <ContextGuess items={reference.items} />}
     </div>
   )
 }

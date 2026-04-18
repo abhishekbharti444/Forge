@@ -23,7 +23,8 @@
     "bpm": 60,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-002",
@@ -44,7 +45,13 @@
     "bpm": 60,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "e|--4--3--2--1--------|\nB|--4--3--2--1--------|\nG|--4--3--2--1--------|\nD|--4--3--2--1--------|\nA|--4--3--2--1--------|\nE|--4--3--2--1--------|"
+    }
   },
   {
     "id": "gp-003",
@@ -74,7 +81,8 @@
     "needs_guitar": false,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-004",
@@ -96,7 +104,13 @@
     "bpm": 60,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 1,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--0--0--0--0--0--0--0--0--|\n   D  U  D  U  D  U  D  U"
+    }
   },
   {
     "id": "gp-005",
@@ -116,7 +130,8 @@
     "needs_guitar": true,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-006",
@@ -137,7 +152,13 @@
     "bpm": 50,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--1--2--3--4-----------|\nA|--1--2--3--4-----------|\nD|--1--2--3--4-----------|\nG|--1--2--3--4-----------|\nB|--1--2--3--4-----------|\ne|--1--2--3--4-----------|"
+    }
   },
   {
     "id": "gp-007",
@@ -157,7 +178,8 @@
     "needs_guitar": true,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-008",
@@ -175,7 +197,8 @@
     "needs_guitar": true,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-009",
@@ -201,7 +224,8 @@
     "bpm": 50,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-010",
@@ -222,7 +246,13 @@
     "bpm": 50,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--5-----------5--------|\nA|--------5-----------5--|\nD|-----5-----------5-----|\nG|--------5-----------5--|\nB|-----5-----------5-----|\ne|--5-----------5--------|"
+    }
   },
   {
     "id": "gp-011",
@@ -243,7 +273,13 @@
     "bpm": 40,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--1--3--2--4--------|\nA|--1--3--2--4--------|\nD|--1--3--2--4--------|\nG|--1--3--2--4--------|\nB|--1--3--2--4--------|\ne|--1--3--2--4--------|"
+    }
   },
   {
     "id": "gp-012",
@@ -265,7 +301,13 @@
     "bpm": 60,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "A|--1--2--3--4--1--2--3--4--|\n   D  U  D  U  D  U  D  U"
+    }
   },
   {
     "id": "gp-013",
@@ -286,7 +328,13 @@
     "bpm": 60,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--5h7----5h7----5h7----|\n   (h = hammer-on)"
+    }
   },
   {
     "id": "gp-014",
@@ -307,7 +355,13 @@
     "bpm": 60,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--7p5----7p5----7p5----|\n   (p = pull-off)"
+    }
   },
   {
     "id": "gp-015",
@@ -327,7 +381,13 @@
     "needs_guitar": true,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "B|--5h7p5h7p5h7p5h7p5--|\n   (continuous trill)"
+    }
   },
   {
     "id": "gp-016",
@@ -353,7 +413,8 @@
     "bpm": 50,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-017",
@@ -374,7 +435,8 @@
     "bpm": 40,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-018",
@@ -395,7 +457,13 @@
     "bpm": 60,
     "tags": [
       "expression"
-    ]
+    ],
+    "level": 3,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "G|--5/7----7/9----9/12---|\n   (/ = slide up)"
+    }
   },
   {
     "id": "gp-019",
@@ -415,7 +483,13 @@
     "needs_guitar": true,
     "tags": [
       "expression"
-    ]
+    ],
+    "level": 3,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "B|--8b(10)--8b(10)--8b(10)--|\n   (b = bend to pitch of fret 10)"
+    }
   },
   {
     "id": "gp-020",
@@ -436,7 +510,13 @@
     "bpm": 60,
     "tags": [
       "expression"
-    ]
+    ],
+    "level": 3,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "B|--8~----8~----8~----|\n   (~ = vibrato)"
+    }
   },
   {
     "id": "gp-021",
@@ -456,7 +536,8 @@
     "bpm": 60,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-022",
@@ -473,7 +554,8 @@
     "needs_guitar": true,
     "tags": [
       "expression"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-023",
@@ -493,7 +575,13 @@
     "bpm": 50,
     "tags": [
       "legato"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--5--5--8--8--------|\nA|--5--5--8--8--------|\nD|--5--5--8--8--------|\nG|--5--5--8--8--------|\nB|--5--5--8--8--------|\ne|--5--5--8--8--------|"
+    }
   },
   {
     "id": "gp-024",
@@ -513,7 +601,8 @@
     "needs_guitar": false,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-025",
@@ -533,7 +622,13 @@
     "bpm": 50,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 3,
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "E|--1-2-3-4--1-2-3-4--|\n   quarter   eighth\n\nE|--1-2-3-4-1-2-3-4--|\n   eighth    triplet"
+    }
   },
   {
     "id": "gp-026",
@@ -559,7 +654,8 @@
       "name": "Open Chords",
       "order": 1,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-027",
@@ -588,7 +684,8 @@
       "name": "Open Chords",
       "order": 2,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-028",
@@ -613,7 +710,8 @@
       "name": "Open Chords",
       "order": 3,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-029",
@@ -638,7 +736,8 @@
       "name": "Open Chords",
       "order": 4,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-030",
@@ -663,7 +762,8 @@
       "name": "Open Chords",
       "order": 5,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-031",
@@ -688,7 +788,8 @@
       "name": "Open Chords",
       "order": 6,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-032",
@@ -718,7 +819,8 @@
       "gp-song-004",
       "gp-song-005",
       "gp-song-007"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-033",
@@ -741,7 +843,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_changes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-034",
@@ -764,7 +867,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_changes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-035",
@@ -787,7 +891,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_changes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-036",
@@ -813,7 +918,8 @@
     "bpm": 80,
     "tags": [
       "progressions"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-037",
@@ -839,7 +945,8 @@
     "bpm": 70,
     "tags": [
       "progressions"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-038",
@@ -866,7 +973,8 @@
       "name": "Barre Chords",
       "order": 1,
       "total": 4
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-039",
@@ -898,7 +1006,8 @@
       "name": "Barre Chords",
       "order": 2,
       "total": 4
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-040",
@@ -923,7 +1032,8 @@
       "name": "Barre Chords",
       "order": 3,
       "total": 4
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-041",
@@ -946,7 +1056,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_changes"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-042",
@@ -973,7 +1084,8 @@
     "bpm": 80,
     "tags": [
       "progressions"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-043",
@@ -997,7 +1109,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-044",
@@ -1022,7 +1135,8 @@
     "bpm": 80,
     "tags": [
       "progressions"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-045",
@@ -1047,7 +1161,8 @@
     "bpm": 90,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-046",
@@ -1070,7 +1185,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-047",
@@ -1090,7 +1206,8 @@
     "bpm": 70,
     "tags": [
       "chord_changes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-048",
@@ -1110,7 +1227,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-049",
@@ -1147,7 +1265,8 @@
       "gp-song-001",
       "gp-song-024",
       "gp-song-025"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-050",
@@ -1168,7 +1287,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-051",
@@ -1190,7 +1310,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-052",
@@ -1210,7 +1331,8 @@
     "needs_guitar": true,
     "tags": [
       "barre_chords"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-053",
@@ -1261,7 +1383,8 @@
     "needs_guitar": false,
     "tags": [
       "chord_types"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-054",
@@ -1288,7 +1411,8 @@
     "needs_guitar": true,
     "tags": [
       "progressions"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-055",
@@ -1314,7 +1438,8 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-056",
@@ -1374,7 +1499,8 @@
     "needs_guitar": false,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-057",
@@ -1438,7 +1564,8 @@
     "needs_guitar": true,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-058",
@@ -1502,7 +1629,8 @@
     "needs_guitar": true,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-059",
@@ -1562,7 +1690,9 @@
     "needs_guitar": false,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1,
+    "context": "Testing your fretboard knowledge without looking builds the instant recall that makes navigation effortless."
   },
   {
     "id": "gp-060",
@@ -1651,7 +1781,8 @@
     "needs_guitar": true,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-061",
@@ -1681,7 +1812,9 @@
       "name": "Pentatonic Boxes",
       "order": 1,
       "total": 8
-    }
+    },
+    "level": 1,
+    "scale": "Em pentatonic 1"
   },
   {
     "id": "gp-062",
@@ -1711,7 +1844,9 @@
       "name": "Pentatonic Boxes",
       "order": 2,
       "total": 8
-    }
+    },
+    "level": 1,
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-063",
@@ -1736,7 +1871,8 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-064",
@@ -1786,7 +1922,9 @@
     "needs_guitar": false,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1,
+    "context": "Fretboard visualization away from the guitar strengthens mental mapping and accelerates learning."
   },
   {
     "id": "gp-065",
@@ -1811,7 +1949,8 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-066",
@@ -1841,7 +1980,9 @@
       "name": "Pentatonic Boxes",
       "order": 3,
       "total": 8
-    }
+    },
+    "level": 2,
+    "scale": "Am pentatonic 2"
   },
   {
     "id": "gp-067",
@@ -1861,7 +2002,14 @@
     "bpm": 60,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "body": "Am Pentatonic Box 1 — Groups of 3:\ne|-------------------5-8-5---|\nB|--------------5-8-5-------8|\nG|---------5-7-5-------------|\nD|----5-7-5------------------|\nA|-5-7-5---------------------|\nE|---------------------------|\n\nPattern: 1-2-3, 2-3-4, 3-4-5...",
+      "mono": true
+    },
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-068",
@@ -1905,7 +2053,8 @@
     "needs_guitar": true,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-069",
@@ -1925,7 +2074,13 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "body": "A Natural Minor:\ne|---------------------5-7-8-|\nB|----------------5-6-8------|\nG|-----------5-7-9-----------|\nD|------5-7-9----------------|\nA|-5-7-8---------------------|\nE|---------------------------|\n\nA Major (for comparison):\ne|---------------------5-7-9-|\nB|----------------5-7-9------|\nG|-----------6-7-9-----------|\nD|------6-7-9----------------|\nA|-5-7-9---------------------|\nE|---------------------------|",
+      "mono": true
+    }
   },
   {
     "id": "gp-070",
@@ -1945,7 +2100,14 @@
     "bpm": 50,
     "tags": [
       "pentatonic_boxes"
-    ]
+    ],
+    "level": 3,
+    "reference": {
+      "type": "text",
+      "body": "Box 1 (fret 5):\ne|-5-8-|\nB|-5-8-|\nG|-5-7-|\nD|-5-7-|\nA|-5-7-|\nE|-5-8-|\n\nBox 2 (fret 8):\ne|-8-10-|\nB|-8-10-|\nG|-7-9--|\nD|-7-9--|\nA|-7-10-|\nE|-8-10-|\n\nConnect: ascend box 1 → slide to box 2 → ascend box 2 → continue through boxes 3-5",
+      "mono": true
+    },
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-071",
@@ -1965,7 +2127,8 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-072",
@@ -1985,7 +2148,8 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-073",
@@ -2004,7 +2168,8 @@
     "needs_guitar": false,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-074",
@@ -2052,7 +2217,8 @@
     "needs_guitar": true,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-075",
@@ -2072,7 +2238,9 @@
     "bpm": 70,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 2,
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-076",
@@ -2092,7 +2260,8 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-077",
@@ -2116,7 +2285,8 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-078",
@@ -2139,7 +2309,8 @@
     "bpm": 70,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-079",
@@ -2164,7 +2335,8 @@
     "bpm": 70,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-080",
@@ -2185,7 +2357,8 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-081",
@@ -2205,6 +2378,10 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
+    ],
+    "level": 1,
+    "chords": [
+      "Am"
     ]
   },
   {
@@ -2225,7 +2402,8 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-083",
@@ -2255,7 +2433,8 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-084",
@@ -2284,7 +2463,8 @@
     "bpm": 75,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-085",
@@ -2304,6 +2484,10 @@
     "bpm": 60,
     "tags": [
       "strumming_patterns"
+    ],
+    "level": 2,
+    "chords": [
+      "Am"
     ]
   },
   {
@@ -2329,7 +2513,8 @@
     "bpm": 70,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-087",
@@ -2349,6 +2534,10 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
+    ],
+    "level": 2,
+    "chords": [
+      "Am"
     ]
   },
   {
@@ -2372,7 +2561,8 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-089",
@@ -2401,7 +2591,8 @@
     "bpm": 90,
     "tags": [
       "time_signatures"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-090",
@@ -2425,7 +2616,8 @@
     "bpm": 60,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-091",
@@ -2450,7 +2642,8 @@
     "bpm": 80,
     "tags": [
       "time_signatures"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-092",
@@ -2475,7 +2668,8 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-093",
@@ -2504,7 +2698,8 @@
     "bpm": 70,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-094",
@@ -2530,7 +2725,8 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-095",
@@ -2550,7 +2746,8 @@
     "bpm": 60,
     "tags": [
       "time_signatures"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-096",
@@ -2599,7 +2796,8 @@
       "name": "Fingerpicking Basics",
       "order": 1,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-097",
@@ -2627,7 +2825,8 @@
       "name": "Fingerpicking Basics",
       "order": 2,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-098",
@@ -2659,7 +2858,8 @@
       "name": "Fingerpicking Basics",
       "order": 3,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-099",
@@ -2689,7 +2889,8 @@
       "name": "Fingerpicking Basics",
       "order": 4,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-100",
@@ -2717,7 +2918,8 @@
       "name": "Fingerpicking Basics",
       "order": 5,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-101",
@@ -2745,7 +2947,8 @@
       "name": "Fingerpicking Basics",
       "order": 6,
       "total": 7
-    }
+    },
+    "level": 1
   },
   {
     "id": "gp-102",
@@ -2778,7 +2981,8 @@
       "gp-song-009",
       "gp-song-014",
       "gp-song-013"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-103",
@@ -2811,7 +3015,8 @@
       "name": "Travis Picking",
       "order": 1,
       "total": 5
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-104",
@@ -2839,7 +3044,8 @@
       "name": "Travis Picking",
       "order": 2,
       "total": 5
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-105",
@@ -2871,7 +3077,8 @@
       "name": "Travis Picking",
       "order": 3,
       "total": 5
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-106",
@@ -2896,7 +3103,8 @@
     "bpm": 60,
     "tags": [
       "arpeggio_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-107",
@@ -2920,7 +3128,8 @@
     "bpm": 50,
     "tags": [
       "arpeggio_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-108",
@@ -2949,7 +3158,8 @@
       "name": "Travis Picking",
       "order": 4,
       "total": 5
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-109",
@@ -2981,7 +3191,8 @@
     "songSuggestions": [
       "gp-song-020",
       "gp-song-022"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-110",
@@ -3004,7 +3215,8 @@
     "bpm": 60,
     "tags": [
       "travis_picking"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-111",
@@ -3029,7 +3241,8 @@
     "bpm": 60,
     "tags": [
       "travis_picking"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-112",
@@ -3051,7 +3264,8 @@
     "needs_guitar": true,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-113",
@@ -3076,7 +3290,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_ear"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-114",
@@ -3141,7 +3356,8 @@
     "needs_guitar": true,
     "tags": [
       "intervals"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-115",
@@ -3168,7 +3384,8 @@
     "needs_guitar": true,
     "tags": [
       "theory"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-116",
@@ -3218,7 +3435,9 @@
     "needs_guitar": true,
     "tags": [
       "chord_ear"
-    ]
+    ],
+    "level": 1,
+    "context": "Training your ear to recognize chord qualities is the bridge between hearing music and understanding it."
   },
   {
     "id": "gp-117",
@@ -3237,7 +3456,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_ear"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-118",
@@ -3262,7 +3482,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_ear"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-119",
@@ -3307,7 +3528,9 @@
     "needs_guitar": false,
     "tags": [
       "theory"
-    ]
+    ],
+    "level": 2,
+    "context": "Music theory gives you the vocabulary to describe what you hear and the tools to predict what comes next."
   },
   {
     "id": "gp-120",
@@ -3366,7 +3589,8 @@
     "needs_guitar": true,
     "tags": [
       "intervals"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-121",
@@ -3385,7 +3609,8 @@
     "needs_guitar": true,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-122",
@@ -3404,7 +3629,8 @@
     "needs_guitar": false,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-123",
@@ -3470,7 +3696,8 @@
     "needs_guitar": true,
     "tags": [
       "theory"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-124",
@@ -3510,7 +3737,9 @@
     "needs_guitar": false,
     "tags": [
       "theory"
-    ]
+    ],
+    "level": 2,
+    "context": "Understanding how chords relate to scales unlocks improvisation and songwriting."
   },
   {
     "id": "gp-125",
@@ -3529,7 +3758,8 @@
     "needs_guitar": false,
     "tags": [
       "intervals"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-126",
@@ -3548,7 +3778,8 @@
     "needs_guitar": true,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-127",
@@ -3588,7 +3819,9 @@
     "needs_guitar": false,
     "tags": [
       "theory"
-    ]
+    ],
+    "level": 3,
+    "context": "Knowing intervals by ear lets you figure out melodies and harmonies without sheet music."
   },
   {
     "id": "gp-128",
@@ -3613,7 +3846,8 @@
     "bpm": 55,
     "tags": [
       "arpeggio_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-129",
@@ -3639,7 +3873,8 @@
     "bpm": 60,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-130",
@@ -3656,7 +3891,8 @@
     "needs_guitar": true,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-131",
@@ -3671,7 +3907,84 @@
     "reference": {
       "type": "text",
       "body": "e|--5--8--------|\nB|--5--8--------|\nG|--5--7--8-----|\nD|--5--7--------|\nA|--5--7--------|\nE|--5--8--------|",
-      "mono": true
+      "mono": true,
+      "fretboard": {
+        "title": "Am Blues Scale — Pentatonic + Blue Note",
+        "startFret": 4,
+        "endFret": 9,
+        "dots": [
+          {
+            "string": 6,
+            "fret": 5,
+            "color": "root"
+          },
+          {
+            "string": 6,
+            "fret": 8,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 6,
+            "color": "accent"
+          },
+          {
+            "string": 5,
+            "fret": 7,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 7,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 6,
+            "color": "accent"
+          },
+          {
+            "string": 3,
+            "fret": 7,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 8,
+            "color": "scale"
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "color": "root"
+          },
+          {
+            "string": 1,
+            "fret": 8,
+            "color": "scale"
+          }
+        ]
+      }
     },
     "tools": [
       "metronome"
@@ -3681,7 +3994,8 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-132",
@@ -3701,7 +4015,13 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 3,
+    "reference": {
+      "type": "text",
+      "body": "C Major Scale in Thirds:\ne|---------------------------0-1-|\nB|--------------------0-1-3------|\nG|--------------0-2-4------------|\nD|--------0-2-3------------------|\nA|--0-2-3------------------------|\nE|-------------------------------|\n\nPlay each pair: C-E, D-F, E-G, F-A, G-B, A-C, B-D",
+      "mono": true
+    }
   },
   {
     "id": "gp-133",
@@ -3721,7 +4041,8 @@
     "needs_guitar": true,
     "tags": [
       "caged_system"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-134",
@@ -3741,7 +4062,8 @@
     "bpm": 60,
     "tags": [
       "scales"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-135",
@@ -3760,7 +4082,8 @@
     "needs_guitar": true,
     "tags": [
       "fretboard_notes"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-136",
@@ -3785,7 +4108,8 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-137",
@@ -3815,7 +4139,8 @@
     "bpm": 80,
     "tags": [
       "strumming_patterns"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-138",
@@ -3835,7 +4160,8 @@
     "bpm": 80,
     "tags": [
       "rhythm_techniques"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-139",
@@ -3860,7 +4186,8 @@
     "bpm": 80,
     "tags": [
       "time_signatures"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-140",
@@ -3890,7 +4217,8 @@
     "bpm": 60,
     "tags": [
       "time_signatures"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-141",
@@ -3909,7 +4237,8 @@
     "needs_guitar": false,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-142",
@@ -3926,7 +4255,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_ear"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-143",
@@ -3946,7 +4276,8 @@
     "bpm": 70,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-144",
@@ -3967,7 +4298,8 @@
     "needs_guitar": true,
     "tags": [
       "chord_ear"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-145",
@@ -3986,7 +4318,8 @@
     "needs_guitar": true,
     "tags": [
       "intervals"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-146",
@@ -4005,7 +4338,8 @@
     "needs_guitar": false,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-147",
@@ -4065,7 +4399,8 @@
     "needs_guitar": false,
     "tags": [
       "theory"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-148",
@@ -4084,7 +4419,8 @@
     "needs_guitar": true,
     "tags": [
       "play_by_ear"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-149",
@@ -4105,7 +4441,8 @@
     "bpm": 60,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 3
   },
   {
     "id": "gp-150",
@@ -4137,7 +4474,8 @@
     "bpm": 70,
     "tags": [
       "warm_up"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-151",
@@ -4160,7 +4498,10 @@
     "bpm": 70,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 2,
+    "context": "Pentatonic licks are the vocabulary of lead guitar — learning them gives you ready-made phrases for improvisation.",
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-152",
@@ -4188,7 +4529,9 @@
     "bpm": 70,
     "tags": [
       "riffs"
-    ]
+    ],
+    "level": 1,
+    "context": "Learning iconic riffs trains your rhythm precision and builds a repertoire of patterns you can draw from."
   },
   {
     "id": "gp-153",
@@ -4211,7 +4554,9 @@
     "bpm": 80,
     "tags": [
       "riffs"
-    ]
+    ],
+    "level": 1,
+    "context": "Riff-based exercises develop coordination between both hands while keeping practice musical and engaging."
   },
   {
     "id": "gp-154",
@@ -4234,7 +4579,9 @@
     "bpm": 70,
     "tags": [
       "riffs"
-    ]
+    ],
+    "level": 1,
+    "context": "Complex riffs push your technique to the edge of your ability — the sweet spot for deliberate practice."
   },
   {
     "id": "gp-155",
@@ -4262,7 +4609,9 @@
     "bpm": 80,
     "tags": [
       "riffs"
-    ]
+    ],
+    "level": 2,
+    "context": "Rhythm riffs combine strumming patterns with melodic elements, building the groove that drives songs forward."
   },
   {
     "id": "gp-156",
@@ -4285,7 +4634,10 @@
     "bpm": 60,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 2,
+    "context": "Connecting pentatonic licks across positions is what makes lead guitar sound fluid rather than boxy.",
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-157",
@@ -4311,7 +4663,10 @@
     "bpm": 70,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 2,
+    "context": "Speed and accuracy in pentatonic runs come from practicing short phrases at increasing tempos.",
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-158",
@@ -4337,7 +4692,9 @@
     "bpm": 60,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 2,
+    "context": "Fingerstyle arrangements teach independence between bass and melody — the foundation of solo guitar."
   },
   {
     "id": "gp-159",
@@ -4363,7 +4720,9 @@
     "bpm": 55,
     "tags": [
       "travis_picking"
-    ]
+    ],
+    "level": 2,
+    "context": "Travis picking creates a full, self-accompanying sound that makes one guitar sound like two."
   },
   {
     "id": "gp-160",
@@ -4386,7 +4745,9 @@
     "bpm": 50,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 3,
+    "context": "Learning fingerstyle songs from real music connects technique exercises to actual musical expression."
   },
   {
     "id": "gp-161",
@@ -4409,7 +4770,9 @@
     "bpm": 50,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 3,
+    "context": "Each fingerstyle song teaches unique patterns and voicings that expand your musical vocabulary."
   },
   {
     "id": "gp-162",
@@ -4432,7 +4795,9 @@
     "bpm": 40,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 3,
+    "context": "Alternate picking at speed requires relaxed technique and precise timing — rushing creates tension."
   },
   {
     "id": "gp-163",
@@ -4455,7 +4820,10 @@
     "bpm": 60,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 2,
+    "context": "Bending and vibrato within pentatonic licks add the emotional expression that separates players from robots.",
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-164",
@@ -4482,7 +4850,9 @@
     "bpm": 70,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 3,
+    "context": "Complex fingerstyle pieces develop the coordination and independence needed for advanced solo guitar."
   },
   {
     "id": "gp-165",
@@ -4505,7 +4875,9 @@
     "bpm": 60,
     "tags": [
       "picking"
-    ]
+    ],
+    "level": 1,
+    "context": "Hybrid picking (pick + fingers) opens up textures impossible with either technique alone."
   },
   {
     "id": "gp-166",
@@ -4533,7 +4905,9 @@
     "bpm": 90,
     "tags": [
       "riffs"
-    ]
+    ],
+    "level": 1,
+    "context": "Syncopated riffs train your internal clock to feel the groove between the beats."
   },
   {
     "id": "gp-167",
@@ -4553,7 +4927,9 @@
     "needs_guitar": true,
     "tags": [
       "expression"
-    ]
+    ],
+    "level": 2,
+    "context": "Dynamic control — playing loud and soft intentionally — is what makes guitar playing musical rather than mechanical."
   },
   {
     "id": "gp-168",
@@ -4582,7 +4958,9 @@
     "bpm": 55,
     "tags": [
       "fingerstyle_songs"
-    ]
+    ],
+    "level": 2,
+    "context": "Advanced fingerstyle songs are the ultimate test of coordination, musicality, and patience."
   },
   {
     "id": "gp-169",
@@ -4605,7 +4983,10 @@
     "bpm": 60,
     "tags": [
       "pentatonic_licks"
-    ]
+    ],
+    "level": 3,
+    "context": "Combining pentatonic boxes into fluid runs across the neck is the goal of all scale practice.",
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-170",
@@ -4632,7 +5013,9 @@
     "bpm": 55,
     "tags": [
       "travis_picking"
-    ]
+    ],
+    "level": 3,
+    "context": "Advanced Travis picking patterns add walking bass lines and syncopation to the basic alternating thumb."
   },
   {
     "id": "gp-171",
@@ -4663,7 +5046,9 @@
       "name": "Pentatonic Boxes",
       "order": 4,
       "total": 8
-    }
+    },
+    "level": 2,
+    "scale": "Am pentatonic 3"
   },
   {
     "id": "gp-172",
@@ -4694,7 +5079,9 @@
       "name": "Pentatonic Boxes",
       "order": 5,
       "total": 8
-    }
+    },
+    "level": 2,
+    "scale": "Am pentatonic 4"
   },
   {
     "id": "gp-173",
@@ -4725,7 +5112,9 @@
       "name": "Pentatonic Boxes",
       "order": 6,
       "total": 8
-    }
+    },
+    "level": 2,
+    "scale": "Am pentatonic 5"
   },
   {
     "id": "gp-174",
@@ -4756,7 +5145,9 @@
       "name": "Major Pentatonic",
       "order": 1,
       "total": 3
-    }
+    },
+    "level": 2,
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-175",
@@ -4790,7 +5181,9 @@
       "name": "Major Pentatonic",
       "order": 2,
       "total": 3
-    }
+    },
+    "level": 2,
+    "scale": "Em pentatonic 1"
   },
   {
     "id": "gp-176",
@@ -4819,7 +5212,14 @@
       "name": "Major Pentatonic",
       "order": 3,
       "total": 3
-    }
+    },
+    "level": 2,
+    "reference": {
+      "type": "text",
+      "body": "Bm Pentatonic Box 1 (fret 7):\ne|-7-10-|\nB|-7-10-|\nG|-7-9--|\nD|-7-9--|\nA|-7-9--|\nE|-7-10-|\n\nSame shape = D Major Pentatonic\nStart on D (A string fret 5) instead of B",
+      "mono": true
+    },
+    "scale": "Bm pentatonic 1"
   },
   {
     "id": "gp-177",
@@ -4834,7 +5234,77 @@
     "reference": {
       "type": "text",
       "body": "E-shape Am barre (fret 5):\ne|--5--(barre)-------|\nB|--5----------------|\nG|--5----------------|\nD|--7----------------|\nA|--7----------------|\nE|--5----------------|\n\nBox 1 around it:\ne|--5--8--------|\nB|--5--8--------|\nG|--5--7--------|\nD|--5--7--------|\nA|--5--7--------|\nE|--5--8--------|",
-      "mono": true
+      "mono": true,
+      "fretboard": {
+        "title": "CAGED: E-shape chord + Pentatonic Box 1",
+        "startFret": 4,
+        "endFret": 9,
+        "dots": [
+          {
+            "string": 6,
+            "fret": 5,
+            "color": "root"
+          },
+          {
+            "string": 5,
+            "fret": 7,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 4,
+            "fret": 7,
+            "color": "root"
+          },
+          {
+            "string": 3,
+            "fret": 5,
+            "label": "3",
+            "color": "chord"
+          },
+          {
+            "string": 2,
+            "fret": 5,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "color": "root"
+          },
+          {
+            "string": 6,
+            "fret": 8,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 7,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 8,
+            "color": "scale"
+          },
+          {
+            "string": 1,
+            "fret": 8,
+            "color": "scale"
+          }
+        ]
+      }
     },
     "chords": [
       "Am"
@@ -4852,7 +5322,8 @@
       "name": "CAGED System",
       "order": 1,
       "total": 5
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-178",
@@ -4867,7 +5338,76 @@
     "reference": {
       "type": "text",
       "body": "D-shape Am (fret 7):\ne|--10---------------|\nB|--10---------------|\nG|---7----------------|\nD|---7----------------|\nA|---x (muted)-------|\nE|---x (muted)-------|\n\nBox 2 around it:\ne|--8--10-------|\nB|--8--10-------|\nG|--7---9-------|\nD|--7--10-------|\nA|--7--10-------|\nE|--8--10-------|",
-      "mono": true
+      "mono": true,
+      "fretboard": {
+        "title": "CAGED: D-shape chord + Pentatonic Box 2",
+        "startFret": 7,
+        "endFret": 11,
+        "dots": [
+          {
+            "string": 4,
+            "fret": 7,
+            "color": "root"
+          },
+          {
+            "string": 3,
+            "fret": 9,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 2,
+            "fret": 10,
+            "color": "root"
+          },
+          {
+            "string": 1,
+            "fret": 8,
+            "label": "3",
+            "color": "chord"
+          },
+          {
+            "string": 6,
+            "fret": 8,
+            "color": "scale"
+          },
+          {
+            "string": 6,
+            "fret": 10,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 7,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 10,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 10,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 7,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 8,
+            "color": "scale"
+          },
+          {
+            "string": 1,
+            "fret": 10,
+            "color": "scale"
+          }
+        ]
+      }
     },
     "tools": [
       "metronome"
@@ -4882,7 +5422,11 @@
       "name": "CAGED System",
       "order": 2,
       "total": 5
-    }
+    },
+    "level": 2,
+    "chords": [
+      "Am_D"
+    ]
   },
   {
     "id": "gp-179",
@@ -4897,7 +5441,76 @@
     "reference": {
       "type": "text",
       "body": "C-shape Am (around fret 10-12):\ne|--12---------------|\nB|--13---------------|\nG|--12---------------|\nD|--10---------------|\nA|--12 (root)--------|\nE|---x (muted)-------|\n\nBox 3 around it:\ne|--10----12----|\nB|--10----13----|\nG|---9----12----|\nD|--10----12----|\nA|--10----12----|\nE|--10----12----|",
-      "mono": true
+      "mono": true,
+      "fretboard": {
+        "title": "CAGED: C-shape chord + Pentatonic Box 3",
+        "startFret": 9,
+        "endFret": 14,
+        "dots": [
+          {
+            "string": 5,
+            "fret": 12,
+            "color": "root"
+          },
+          {
+            "string": 4,
+            "fret": 10,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 3,
+            "fret": 9,
+            "label": "3",
+            "color": "chord"
+          },
+          {
+            "string": 2,
+            "fret": 10,
+            "color": "root"
+          },
+          {
+            "string": 1,
+            "fret": 12,
+            "color": "root"
+          },
+          {
+            "string": 6,
+            "fret": 10,
+            "color": "scale"
+          },
+          {
+            "string": 6,
+            "fret": 12,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 10,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 12,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 12,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 13,
+            "color": "scale"
+          },
+          {
+            "string": 1,
+            "fret": 10,
+            "color": "scale"
+          }
+        ]
+      }
     },
     "tools": [
       "metronome"
@@ -4912,7 +5525,11 @@
       "name": "CAGED System",
       "order": 3,
       "total": 5
-    }
+    },
+    "level": 3,
+    "chords": [
+      "Am_C"
+    ]
   },
   {
     "id": "gp-180",
@@ -4927,10 +5544,80 @@
     "reference": {
       "type": "text",
       "body": "A-shape Am barre (fret 12):\ne|--12---------------|\nB|--13---------------|\nG|--14---------------|\nD|--14---------------|\nA|--12 (root)--------|\nE|---x (muted)-------|\n\nBox 4 around it:\ne|--12----15----|\nB|--13----15----|\nG|--12----14----|\nD|--12----14----|\nA|--12----15----|\nE|--12----15----|",
-      "mono": true
+      "mono": true,
+      "fretboard": {
+        "title": "CAGED: A-shape chord + Pentatonic Box 4",
+        "startFret": 11,
+        "endFret": 16,
+        "dots": [
+          {
+            "string": 5,
+            "fret": 12,
+            "color": "root"
+          },
+          {
+            "string": 4,
+            "fret": 14,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 3,
+            "fret": 14,
+            "color": "root"
+          },
+          {
+            "string": 2,
+            "fret": 13,
+            "label": "3",
+            "color": "chord"
+          },
+          {
+            "string": 1,
+            "fret": 12,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 6,
+            "fret": 12,
+            "color": "scale"
+          },
+          {
+            "string": 6,
+            "fret": 15,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 14,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 12,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 12,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 15,
+            "color": "scale"
+          },
+          {
+            "string": 1,
+            "fret": 15,
+            "color": "scale"
+          }
+        ]
+      }
     },
     "chords": [
-      "Am"
+      "Am_A"
     ],
     "tools": [
       "metronome"
@@ -4945,7 +5632,8 @@
       "name": "CAGED System",
       "order": 4,
       "total": 5
-    }
+    },
+    "level": 3
   },
   {
     "id": "gp-181",
@@ -4960,7 +5648,78 @@
     "reference": {
       "type": "text",
       "body": "G-shape Am (around fret 2-5):\ne|--5--(root)---------|\nB|--5-----------------|\nG|--2--(root)---------|\nD|--2-----------------|\nA|--x (muted)---------|\nE|--5-----------------|\n\nBox 5 around it:\ne|--3----5------|\nB|--3----5------|\nG|--2----5------|\nD|--2----5------|\nA|--3----5------|\nE|--3----5------|",
-      "mono": true
+      "mono": true,
+      "fretboard": {
+        "title": "CAGED: G-shape chord + Pentatonic Box 5",
+        "startFret": 1,
+        "endFret": 6,
+        "dots": [
+          {
+            "string": 6,
+            "fret": 3,
+            "label": "3",
+            "color": "chord"
+          },
+          {
+            "string": 5,
+            "fret": 2,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 4,
+            "fret": 2,
+            "color": "root"
+          },
+          {
+            "string": 3,
+            "fret": 2,
+            "label": "3",
+            "color": "chord"
+          },
+          {
+            "string": 2,
+            "fret": 3,
+            "label": "5",
+            "color": "chord"
+          },
+          {
+            "string": 1,
+            "fret": 3,
+            "color": "scale"
+          },
+          {
+            "string": 6,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 5,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 4,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 3,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 2,
+            "fret": 5,
+            "color": "scale"
+          },
+          {
+            "string": 1,
+            "fret": 5,
+            "color": "root"
+          }
+        ]
+      }
     },
     "tools": [
       "metronome"
@@ -4975,7 +5734,11 @@
       "name": "CAGED System",
       "order": 5,
       "total": 5
-    }
+    },
+    "level": 3,
+    "chords": [
+      "Am_G"
+    ]
   },
   {
     "id": "gp-182",
@@ -5005,7 +5768,9 @@
       "name": "Key Transposition",
       "order": 1,
       "total": 3
-    }
+    },
+    "level": 2,
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-183",
@@ -5030,7 +5795,9 @@
       "name": "Key Transposition",
       "order": 2,
       "total": 3
-    }
+    },
+    "level": 2,
+    "scale": "Gm pentatonic 1"
   },
   {
     "id": "gp-184",
@@ -5091,7 +5858,8 @@
       "name": "Key Transposition",
       "order": 3,
       "total": 3
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-185",
@@ -5120,7 +5888,8 @@
       "name": "Scale-Chord Connection",
       "order": 1,
       "total": 2
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-186",
@@ -5148,7 +5917,8 @@
       "name": "Scale-Chord Connection",
       "order": 2,
       "total": 2
-    }
+    },
+    "level": 2
   },
   {
     "id": "gp-187",
@@ -5178,7 +5948,9 @@
       "name": "Pentatonic Boxes",
       "order": 7,
       "total": 8
-    }
+    },
+    "level": 3,
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-188",
@@ -5208,913 +5980,9 @@
       "name": "Pentatonic Boxes",
       "order": 8,
       "total": 8
-    }
-  },
-  {
-    "id": "gp-song-001",
-    "description": "Play Tum Hi Ho by Arijit Singh",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Tum Hi Ho. Listen to the song first to feel the rhythm, then play along with the strumming pattern below.",
-    "context": "One of the most popular Bollywood songs ever. Uses just 4 basic open chords — perfect for beginners.",
-    "constraint_note": "Focus on smooth chord transitions. The Am→F change is the trickiest part. Practice that switch separately if needed.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| Am | F | C | G |\n| Am | F | C | G |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
     },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 93,
-    "chords": [
-      "Am",
-      "F",
-      "C",
-      "G"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Tum Hi Ho",
-      "artist": "Arijit Singh",
-      "genre": "bollywood",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-002",
-    "description": "Play Kal Ho Naa Ho by Sonu Nigam",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 1. Play the chord progression for Kal Ho Naa Ho using the pattern below.",
-    "context": "The iconic title track from the Shah Rukh Khan film. Simple chords with a capo on fret 1 to match the original key.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 1\n\nProgression:\n| C | G | Am | F |\n| C | G | Am | F |\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 85,
-    "chords": [
-      "C",
-      "G",
-      "Am",
-      "F"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Kal Ho Naa Ho",
-      "artist": "Sonu Nigam",
-      "genre": "bollywood",
-      "capo": 1
-    }
-  },
-  {
-    "id": "gp-song-003",
-    "description": "Play Channa Mereya by Arijit Singh",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Channa Mereya. This song uses 5 chords but the pattern repeats throughout.",
-    "context": "From Ae Dil Hai Mushkil. A beautiful, emotional song that's great for practicing minor chord progressions.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| Am | F  | Dm | C  | G  |\n| Am | F  | Dm | C  | G  |\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 90,
-    "chords": [
-      "Am",
-      "F",
-      "Dm",
-      "C",
-      "G"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Channa Mereya",
-      "artist": "Arijit Singh",
-      "genre": "bollywood",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-004",
-    "description": "Play Tere Bina by A.R. Rahman",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Tere Bina from Guru. Only 3 chords — one of the easiest Bollywood songs to play.",
-    "context": "A.R. Rahman's beautiful melody from the film Guru. Just 3 major chords make this perfect for absolute beginners.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| A | D | E | A |\n| A | D | E | A |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 80,
-    "chords": [
-      "A",
-      "D",
-      "E"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Tere Bina",
-      "artist": "A.R. Rahman",
-      "genre": "bollywood",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-005",
-    "description": "Play Kabira by Tochi Raina & Rekha Bhardwaj",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Kabira from Yeh Jawaani Hai Deewani. Four open chords with a driving rhythm.",
-    "context": "One of the most loved songs from YJHD. The Em-C-G-D progression is one of the most common in all of music.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| Em | C | G | D |\n| Em | C | G | D |\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 95,
-    "chords": [
-      "Em",
-      "C",
-      "G",
-      "D"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Kabira",
-      "artist": "Tochi Raina & Rekha Bhardwaj",
-      "genre": "bollywood",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-006",
-    "description": "Play Agar Tum Saath Ho by Arijit Singh & Alka Yagnik",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 2. Play the chord progression for Agar Tum Saath Ho from Tamasha.",
-    "context": "A hauntingly beautiful duet from Tamasha. The capo on fret 2 lets you use simple open chord shapes.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 2\n\nProgression:\n| G | A | Em | D |\n| G | A | Em | D |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 85,
-    "chords": [
-      "G",
-      "A",
-      "Em",
-      "D"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Agar Tum Saath Ho",
-      "artist": "Arijit Singh & Alka Yagnik",
-      "genre": "bollywood",
-      "capo": 2
-    }
-  },
-  {
-    "id": "gp-song-007",
-    "description": "Play Ilahi by Arijit Singh",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Ilahi from Yeh Jawaani Hai Deewani. A feel-good song with a bouncy rhythm.",
-    "context": "The road trip anthem from YJHD. Simple G-based progression with an upbeat strumming pattern.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| G | C | D | Em |\n| G | C | D | Em |\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 100,
-    "chords": [
-      "G",
-      "C",
-      "D",
-      "Em"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Ilahi",
-      "artist": "Arijit Singh",
-      "genre": "bollywood",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-008",
-    "description": "Play Tujhe Kitna Chahne Lage by Arijit Singh",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 4. Play the chord progression for Tujhe Kitna Chahne Lage from Kabir Singh.",
-    "context": "A massive hit from Kabir Singh. Capo on fret 4 lets you play with easy Am-shape chords.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 4\n\nProgression:\n| Am | G | C | D |\n| Am | G | C | D |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 85,
-    "chords": [
-      "Am",
-      "G",
-      "C",
-      "D"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Tujhe Kitna Chahne Lage",
-      "artist": "Arijit Singh",
-      "genre": "bollywood",
-      "capo": 4
-    }
-  },
-  {
-    "id": "gp-song-009",
-    "description": "Play Phir Le Aya Dil by Arijit Singh (fingerpicking)",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "fingerpicking",
-    "action": "Play the chord progression for Phir Le Aya Dil from Barfi using a fingerpicking arpeggio pattern.",
-    "context": "Arijit Singh's debut hit. The fingerpicking pattern gives it its delicate, emotional quality. A great fingerpicking practice song.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| Am | G | F | E |\n| Am | G | F | E |\n\nFingerpicking (p-i-m-a):\ne|------0-----------0---|\nB|----1---1-------0---0-|\nG|--2-------2---0-------|\nD|-------------2--------|\nA|-0--------------------|\nE|------------------0---|",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 75,
-    "chords": [
-      "Am",
-      "G",
-      "F",
-      "E"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Phir Le Aya Dil",
-      "artist": "Arijit Singh",
-      "genre": "bollywood",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-010",
-    "description": "Play Khairiyat by Arijit Singh",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 3. Play the chord progression for Khairiyat from Chhichhore.",
-    "context": "A soulful track from Chhichhore. The capo on fret 3 matches the original key with simple open chords.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 3\n\nProgression:\n| Am | G | F | C |\n| Am | G | F | C |\n\nPattern: D D U D U D D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 63,
-    "chords": [
-      "Am",
-      "G",
-      "F",
-      "C"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Khairiyat",
-      "artist": "Arijit Singh",
-      "genre": "bollywood",
-      "capo": 3
-    }
-  },
-  {
-    "id": "gp-song-011",
-    "description": "Play Perfect by Ed Sheeran",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 1. Play the chord progression for Perfect. This song is in 6/8 time — count 1-2-3-4-5-6 instead of 1-2-3-4.",
-    "context": "One of the biggest love songs of the 2010s, #1 in 20+ countries. The 6/8 time signature gives it a gentle, swaying feel.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 1 (6/8 time)\n\nProgression:\n| G | Em | C | D |\n| G | Em | C | D |\n\nPattern: D - U D - U\nBeat:    1 2 3 4 5 6",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 63,
-    "chords": [
-      "G",
-      "Em",
-      "C",
-      "D"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Perfect",
-      "artist": "Ed Sheeran",
-      "genre": "english",
-      "capo": 1
-    }
-  },
-  {
-    "id": "gp-song-012",
-    "description": "Play Shape of You by Ed Sheeran",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 4. Play the chord progression for Shape of You with a percussive strumming style.",
-    "context": "The most streamed song on Spotify for years. The percussive muted strums between chords give it its signature groove.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 4\n\nProgression:\n| Am | Dm | F | G |\n| Am | Dm | F | G |\n\nPattern: D x D U x U D x\nBeat:    1 & 2 & 3 & 4 &\n(x = muted strum)",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 96,
-    "chords": [
-      "Am",
-      "Dm",
-      "F",
-      "G"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Shape of You",
-      "artist": "Ed Sheeran",
-      "genre": "english",
-      "capo": 4
-    }
-  },
-  {
-    "id": "gp-song-013",
-    "description": "Play Someone Like You by Adele",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "fingerpicking",
-    "action": "Place capo on fret 2. Play the chord progression for Someone Like You with a fingerpicking arpeggio pattern.",
-    "context": "Adele's global smash hit. The fingerpicked arpeggios create the emotional, intimate feel that defines this song.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 2\n\nProgression:\n| G | D | Em | C |\n| G | D | Em | C |\n\nFingerpicking (p-i-m-i):\ne|------3-----------2---|\nB|----3---3-------3---3-|\nG|--0-------0---2-------|\nD|---------------------|\nA|---------------------|\nE|-3-----------2-------|",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 68,
-    "chords": [
-      "G",
-      "D",
-      "Em",
-      "C"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Someone Like You",
-      "artist": "Adele",
-      "genre": "english",
-      "capo": 2
-    }
-  },
-  {
-    "id": "gp-song-014",
-    "description": "Play Let Her Go by Passenger",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "fingerpicking",
-    "action": "Play the chord progression for Let Her Go with a fingerpicking pattern. The iconic intro uses a simple arpeggio.",
-    "context": "A worldwide hit from Australian-British singer Passenger. The fingerpicking pattern is one of the most recognizable in modern music.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| G | D | Em | C |\n| G | D | Em | C |\n\nFingerpicking:\ne|------3-------2-------0-------0---|\nB|----3---3---3---3---0---0---1---1-|\nG|--0-------2-------0-------0------|\nD|---------------------------------|\nA|-------------------------3-------|\nE|-3-------2-------0---------------|",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 75,
-    "chords": [
-      "G",
-      "D",
-      "Em",
-      "C"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Let Her Go",
-      "artist": "Passenger",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-015",
-    "description": "Play Photograph by Ed Sheeran",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 4. Play the chord progression for Photograph. The F chord (played as an easy F) is the main challenge.",
-    "context": "Ed Sheeran's emotional ballad, a global hit. With capo on fret 4, you play simple shapes in the key of C.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 4\n\nProgression:\n| C | Am | G | F |\n| C | Am | G | F |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 108,
-    "chords": [
-      "C",
-      "Am",
-      "G",
-      "F"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Photograph",
-      "artist": "Ed Sheeran",
-      "genre": "english",
-      "capo": 4
-    }
-  },
-  {
-    "id": "gp-song-016",
-    "description": "Play A Thousand Years by Christina Perri",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 3. Play the chord progression for A Thousand Years. Same chords as Perfect — if you know one, you know both.",
-    "context": "From the Twilight soundtrack, beloved worldwide. The gentle 6/8 feel and simple chords make it a great beginner song.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 3 (6/8 time)\n\nProgression:\n| G | Em | C | D |\n| G | Em | C | D |\n\nPattern: D - U D - U\nBeat:    1 2 3 4 5 6",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 63,
-    "chords": [
-      "G",
-      "Em",
-      "C",
-      "D"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "A Thousand Years",
-      "artist": "Christina Perri",
-      "genre": "english",
-      "capo": 3
-    }
-  },
-  {
-    "id": "gp-song-017",
-    "description": "Play Riptide by Vance Joy",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 1. Play Riptide — just 3 chords for the entire song. One of the easiest songs to learn.",
-    "context": "Australian Vance Joy's global hit. Only 3 chords make this one of the simplest songs to play on guitar.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 1\n\nProgression:\n| Am | G | C | C |\n| Am | G | C | C |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 102,
-    "chords": [
-      "Am",
-      "G",
-      "C"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Riptide",
-      "artist": "Vance Joy",
-      "genre": "english",
-      "capo": 1
-    }
-  },
-  {
-    "id": "gp-song-018",
-    "description": "Play Hey Jude by The Beatles",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Hey Jude. One of the most iconic songs ever written — and surprisingly simple.",
-    "context": "The Beatles' 1968 masterpiece, known in every corner of the world. The verse uses just 3 chords.",
-    "reference": {
-      "type": "text",
-      "body": "Verse:\n| C | G | G | C |\n\nChorus:\n| C | F | C | G |\n| F | C | G | C |\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 74,
-    "chords": [
-      "C",
-      "G",
-      "F",
-      "Am"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Hey Jude",
-      "artist": "The Beatles",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-019",
-    "description": "Play Wonderwall by Oasis",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Place capo on fret 2. Play Wonderwall — THE campfire song. The chord names look unusual but the shapes are easy.",
-    "context": "Oasis's 1995 anthem, arguably the most played song at every gathering worldwide. The sus chords give it its distinctive jangly sound.",
-    "reference": {
-      "type": "text",
-      "body": "Capo: Fret 2\n\nProgression:\n| Em7 | G | Dsus4 | A7sus4 |\n| Em7 | G | Dsus4 | A7sus4 |\n\nEm7:    022030\nG:      320033\nDsus4:  xx0233\nA7sus4: x02030\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 87,
-    "chords": [
-      "Em7",
-      "G",
-      "Dsus4",
-      "A7sus4"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Wonderwall",
-      "artist": "Oasis",
-      "genre": "english",
-      "capo": 2
-    }
-  },
-  {
-    "id": "gp-song-020",
-    "description": "Play Nothing Else Matters by Metallica (fingerpicking)",
-    "type": "practice",
-    "difficulty": "stretch",
-    "time_minutes": 15,
-    "skill_area": "fingerpicking",
-    "action": "Play the iconic fingerpicking intro and chord progression for Nothing Else Matters. This is the ultimate fingerpicking practice song.",
-    "context": "Metallica's 1991 ballad, known worldwide. The fingerpicking intro is one of the most recognizable guitar patterns ever written.",
-    "reference": {
-      "type": "text",
-      "body": "Intro fingerpicking:\ne|------0-----------0---|\nB|----0---0-------0---0-|\nG|--1-------1---1-------|\nD|---------------------|\nA|---------------------|\nE|-0-----------0-------|\n\nProgression:\n| Em | D | C | Em |\n| Em | D | C | G | B7 | Em |\n\nPlay intro pattern on each chord",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 69,
-    "chords": [
-      "Em",
-      "D",
-      "C",
-      "G",
-      "B7",
-      "Am"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Nothing Else Matters",
-      "artist": "Metallica",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-021",
-    "description": "Play Wish You Were Here by Pink Floyd",
-    "type": "practice",
-    "difficulty": "medium",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Wish You Were Here. The intro uses a distinctive acoustic pattern.",
-    "context": "Pink Floyd's 1975 tribute to Syd Barrett. One of the most emotionally powerful acoustic guitar songs ever recorded.",
-    "reference": {
-      "type": "text",
-      "body": "Intro:\n| G | C | D | Am |\n\nVerse:\n| C | D | Am | G |\n| C | D | Am | G |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 60,
-    "chords": [
-      "G",
-      "C",
-      "D",
-      "Am",
-      "Em"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Wish You Were Here",
-      "artist": "Pink Floyd",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-022",
-    "description": "Play Hotel California by Eagles (fingerpicking)",
-    "type": "practice",
-    "difficulty": "stretch",
-    "time_minutes": 15,
-    "skill_area": "fingerpicking",
-    "action": "Play the chord progression for Hotel California with a fingerpicking arpeggio pattern. This is a challenging but rewarding song.",
-    "context": "The Eagles' 1977 classic, one of the best-selling singles of all time. The descending chord progression is iconic.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| Am | E | G | D |\n| F  | C | Dm | E |\n\nFingerpicking (p-i-m-a-m-i):\ne|--------0-----------|\nB|------1---1---------|\nG|----2-------2-------|\nD|--2-----------2-----|\nA|-0-----------------|\nE|-------------------|",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 75,
-    "chords": [
-      "Am",
-      "E",
-      "G",
-      "D",
-      "F",
-      "C",
-      "Dm"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Hotel California",
-      "artist": "Eagles",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-023",
-    "description": "Play Zombie by The Cranberries",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Zombie. Four chords that repeat throughout the entire song.",
-    "context": "The Cranberries' 1994 protest song, known worldwide. The driving rhythm and simple chord progression make it a great practice song.",
-    "reference": {
-      "type": "text",
-      "body": "Progression (entire song):\n| Em | Cmaj7 | G | D |\n| Em | Cmaj7 | G | D |\n\nCmaj7: x32000 (C but lift index)\n\nPattern: D D U U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 82,
-    "chords": [
-      "Em",
-      "Cmaj7",
-      "G",
-      "D"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Zombie",
-      "artist": "The Cranberries",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-024",
-    "description": "Play Let It Be by The Beatles",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Let It Be. The F chord is the only challenge — use the easy F (xx3211) if the full barre is too hard.",
-    "context": "The Beatles' 1970 classic. Known in every country on earth. The C-G-Am-F progression is one of the most common in all of music.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| C | G | Am | F |\n| C | G | F  | C |\n\nEasy F: xx3211 (skip low E and A)\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 71,
-    "chords": [
-      "C",
-      "G",
-      "Am",
-      "F"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Let It Be",
-      "artist": "The Beatles",
-      "genre": "english",
-      "capo": 0
-    }
-  },
-  {
-    "id": "gp-song-025",
-    "description": "Play Counting Stars by OneRepublic",
-    "type": "practice",
-    "difficulty": "easy",
-    "time_minutes": 10,
-    "skill_area": "chords",
-    "action": "Play the chord progression for Counting Stars. A modern hit with a driving rhythm and simple chords.",
-    "context": "OneRepublic's 2013 global hit, popular across all continents. The Am-C-G-F progression drives the entire song.",
-    "reference": {
-      "type": "text",
-      "body": "Progression:\n| Am | C | G | F |\n| Am | C | G | F |\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &",
-      "mono": true
-    },
-    "tools": [
-      "metronome"
-    ],
-    "completion": "self_report",
-    "needs_guitar": true,
-    "bpm": 122,
-    "chords": [
-      "Am",
-      "C",
-      "G",
-      "F"
-    ],
-    "tags": [
-      "songs"
-    ],
-    "song": {
-      "title": "Counting Stars",
-      "artist": "OneRepublic",
-      "genre": "english",
-      "capo": 0
-    }
+    "level": 3,
+    "scale": "Am pentatonic 1"
   },
   {
     "id": "gp-ref-001",
@@ -6167,7 +6035,8 @@
     "needs_guitar": false,
     "tags": [
       "reference"
-    ]
+    ],
+    "level": 2
   },
   {
     "id": "gp-ref-002",
@@ -6220,7 +6089,8 @@
     "needs_guitar": false,
     "tags": [
       "reference"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-ref-003",
@@ -6249,7 +6119,8 @@
     "needs_guitar": true,
     "tags": [
       "reference"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-ref-004",
@@ -6276,7 +6147,8 @@
     "needs_guitar": true,
     "tags": [
       "reference"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-ref-005",
@@ -6303,7 +6175,8 @@
     "needs_guitar": true,
     "tags": [
       "reference"
-    ]
+    ],
+    "level": 1
   },
   {
     "id": "gp-ref-006",
@@ -6333,6 +6206,2949 @@
     "needs_guitar": true,
     "tags": [
       "reference"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-ret-001",
+    "description": "Name the natural notes on the low E string across all 12 frets.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "scales_fretboard",
+    "action": "For each fret position, recall the note name. Tap to reveal and check yourself.",
+    "context": "Knowing the notes on the low E string is the foundation for finding any chord root and navigating the fretboard.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "Fret 0 (open)",
+          "reveal": "E"
+        },
+        {
+          "primary": "Fret 1",
+          "reveal": "F"
+        },
+        {
+          "primary": "Fret 3",
+          "reveal": "G"
+        },
+        {
+          "primary": "Fret 5",
+          "reveal": "A"
+        },
+        {
+          "primary": "Fret 7",
+          "reveal": "B"
+        },
+        {
+          "primary": "Fret 8",
+          "reveal": "C"
+        },
+        {
+          "primary": "Fret 10",
+          "reveal": "D"
+        },
+        {
+          "primary": "Fret 12",
+          "reveal": "E (octave)"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "fretboard_notes"
     ]
+  },
+  {
+    "id": "gp-ret-002",
+    "description": "Name the natural notes on the A string across all 12 frets.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "scales_fretboard",
+    "action": "For each fret position, recall the note name. Tap to reveal and check yourself.",
+    "context": "The A string is the second most important string for finding chord roots, especially for barre chords.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "Fret 0 (open)",
+          "reveal": "A"
+        },
+        {
+          "primary": "Fret 2",
+          "reveal": "B"
+        },
+        {
+          "primary": "Fret 3",
+          "reveal": "C"
+        },
+        {
+          "primary": "Fret 5",
+          "reveal": "D"
+        },
+        {
+          "primary": "Fret 7",
+          "reveal": "E"
+        },
+        {
+          "primary": "Fret 8",
+          "reveal": "F"
+        },
+        {
+          "primary": "Fret 10",
+          "reveal": "G"
+        },
+        {
+          "primary": "Fret 12",
+          "reveal": "A (octave)"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "fretboard_notes"
+    ]
+  },
+  {
+    "id": "gp-ret-003",
+    "description": "Given a fret position and string, name the note.",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "scales_fretboard",
+    "action": "For each string+fret combination, recall the note. This tests your fretboard knowledge across all strings.",
+    "context": "Being able to instantly name any note on the fretboard is what separates intermediate players from beginners.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "6th string, fret 5",
+          "reveal": "A"
+        },
+        {
+          "primary": "5th string, fret 3",
+          "reveal": "C"
+        },
+        {
+          "primary": "4th string, fret 5",
+          "reveal": "G"
+        },
+        {
+          "primary": "3rd string, fret 2",
+          "reveal": "A"
+        },
+        {
+          "primary": "2nd string, fret 1",
+          "reveal": "C"
+        },
+        {
+          "primary": "1st string, fret 3",
+          "reveal": "G"
+        },
+        {
+          "primary": "6th string, fret 8",
+          "reveal": "C"
+        },
+        {
+          "primary": "5th string, fret 7",
+          "reveal": "E"
+        },
+        {
+          "primary": "4th string, fret 2",
+          "reveal": "E"
+        },
+        {
+          "primary": "3rd string, fret 4",
+          "reveal": "B"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 2,
+    "tags": [
+      "fretboard_notes"
+    ]
+  },
+  {
+    "id": "gp-ret-004",
+    "description": "Name the notes in the A minor pentatonic scale.",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "scales_fretboard",
+    "action": "Recall the 5 notes of the A minor pentatonic scale. Then identify each note's interval from the root.",
+    "context": "The pentatonic scale is the most used scale in rock, blues, and pop guitar. Knowing its notes by heart is essential.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "Note 1 (root)",
+          "reveal": "A"
+        },
+        {
+          "primary": "Note 2 (minor 3rd)",
+          "reveal": "C"
+        },
+        {
+          "primary": "Note 3 (perfect 4th)",
+          "reveal": "D"
+        },
+        {
+          "primary": "Note 4 (perfect 5th)",
+          "reveal": "E"
+        },
+        {
+          "primary": "Note 5 (minor 7th)",
+          "reveal": "G"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 2,
+    "tags": [
+      "scales"
+    ]
+  },
+  {
+    "id": "gp-ret-005",
+    "description": "Name the notes in common major keys.",
+    "type": "retrieval",
+    "difficulty": "stretch",
+    "time_minutes": 5,
+    "skill_area": "scales_fretboard",
+    "action": "For each key, recall all 7 notes of the major scale.",
+    "context": "Knowing key signatures lets you understand chord progressions, transpose songs, and improvise confidently.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "C major",
+          "reveal": "C D E F G A B"
+        },
+        {
+          "primary": "G major",
+          "reveal": "G A B C D E F#"
+        },
+        {
+          "primary": "D major",
+          "reveal": "D E F# G A B C#"
+        },
+        {
+          "primary": "A major",
+          "reveal": "A B C# D E F# G#"
+        },
+        {
+          "primary": "E major",
+          "reveal": "E F# G# A B C# D#"
+        },
+        {
+          "primary": "F major",
+          "reveal": "F G A Bb C D E"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 3,
+    "tags": [
+      "scales"
+    ]
+  },
+  {
+    "id": "gp-ret-006",
+    "description": "Identify the fret where each note's octave lives on the same string.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "scales_fretboard",
+    "action": "For each open string, name the fret where its octave is found.",
+    "context": "The 12th fret is always the octave of the open string. This is the most fundamental fretboard relationship.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "Open low E → octave at fret?",
+          "reveal": "Fret 12"
+        },
+        {
+          "primary": "Open A → octave at fret?",
+          "reveal": "Fret 12"
+        },
+        {
+          "primary": "Open D → octave at fret?",
+          "reveal": "Fret 12"
+        },
+        {
+          "primary": "Open G → octave at fret?",
+          "reveal": "Fret 12"
+        },
+        {
+          "primary": "Open B → octave at fret?",
+          "reveal": "Fret 12"
+        },
+        {
+          "primary": "Open high E → octave at fret?",
+          "reveal": "Fret 12"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "fretboard_notes"
+    ]
+  },
+  {
+    "id": "gp-ret-007",
+    "description": "Given a chord fingering, name the chord.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "chords",
+    "action": "For each fingering pattern (low E to high E), name the chord. x = muted, 0 = open.",
+    "context": "Recognizing chord shapes from their fingerings builds the visual memory that makes chord changes faster.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "x-0-2-2-1-0",
+          "reveal": "Am"
+        },
+        {
+          "primary": "x-3-2-0-1-0",
+          "reveal": "C"
+        },
+        {
+          "primary": "3-2-0-0-0-3",
+          "reveal": "G"
+        },
+        {
+          "primary": "x-x-0-2-3-2",
+          "reveal": "D"
+        },
+        {
+          "primary": "0-2-2-0-0-0",
+          "reveal": "Em"
+        },
+        {
+          "primary": "0-2-2-1-0-0",
+          "reveal": "E"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "open_chords"
+    ]
+  },
+  {
+    "id": "gp-ret-008",
+    "description": "Name all the notes in common open chords.",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "chords",
+    "action": "For each chord, recall the notes that make it up (root, 3rd, 5th).",
+    "context": "Understanding chord construction helps you find chords anywhere on the fretboard and understand music theory.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "C major",
+          "reveal": "C - E - G"
+        },
+        {
+          "primary": "G major",
+          "reveal": "G - B - D"
+        },
+        {
+          "primary": "D major",
+          "reveal": "D - F# - A"
+        },
+        {
+          "primary": "A minor",
+          "reveal": "A - C - E"
+        },
+        {
+          "primary": "E minor",
+          "reveal": "E - G - B"
+        },
+        {
+          "primary": "A major",
+          "reveal": "A - C# - E"
+        },
+        {
+          "primary": "E major",
+          "reveal": "E - G# - B"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 2,
+    "tags": [
+      "chord_types"
+    ]
+  },
+  {
+    "id": "gp-ret-009",
+    "description": "Identify major vs minor chords from their names.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "chords",
+    "action": "For each chord name, identify whether it's major or minor.",
+    "context": "Major chords sound bright and happy. Minor chords sound dark and sad. Recognizing this from the name alone is basic music literacy.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "Am",
+          "reveal": "Minor"
+        },
+        {
+          "primary": "C",
+          "reveal": "Major"
+        },
+        {
+          "primary": "Em",
+          "reveal": "Minor"
+        },
+        {
+          "primary": "G",
+          "reveal": "Major"
+        },
+        {
+          "primary": "Dm",
+          "reveal": "Minor"
+        },
+        {
+          "primary": "D",
+          "reveal": "Major"
+        },
+        {
+          "primary": "F",
+          "reveal": "Major"
+        },
+        {
+          "primary": "Bm",
+          "reveal": "Minor"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "chord_types"
+    ]
+  },
+  {
+    "id": "gp-ret-010",
+    "description": "Match chords to their function (I, IV, V) in common keys.",
+    "type": "retrieval",
+    "difficulty": "stretch",
+    "time_minutes": 5,
+    "skill_area": "chords",
+    "action": "For each key, name the I, IV, and V chords. These three chords form the backbone of most songs.",
+    "context": "The I-IV-V progression is the most common in all of Western music. Knowing it in every key unlocks thousands of songs.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "Key of C: I - IV - V",
+          "reveal": "C - F - G"
+        },
+        {
+          "primary": "Key of G: I - IV - V",
+          "reveal": "G - C - D"
+        },
+        {
+          "primary": "Key of D: I - IV - V",
+          "reveal": "D - G - A"
+        },
+        {
+          "primary": "Key of A: I - IV - V",
+          "reveal": "A - D - E"
+        },
+        {
+          "primary": "Key of E: I - IV - V",
+          "reveal": "E - A - B"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 3,
+    "tags": [
+      "progressions"
+    ]
+  },
+  {
+    "id": "gp-ret-011",
+    "description": "Given a barre chord fingering, name the chord.",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "chords",
+    "action": "For each barre chord shape and fret position, name the chord.",
+    "context": "Barre chords are moveable shapes. Knowing which chord you get at each fret is key to playing anywhere on the neck.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "E shape barre at fret 1",
+          "reveal": "F major"
+        },
+        {
+          "primary": "E shape barre at fret 3",
+          "reveal": "G major"
+        },
+        {
+          "primary": "E shape barre at fret 5",
+          "reveal": "A major"
+        },
+        {
+          "primary": "Am shape barre at fret 1",
+          "reveal": "Bb minor"
+        },
+        {
+          "primary": "Am shape barre at fret 3",
+          "reveal": "C minor"
+        },
+        {
+          "primary": "Am shape barre at fret 5",
+          "reveal": "D minor"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 2,
+    "tags": [
+      "barre_chords"
+    ]
+  },
+  {
+    "id": "gp-ret-012",
+    "description": "Name common intervals from their distance in semitones.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "ear_training",
+    "action": "For each number of semitones, name the interval.",
+    "context": "Intervals are the building blocks of melody and harmony. Knowing them by number of semitones connects theory to the fretboard (1 fret = 1 semitone).",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "0 semitones",
+          "reveal": "Unison"
+        },
+        {
+          "primary": "2 semitones",
+          "reveal": "Major 2nd"
+        },
+        {
+          "primary": "3 semitones",
+          "reveal": "Minor 3rd"
+        },
+        {
+          "primary": "4 semitones",
+          "reveal": "Major 3rd"
+        },
+        {
+          "primary": "5 semitones",
+          "reveal": "Perfect 4th"
+        },
+        {
+          "primary": "7 semitones",
+          "reveal": "Perfect 5th"
+        },
+        {
+          "primary": "12 semitones",
+          "reveal": "Octave"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "intervals"
+    ]
+  },
+  {
+    "id": "gp-ret-013",
+    "description": "Name the interval between two given notes.",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "ear_training",
+    "action": "For each pair of notes, name the interval between them.",
+    "context": "Being able to calculate intervals between any two notes is essential for understanding chord construction and melody.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "C to E",
+          "reveal": "Major 3rd"
+        },
+        {
+          "primary": "C to G",
+          "reveal": "Perfect 5th"
+        },
+        {
+          "primary": "A to C",
+          "reveal": "Minor 3rd"
+        },
+        {
+          "primary": "D to A",
+          "reveal": "Perfect 5th"
+        },
+        {
+          "primary": "E to G",
+          "reveal": "Minor 3rd"
+        },
+        {
+          "primary": "G to D",
+          "reveal": "Perfect 5th"
+        },
+        {
+          "primary": "A to E",
+          "reveal": "Perfect 5th"
+        },
+        {
+          "primary": "C to F",
+          "reveal": "Perfect 4th"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 2,
+    "tags": [
+      "intervals"
+    ]
+  },
+  {
+    "id": "gp-ret-014",
+    "description": "Name the open string notes and their standard tuning frequencies.",
+    "type": "retrieval",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "ear_training",
+    "action": "Name each open string from thickest to thinnest. Bonus: recall the mnemonic.",
+    "context": "Every guitarist must know the open string names by heart. The mnemonic 'Eddie Ate Dynamite Good Bye Eddie' helps.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "6th string (thickest)",
+          "reveal": "E"
+        },
+        {
+          "primary": "5th string",
+          "reveal": "A"
+        },
+        {
+          "primary": "4th string",
+          "reveal": "D"
+        },
+        {
+          "primary": "3rd string",
+          "reveal": "G"
+        },
+        {
+          "primary": "2nd string",
+          "reveal": "B"
+        },
+        {
+          "primary": "1st string (thinnest)",
+          "reveal": "E"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 1,
+    "tags": [
+      "theory"
+    ]
+  },
+  {
+    "id": "gp-ret-015",
+    "description": "Identify the key of a chord progression.",
+    "type": "retrieval",
+    "difficulty": "stretch",
+    "time_minutes": 5,
+    "skill_area": "ear_training",
+    "action": "For each chord progression, identify the key it's in.",
+    "context": "Identifying the key from a progression is the first step to improvising over any song.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "C - Am - F - G",
+          "reveal": "Key of C major"
+        },
+        {
+          "primary": "G - Em - C - D",
+          "reveal": "Key of G major"
+        },
+        {
+          "primary": "Am - F - C - G",
+          "reveal": "Key of C major (vi-IV-I-V)"
+        },
+        {
+          "primary": "D - Bm - G - A",
+          "reveal": "Key of D major"
+        },
+        {
+          "primary": "Em - C - G - D",
+          "reveal": "Key of G major (vi-IV-I-V)"
+        },
+        {
+          "primary": "A - D - E - A",
+          "reveal": "Key of A major (I-IV-V-I)"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 3,
+    "tags": [
+      "theory"
+    ]
+  },
+  {
+    "id": "gp-ret-016",
+    "description": "Name the notes in the C major scale and their scale degrees.",
+    "type": "retrieval",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "ear_training",
+    "action": "For each scale degree number, name the note in C major.",
+    "context": "C major is the 'reference key' with no sharps or flats. Knowing it cold makes learning all other keys easier.",
+    "reference": {
+      "type": "structured_list",
+      "items": [
+        {
+          "primary": "1st degree (tonic)",
+          "reveal": "C"
+        },
+        {
+          "primary": "2nd degree (supertonic)",
+          "reveal": "D"
+        },
+        {
+          "primary": "3rd degree (mediant)",
+          "reveal": "E"
+        },
+        {
+          "primary": "4th degree (subdominant)",
+          "reveal": "F"
+        },
+        {
+          "primary": "5th degree (dominant)",
+          "reveal": "G"
+        },
+        {
+          "primary": "6th degree (submediant)",
+          "reveal": "A"
+        },
+        {
+          "primary": "7th degree (leading tone)",
+          "reveal": "B"
+        }
+      ]
+    },
+    "tools": [
+      "reveal_hide"
+    ],
+    "completion": "self_report",
+    "needs_guitar": false,
+    "level": 2,
+    "tags": [
+      "theory"
+    ]
+  },
+  {
+    "id": "gp-prog-001",
+    "description": "Master the Am–F–C–G progression — the most used pattern in pop music.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play Am–F–C–G in a loop (4 beats each). First with all downstrokes, then D-DU-UDU, then create your own strumming pattern. Try starting from different chords in the cycle — C–G–Am–F has a completely different feel.",
+    "context": "This single progression powers Tum Hi Ho, Kal Ho Naa Ho, Let It Be, Counting Stars, Khairiyat, Photograph, Hey Jude, and hundreds more. Learn the pattern, and you can play them all — plus write your own songs with it.",
+    "constraint_note": "Don't just loop it mechanically. Try changing dynamics — play the Am soft and build to the G. That's how you make 4 chords sound like music.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Progression:\n| Am | F | C | G |\n\nVariations (same chords, different feel):\n| C  | G  | Am | F  |  ← bright, uplifting\n| Am | G  | F  | C  |  ← descending, melancholic\n| F  | C  | G  | Am |  ← building tension\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "tags": [
+      "progressions",
+      "creative"
+    ],
+    "level": 1
+  },
+  {
+    "id": "gp-prog-002",
+    "description": "Master the Em–C–G–D progression — the backbone of rock and folk.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play Em–C–G–D in a loop. Try it with a steady down-up strum, then with palm muting on the downbeats, then create your own pattern. Rearrange the order — G–D–Em–C feels completely different.",
+    "context": "Used in Kabira, Perfect, Let Her Go, Someone Like You, A Thousand Years, Ilahi, and countless others. All open chords, all easy shapes — the magic is in how you play them.",
+    "constraint_note": "Try accenting different beats. Accent beat 1 for a march feel. Accent the '&' of beat 2 for a reggae feel. Same chords, totally different music.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Progression:\n| Em | C | G | D |\n\nVariations:\n| G  | D  | Em | C  |  ← anthem feel\n| G  | Em | C  | D  |  ← classic pop\n| Em | G  | D  | C  |  ← folk ballad\n\nPattern: D - D U - U D U\nBeat:    1 & 2 & 3 & 4 &"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 85,
+    "chords": [
+      "Em",
+      "C",
+      "G",
+      "D"
+    ],
+    "tags": [
+      "progressions",
+      "creative"
+    ],
+    "level": 1
+  },
+  {
+    "id": "gp-prog-003",
+    "description": "Master the Am–G–F–E Andalusian cadence — the dramatic descending progression.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play Am–G–F–E slowly. Feel how each chord descends by one step — that's what creates the dramatic pull. Try it with arpeggios instead of strumming. Then try Am–G–F–E7 (the E7 pulls harder back to Am).",
+    "context": "This descending pattern (Phir Le Aya Dil, Stairway to Heaven intro, Hit the Road Jack) has been used for centuries in flamenco and classical music. The bass line walks down: A–G–F–E.",
+    "constraint_note": "Listen to the bass notes descending. Try playing just the bass note of each chord first (A string open, then 3rd fret, then 1st fret, then open E). That descending line IS the progression.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Progression:\n| Am | G | F | E |\n\nBass line (the secret):\nA → G → F → E (descending by step)\n\nVariation:\n| Am | G | F | E7 |  ← E7 pulls back to Am"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "chords": [
+      "Am",
+      "G",
+      "F",
+      "E",
+      "E7"
+    ],
+    "tags": [
+      "progressions",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-004",
+    "description": "Master the 3-chord trick — A–D–E, the simplest way to make music.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play A–D–E in a loop. These are the I–IV–V chords in the key of A — the most fundamental relationship in music. Try different rhythms: country shuffle, rock power strum, gentle fingerpick. Then try the minor version: Am–Dm–E.",
+    "context": "Three chords and the truth — that's all you need. Tere Bina, La Bamba, Twist and Shout, and thousands of folk/country/rock songs use exactly these three chords. The I–IV–V pattern works in every key.",
+    "constraint_note": "Once comfortable, try transposing: play the same I–IV–V pattern in G (G–C–D) and in E (E–A–B7). Same pattern, different key, different mood.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Key of A:\n| A | D | E | A |\n\nKey of G (same pattern):\n| G | C | D | G |\n\nKey of E (same pattern):\n| E | A | B7 | E |\n\nMinor version:\n| Am | Dm | E | Am |"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 100,
+    "chords": [
+      "A",
+      "D",
+      "E"
+    ],
+    "tags": [
+      "progressions",
+      "theory",
+      "creative"
+    ],
+    "level": 1
+  },
+  {
+    "id": "gp-prog-005",
+    "description": "Master the Am–Dm–F–G minor pop progression.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play Am–Dm–F–G. This is i–iv–VI–VII in A minor — a darker, moodier version of the pop progression. Try it with a percussive strum (mute between chords). Then substitute Em for Am and see how the feel changes.",
+    "context": "Used in Shape of You and many EDM/pop tracks. The Dm adds a darker color that Am–F–C–G doesn't have. Understanding chord substitution (swapping one chord for a related one) is how musicians create variety.",
+    "constraint_note": "Try replacing the G with G7 or E. Each substitution changes the emotional pull. This is how you develop your ear for harmony.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Progression:\n| Am | Dm | F | G |\n\nSubstitution ideas:\n| Am | Dm | F | E  |  ← stronger pull to Am\n| Am | Dm | F | G7 |  ← jazzy tension\n| Am | Dm | C | G  |  ← brighter"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 96,
+    "chords": [
+      "Am",
+      "Dm",
+      "F",
+      "G"
+    ],
+    "tags": [
+      "progressions",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-006",
+    "description": "Explore sus chords in a progression — add color beyond major and minor.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play Em7–G–Dsus4–A7sus4 (the Wonderwall progression). Sus chords create tension by replacing the 3rd with a 4th or 2nd. Try resolving each sus chord (Dsus4 → D, A7sus4 → A7). Then take any progression you know and add sus chords to it.",
+    "context": "Sus chords are one of the easiest ways to make simple progressions sound more interesting. They create a 'floating' quality — neither major nor minor. Wonderwall, Zombie (Em–Cmaj7–G–D), and many acoustic songs use this trick.",
+    "constraint_note": "Take the Am–F–C–G progression and try: Asus2–F–Csus2–G. Hear the difference? That's the power of chord embellishment.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Wonderwall pattern:\n| Em7 | G | Dsus4 | A7sus4 |\n\nSus chord shapes:\nDsus4:  xx0233    (resolve to D: xx0232)\nDsus2:  xx0230\nAsus2:  x02200\nAsus4:  x02230\n\nExperiment: embellish any chord\nC → Csus4 → C    (add pinky on 1st fret B string)"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "chords": [
+      "Em7",
+      "G",
+      "Dsus4",
+      "A7sus4"
+    ],
+    "tags": [
+      "progressions",
+      "chord_types",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-007",
+    "description": "Fingerpick the Em arpeggio pattern — the foundation of fingerstyle guitar.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "fingerpicking",
+    "action": "Play the classic Em arpeggio: p on low E, then i-m-a on G-B-e strings, letting all notes ring. Move through Em–D–C–G–B7–Am. Focus on even timing and letting notes sustain. Then create your own arpeggio order — try p-a-m-i or p-i-a-m.",
+    "context": "This arpeggio pattern (Nothing Else Matters, countless classical pieces) is the gateway to fingerstyle. The pattern matters more than the song — once you can arpeggiate smoothly over chord changes, you can fingerpick anything.",
+    "constraint_note": "Try varying which bass string your thumb plays. On Em, try alternating between the low E and A strings. This creates movement in the bass — the foundation of Travis picking.",
+    "reference": {
+      "type": "tab",
+      "body": "Em arpeggio pattern:\ne|-------0---------0---------0---------0---|\nB|-----0---------0---------0---------0-----|\nG|---0---------0---------0---------0-------|\nD|-----------------------------------------|\nA|-----------------------------------------|\nE|-0---------0---------0---------0---------|\n   p   i   m   a   p   i   m   a"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "chords": [
+      "Em",
+      "D",
+      "C",
+      "G",
+      "B7",
+      "Am"
+    ],
+    "tags": [
+      "arpeggio_patterns",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-008",
+    "description": "Fingerpick the Am descending arpeggio — a haunting pattern for minor keys.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "fingerpicking",
+    "action": "Play the Am arpeggio with a descending melody on the high e string while the bass alternates. Move through Am–E–G–D–F–C–Dm. This is a complex progression — take it two chords at a time. Then try creating your own melody notes over the arpeggio.",
+    "context": "Hotel California's intro uses this descending arpeggio concept over a long chord progression. The technique — maintaining a bass pattern while a melody moves on top — is the core of solo fingerstyle guitar.",
+    "constraint_note": "If the full progression is too much, just loop Am–E–G–D. The goal is smooth arpeggio over chord changes, not memorizing a specific song.",
+    "reference": {
+      "type": "tab",
+      "body": "Am arpeggio with melody:\ne|-----0---1---0-----------0---1---0-------|\nB|---1-----------1-------1-----------1-----|\nG|-2---------------2---0---------------0---|\nD|-----------------------------------------|\nA|-0-------------------0-------------------|\nE|-----------------------------------------|\n   Am                  Am"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 60,
+    "chords": [
+      "Am",
+      "E",
+      "G",
+      "D",
+      "F",
+      "C",
+      "Dm"
+    ],
+    "tags": [
+      "arpeggio_patterns",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-prog-009",
+    "description": "Fingerpick the C#m arpeggio — practice barre chord arpeggios.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "fingerpicking",
+    "action": "Play the C#sus2 arpeggio shape (Aadat intro pattern). Barre chord arpeggios are harder because you must hold the barre while picking individual strings. Move between C#m–A–B. Then try the same arpeggio pattern on other barre chord shapes.",
+    "context": "Aadat by Jal made this C#m arpeggio iconic in South Asian guitar. But the real skill is arpeggiating barre chords — once you can do it on C#m, you can do it on any barre chord anywhere on the neck.",
+    "constraint_note": "If C#m barre is too hard, try the same arpeggio pattern on Am (open) first, then move it up to C#m (4th fret barre).",
+    "reference": {
+      "type": "tab",
+      "body": "C#sus2 arpeggio (Aadat pattern):\ne|---4---4---4---4---|\nB|-----4---4---4---4-|\nG|---6---6---6---6---|\nD|-------------------|\nA|---4---------------|\nE|-------------------|\n\nProgression:\n| C#m | A | B | C#m |"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 103,
+    "chords": [
+      "C#sus2",
+      "C#m",
+      "A",
+      "B"
+    ],
+    "tags": [
+      "arpeggio_patterns",
+      "barre_chords",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-010",
+    "description": "Play a progression in different keys — understand transposition by doing it.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Take the I–V–vi–IV pattern and play it in 3 keys: C (C–G–Am–F), G (G–D–Em–C), and D (D–A–Bm–G). Same pattern, different keys, different mood. Use a capo to play the C shapes in other keys too — capo 2 = key of D.",
+    "context": "Understanding that progressions are PATTERNS (not fixed chords) is the single biggest leap from reproducer to musician. Every progression you know works in every key. A capo is the shortcut; barre chords are the real solution.",
+    "constraint_note": "Try singing or humming a melody over each key. Notice how the same progression feels different in C vs G vs D. That's because of the guitar's open string resonance.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "I-V-vi-IV in 3 keys:\n\nKey of C: | C  | G  | Am | F  |\nKey of G: | G  | D  | Em | C  |\nKey of D: | D  | A  | Bm | G  |\n\nWith capo (C shapes):\nCapo 0: C-G-Am-F = Key of C\nCapo 2: C-G-Am-F = Key of D\nCapo 5: C-G-Am-F = Key of F"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "chords": [
+      "C",
+      "G",
+      "Am",
+      "F",
+      "D",
+      "A",
+      "Bm"
+    ],
+    "tags": [
+      "progressions",
+      "theory",
+      "key_transposition",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-011",
+    "description": "Strum a 5-chord progression — build stamina for longer sequences.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play G–C–D–Am–Em as a flowing sequence. 5-chord progressions require more memory and smoother transitions. Try different bar lengths — 4 beats per chord, then 2 beats per chord. Create your own 5-chord progression using any chords you know.",
+    "context": "Most songs use 3-4 chords, but longer progressions (Wish You Were Here, Channa Mereya) create more interesting harmonic journeys. The skill is maintaining rhythm through more chord changes.",
+    "constraint_note": "Challenge: pick 5 chords at random and make them sound good together. Not all combinations work — figuring out which ones do is how you develop harmonic intuition.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Progression:\n| G | C | D | Am | Em |\n\nChanna Mereya pattern:\n| Am | F | Dm | C | G |\n\nChallenge: create your own 5-chord progression"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 85,
+    "chords": [
+      "G",
+      "C",
+      "D",
+      "Am",
+      "Em"
+    ],
+    "tags": [
+      "progressions",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-prog-012",
+    "description": "Fingerpick a Travis picking pattern over a chord progression.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "fingerpicking",
+    "action": "Play a Travis picking pattern (alternating bass + melody) over G–D–Em–C. The thumb alternates between two bass strings while fingers pick a melody on top. Then try adding your own melody notes — change which treble strings you pick.",
+    "context": "Travis picking (Dust in the Wind, many folk songs) is the foundation of fingerstyle independence — your thumb becomes a bass player while your fingers become a melody player. Two instruments, one guitar.",
+    "constraint_note": "Start with just the thumb alternating bass. Once that's automatic, add one finger at a time. The bass must be steady like a heartbeat — the melody floats on top.",
+    "reference": {
+      "type": "tab",
+      "body": "Travis picking on G:\ne|-------3-------3-------3-------3---|\nB|---0-------0-------0-------0-------|\nG|-----------------------------------------|\nD|-----------------------------------------|\nA|-----------------------------------------|\nE|-3---3---3---3---3---3---3---3-----|\n   T   T   i   T   T   T   i   T\n   (T=thumb, i=index)"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 65,
+    "chords": [
+      "G",
+      "D",
+      "Em",
+      "C"
+    ],
+    "tags": [
+      "travis_picking",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-improv-001",
+    "description": "First improvisation — play any notes from Am pentatonic and make it sound like music.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play random notes from Am pentatonic box 1. The rule: no wrong notes. Focus on rhythm and space — leave gaps between phrases. Try repeating a short phrase, then varying it slightly.",
+    "context": "This is the moment you stop being a scale practicer and start being a musician. The pentatonic scale is designed so that every note sounds good over an Am chord. Trust it.",
+    "constraint_note": "Three rules for sounding musical: 1) End phrases on A or C. 2) Leave silence between phrases. 3) Repeat ideas — music is patterns, not random notes.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "improvisation",
+      "pentatonic_licks"
+    ],
+    "level": 2,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "scale": "Am pentatonic 1"
+  },
+  {
+    "id": "gp-improv-002",
+    "description": "Improvise with just 3 notes — prove that less is more.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Pick any 3 notes from Am pentatonic (e.g., A, C, D on the G and B strings). Improvise using ONLY those 3 notes for the full 10 minutes. Use rhythm, bends, slides, and repetition to create variety.",
+    "context": "B.B. King built a career on 5 notes. Constraints force creativity — when you can't rely on more notes, you discover rhythm, dynamics, and phrasing. This is the most important improvisation lesson.",
+    "constraint_note": "If it sounds boring, you're not using enough rhythmic variety. Try: long note, short-short-long, silence, repeat. Same 3 notes, infinite possibilities.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 75,
+    "tags": [
+      "improvisation",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "scale": "Am pentatonic 1"
+  },
+  {
+    "id": "gp-improv-003",
+    "description": "Improvise over Em pentatonic — explore a different key and position.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play freely over Em pentatonic box 1 (open position). Strum an Em chord, then solo, then strum again. Try to create a 'question and answer' — play a phrase, then play a response to it.",
+    "context": "Em pentatonic in open position uses open strings, giving a different feel than Am at the 5th fret. The open strings ring out and create natural sustain — use that.",
+    "constraint_note": "Try the call-and-response technique: play a short phrase (the question), pause, then play a variation (the answer). This is how musical conversations work.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "tags": [
+      "improvisation",
+      "pentatonic_licks"
+    ],
+    "level": 2,
+    "audioUrl": "/audio/guitar/backing/em-c-g-d-85bpm.mp3",
+    "scale": "Em pentatonic 1"
+  },
+  {
+    "id": "gp-improv-004",
+    "description": "Rhythmic improvisation — same notes, completely different feel.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "rhythm",
+    "action": "Pick 4 notes from Am pentatonic. Play them as: (1) slow whole notes, (2) steady eighth notes, (3) syncopated with accents on offbeats, (4) a shuffle/swing feel. Same notes each time — only the rhythm changes.",
+    "context": "Rhythm is 80% of what makes music sound good. Most beginners focus on which notes to play and ignore HOW to play them. This exercise proves that rhythm transforms everything.",
+    "constraint_note": "Record yourself (phone is fine) playing all 4 versions. Listen back. The difference is dramatic — and you only changed the rhythm.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 85,
+    "tags": [
+      "improvisation",
+      "rhythm_techniques",
+      "creative"
+    ],
+    "level": 3,
+    "chords": [
+      "Am"
+    ]
+  },
+  {
+    "id": "gp-improv-005",
+    "description": "Improvise with expression — bends, slides, and vibrato make notes sing.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "technique",
+    "action": "Improvise over Am pentatonic but every phrase must include at least one expressive technique: a bend, a slide, or vibrato. Play fewer notes — focus on making each one count.",
+    "context": "The difference between a scale exercise and music is expression. A single bent note with vibrato says more than 20 notes played flat. This is where technique serves creativity.",
+    "constraint_note": "Try this: play one note, add vibrato, hold it for 4 beats. That's a musical statement. Now add a slide into the next note. Two notes, more expression than a whole scale run.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "improvisation",
+      "expression",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3"
+  },
+  {
+    "id": "gp-improv-006",
+    "description": "Chord tone improvisation — target the notes inside each chord.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play over Am–F–C–G. When Am is playing, emphasize A, C, E. When F is playing, emphasize F, A, C. Land on a chord tone on beat 1 of each chord change. Use pentatonic notes to connect between chord tones.",
+    "context": "This is the difference between 'playing over changes' and 'playing through changes.' Beginners ignore the chords underneath. Advanced improvisers hear each chord and target its notes. This is how jazz and blues players think.",
+    "constraint_note": "Start simple: just play the root note of each chord on beat 1. Then add one more chord tone. Build up gradually.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 75,
+    "tags": [
+      "improvisation",
+      "theory",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "scale": "Am pentatonic 1"
+  },
+  {
+    "id": "gp-improv-007",
+    "description": "Blues improvisation — play the 12-bar blues and solo over it.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Strum the 12-bar blues in E (E-E-E-E, A-A-E-E, B7-A-E-B7). Then solo over it using Em pentatonic. Alternate: strum 4 bars, solo 4 bars. Add the 'blue note' (Bb on the A string, 1st fret) for authentic blues flavor.",
+    "context": "The 12-bar blues is the foundation of rock, jazz, and R&B. Every guitarist should be able to jam over a blues. The structure is simple and repeating — perfect for improvisation practice.",
+    "constraint_note": "The blue note (b5) is the secret ingredient. In Em pentatonic, it's the Bb — fret 6 on the low E string or fret 1 on the A string. Use it as a passing note, not a landing note.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "chords": [
+      "E",
+      "A",
+      "B7"
+    ],
+    "tags": [
+      "improvisation",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/blues-e-90bpm.mp3"
+  },
+  {
+    "id": "gp-improv-008",
+    "description": "Fingerpicking improvisation — create a melody over an arpeggio pattern.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "fingerpicking",
+    "action": "Set up a repeating arpeggio on Am (thumb on bass, i-m on B-e strings). Now change which fret your ring finger or pinky plays on the high e string while keeping the arpeggio going. You're composing a melody in real time over your own accompaniment.",
+    "context": "This is solo fingerstyle in its simplest form — you are the rhythm section AND the melody player. Start with small changes (one note different per bar) and gradually add more variation.",
+    "constraint_note": "Keep the thumb steady. The bass is the foundation — if it wobbles, everything falls apart. The melody can be free, but the bass must be a metronome.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 65,
+    "chords": [
+      "Am"
+    ],
+    "tags": [
+      "improvisation",
+      "fingerpicking",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-improv-009",
+    "description": "Ear-first improvisation — hear a phrase in your head, then find it on the guitar.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "ear_training",
+    "action": "Hum or sing a short melody (3-5 notes). Then find those exact notes on the guitar. Repeat: sing something new, find it. The goal is to close the gap between what you hear internally and what your fingers play.",
+    "context": "This is the ultimate musician skill — your instrument becomes an extension of your inner voice. Jazz musicians call it 'singing through the instrument.' It requires ear training and fretboard knowledge working together.",
+    "constraint_note": "Start with just 2-3 notes. Sing them, find them. If you can't find them, simplify. The exercise is about the CONNECTION between ear and fingers, not complexity.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "improvisation",
+      "play_by_ear",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-improv-010",
+    "description": "Space and silence — improvise by playing LESS.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Improvise over Am pentatonic with this rule: for every note you play, leave at least 2 beats of silence. Play a note or short phrase, then wait. Let the silence breathe. This is harder than it sounds.",
+    "context": "Miles Davis: 'It's not the notes you play, it's the notes you don't play.' Beginners fill every beat with sound. Musicians use silence as a tool. Space creates tension, anticipation, and emotional impact.",
+    "constraint_note": "Count the silence out loud if needed. Play — one, two — play — one, two, three — play. The silence is not empty; it's where the listener processes what you just played.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "improvisation",
+      "creative"
+    ],
+    "level": 2,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "scale": "Am pentatonic 1"
+  },
+  {
+    "id": "gp-improv-011",
+    "description": "Improvise using pentatonic box 2 — break out of the box 1 comfort zone.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Solo using ONLY Am pentatonic box 2 (starting at the 8th fret). The higher position has a brighter, more vocal quality. Try the same phrases you play in box 1 but in this new position. Then connect boxes 1 and 2 with a slide.",
+    "context": "Most guitarists get stuck in box 1 forever. Each pentatonic box has a different character because of where the bends and root notes fall. Box 2 is great for expressive bending on the B and G strings.",
+    "constraint_note": "The bend on the 10th fret of the B string (bending D up to E) is one of the most expressive sounds in rock guitar. Find it and use it.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 75,
+    "tags": [
+      "improvisation",
+      "pentatonic_boxes",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "scale": "Am pentatonic 2"
+  },
+  {
+    "id": "gp-improv-012",
+    "description": "Strum improvisation — create your own strumming pattern on the spot.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "rhythm",
+    "action": "Play Am–F–C–G. For each time through the progression, invent a new strumming pattern. Don't plan it — just start strumming and see what happens. Some will sound bad. That's fine. Keep going.",
+    "context": "Strumming patterns aren't things you memorize from a book — they're rhythmic ideas you feel. Every guitarist develops their own strumming vocabulary through experimentation. This exercise builds that vocabulary.",
+    "constraint_note": "Try: all upstrokes, muted ghost strums between hits, accenting beat 3 instead of beat 1, double-time for 2 bars then half-time. Break the rules.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "tags": [
+      "improvisation",
+      "strumming_patterns",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-improv-013",
+    "description": "Improvise a melody over a major key — happy, bright, uplifting.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play over G–C–D using G major pentatonic (G, A, B, D, E). Major pentatonic has a bright, country/pop feel — very different from minor pentatonic. Try to create a melody that sounds joyful.",
+    "context": "Most guitarists only learn minor pentatonic. Major pentatonic opens up a completely different emotional palette — think classic rock solos, country licks, and uplifting melodies.",
+    "constraint_note": "The notes are the same as Em pentatonic but the ROOT is different (G instead of E). Starting and ending on G makes it sound major. Starting on E makes it sound minor. Same notes, different feel — that's the power of context.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "chords": [
+      "G",
+      "C",
+      "D"
+    ],
+    "tags": [
+      "improvisation",
+      "major_pentatonic",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/g-c-d-100bpm.mp3",
+    "scale": "Am pentatonic 1"
+  },
+  {
+    "id": "gp-improv-014",
+    "description": "Dynamics improvisation — play the same phrase soft, medium, and loud.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "technique",
+    "action": "Create a 4-note phrase from Am pentatonic. Play it pianissimo (barely audible), then mezzo-forte (medium), then fortissimo (as loud as you can cleanly). Then improvise freely, consciously varying your volume throughout.",
+    "context": "Dynamics are the most overlooked expressive tool. A whisper followed by a shout is more powerful than constant shouting. Classical and jazz musicians obsess over dynamics — guitarists often forget they exist.",
+    "constraint_note": "Try a full improvisation where you start very quiet and gradually build to loud over 30 seconds, then suddenly drop back to quiet. That's a dynamic arc — it tells a story.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "improvisation",
+      "expression",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-improv-015",
+    "description": "Chord improvisation — create a progression that tells an emotional story.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Pick 4 chords (any you know) and arrange them into a progression that moves through emotions: start calm, build tension, reach a peak, resolve. Play it with dynamics and strumming that match the emotional arc.",
+    "context": "Songwriters don't pick chords randomly — they craft emotional journeys. A minor chord creates tension, a major chord resolves it. Moving from Am to C feels like sadness lifting. This is the foundation of composition.",
+    "constraint_note": "Try: Am (sad) → F (longing) → G (building) → C (resolution). Then try your own. There are no wrong answers — only choices that feel different.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "tags": [
+      "improvisation",
+      "progressions",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-improv-016",
+    "description": "Modal improvisation — play Dorian over a minor groove for a jazzy feel.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play over a Dm chord using D Dorian (same notes as C major, but starting on D). The Dorian mode has a brighter, jazzier sound than natural minor because of the raised 6th (B natural instead of Bb). Compare: play Am pentatonic over Dm, then D Dorian. Hear the difference.",
+    "context": "Modes are how you expand beyond pentatonic. Dorian is the most useful mode for improvisation — it works over minor chords in jazz, funk, blues, and rock. Carlos Santana and John Coltrane both used it extensively.",
+    "constraint_note": "Focus on the note that makes Dorian special: the natural 6th (B in D Dorian). Emphasize it in your phrases. That one note is the difference between 'minor scale' and 'Dorian.'",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "chords": [
+      "Dm"
+    ],
+    "tags": [
+      "improvisation",
+      "creative"
+    ],
+    "level": 3,
+    "audioUrl": "/audio/guitar/backing/dm-dorian-80bpm.mp3"
+  },
+  {
+    "id": "gp-improv-017",
+    "description": "Improvise a bass line — use only the low 3 strings.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play over Am–F–C–G using only the E, A, and D strings. Create a walking bass line that connects the root notes of each chord. Use chromatic approach notes (one fret below the target note) to add movement.",
+    "context": "Bass lines are the foundation of music. Understanding how bass movement connects chords gives you a deeper understanding of harmony than any theory book. Plus, it makes your fingerstyle playing much stronger.",
+    "constraint_note": "The simplest bass line: just play the root of each chord on beat 1. Then add the 5th on beat 3. Then fill beats 2 and 4 with passing notes. Build complexity gradually.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "tags": [
+      "improvisation",
+      "creative"
+    ],
+    "level": 2,
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3"
+  },
+  {
+    "id": "gp-improv-018",
+    "description": "Improvise a riff — create a short, repeating melodic idea.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Create a 1-bar riff (4 beats) using any notes you want. It should be catchy enough to repeat. Loop it 8 times. Then create a second riff that contrasts with the first (different rhythm or register). Alternate between them: riff A, riff A, riff B, riff A.",
+    "context": "Riffs are the building blocks of rock music — Smoke on the Water, Seven Nation Army, Day Tripper. A great riff is simple, rhythmic, and memorable. You don't need many notes — you need the RIGHT notes with the RIGHT rhythm.",
+    "constraint_note": "Hum something catchy first, then find it on the guitar. The best riffs come from the voice, not the fingers.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 100,
+    "tags": [
+      "improvisation",
+      "riffs",
+      "creative"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-create-001",
+    "description": "Write a chord progression that sounds sad — explore minor key harmony.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Create a 4-chord progression that sounds melancholic. Start with Am or Em. Try different chords for positions 2, 3, 4 until you find a combination that feels genuinely sad. Play it with a slow, gentle strum.",
+    "context": "Sadness in music comes from minor chords, descending motion, and slow tempo. But not all minor progressions sound sad — Am–G–F–E sounds dramatic, while Am–C–Em–F sounds wistful. The specific combination matters.",
+    "constraint_note": "Once you find your sad progression, try making it hopeful by changing just ONE chord. That's the power of harmony — one chord changes everything.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "composition",
+      "progressions",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-002",
+    "description": "Write a 4-bar melody using only the Am pentatonic scale.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Compose a melody — 4 bars, each bar has 4 beats. Use Am pentatonic notes only. The melody should be singable (hum it first, then play it). Write it down as fret numbers so you remember it. Play it 5 times until it's memorized.",
+    "context": "Composition starts with melody. A good melody is simple, singable, and has a shape — it goes up, comes down, has a peak moment. Think of any melody you love — it probably uses fewer notes than you'd expect.",
+    "constraint_note": "Rules for a strong melody: 1) It should have a clear high point. 2) It should end on a note that feels 'home' (A or E). 3) You should be able to hum it after hearing it twice.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 80,
+    "tags": [
+      "composition",
+      "creative"
+    ],
+    "level": 3,
+    "scale": "Am pentatonic 1"
+  },
+  {
+    "id": "gp-create-003",
+    "description": "Reharmonize a progression — swap one chord and hear how the feel changes.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Start with Am–F–C–G. Replace one chord at a time with a substitute: try Dm for F, Em for G, E for G, Am7 for Am. Play each version and notice how the emotional feel shifts. Pick your favorite variation.",
+    "context": "Reharmonization is how arrangers and producers create fresh versions of familiar progressions. Every chord has relatives that can substitute for it — Dm and F share two notes (F and A), so Dm can replace F with a darker color.",
+    "constraint_note": "Try replacing C with Cmaj7, or Am with Am7. Adding 7ths is the simplest reharmonization — same chord, richer color.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 85,
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G",
+      "Dm",
+      "Em",
+      "E"
+    ],
+    "tags": [
+      "composition",
+      "progressions",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-004",
+    "description": "Create a verse-chorus structure — two progressions that contrast each other.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Write two 4-chord progressions: one for a verse (quieter, more subdued) and one for a chorus (brighter, more energy). Play verse 2x, then chorus 2x, then verse again. The contrast between them should feel like a lift.",
+    "context": "Song structure is about contrast and return. The verse sets up tension or a story; the chorus releases it. Musically, this often means: verse in minor or with fewer chords, chorus in major or with a IV–V–I resolution.",
+    "constraint_note": "Classic trick: verse starts on a minor chord (Am–F–C–G), chorus starts on the relative major (C–G–Am–F). Same chords, different starting point, completely different energy.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "tags": [
+      "composition",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-005",
+    "description": "Compose a fingerstyle arrangement — melody + bass on one guitar.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "fingerpicking",
+    "action": "Take a simple melody you know (Happy Birthday, a nursery rhyme, anything). Play the melody on the high strings. Now add bass notes (root of each chord) with your thumb on beats 1 and 3. You're arranging for solo guitar.",
+    "context": "Fingerstyle arrangement is the ultimate creative guitar skill — you're a one-person band. Start with the simplest possible melody and the simplest possible bass. Complexity comes later.",
+    "constraint_note": "If playing melody + bass simultaneously is too hard, alternate: bass note on beat 1, melody on beats 2-3-4. That's still an arrangement.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 60,
+    "tags": [
+      "composition",
+      "fingerpicking",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-006",
+    "description": "Write a memorable melody using only 3 notes — the ultimate creative constraint.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Pick 3 notes (e.g., A, C, E on the B string: frets 10, 13, 17 — or anywhere). Compose the most memorable melody you can using ONLY those 3 notes. Use rhythm, repetition, and dynamics to create interest.",
+    "context": "Many iconic melodies use very few notes. 'Smoke on the Water' uses 4 notes. 'Seven Nation Army' uses the same note repeated with one variation. Constraints breed creativity — fewer notes forces you to be rhythmically inventive.",
+    "constraint_note": "Try this: create a 2-bar phrase, then repeat it with one small change (different rhythm, one note moved). That's how melodies develop — repetition with variation.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "tags": [
+      "composition",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-007",
+    "description": "Create a chord progression for a specific mood — tense and unresolved.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Build a progression that sounds tense and never fully resolves. Use minor chords, diminished chords, or sus chords. Avoid landing on a major chord. Play it in a loop — it should feel like it's always searching, never arriving.",
+    "context": "Film scores use unresolved progressions to create suspense. The trick is avoiding the 'home' chord (the I chord). If you're in Am, avoid landing on Am. Stay on the tension chords (Dm, E, F, Bdim).",
+    "constraint_note": "Try: Dm–E–Am–Bdim. The Bdim creates extreme tension. Or: Fsus2–G–Am–Gsus4. Sus chords float without resolving.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 75,
+    "tags": [
+      "composition",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-008",
+    "description": "Write a guitar riff and build a song section around it.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "scales_fretboard",
+    "action": "Create a 2-bar riff (single notes, power chords, or a mix). Loop it 4 times as your 'verse.' Then create a contrasting section — different rhythm, different register, or add chords. Alternate between the two sections.",
+    "context": "Many rock songs are built on a single riff: Smoke on the Water, Enter Sandman, Seven Nation Army. The riff IS the song. Start with a strong riff and the rest follows.",
+    "constraint_note": "A great riff has: a strong rhythmic hook, a limited note range (3-5 notes), and something unexpected (a rest, a bend, an accent on an offbeat).",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 100,
+    "tags": [
+      "composition",
+      "riffs",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-009",
+    "description": "Compose a short piece — 16 bars with a beginning, middle, and end.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "chords",
+    "action": "Write a 16-bar piece: 4 bars intro, 4 bars section A, 4 bars section B (contrasting), 4 bars return to A. Use chords, a melody, or both. It should feel complete — like a short story with a beginning, middle, and end.",
+    "context": "This is songwriting in miniature. The AABA form (or intro-A-B-A) is one of the oldest structures in music. The return to A at the end creates satisfaction — the listener recognizes where they started.",
+    "constraint_note": "Keep it simple. 2-3 chords per section is enough. The structure does the heavy lifting — you don't need complex harmony to create a satisfying piece.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 85,
+    "tags": [
+      "composition",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-improv-019",
+    "description": "Create a groove — combine strumming, muting, and percussion into your own rhythm.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "rhythm",
+    "action": "On a single chord (Am), create a 2-bar rhythmic pattern that combines: strums, palm-muted strums, and percussive slaps on the guitar body. Loop it until it grooves. Then move it through a chord progression.",
+    "context": "Percussive acoustic guitar (Andy McKee, John Mayer) treats the guitar as a drum AND a harmonic instrument. Your right hand has three sounds: open strum, muted strum, and body slap. Combine them.",
+    "constraint_note": "Start with a basic beat: slap on 1, muted strum on 2, open strum on 3, muted on 4. Then vary it. The body slap replaces a kick drum, the muted strum is a snare.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 90,
+    "tags": [
+      "improvisation",
+      "rhythm_techniques",
+      "creative"
+    ],
+    "level": 3,
+    "chords": [
+      "Am"
+    ]
+  },
+  {
+    "id": "gp-improv-020",
+    "description": "Polyrhythm exercise — play a different rhythm with each hand.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "rhythm",
+    "action": "Play a steady bass note with your thumb on beats 1 and 3 (half notes). With your fingers, play a melody in triplets (3 notes per beat). The two rhythms overlap — this is polyrhythm. Start very slowly.",
+    "context": "Polyrhythm is the foundation of African, Latin, and funk music. It sounds complex but it's just two simple patterns happening simultaneously. Your thumb is a metronome; your fingers are free.",
+    "constraint_note": "If triplets over half notes is too hard, start with: thumb on every beat, fingers on every other beat. Then try thumb on 1-3, fingers on every beat. Build independence gradually.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 60,
+    "tags": [
+      "improvisation",
+      "creative"
+    ],
+    "level": 3,
+    "chords": [
+      "Am"
+    ]
+  },
+  {
+    "id": "gp-improv-021",
+    "description": "Transcribe a riff by ear — listen, find it, play it.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "ear_training",
+    "action": "Pick any song you know well. Listen to the main riff or melody (just 4-8 notes). Pause the music. Find those notes on your guitar by ear — no tabs, no looking it up. It might take many attempts. That's the point.",
+    "context": "Transcription by ear is how every great musician before the internet learned music. It trains your ear, your fretboard knowledge, and your musical memory simultaneously. It's hard and slow at first — that means it's working.",
+    "constraint_note": "Start with something simple — a nursery rhyme, a jingle, a 3-note riff. If you can't find a note, sing it and slide your finger up the fretboard until the pitch matches.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "improvisation",
+      "play_by_ear",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-create-010",
+    "description": "Harmonize a melody — find chords that fit under a tune you know.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "ear_training",
+    "action": "Pick a simple melody you can play (Happy Birthday, a folk tune, anything). Now find chords that sound good underneath it. Try different chords under each bar — some will clash, some will click. Trust your ear.",
+    "context": "This is the reverse of improvisation — instead of creating melody over chords, you're creating chords under melody. It's how arrangers work. Your ear already knows what sounds 'right' — this exercise teaches you to trust it.",
+    "constraint_note": "Start with just 2 chords (C and G, or Am and E). Most simple melodies can be harmonized with just 2-3 chords. Add more only when 2 aren't enough.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "bpm": 70,
+    "tags": [
+      "composition",
+      "play_by_ear",
+      "creative"
+    ],
+    "level": 3
+  },
+  {
+    "id": "gp-theory-001",
+    "description": "Intervals on the fretboard — the building blocks of all chords and scales.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play these 3 intervals from any note: major 3rd (4 frets), perfect 5th (7 frets), octave (12 frets). Start on the 5th fret of the low E string (A). Find A a major 3rd up, a perfect 5th up, and an octave up. Then do the same starting from G (3rd fret).",
+    "context": "Intervals are the distance between two notes. Every chord, scale, and melody is built from intervals. Learning just 3 intervals — major 3rd, perfect 5th, and octave — unlocks how chords and scales are constructed.",
+    "constraint_note": "You don't need to memorize all 12 interval names. These 3 are enough to understand chord construction in the next lesson.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Key intervals:\nMinor 3rd  = 3 frets  (sad sound)\nMajor 3rd  = 4 frets  (happy sound)\nPerfect 5th = 7 frets  (power chord sound)\nOctave     = 12 frets (same note, higher)\n\nFrom A (5th fret, low E):\nA → C# (major 3rd, 9th fret)\nA → E  (perfect 5th, 12th fret)\nA → A  (octave, 17th fret or 7th fret A string)"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "intervals"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-002",
+    "description": "How chords are built — a major chord is root + major 3rd + perfect 5th.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play an open E major chord. Now find the 3 ingredients: Root (E, open 6th string), Major 3rd (G#, 1st fret 3rd string), Perfect 5th (B, 2nd fret 5th string). Every other note in the chord is a duplicate of one of these 3. Do the same analysis for A major and C major.",
+    "context": "Every major chord uses the same recipe: root + major 3rd + perfect 5th. A minor chord changes one ingredient: root + MINOR 3rd + perfect 5th. That one-fret difference between major and minor 3rd is why Em sounds sad and E sounds happy.",
+    "constraint_note": "Compare E major and E minor. The only difference is the G# (1st fret, 3rd string) dropping to G (open 3rd string). That's a major 3rd becoming a minor 3rd. One fret changes the entire mood.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Chord recipes:\nMajor = Root + Major 3rd (4 frets) + Perfect 5th (7 frets)\nMinor = Root + Minor 3rd (3 frets) + Perfect 5th (7 frets)\n\nE major chord analysis:\nE|--0-- = E  (octave of root)\nB|--0-- = B  (perfect 5th)\nG|--1-- = G# (major 3rd) ← THIS makes it major\nD|--2-- = E  (octave of root)\nA|--2-- = B  (perfect 5th)\nE|--0-- = E  (root)"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "chord_types"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-003",
+    "description": "How scales are built — the major scale is a pattern of whole and half steps.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "action": "Play the C major scale (C-D-E-F-G-A-B-C) on one string. Count the frets between each note: C→D (2 frets), D→E (2), E→F (1), F→G (2), G→A (2), A→B (2), B→C (1). The pattern is W-W-H-W-W-W-H. Now play the G major scale using the same pattern starting from G.",
+    "context": "The major scale isn't random — it follows a fixed pattern of whole steps (2 frets) and half steps (1 fret): W-W-H-W-W-W-H. This pattern works from ANY starting note. Start on C and you get C major. Start on G and you get G major. Same pattern, different key.",
+    "constraint_note": "The pentatonic scale you already know is just the major scale with 2 notes removed. The major scale has 7 notes; the pentatonic has 5. You already know most of it.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Major scale pattern: W - W - H - W - W - W - H\n(W = whole step = 2 frets, H = half step = 1 fret)\n\nC major: C  D  E  F  G  A  B  C\n          W  W  H  W  W  W  H\n\nG major: G  A  B  C  D  E  F# G\n          W  W  H  W  W  W  H\n\nNotice: G major has F# instead of F.\nThe pattern FORCES certain sharps/flats."
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "scales"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-004",
+    "description": "The chord family — every key has 7 chords that belong together.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play all 7 chords in the key of C: C, Dm, Em, F, G, Am, Bdim. Strum each one and listen — they all sound like they 'belong' together. Now play all 7 in the key of G: G, Am, Bm, C, D, Em, F#dim. Same pattern, different key.",
+    "context": "Each note of the major scale can be the root of a chord. The pattern is always: Major, minor, minor, Major, Major, minor, diminished. In Roman numerals: I, ii, iii, IV, V, vi, vii°. This is the chord family — the 7 chords that naturally go together in any key.",
+    "constraint_note": "Notice the pattern: chords I, IV, V are major. Chords ii, iii, vi are minor. Chord vii° is diminished. This pattern is the same in EVERY key. Memorize it once, use it forever.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "The chord family pattern:\nI    ii   iii  IV   V    vi   vii°\nMaj  min  min  Maj  Maj  min  dim\n\nKey of C:\nC    Dm   Em   F    G    Am   Bdim\n\nKey of G:\nG    Am   Bm   C    D    Em   F#dim\n\nKey of D:\nD    Em   F#m  G    A    Bm   C#dim"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "chords": [
+      "C",
+      "Dm",
+      "Em",
+      "F",
+      "G",
+      "Am"
+    ],
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "progressions"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-005",
+    "description": "Why progressions work — Am-F-C-G all belong to the key of C.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play Am-F-C-G. Now look at the chord family of C major: C, Dm, Em, F, G, Am, Bdim. Every chord in Am-F-C-G is in this family. In Roman numerals: vi-IV-I-V. Play Em-C-G-D — that's vi-IV-I-V in the key of G. Same pattern, different key, same feeling.",
+    "context": "Progressions sound good because all their chords share the same scale. Am-F-C-G works because every note in every chord comes from the C major scale. If you threw in an Eb chord, it would sound 'wrong' because Eb doesn't belong to the key of C.",
+    "constraint_note": "This is the single most important theory concept for a musician. Once you see progressions as Roman numeral patterns, you can understand any song instantly and create your own progressions that work.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Key of C family: C  Dm  Em  F  G  Am  Bdim\n                  I  ii  iii IV V  vi  vii°\n\nAm-F-C-G = vi-IV-I-V (in key of C)\nEm-C-G-D = vi-IV-I-V (in key of G)\nBm-G-D-A = vi-IV-I-V (in key of D)\n\nSame pattern → same emotional feel\nDifferent key → different pitch"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "progressions"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-006",
+    "description": "Relative major and minor — Am and C major are two sides of the same coin.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play C-G-Am-F (starts on C, feels bright). Now play Am-F-C-G (starts on Am, feels darker). Same 4 chords, different starting point, completely different mood. C major and A minor are 'relatives' — they share the exact same 7 chords.",
+    "context": "Every major key has a relative minor (and vice versa). They share all the same chords — the only difference is which chord feels like 'home.' When C feels like home, it's C major. When Am feels like home, it's A minor. The relative minor is always the vi chord.",
+    "constraint_note": "To find the relative minor of any major key: it's the vi chord. C major → Am. G major → Em. D major → Bm. To find the relative major of any minor key: go up 3 frets from the root.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Relative pairs (share the same 7 chords):\nC major  ↔  A minor\nG major  ↔  E minor\nD major  ↔  B minor\nF major  ↔  D minor\nA major  ↔  F# minor\nE major  ↔  C# minor\n\nRule: relative minor = vi chord\nRule: relative minor root is 3 frets below major root"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "tags": [
+      "theory",
+      "theory_sequence"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-007",
+    "description": "Transposition — play the same progression pattern in 3 different keys.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play I-V-vi-IV in C (C-G-Am-F), then in G (G-D-Em-C), then in D (D-A-Bm-G). Same Roman numeral pattern, 3 different keys. Notice how the feel is similar but the pitch is different. This is transposition — moving a pattern to a new key.",
+    "context": "Once you think in Roman numerals instead of chord names, you can play in any key instantly. A singer says 'this is too high, can we go lower?' You just move the whole pattern down. This is what professional musicians do — they think in patterns, not fixed chords.",
+    "constraint_note": "Try I-IV-V-I in 3 keys: C (C-F-G-C), G (G-C-D-G), A (A-D-E-A). If you know the chord family for each key, transposition is instant.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "I-V-vi-IV in every common key:\nC: C  - G  - Am - F\nG: G  - D  - Em - C\nD: D  - A  - Bm - G\nA: A  - E  - F#m- D\nE: E  - B  - C#m- A\nF: F  - C  - Dm - Bb"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "key_transposition"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-theory-008",
+    "description": "Chord substitution — swap a chord for its relative and hear the color change.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "chords",
+    "action": "Play C-F-G-C. Now replace F(IV) with Dm(ii) — they share two notes (F and A). Play C-Dm-G-C. Hear the difference? Now replace C(I) with Am(vi): Am-F-G-Am. Same family, different mood. Try more swaps: Em for G, Am for C.",
+    "context": "Chords that are a 3rd apart (like C and Am, or F and Dm) share 2 out of 3 notes. This means they can substitute for each other. This is how songwriters create variety — same progression structure, different color. It's also how you develop your own harmonic voice.",
+    "constraint_note": "Substitution pairs in key of C: C↔Am, F↔Dm, G↔Em. Each pair shares 2 notes. Try replacing one chord at a time in any progression you know.",
+    "reference": {
+      "type": "text",
+      "mono": true,
+      "body": "Substitution pairs (share 2 notes):\nI  ↔ vi   (C ↔ Am)   share C, E\nIV ↔ ii   (F ↔ Dm)   share F, A\nV  ↔ iii  (G ↔ Em)   share G, B\n\nOriginal:     C  - F  - G  - C\nSub IV→ii:    C  - Dm - G  - C\nSub I→vi:     Am - F  - G  - Am\nSub V→iii:    C  - F  - Em - C"
+    },
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "needs_guitar": true,
+    "tags": [
+      "theory",
+      "theory_sequence",
+      "progressions"
+    ],
+    "level": 2
+  },
+  {
+    "id": "gp-solo-001",
+    "description": "Solo over the Am backing track using ONLY E-shape (box 1) (frets 5-8). Don't run the scale up and down — play phrases. Try to make someone tap their foot.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "scale": "Am pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over the Am backing track using ONLY E-shape (box 1) (frets 5-8). Don't run the scale up and down — play phrases. Try to make someone tap their foot.",
+    "constraint_note": "Stay in E-shape (box 1) the entire time. If you catch yourself running the scale mechanically, stop, breathe, and start a new phrase. Less is more — 3 good notes beat 12 fast ones.",
+    "context": "E-shape (box 1) is home base. Before you can solo across the neck, you need to be completely comfortable making music in one position. Every great solo has moments that sit in one spot and breathe.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 1,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-002",
+    "description": "Solo over the Am backing track using ONLY D-shape (box 2) (frets 8-10). This position has a brighter, more vocal quality than E-shape (box 1).",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "scale": "Am pentatonic 2",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over the Am backing track using ONLY D-shape (box 2) (frets 8-10). This position has a brighter, more vocal quality than E-shape (box 1).",
+    "constraint_note": "Stay in D-shape (box 2) only. The shape feels different from E-shape (box 1) — the intervals are spaced differently. Let your ear guide you, not your fingers.",
+    "context": "Each box has its own character because the intervals fall under your fingers differently. D-shape (box 2) tends to produce more melodic, singing phrases. Discovering each box's personality is part of becoming a soloist.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 2,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-003",
+    "description": "Solo over the Am backing track using ONLY C-shape (box 3) (frets 10-13). This is the C-shape position — higher on the neck, thinner tone.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "scale": "Am pentatonic 3",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over the Am backing track using ONLY C-shape (box 3) (frets 10-13). This is the C-shape position — higher on the neck, thinner tone.",
+    "constraint_note": "The G string has a wide stretch here (3 frets). Use your index and pinky. If the stretch is hard, focus on the top 4 strings where the notes are closer together.",
+    "context": "C-shape (box 3) sits around the 12th fret — the octave point. Notes here have a bright, cutting quality that works great for the climax of a solo. Many guitarists instinctively move here when they want to build intensity.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 3,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-004",
+    "description": "Solo over the Am backing track using ONLY A-shape (box 4) (frets 12-15). This is the A-shape position — the highest standard position.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "scale": "Am pentatonic 4",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over the Am backing track using ONLY A-shape (box 4) (frets 12-15). This is the A-shape position — the highest standard position.",
+    "constraint_note": "You're high on the neck now. The frets are closer together, so stretches are easier but accuracy matters more. Listen to how different this sounds from E-shape (box 1) — same notes, completely different vibe.",
+    "context": "A-shape (box 4) is where guitarists go for screaming, expressive solos. The high frets give you access to bends that really sing. Think of the climax of a blues solo — that's A-shape (box 4) territory.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 4,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-005",
+    "description": "Solo over the Am backing track using ONLY G-shape (box 5) (frets 2-5). This is the G-shape position — below E-shape (box 1), completing the circle.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "scale": "Am pentatonic 5",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over the Am backing track using ONLY G-shape (box 5) (frets 2-5). This is the G-shape position — below E-shape (box 1), completing the circle.",
+    "constraint_note": "G-shape (box 5) connects below E-shape (box 1). The top notes of G-shape (box 5) (fret 5) are the bottom notes of box 1. After this task, you'll have soloed in all 5 positions — the entire fretboard is yours.",
+    "context": "G-shape (box 5) has a warm, deep quality because it sits in the lower frets. It's less commonly used for lead playing, which means phrases from here sound unexpected and fresh. Knowing all 5 boxes means you're never stuck.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 5,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-006",
+    "description": "Connect E-shape (box 1) and D-shape (box 2). Start soloing in the E-shape (box 1) (frets 5-8), then slide up into D-shape (box 2) (frets 8-10) using the shared notes around fret 7-8.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Connect E-shape (box 1) and D-shape (box 2). Start soloing in the E-shape (box 1) (frets 5-8), then slide up into D-shape (box 2) (frets 8-10) using the shared notes around fret 7-8.",
+    "constraint_note": "The transition point is frets 7-8 — notes here belong to both boxes. Use a slide on the G or B string to move smoothly between positions. Don't jump — glide.",
+    "context": "Connecting two boxes is the first step toward full-neck soloing. The key insight: boxes overlap. The top of E-shape (box 1) and the bottom of D-shape (box 2) share notes. That overlap is your bridge.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 6,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 1",
+      "Am pentatonic 2"
+    ]
+  },
+  {
+    "id": "gp-solo-007",
+    "description": "Connect D-shape (box 2) and C-shape (box 3). Solo in the D-shape (box 2) (frets 8-10), then transition into C-shape (box 3) (frets 10-13) through the shared notes around fret 10.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Connect D-shape (box 2) and C-shape (box 3). Solo in the D-shape (box 2) (frets 8-10), then transition into C-shape (box 3) (frets 10-13) through the shared notes around fret 10.",
+    "constraint_note": "Fret 10 is the pivot point. Several notes at fret 10 appear in both boxes. Play a phrase in D-shape (box 2), slide up to fret 10, and continue the phrase in C-shape (box 3).",
+    "context": "Each connection you learn doubles your soloing range. E-shape (box 1) alone covers 4 frets. Boxes 1+2 cover 6 frets. By the time you connect 1+2+3, you have frets 5-13 — over half the neck.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 7,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 2",
+      "Am pentatonic 3"
+    ]
+  },
+  {
+    "id": "gp-solo-008",
+    "description": "Connect C-shape (box 3) and A-shape (box 4). Solo in the C-shape (box 3) (frets 10-13), then move into A-shape (box 4) (frets 12-15) through the overlap around fret 12.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Connect C-shape (box 3) and A-shape (box 4). Solo in the C-shape (box 3) (frets 10-13), then move into A-shape (box 4) (frets 12-15) through the overlap around fret 12.",
+    "constraint_note": "Fret 12 is the octave — the same notes as the open strings. The A at fret 12 on the A string is a strong landing note. Use it as your anchor when transitioning.",
+    "context": "The 12th fret is a landmark on the guitar. When you cross it, you're in the upper register. Connecting the C-shape (box 3) and 4 gives you access to the highest, most expressive part of the neck.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 8,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 3",
+      "Am pentatonic 4"
+    ]
+  },
+  {
+    "id": "gp-solo-009",
+    "description": "Connect A-shape (box 4) and G-shape (box 5). Solo in the A-shape (box 4) (frets 12-15), then wrap around to G-shape (box 5) (frets 2-5). This is the longest jump — use it to descend dramatically.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Connect A-shape (box 4) and G-shape (box 5). Solo in the A-shape (box 4) (frets 12-15), then wrap around to G-shape (box 5) (frets 2-5). This is the longest jump — use it to descend dramatically.",
+    "constraint_note": "G-shape (box 5) at fret 2 is the same pattern as G-shape (box 5) at fret 14-17 (one octave higher). You can either jump down to fret 2 for a dramatic drop, or stay high and play box 5 at fret 14. Try both.",
+    "context": "This connection completes the circle. A-shape (box 4) is the highest position, G-shape (box 5) wraps back to the lowest. Professional guitarists use this jump for dramatic effect — a screaming high note followed by a deep, growling phrase.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 9,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 4",
+      "Am pentatonic 5"
+    ]
+  },
+  {
+    "id": "gp-solo-010",
+    "description": "Connect G-shape (box 5) and E-shape (box 1). Solo in the G-shape (box 5) (frets 2-5), then slide up into E-shape (box 1) (frets 5-8). This closes the loop — you can now move in either direction.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 2,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Connect G-shape (box 5) and E-shape (box 1). Solo in the G-shape (box 5) (frets 2-5), then slide up into E-shape (box 1) (frets 5-8). This closes the loop — you can now move in either direction.",
+    "constraint_note": "Fret 5 is where G-shape (box 5) ends and E-shape (box 1) begins. The root note A is at fret 5 on the low E string — a perfect pivot point. Land on it, then launch into E-shape (box 1).",
+    "context": "You've now connected all 5 boxes into a continuous loop: 5→1→2→3→4→5. The pentatonic scale tiles the entire fretboard with no gaps. You can start anywhere and move in any direction. That's fretboard freedom.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 10,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 5",
+      "Am pentatonic 1"
+    ]
+  },
+  {
+    "id": "gp-solo-011",
+    "description": "Ascend the entire neck musically. Start in G-shape (box 5) (fret 2), play a phrase, move to E-shape (box 1) (fret 5), play a phrase, continue through the D-shape (box 2), 3, and 4. Then descend back down.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Ascend the entire neck musically. Start in G-shape (box 5) (fret 2), play a phrase, move to E-shape (box 1) (fret 5), play a phrase, continue through the D-shape (box 2), 3, and 4. Then descend back down.",
+    "constraint_note": "This is NOT a speed run. Play 2-4 notes in each box, then transition. The goal is to sound like one continuous solo that happens to travel up the neck, not a scale exercise.",
+    "context": "This is the moment it all comes together. You've mastered each box and each connection. Now you're using the entire fretboard as one instrument, not 5 separate boxes. This is what fretboard freedom sounds like.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 11,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 5",
+      "Am pentatonic 1",
+      "Am pentatonic 2",
+      "Am pentatonic 3",
+      "Am pentatonic 4"
+    ]
+  },
+  {
+    "id": "gp-solo-012",
+    "description": "Solo freely across the full neck with no box restrictions. Go wherever your ear takes you. The only rule: don't stay in one position for more than 4 bars.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo freely across the full neck with no box restrictions. Go wherever your ear takes you. The only rule: don't stay in one position for more than 4 bars.",
+    "constraint_note": "Forget the box numbers. You know where the notes are — trust your fingers. If you get lost, land on any A note (fret 5 on low E, fret 7 on D, fret 10 on B) and reorient from there.",
+    "context": "This is the goal of the entire journey. You're no longer thinking in boxes — you're thinking in music. The boxes were scaffolding. Now you're playing the building.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 12,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 5",
+      "Am pentatonic 1",
+      "Am pentatonic 2",
+      "Am pentatonic 3",
+      "Am pentatonic 4"
+    ]
+  },
+  {
+    "id": "gp-solo-013",
+    "description": "Solo in the middle zone: the E-shape (box 1), 2, and 3 (frets 5-13). This is the most comfortable and commonly used range. Practice moving fluidly within this zone.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "pentatonic_boxes"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo in the middle zone: the E-shape (box 1), 2, and 3 (frets 5-13). This is the most comfortable and commonly used range. Practice moving fluidly within this zone.",
+    "constraint_note": "Most guitar solos live between frets 5 and 12. Get so comfortable here that you stop thinking about which box you're in. Move by sound, not by shape.",
+    "context": "Professional guitarists spend 80% of their solo time in this zone. It's where the guitar sounds best, the frets are a comfortable size, and you have the most expressive range. Mastering this zone alone makes you a capable soloist.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 13,
+      "total": 23
+    },
+    "scales": [
+      "Am pentatonic 1",
+      "Am pentatonic 2",
+      "Am pentatonic 3"
+    ]
+  },
+  {
+    "id": "gp-solo-014",
+    "description": "Solo over Am–F–C–G and target the root note of each chord as it changes. When Am plays, land on A. When F plays, land on F. When C plays, land on C. When G plays, land on G.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "chord_following"
+    ],
+    "scale": "Am pentatonic 1",
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over Am–F–C–G and target the root note of each chord as it changes. When Am plays, land on A. When F plays, land on F. When C plays, land on C. When G plays, land on G.",
+    "constraint_note": "You don't need to play the root on beat 1 every time — just make sure you arrive on it somewhere during each chord. Play pentatonic notes between the roots. The roots are your anchors, the pentatonic fills the space.",
+    "context": "This is the single most important soloing concept. When you target chord roots, your solo follows the harmony instead of floating above it. Listeners feel the chord changes through your solo. This is what separates a good solo from random noodling.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 14,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-015",
+    "description": "Solo over Em–C–G–D. For each chord, find and emphasize its root note. You'll need to move positions — Em root is at fret 0/12, C at fret 8/3, G at fret 3/10, D at fret 10/5.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "chord_following"
+    ],
+    "chords": [
+      "Em",
+      "C",
+      "G",
+      "D"
+    ],
+    "scale": "Em pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/em-c-g-d-85bpm.mp3",
+    "bpm": 85,
+    "needs_guitar": true,
+    "action": "Solo over Em–C–G–D. For each chord, find and emphasize its root note. You'll need to move positions — Em root is at fret 0/12, C at fret 8/3, G at fret 3/10, D at fret 10/5.",
+    "constraint_note": "Different key, different root locations. Don't panic if you can't find the root instantly — play pentatonic notes until you land on it. Over time, your ear will guide you to the right note before your brain figures out the fret number.",
+    "context": "Practicing chord-following in multiple keys builds real fluency. In Am you might memorize the root locations. In Em you have to think — and that thinking is what builds the skill.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 15,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-016",
+    "description": "Solo over the 12-bar blues in E. The chords are E(4 bars)–A(2 bars)–E(2 bars)–B7(1 bar)–A(1 bar)–E(1 bar)–B7(1 bar). Follow the chord changes by shifting your pentatonic position.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "chord_following"
+    ],
+    "scale": "Em pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/blues-e-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over the 12-bar blues in E. The chords are E(4 bars)–A(2 bars)–E(2 bars)–B7(1 bar)–A(1 bar)–E(1 bar)–B7(1 bar). Follow the chord changes by shifting your pentatonic position.",
+    "constraint_note": "The blues is the ultimate chord-following exercise. The I-IV-V changes are predictable, so you can plan ahead. When A comes, target A notes. When B7 comes, target B. Between targets, play Em pentatonic freely.",
+    "context": "The 12-bar blues is the foundation of rock, blues, and jazz soloing. Every guitarist who can solo learned it over this form. The chord changes are simple but the challenge of following them musically is deep enough to last a lifetime.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 16,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-017",
+    "description": "Solo over Am–F–C–G and play the chord tones (root, 3rd, 5th) of each chord as it arrives. Am = A,C,E. F = F,A,C. C = C,E,G. G = G,B,D.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "chord_following"
+    ],
+    "scale": "Am pentatonic 1",
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over Am–F–C–G and play the chord tones (root, 3rd, 5th) of each chord as it arrives. Am = A,C,E. F = F,A,C. C = C,E,G. G = G,B,D.",
+    "constraint_note": "Start simple: just play the 3 chord tones as an arpeggio when each chord hits. Once that's comfortable, mix in pentatonic notes between the chord tones. The chord tones are the skeleton, the pentatonic is the flesh.",
+    "context": "Chord tones are the strongest notes you can play over any chord. They sound 'right' because they ARE the chord. Targeting chord tones is what makes a solo sound intentional rather than random — like the soloist is hearing the harmony, not just playing a scale.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 17,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-018",
+    "description": "Combine everything: solo over Am–F–C–G. Hit a chord tone on beat 1 of each chord change, then fill with pentatonic phrases until the next chord. Make it musical — this is a real solo.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "chord_following"
+    ],
+    "scale": "Am pentatonic 1",
+    "chords": [
+      "Am",
+      "F",
+      "C",
+      "G"
+    ],
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Combine everything: solo over Am–F–C–G. Hit a chord tone on beat 1 of each chord change, then fill with pentatonic phrases until the next chord. Make it musical — this is a real solo.",
+    "constraint_note": "This is the full picture: chord tone targeting + pentatonic vocabulary + phrasing + full neck movement. Don't try to be perfect. A solo with one great phrase and some stumbles is better than a technically clean but lifeless run through the scale.",
+    "context": "This is what SPJ calls 'Level 1 soloing done right.' You're using only pentatonic notes, but you're following the chords, moving across the neck, and making musical choices. Many professional guitarists never go beyond this — because done well, it's enough.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 18,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-019",
+    "description": "Solo using only 3 notes from Am pentatonic — plus bends to reach other pitches. Limitation breeds creativity. Make those 3 notes sing.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "phrasing"
+    ],
+    "scale": "Am pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo using only 3 notes from Am pentatonic — plus bends to reach other pitches. Limitation breeds creativity. Make those 3 notes sing.",
+    "constraint_note": "Pick any 3 notes (e.g., A on fret 5, C on fret 8, D on fret 7 — all on the G string). Use bends, vibrato, and rhythm to create variety. BB King built a career on 3 notes and a bend.",
+    "context": "Great soloists don't play more notes — they play fewer notes better. A single note with a perfect bend and vibrato says more than 16 fast notes. This exercise trains your ear to hear expression, not just pitch.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 19,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-020",
+    "description": "Solo over Am–F–C–G. End every phrase with vibrato on a chord tone. The vibrato is your signature — make it even, controlled, and expressive.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "phrasing"
+    ],
+    "scale": "Am pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo over Am–F–C–G. End every phrase with vibrato on a chord tone. The vibrato is your signature — make it even, controlled, and expressive.",
+    "constraint_note": "Play a short phrase (3-5 notes), then land on a chord tone and hold it with vibrato for 2-3 beats. The vibrato should be rhythmic — not random wobbling. Think of a singer holding a long note.",
+    "context": "Vibrato is what separates a beginner from an intermediate player. It's the most personal technique — every guitarist's vibrato sounds different. Practicing it on chord tones trains two skills at once: phrasing and chord awareness.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 20,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-021",
+    "description": "Solo across the E-shape (box 1)-2-3 using slides to connect them. No jumping — every position change should be a slide on one string that carries you into the next box.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "phrasing"
+    ],
+    "scale": "Am pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Solo across the E-shape (box 1)-2-3 using slides to connect them. No jumping — every position change should be a slide on one string that carries you into the next box.",
+    "constraint_note": "The G string is great for slides: fret 5 (E-shape (box 1)) slides to fret 7 (D-shape (box 2)) slides to fret 9 (C-shape (box 3)). The B string works too: fret 5 to 8 to 10. Let the slide be part of the melody, not just a transition.",
+    "context": "Slides are the most natural way to connect boxes. They sound smooth, they're easy to execute, and they give your solo a vocal quality — like a singer sliding between notes. Professional guitarists use slides constantly to move across the neck without the listener noticing a position shift.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 21,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-022",
+    "description": "Call and response: play a short phrase (2-4 notes), leave 2 beats of silence, then play a response phrase. The silence is as important as the notes.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "phrasing"
+    ],
+    "scale": "Am pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Call and response: play a short phrase (2-4 notes), leave 2 beats of silence, then play a response phrase. The silence is as important as the notes.",
+    "constraint_note": "The 'response' should relate to the 'call' — same rhythm but different notes, or same notes but different rhythm. Think of it as a conversation: statement, pause, reply. Never fill every beat.",
+    "context": "Space is the hardest thing for guitarists to learn. The instinct is to fill every moment with notes. But the greatest solos breathe — they have phrases and pauses, tension and release. Miles Davis said 'it's not the notes you play, it's the notes you don't play.'",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 22,
+      "total": 23
+    }
+  },
+  {
+    "id": "gp-solo-023",
+    "description": "Dynamic solo: start very quiet (barely touching the strings), gradually build intensity over 2 minutes, reach a peak, then bring it back down to quiet. Tell a story with volume.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "scales_fretboard",
+    "level": 3,
+    "tags": [
+      "pentatonic_soloing",
+      "phrasing"
+    ],
+    "scale": "Am pentatonic 1",
+    "audioUrl": "/audio/guitar/backing/am-f-c-g-90bpm.mp3",
+    "bpm": 90,
+    "needs_guitar": true,
+    "action": "Dynamic solo: start very quiet (barely touching the strings), gradually build intensity over 2 minutes, reach a peak, then bring it back down to quiet. Tell a story with volume.",
+    "constraint_note": "Quiet = fewer notes, lower strings, gentle picking. Loud = more notes, higher strings, aggressive picking, bends. The build should feel natural — like a wave rising and falling. Don't rush to the peak.",
+    "context": "Dynamics are what make a solo feel like a journey. A solo that stays at one volume is like a story with no plot. The quiet-loud-quiet arc is the simplest and most powerful structure in music. Every great solo — Comfortably Numb, Stairway, Free Bird — follows this shape.",
+    "tools": [
+      "metronome"
+    ],
+    "completion": "self_report",
+    "sequence": {
+      "name": "fretboard_soloing",
+      "order": 23,
+      "total": 23
+    }
   }
 ]

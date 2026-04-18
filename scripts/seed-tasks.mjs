@@ -10,14 +10,15 @@ const supabase = createClient(
 )
 
 const banks = [
-  { file: '../data/creative_writing.json', category: 'creative_writing' },
-  { file: '../data/learn_kannada.json', category: 'learn_kannada' },
-  { file: '../data/public_speaking.json', category: 'public_speaking' },
-  { file: '../data/guitar_practice.json', category: 'guitar_practice' },
-  { file: '../data/guided_thinking.json', category: 'guided_thinking' },
-  { file: '../data/active_listening.json', category: 'active_listening' },
-  { file: '../data/philosophy.json', category: 'philosophy' },
-  { file: '../data/distributed_systems.json', category: 'distributed_systems' },
+  { file: new URL('../data/creative_writing.json', import.meta.url), category: 'creative_writing' },
+  { file: new URL('../data/learn_kannada.json', import.meta.url), category: 'learn_kannada' },
+  { file: new URL('../data/public_speaking.json', import.meta.url), category: 'public_speaking' },
+  { file: new URL('../data/guitar_practice.json', import.meta.url), category: 'guitar_practice' },
+  { file: new URL('../data/guided_thinking.json', import.meta.url), category: 'guided_thinking' },
+  { file: new URL('../data/active_listening.json', import.meta.url), category: 'active_listening' },
+  { file: new URL('../data/philosophy.json', import.meta.url), category: 'philosophy' },
+  { file: new URL('../data/distributed_systems.json', import.meta.url), category: 'distributed_systems' },
+  { file: new URL('../data/deep_reading.json', import.meta.url), category: 'deep_reading' },
 ]
 
 // Clear existing tasks to avoid duplicates

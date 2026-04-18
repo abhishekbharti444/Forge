@@ -73,7 +73,7 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
         const unpacked = (d.tasks || []).map(t => {
           const ref = t.reference as any
           if (!ref) return t
-          const { sequence, song, tags, bpm, chords, needs_guitar, songSuggestions, ...cleanRef } = ref
+          const { sequence, song, tags, bpm, chords, needs_guitar, songSuggestions, scale, scales, ...cleanRef } = ref
           const extras: any = {}
           if (sequence !== undefined) extras.sequence = sequence
           if (song !== undefined) extras.song = song
@@ -82,6 +82,8 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
           if (chords !== undefined) extras.chords = chords
           if (needs_guitar !== undefined) extras.needs_guitar = needs_guitar
           if (songSuggestions !== undefined) extras.songSuggestions = songSuggestions
+          if (scale !== undefined) extras.scale = scale
+          if (scales !== undefined) extras.scales = scales
           return { ...t, ...extras, reference: Object.keys(cleanRef).length ? cleanRef : t.reference } as Task
         })
         setTasks(unpacked)

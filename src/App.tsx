@@ -14,12 +14,14 @@ import { DoneForToday } from './states/DoneForToday'
 import { History } from './states/History'
 import { TaskReview } from './states/TaskReview'
 
+import { PodcastPlayer, KANNADA_EPISODES } from './components/PodcastPlayer'
 import { recordCompletion } from './lib/momentum'
 import { recordCompletion as recordProgress, getTasksCompletedToday as getProgressToday, getLastCategory as getProgressLastCategory } from './lib/progress'
+import { getCompletedIds } from './lib/progress'
 
 const IS_REVIEW = new URLSearchParams(window.location.search).has('review')
 
-type AppState = 'loading' | 'auth' | 'intent' | 'home' | 'journeys' | 'focused' | 'audio' | 'whatsnext' | 'donefortoday' | 'history' | 'error'
+type AppState = 'loading' | 'auth' | 'intent' | 'home' | 'journeys' | 'focused' | 'audio' | 'whatsnext' | 'donefortoday' | 'history' | 'podcast' | 'error'
 
 interface TaskData {
   task_id: string
@@ -35,9 +37,13 @@ interface TaskData {
   reference?: { type: string; [key: string]: any }
   tools?: string[]
   completion?: string
+  prompts?: { prompt: string; lines: number }[]
   needs_guitar?: boolean
   bpm?: number
   chords?: string[]
+  scale?: string
+  scales?: string[]
+  audioUrl?: string
   tags?: string[]
   sequence?: { name: string; order: number; total: number }
   song?: { title: string; artist: string; genre: string; capo: number }
@@ -60,6 +66,8 @@ function App() {
   const [audioMode, setAudioMode] = useState<'speak' | 'listen'>('speak')
   const [tasksCompletedToday, setTasksCompletedToday] = useState(getProgressToday)
   const [lastCategory, setLastCategory] = useState(getProgressLastCategory)
+  const [podcastEpisode, setPodcastEpisode] = useState(0)
+  const [podcastTasks, setPodcastTasks] = useState<any[]>([])
 
   useEffect(() => { sessionStorage.setItem('forge_appState', appState) }, [appState])
   useEffect(() => { sessionStorage.setItem('forge_currentTask', JSON.stringify(currentTask)) }, [currentTask])
@@ -92,6 +100,15 @@ function App() {
     setAppState('journeys')
   }
 
+  async function handlePodcast(episodeIdx: number) {
+    setPodcastEpisode(episodeIdx)
+    try {
+      const d = await apiFetch<{ tasks: any[] }>('/tasks?category=learn_kannada')
+      setPodcastTasks(d.tasks || [])
+    } catch { setPodcastTasks([]) }
+    setAppState('podcast')
+  }
+
   function handleStartTask(task: any, mode: 'screen' | 'speak' | 'listen') {
     const ref = task.reference || {} as any
     setCurrentTask({
@@ -108,9 +125,12 @@ function App() {
       reference: task.reference,
       tools: task.tools,
       completion: task.completion,
+      prompts: task.prompts,
       needs_guitar: task.needs_guitar || ref.needs_guitar,
       bpm: task.bpm || ref.bpm,
       chords: task.chords || ref.chords,
+      scale: task.scale,
+      scales: task.scales,
       tags: task.tags || ref.tags,
       sequence: task.sequence || ref.sequence,
       song: task.song || ref.song,
@@ -141,7 +161,7 @@ function App() {
         const seq = t.sequence || ref.sequence
         const song = t.song || ref.song
         const tags = t.tags || ref.tags
-        return { ...t, sequence: seq, song, tags, bpm: t.bpm || ref.bpm, chords: t.chords || ref.chords, needs_guitar: t.needs_guitar || ref.needs_guitar }
+        return { ...t, sequence: seq, song, tags, bpm: t.bpm || ref.bpm, chords: t.chords || ref.chords, needs_guitar: t.needs_guitar || ref.needs_guitar, scale: t.scale || ref.scale, scales: t.scales || ref.scales }
       })
       const next = tasks.find((t: any) => t.sequence?.name === seqName && t.sequence?.order === nextOrder)
       if (next) {
@@ -183,7 +203,7 @@ function App() {
     if (appState === 'intent') return <IntentCapture onGoalSet={handleGoalSet} />
 
     if (appState === 'home')
-      return <GoalHome tasksCompletedToday={tasksCompletedToday} onPractice={handlePractice} onHistory={() => setAppState('history')} onEditGoals={() => setAppState('intent')} />
+      return <GoalHome tasksCompletedToday={tasksCompletedToday} onPractice={handlePractice} onPodcast={handlePodcast} onHistory={() => setAppState('history')} onEditGoals={() => setAppState('intent')} />
 
     if (appState === 'journeys')
       return <Journeys category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} onStartTask={handleStartTask} onHome={() => setAppState('home')} />
@@ -193,6 +213,11 @@ function App() {
 
     if (appState === 'audio' && currentTask)
       return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => setAppState('journeys')} />
+
+    if (appState === 'podcast')
+      return <PodcastPlayer episode={KANNADA_EPISODES[podcastEpisode]} tasks={podcastTasks}
+        onDone={() => setAppState('home')}
+        onTaskComplete={(taskId) => { const ids = getCompletedIds(); ids.add(taskId) }} />
 
     if (appState === 'whatsnext')
       return <WhatsNext completedSkillArea={currentTask?.skill_area} category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} tasksCompletedToday={tasksCompletedToday} onStartTask={handleStartTask} onDoneForNow={() => setAppState('journeys')} />

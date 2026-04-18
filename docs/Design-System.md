@@ -1,8 +1,10 @@
 # Forge — Design System
 
+> How Forge looks, feels, and behaves. Implementation of the principles in [Philosophy.md](./Philosophy.md).
+
 ## Design Principles
 
-Based on research across Duolingo, Headspace, Finch, FocusRoom, and habit formation UX literature.
+Based on serotonergic design principles — technology that produces contentment and genuine skill growth, not dopaminergic engagement loops. Informed by research across Headspace, Finch, FocusRoom, positive computing (Calvo & Peters), Self-Determination Theory (Ryan & Deci), and evidence-based learning science.
 
 ### 1. Warmth Is the Quiet Multiplier
 The app should feel like a thoughtful friend, not a task database. Warm colors, conversational copy, micro-interactions that feel alive. The task card should feel like a note from someone who cares about your progress.
@@ -14,7 +16,7 @@ Every screen has exactly one primary action. No navigation bars, no menus during
 Day 1 feels almost empty — just the question, then one task. Momentum indicator appears after the user has something to show. History link appears after completions exist. The app reveals itself as you use it.
 
 ### 4. Purposeful Delight
-Every animation serves the habit loop:
+Every animation serves the practice loop:
 - Task appears: subtle fade-in, like a message arriving
 - "Let's go" tap: satisfying haptic + card expanding into focused view
 - "I'm done" tap: warm pulse or glow (not confetti — too much)
@@ -29,6 +31,36 @@ The completion state is the most important screen. It needs to feel genuinely re
 
 ### 7. No Shame, Ever
 If a user returns after a gap: "Welcome back. Ready for one?" — as if no time passed. Momentum resets weekly by design. Every Monday is a fresh start.
+
+### 8. Desirable Difficulty
+The practice must feel like practice, not like scrolling. Quiz mode defaults to retrieval (produce the answer) not recognition (pick from options). Fill-blanks require typing, not tapping. Chord diagrams show what to play — the user has to play it. The UI should be warm and supportive, but the task itself should require genuine cognitive or physical effort. Easy feels good in the moment; hard is what actually rewires the brain. Design for the latter, wrap it in the former.
+
+---
+
+## UI Decisions
+
+Specific interaction design choices that implement the philosophy.
+
+### Free-Text Intent, Not Dropdowns
+The first screen asks "What do you want to get better at?" as free text, not a dropdown. The app eliminates decisions — the first interaction shouldn't be one. Free text feels personal and collects demand data for unsupported goals.
+
+### No Timer During Practice
+User taps "Let's go" → clean focused view. No countdown. Timers create pressure, not momentum. Finishing early feels wasteful, running over feels like failure. Time estimate appears subtly as reassurance ("This usually takes about 10 minutes"), not as a constraint.
+
+### "Not the Right Moment" Instead of Skip
+Contextual skip with a one-tap reason: "Too long right now" / "Not in the mood for this type" / "Already know this." Every skip becomes actionable signal. Generic skips produce useless data.
+
+### Momentum Score, Not Streak
+Rolling weekly momentum: active days shown as dots, level label ("Getting started" / "Building momentum" / "On fire"). Resets every Monday. No streak counter, no "don't break the chain." Momentum rewards consistency without demanding daily use or punishing gaps.
+
+### Clean Task Card — No Visible Metadata
+Main screen shows ONLY the task description and "Let's go." No type badges, no difficulty labels, no time estimates on the card. Metadata is internal scoring input, not user-facing UI. The card should feel like a nudge from a coach, not a work assignment.
+
+### "Done for Today" Rest State
+After 2-3 completions, the app shifts to a rest state: "You've done 3 tasks today. That's real progress. Come back tomorrow." A completion state creates a powerful psychological reward and makes the user want to come back rather than feeling drained.
+
+### "Go Do It" for Real-World Tasks
+Conversation/Connection tasks use "Go do it" instead of "Let's go" — acknowledging the user is leaving the app. The flow: see prompt → go live → come back → reflect. No timer, no reference material. Just a nudge and a reflection space.
 
 ---
 
@@ -379,9 +411,17 @@ Note: Venue generated Cloudscape-based mockups. We're implementing with Tailwind
 
 > See `UX-Audit.md` for the full audit. Key findings that affect the Design System:
 
-### Principle #6 Amendment: Immediate Payoff Must Be Variable
+### Principle #6 Amendment: Immediate Payoff Must Feel Complete, Not Variable
 
-The current completion screen shows "Nice work." every time. Research on habit-forming apps (thisisglance.com, xqa.io) is emphatic: **variable rewards sustain engagement far better than predictable ones.** The completion screen should draw from a pool of 15-20 warm, varied messages and include specific stats (time spent, items learned, streak count). This doesn't conflict with the "warm pulse, not confetti" principle — it's about *content variety*, not visual excess.
+The completion screen should feel like the end of a satisfying chapter — warm, specific, and final. Not a slot machine pull. Variable reward mechanics (randomized messages, surprise bonuses, streak celebrations) are dopaminergic tools that shift motivation from "I practiced because it matters" to "I practiced to see what reward I get." This is the Duolingo trap.
+
+The completion screen should:
+- Acknowledge what the user specifically did ("You practiced 10 Kannada food words" or "You wrote for 8 minutes")
+- Use warm, varied language (not the same "Nice work" every time — but varied for *warmth*, not for *unpredictability*)
+- Never show streak counts, XP, or gamified metrics
+- End with an invitation to reflect, not a nudge to continue
+
+The distinction matters: varied messages that feel like a thoughtful friend noticing different things ≠ variable rewards designed to create anticipation. The former is serotonergic (contentment). The latter is dopaminergic (craving).
 
 ### Principle #3 Amendment: Progressive Discovery Applies to Journey Tasks
 

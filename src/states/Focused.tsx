@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { ReferenceRenderer, ChordReference } from '../components/ReferenceRenderer'
+import { FretboardDiagram } from '../components/FretboardDiagram'
 import { Timer, Metronome } from '../components/WorkspaceTools'
+
 
 // Split long text into visual paragraphs (~2-3 sentences each)
 function Paragraphs({ text, className }: { text: string; className: string }) {
@@ -14,9 +16,10 @@ function Paragraphs({ text, className }: { text: string; className: string }) {
 }
 
 interface Step {
-  type: 'instruction' | 'reference' | 'exercise' | 'reflect'
+  type: 'instruction' | 'reference' | 'exercise' | 'reflect' | 'prompt'
   title: string
   content?: any
+  promptIndex?: number
 }
 
 interface Props {
@@ -27,10 +30,14 @@ interface Props {
     reference?: { type: string; [key: string]: any }
     tools?: string[]
     completion?: string
+    prompts?: { prompt: string; lines: number }[]
     bpm?: number
     chords?: string[]
+    scale?: string
+    scales?: string[]
     sequence?: { name: string; order: number; total: number }
     songSuggestions?: string[]
+    audioUrl?: string
   }
   onDone: (extra?: { text?: string }) => void
   onHome?: () => void
@@ -50,11 +57,19 @@ function buildSteps(task: Props['task']): Step[] {
     return steps
   }
 
-  // Metronome-led practice (guitar technique, rhythm)
+  // Metronome-led practice (guitar technique, rhythm) — metronome shown on instruction screen
   if (tools.includes('metronome')) {
     steps.push({ type: 'instruction', title: 'What to do' })
-    steps.push({ type: 'exercise', title: 'Practice' })
     steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
+  }
+
+  // Multi-prompt writing (deep reading, structured reflection)
+  if (task.prompts?.length && tools.includes('text_input') && !task.reference) {
+    steps.push({ type: 'instruction', title: 'What to do' })
+    task.prompts.forEach((_, i) => {
+      steps.push({ type: 'prompt', title: `${i + 1} of ${task.prompts!.length}`, promptIndex: i })
+    })
     return steps
   }
 
@@ -90,6 +105,13 @@ function buildSteps(task: Props['task']): Step[] {
     return steps
   }
 
+  // Guitar scale/fretboard practice: everything shown on instruction screen
+  if (task.scale || task.scales || task.reference?.fretboard) {
+    steps.push({ type: 'instruction', title: 'What to do' })
+    steps.push({ type: 'reflect', title: 'Reflect' })
+    return steps
+  }
+
   // Default: instruction → study (if reference has renderable content) → reflect
   steps.push({ type: 'instruction', title: 'What to do' })
   if (refType) steps.push({ type: 'reference', title: 'Study' })
@@ -100,7 +122,7 @@ function buildSteps(task: Props['task']): Step[] {
 function reflectPrompt(task: Props['task']): { question: string; hint: string } {
   const tools = task.tools || []
   if (tools.includes('metronome')) return { question: 'Could you keep tempo cleanly?', hint: 'Where did you stumble? What BPM felt comfortable?' }
-  if (tools.includes('text_input') && !task.reference) return { question: 'Read back what you wrote.', hint: 'Does it hold up? What would you change?' }
+  if (tools.includes('text_input') && !task.reference) return { question: task.constraint_note || 'Read back what you wrote.', hint: task.constraint_note ? '' : 'Does it hold up? What would you change?' }
   if (task.type === 'retrieval') return { question: 'Which items did you miss?', hint: 'What tripped you up? Any patterns?' }
   if (task.reference?.type === 'dialogue') return { question: 'Could you say your lines without looking?', hint: 'Try once from memory. What stuck, what didn\'t?' }
   if (task.reference?.type === 'fill_blank') return { question: 'Which blanks were hardest?', hint: 'What made them tricky? How would you remember next time?' }
@@ -112,12 +134,24 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
   const prompt = reflectPrompt(task)
   const [current, setCurrent] = useState(0)
   const [reflection, setReflection] = useState('')
+  const [promptResponses, setPromptResponses] = useState<string[]>(
+    () => new Array(task.prompts?.length || 0).fill('')
+  )
   const step = steps[current]
   const isLast = current === steps.length - 1
 
+  function updatePromptResponse(idx: number, value: string) {
+    setPromptResponses(prev => { const next = [...prev]; next[idx] = value; return next })
+  }
+
+  const hasPromptContent = promptResponses.some(r => r.trim())
+
   function next() {
     if (isLast) {
-      onDone(reflection ? { text: reflection } : undefined)
+      const text = task.prompts?.length
+        ? promptResponses.map((r, i) => `${task.prompts![i].prompt}\n${r}`).filter((_, i) => promptResponses[i].trim()).join('\n\n')
+        : reflection
+      onDone(text ? { text } : undefined)
     } else {
       setCurrent(c => c + 1)
     }
@@ -144,35 +178,87 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
       <div className="flex-1">
         {step.type === 'instruction' && (
           <div className="space-y-5">
-            <p className="text-text-primary text-lg leading-[1.7]">{task.action || task.description}</p>
-            {task.constraint_note && (
-              <div>
-                <p className="text-accent-amber text-xs font-semibold uppercase tracking-wide mb-1">Rules</p>
-                <Paragraphs text={task.constraint_note} className="text-text-secondary text-sm leading-relaxed text-justify" />
-              </div>
-            )}
-            {task.context && (
-              <div>
-                <p className="text-accent-amber text-xs font-semibold uppercase tracking-wide mb-1">Why this matters</p>
-                <Paragraphs text={task.context} className="text-text-secondary/80 text-sm leading-relaxed text-justify" />
-              </div>
-            )}
-            {task.example && (
-              <div>
-                <p className="text-accent-amber text-xs font-semibold uppercase tracking-wide mb-1">Example</p>
-                <div className="bg-bg-surface border border-border rounded-xl px-4 py-3">
-                  <Paragraphs text={task.example} className="text-text-primary text-sm leading-relaxed text-justify" />
-                </div>
-              </div>
-            )}
+            {/* Layer 1: Title */}
+            <p className="text-text-primary text-lg leading-[1.7]">{(task.action || task.description).split('.')[0]}.</p>
+
+            {/* Layer 2: Visuals */}
             {task.chords && task.chords.length > 0 && (
               <ChordReference chords={task.chords} />
+            )}
+            {task.scales && task.scales.length > 0 && (
+              <FretboardDiagram scales={task.scales} />
+            )}
+            {task.scale && !task.scales && (
+              <FretboardDiagram scale={task.scale} />
+            )}
+            {!task.scale && !task.scales && task.reference?.fretboard && (
+              <FretboardDiagram {...task.reference.fretboard} />
+            )}
+            {task.reference?.type === 'text' && task.reference?.mono && !task.scale && !task.reference?.fretboard && (
+              <ReferenceRenderer reference={task.reference} tools={task.tools} bpm={task.bpm} />
+            )}
+
+            {/* Layer 3: Tools */}
+            {task.audioUrl && (
+              <div className="flex items-center gap-3">
+                <audio controls loop src={task.audioUrl} className="h-8" />
+                <span className="text-text-secondary/40 text-xs">Backing track</span>
+              </div>
+            )}
+            {task.bpm && (
+              <Metronome bpm={task.bpm} />
+            )}
+
+            {/* Layer 4: Details (expandable) */}
+            {(task.constraint_note || task.context || task.example || (task.action && task.description !== task.action)) && (
+              <details className="group">
+                <summary className="text-accent-amber text-xs font-semibold uppercase tracking-wide cursor-pointer select-none">
+                  Details ▸
+                </summary>
+                <div className="space-y-4 mt-3">
+                  {task.action && task.description !== task.action && (
+                    <Paragraphs text={task.action ? task.description : ''} className="text-text-secondary text-sm leading-relaxed text-justify" />
+                  )}
+                  {task.constraint_note && (
+                    <div>
+                      <p className="text-accent-amber/60 text-xs font-semibold uppercase tracking-wide mb-1">Rules</p>
+                      <Paragraphs text={task.constraint_note} className="text-text-secondary text-sm leading-relaxed text-justify" />
+                    </div>
+                  )}
+                  {task.context && (
+                    <div>
+                      <p className="text-accent-amber/60 text-xs font-semibold uppercase tracking-wide mb-1">Why this matters</p>
+                      <Paragraphs text={task.context} className="text-text-secondary/80 text-sm leading-relaxed text-justify" />
+                    </div>
+                  )}
+                  {task.example && (
+                    <div>
+                      <p className="text-accent-amber/60 text-xs font-semibold uppercase tracking-wide mb-1">Example</p>
+                      <div className="bg-bg-surface border border-border rounded-xl px-4 py-3">
+                        <Paragraphs text={task.example} className="text-text-primary text-sm leading-relaxed text-justify" />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </details>
             )}
           </div>
         )}
 
         {step.type === 'reference' && task.reference && (
           <ReferenceRenderer reference={task.reference} tools={task.tools} bpm={task.bpm} />
+        )}
+
+        {step.type === 'prompt' && task.prompts && step.promptIndex != null && (
+          <div className="space-y-4">
+            <p className="text-text-primary text-lg leading-relaxed">{task.prompts[step.promptIndex].prompt}</p>
+            <textarea
+              value={promptResponses[step.promptIndex] || ''}
+              onChange={e => updatePromptResponse(step.promptIndex!, e.target.value)}
+              rows={task.prompts[step.promptIndex].lines + 1}
+              className="w-full px-4 py-3 bg-bg-surface border border-border rounded-xl text-text-primary placeholder-text-secondary/40 focus:outline-none focus:border-accent-amber/50 resize-none text-sm"
+            />
+          </div>
         )}
 
         {step.type === 'exercise' && (
@@ -195,7 +281,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         {step.type === 'reflect' && (
           <div className="space-y-4">
             <p className="text-text-primary text-lg">{prompt.question}</p>
-            <p className="text-text-secondary text-sm">{prompt.hint}</p>
+            {prompt.hint && <p className="text-text-secondary text-sm">{prompt.hint}</p>}
             <textarea
               value={reflection}
               onChange={e => setReflection(e.target.value)}
@@ -244,7 +330,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         ) : (
           <button onClick={next}
             className="w-full py-3.5 bg-accent-amber text-bg-primary font-semibold rounded-xl hover:bg-accent-amber-hover transition-colors">
-            {isLast ? (reflection ? 'Save & finish' : 'Finish') : 'Next →'}
+            {isLast ? ((reflection || hasPromptContent) ? 'Save & finish' : 'Finish') : 'Next →'}
           </button>
         )}
 

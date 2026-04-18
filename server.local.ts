@@ -10,7 +10,7 @@ const creativeTasks = JSON.parse(readFileSync('./data/creative_writing.json', 'u
   id: `cw-task-${i}`, goal_category: 'creative_writing', ...t,
 }))
 const kannadaTasks = JSON.parse(readFileSync('./data/learn_kannada.json', 'utf-8')).map((t: any, i: number) => ({
-  id: `kn-task-${i}`, goal_category: 'learn_kannada', ...t,
+  id: t.id || `kn-task-${i}`, goal_category: 'learn_kannada', ...t,
 }))
 const speakingTasks = JSON.parse(readFileSync('./data/public_speaking.json', 'utf-8')).map((t: any, i: number) => ({
   id: `ps-task-${i}`, goal_category: 'public_speaking', ...t,
@@ -30,7 +30,10 @@ const philosophyTasks = JSON.parse(readFileSync('./data/philosophy.json', 'utf-8
 const distributedTasks = JSON.parse(readFileSync('./data/distributed_systems.json', 'utf-8')).map((t: any, i: number) => ({
   id: `ds-task-${i}`, goal_category: 'distributed_systems', ...t,
 }))
-const tasks = [...creativeTasks, ...kannadaTasks, ...speakingTasks, ...guitarTasks, ...thinkingTasks, ...listeningTasks, ...philosophyTasks, ...distributedTasks]
+const deepReadingTasks = JSON.parse(readFileSync('./data/deep_reading.json', 'utf-8')).map((t: any, i: number) => ({
+  id: `dr-task-${i}`, goal_category: 'deep_reading', ...t,
+}))
+const tasks = [...creativeTasks, ...kannadaTasks, ...speakingTasks, ...guitarTasks, ...thinkingTasks, ...listeningTasks, ...philosophyTasks, ...distributedTasks, ...deepReadingTasks]
 
 // In-memory state
 const state = {
@@ -65,6 +68,7 @@ app.post('/api/goals/parse', (req, res) => {
     active_listening: ['listening', 'comprehension', 'attention', 'focus', 'memory'],
     philosophy: ['philosophy', 'philosopher', 'ethics', 'morality', 'stoicism', 'existentialism', 'logic', 'fallacy', 'metaphysics', 'epistemology', 'critical thinking', 'argumentation'],
     distributed_systems: ['distributed', 'system design', 'scalability', 'consensus', 'replication', 'cap theorem', 'raft', 'paxos', 'fault tolerance', 'architecture', 'microservice', 'partitioning', 'sharding'],
+    deep_reading: ['reading', 'read', 'deep reading', 'comprehension', 'books', 'book', 'articles', 'analytical reading', 'critical reading'],
   }
 
   for (const [category, keywords] of Object.entries(goals)) {
@@ -94,7 +98,7 @@ app.get('/api/suggest', (_req, res) => {
 
   const candidates = goalTasks.filter((t: any) => {
     if (completedIds.has(t.id) || skippedIds.has(t.id)) return false
-    // Level gate: allow if no level field, or level <= max completed + 1 (level 1 always ok)
+    // Level gate
     if (t.level && t.level > 1) {
       const allowed = (maxLevel[t.skill_area] || 0) + 1
       if (t.level > allowed) return false
@@ -104,7 +108,27 @@ app.get('/api/suggest', (_req, res) => {
 
   if (!candidates.length) return res.json({ done_for_today: false, tasks_completed: count })
 
-  const task = candidates[Math.floor(Math.random() * candidates.length)]
+  // Phase-aware selection: prefer lowest incomplete phase
+  let task
+  const phases = [1, 2, 3, 4]
+  const phaseThreshold = 0.7 // 70% complete to unlock next phase
+  for (const phase of phases) {
+    const phaseTasks = candidates.filter((t: any) => t.phase === phase)
+    if (phaseTasks.length > 0) {
+      // Check if previous phase is sufficiently complete
+      if (phase > 1) {
+        const prevPhaseTasks = goalTasks.filter((t: any) => t.phase === phase - 1)
+        const prevCompleted = prevPhaseTasks.filter((t: any) => completedIds.has(t.id)).length
+        if (prevPhaseTasks.length > 0 && prevCompleted / prevPhaseTasks.length < phaseThreshold) {
+          continue // previous phase not done enough, skip this phase
+        }
+      }
+      task = phaseTasks[Math.floor(Math.random() * phaseTasks.length)]
+      break
+    }
+  }
+  // Fallback: any candidate (for non-phased goals)
+  if (!task) task = candidates[Math.floor(Math.random() * candidates.length)]
   res.json({ done_for_today: false, tasks_completed: count, task })
 })
 
@@ -161,7 +185,7 @@ app.get('/api/concepts', (_req, res) => {
 const EMOJI_MAP: Record<string, string> = {
   learn_kannada: '🇮🇳', guitar_practice: '🎸', creative_writing: '✍️',
   public_speaking: '🗣', guided_thinking: '🧠', active_listening: '🎧',
-  philosophy: '📖', distributed_systems: '🧩',
+  philosophy: '📖', distributed_systems: '🧩', deep_reading: '📕',
 }
 
 app.get('/api/categories', (_req, res) => {

@@ -4,27 +4,26 @@ import { supabaseAdmin } from './_lib/supabase.js'
 const EMOJI_MAP: Record<string, string> = {
   learn_kannada: '🇮🇳', guitar_practice: '🎸', creative_writing: '✍️',
   public_speaking: '🗣', guided_thinking: '🧠', active_listening: '🎧',
-  philosophy: '📖', distributed_systems: '🧩',
+  philosophy: '📖', distributed_systems: '🧩', deep_reading: '📕',
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
 
-  // Get distinct categories with counts using multiple queries
-  const { data: allCats, error: catError } = await supabaseAdmin
-    .from('tasks')
-    .select('goal_category')
-
-  if (catError) return res.status(500).json({ error: catError.message })
-
-  // Supabase default limit is 1000 — fetch remaining if needed
-  let allRows = allCats || []
-  if (allRows.length === 1000) {
-    const { data: more } = await supabaseAdmin
+  // Get distinct categories with counts — paginate past Supabase 1000-row default
+  let allRows: any[] = []
+  let from = 0
+  const PAGE = 1000
+  while (true) {
+    const { data, error } = await supabaseAdmin
       .from('tasks')
       .select('goal_category')
-      .range(1000, 5000)
-    if (more) allRows = [...allRows, ...more]
+      .range(from, from + PAGE - 1)
+    if (error) return res.status(500).json({ error: error.message })
+    if (!data || data.length === 0) break
+    allRows = allRows.concat(data)
+    if (data.length < PAGE) break
+    from += PAGE
   }
 
   const counts = new Map<string, number>()

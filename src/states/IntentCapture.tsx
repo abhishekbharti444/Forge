@@ -6,6 +6,7 @@ const CATEGORIES = [
   { id: 'public_speaking', label: 'Public Speaking', emoji: '🗣', desc: 'Clarity, storytelling, presence, persuasion' },
   { id: 'philosophy', label: 'Philosophy', emoji: '📖', desc: 'Ethics, logic, thought experiments, wisdom' },
   { id: 'distributed_systems', label: 'Distributed Systems', emoji: '📡', desc: 'Consensus, replication, fault tolerance' },
+  { id: 'deep_reading', label: 'Deep Reading', emoji: '📕', desc: 'Comprehension, argument mapping, critical thinking' },
 ]
 
 interface Props {

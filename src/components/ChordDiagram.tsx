@@ -54,8 +54,8 @@ export function ChordDiagramSVG({ name, frets, fingers, barre }: ChordDiagramPro
 
         {/* Barre */}
         {barre && (
-          <rect x={sx(barre.to) - 4} y={fy(barre.fret) - fretGap / 2 - 4}
-            width={sx(barre.from) - sx(barre.to) + 8} height={8} rx={4}
+          <rect x={Math.min(sx(barre.from), sx(barre.to)) - 4} y={fy(barre.fret) - fretGap / 2 - 4}
+            width={Math.abs(sx(barre.from) - sx(barre.to)) + 8} height={8} rx={4}
             fill="#d4a843" opacity={0.8} />
         )}
 
@@ -144,10 +144,17 @@ const CHORD_DB: Record<string, { frets: number[]; fingers?: number[]; barre?: { 
   'F#m':   { frets: [2, 4, 4, 2, 2, 2], fingers: [1, 3, 4, 1, 1, 1], barre: { fret: 2, from: 0, to: 5 } },
   'Gm':    { frets: [3, 5, 5, 3, 3, 3], fingers: [1, 3, 4, 1, 1, 1], barre: { fret: 3, from: 0, to: 5 } },
   'Cm':    { frets: [-1, 3, 5, 5, 4, 3], fingers: [0, 1, 3, 4, 2, 1], barre: { fret: 3, from: 1, to: 5 } },
+  'C#m':   { frets: [-1, 4, 6, 6, 5, 4], fingers: [0, 1, 3, 4, 2, 1], barre: { fret: 4, from: 1, to: 5 } },
+  'C#sus2':{ frets: [-1, 4, 6, 6, 4, 4], fingers: [0, 1, 3, 4, 1, 1], barre: { fret: 4, from: 1, to: 5 } },
   // Diminished / augmented
   'Bdim':  { frets: [-1, 2, 3, 4, 3, -1], fingers: [0, 1, 2, 4, 3, 0] },
   'F#dim': { frets: [-1, -1, 4, 5, 4, 2], fingers: [0, 0, 1, 3, 2, 1] },
   'Caug':  { frets: [-1, 3, 2, 1, 1, 0], fingers: [0, 4, 3, 1, 2, 0] },
+  // CAGED Am shapes (barre voicings)
+  'Am_D':  { frets: [-1, -1, 7, 9, 10, 8], fingers: [0, 0, 1, 3, 4, 2] },
+  'Am_C':  { frets: [-1, 12, 10, 12, 12, 12], fingers: [0, 3, 1, 4, 4, 4], barre: { fret: 12, from: 2, to: 5 } },
+  'Am_A':  { frets: [-1, 12, 14, 14, 13, 12], fingers: [0, 1, 3, 4, 2, 1], barre: { fret: 12, from: 1, to: 5 } },
+  'Am_G':  { frets: [2, 0, 2, 2, 1, 0], fingers: [2, 0, 3, 4, 1, 0] },
 }
 
 export function lookupChord(name: string) {

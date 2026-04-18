@@ -48,6 +48,9 @@ export function TaskReview() {
           { id: 'creative_writing', label: 'Creative Writing' },
           { id: 'learn_kannada', label: 'Learn Kannada' },
           { id: 'public_speaking', label: 'Public Speaking' },
+          { id: 'guitar_practice', label: 'Guitar Practice' },
+          { id: 'philosophy', label: 'Philosophy' },
+          { id: 'distributed_systems', label: 'Distributed Systems' },
         ].map(c => (
           <button key={c.id} onClick={() => { setCategory(c.id); setSkillFilter('all'); setPage(0) }}
             className={`px-3 py-1.5 rounded-lg text-sm ${category === c.id ? 'bg-accent-amber text-bg-primary' : 'bg-bg-surface text-text-secondary'}`}>

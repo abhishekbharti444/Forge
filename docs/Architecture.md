@@ -407,17 +407,28 @@ The Focused screen assembles itself from the task's reference + tools + completi
 
 Tasks without `reference` or `tools` render exactly as today — just action + constraint + context + example + "I'm done" button. Fully backward compatible.
 
-### Product Principle: Coach + Practice Ground
+### Product Principle: The Two Legs
 
-*Added April 3, 2026*
+*Updated April 11, 2026*
 
-**Be the practice ground when we can. Be the best coach when we can't.**
+Forge stands on two product principles. Both are required. Either alone is insufficient.
+
+**Leg 1: Eliminate the decision.** Be the practice ground when we can. Be the best coach when we can't. The user opens the app and the next action is already chosen. No planning, no browsing, no deciding.
+
+**Leg 2: Make the practice real.** The time spent in Forge must produce actual skill progress — not the illusion of it. Retrieval over recognition. Production over consumption. Desirable difficulty over easy wins.
+
+The Duolingo contrast: Duolingo optimizes for engagement (streaks, XP, recognition taps). Users complete millions of lessons and can't hold a conversation. Forge optimizes for actual learning. It's harder in the moment. But it works.
+
+**The test for every feature:**
+1. Does this eliminate a decision? (Leg 1)
+2. Does this produce real skill progress? (Leg 2)
+3. If neither — don't build it.
+
+### Coach + Practice Ground
 
 For tasks where our interface IS sufficient — vocabulary drilling, quizzing, timed speaking, fill-in-the-blank, dialogue practice, self-testing — the in-app experience should be complete. The user shouldn't need to leave.
 
 For tasks where practice is inherently external — swimming, guitar, drawing — we provide the best possible instructions, technique cues, and resources, then welcome them back for reflection.
-
-The test for every feature: **does this keep the user practicing IN the app, or does it try to replace a tool that already exists better elsewhere?**
 
 Fits (build it): quiz mode, fill-in-the-blank, dialogue practice, timer, text input, rich item details.
 Doesn't fit (don't build): drawing canvas, code editor, video player, audio recorder, movement tracker.
@@ -430,7 +441,7 @@ Doesn't fit (don't build): drawing canvas, code editor, video player, audio reco
 | **Guided external** | Swimming drills, guitar practice, drawing, cooking | Coach: instructions + technique cues + resources | text/steps reference, timer, checklist, `resources` links |
 | **Thinking/analysis** | System design, architecture review, critical thinking | Present scenario, capture response | text reference, text_input, self_report |
 
-### Product Principle: Practice Tool First, Learning Tool Second
+### Practice Tool First, Learning Tool Second
 
 *Added April 5, 2026*
 
@@ -439,6 +450,8 @@ Doesn't fit (don't build): drawing canvas, code editor, video player, audio reco
 Forge optimizes for practice — retrieval drills, application scenarios, design exercises. But every skill area must be learnable from scratch within the app. A user who's never read DDIA should be able to build distributed systems mastery using only Forge.
 
 The balance: **gateway narrations** provide the "why" foundation, **concept cards** organize the knowledge, **fill-blanks** test recall, and **what-breaks scenarios** build intuition. The learning path is: story → reference → drill → apply.
+
+**Default to retrieval, not presentation.** Quiz mode is the default for any structured_list with reveal fields. The user must produce the answer before seeing it. Learn mode (show answer first) is available as a fallback, not the starting point. This is a one-line change in rendering but a fundamental shift in learning effectiveness (Roediger & Karpicke, 2006).
 
 | Goal type | Learning happens... | Forge's role | Content strategy |
 |---|---|---|---|
@@ -906,12 +919,31 @@ forge/
 
 | Service | Limit | MVP Usage | When You'd Upgrade |
 |---|---|---|---|
-| **Vercel** | 100 GB bandwidth, 100K function invocations/day | ~1 GB, ~200 invocations/day | Thousands of daily users |
+| **Vercel** | 100 GB bandwidth, 100K function invocations/day | ~1 GB + 16 MB audio, ~200 invocations/day | Thousands of daily users |
 | **Supabase** | 500 MB DB, 50K MAU, unlimited API | ~5 MB, 20 MAU | 500+ users or need always-on (no pause) |
 | **Resend** (later) | 3K emails/month | ~600/month | 100+ daily users |
 | **OpenAI** (one-time) | Pay-as-you-go | ~$10 for task generation | Only when generating new task banks |
+| **AI4Bharat IndicF5** | Free (MIT, local) | ~16 MB MP3 generated once | Never — it's free forever |
 
 **Supabase free tier caveat:** Projects pause after 1 week of inactivity. With 20 active test users, this shouldn't trigger. If it does, a single API call wakes it (few seconds delay on first request).
+
+### Audio Storage Decision
+
+Pre-generated Kannada TTS audio (via AI4Bharat IndicF5, run locally on M1 Pro) is stored as
+static MP3 files in `public/audio/kn/`. Deployed with the app, served from Vercel's CDN.
+
+- **Total audio:** ~16 MB (MP3 @ 64kbps, ~35 min for full curriculum)
+- **Per-session bandwidth:** ~0.5-1.5 MB (user loads 1-3 tasks)
+- **Capacity:** ~68,000 sessions/month within Vercel's 100 GB free bandwidth
+- **Why not Supabase Storage:** 2 GB/month bandwidth limit = only 1,365 sessions. Bottleneck.
+- **English narration:** Browser Web Speech API (runtime). IndicF5 is Indian languages only.
+
+See `app/todo/audio-infrastructure.md` for full TTS evaluation and pipeline design.
+
+**Scaling plan:** Vercel Hobby limits static uploads to 100 MB. At ~16 MB per language,
+we hit this around 6 Indian languages. When approaching the limit, migrate audio files to
+Cloudflare R2 (10 GB free, zero egress fees). Code change: `audio_url` switches from
+relative path to full URL. $0/month.
 
 ---
 

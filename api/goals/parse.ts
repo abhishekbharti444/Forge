@@ -11,6 +11,7 @@ const GOAL_KEYWORDS: Record<string, string[]> = {
   active_listening: ['listening', 'comprehension', 'attention', 'focus', 'memory'],
   philosophy: ['philosophy', 'philosopher', 'ethics', 'morality', 'stoicism', 'existentialism', 'logic', 'fallacy', 'metaphysics', 'epistemology', 'critical thinking', 'argumentation'],
   distributed_systems: ['distributed', 'system design', 'scalability', 'consensus', 'replication', 'cap theorem', 'raft', 'paxos', 'fault tolerance', 'architecture', 'microservice', 'partitioning', 'sharding'],
+  deep_reading: ['reading', 'read', 'deep reading', 'comprehension', 'books', 'book', 'articles', 'analytical reading', 'critical reading'],
 }
 
 function matchGoal(text: string): string | null {

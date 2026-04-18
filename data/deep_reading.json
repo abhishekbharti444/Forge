@@ -1,0 +1,934 @@
+[
+  {
+    "id": "dr-001",
+    "description": "Read for 2 minutes. Stop. Write what the author argued in exactly 3 sentences. No opinions, no interpretation \u2014 just their argument.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "comprehension",
+    "action": "Pick up whatever you're reading \u2014 a book, an article, a blog post. Read for 2 minutes. Then stop and look away from the text.",
+    "context": "Most people can't accurately restate what they just read. They form vague impressions and call it understanding. This task trains the most fundamental reading skill: did you actually hear what the author said?",
+    "constraint_note": "Write the author's argument in exactly 3 sentences. No opinions, no 'I think,' no interpretation. Just what THEY said. If you can't fill 3 sentences, you missed something. If you need more than 3, you haven't found the core.",
+    "example": "Not: 'The author talks about climate change and makes some good points.' Yes: 'The author argues that carbon pricing is more effective than regulation because it lets markets find the cheapest path to reduction. They cite the EU emissions trading system as evidence. They acknowledge the political difficulty but claim the economic logic is overwhelming.'",
+    "tools": [
+      "timer",
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "restatement"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the author's main claim?",
+        "lines": 2
+      },
+      {
+        "prompt": "How do they support it?",
+        "lines": 2
+      },
+      {
+        "prompt": "What conclusion do they reach?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-002",
+    "description": "Read one page or one scroll of text. Write the single question the author is trying to answer \u2014 not what they said, but what question they're responding to.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "comprehension",
+    "action": "Read one page of a book or one full scroll of an article. Pay attention not to the answers the author gives, but to the question driving the text.",
+    "context": "Every piece of writing is a response to a question \u2014 sometimes stated, usually not. Finding that question is harder than summarizing the answer, and it reveals what the author actually cares about.",
+    "constraint_note": "Write the question as a single question mark sentence. Not a summary of the text \u2014 the question the text exists to answer. If the author were in a room and someone asked them something, what was the question?",
+    "example": "Text about habit formation might be answering: 'Why do people fail to change their behavior even when they know what to do?' \u2014 not 'What are habits?' The deeper question produces the deeper reading.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "restatement"
+    ],
+    "prompts": [
+      {
+        "prompt": "What question is the author trying to answer? Write it as a single question.",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-003",
+    "description": "Read a passage. Explain it to a 12-year-old in 2 sentences. No jargon, no abstractions. If you can't simplify it, you didn't understand it.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "comprehension",
+    "action": "Read a passage \u2014 a paragraph or two from whatever you're reading. Something with a real idea in it, not just narrative.",
+    "context": "The Feynman technique: if you can't explain something simply, you don't understand it. Jargon and abstraction are where false understanding hides. A 12-year-old forces you to find the actual idea underneath the language.",
+    "constraint_note": "Write your explanation in exactly 2 sentences. No words a 12-year-old wouldn't know. No 'essentially' or 'fundamentally' \u2014 those are filler words that mask confusion. If you're stuck, that's the signal: reread the passage.",
+    "example": "Dense text about monetary policy becomes: 'When stuff gets too expensive too fast, the government makes it harder to borrow money so people buy less. That slows prices down, but it also means some people lose their jobs.'",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "simplification"
+    ],
+    "prompts": [
+      {
+        "prompt": "Explain this passage to a 12-year-old. 2 sentences, no jargon.",
+        "lines": 2
+      },
+      {
+        "prompt": "Did you use any word a 12-year-old wouldn't know? Rewrite those parts.",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-004",
+    "description": "Read two pages or a full article section. Write a 1-sentence summary that someone who hasn't read the text would fully understand. One sentence. Not two.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "comprehension",
+    "action": "Read two pages of a book or one full section of an article. Take in the whole argument or narrative arc of that section.",
+    "context": "Compressing to one sentence forces you to find the single most important idea and discard everything else. This is the skill editors, executives, and clear thinkers use constantly \u2014 and most people never practice.",
+    "constraint_note": "One sentence. It must stand alone \u2014 someone who hasn't read the text should understand your sentence without any context. If your sentence needs a 'because' clause that runs for three lines, you haven't found the core yet.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "compression"
+    ],
+    "prompts": [
+      {
+        "prompt": "Write a 1-sentence summary that stands alone \u2014 someone who hasn't read the text should understand it.",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-005",
+    "description": "Read a chapter or long article. Write 3 summaries of the same content: one in 3 sentences, one in 1 sentence, one in exactly 3 words.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "comprehension",
+    "action": "Read a full chapter or a long article \u2014 something substantial enough that summarizing it requires real choices about what to keep and what to cut.",
+    "context": "Progressive compression is how experts think. A doctor summarizes a case in a paragraph for the chart, a sentence for the handoff, and a word for the diagnosis. Each level of compression forces a deeper understanding of what actually matters.",
+    "constraint_note": "Write all three summaries:\n\u2022 3 sentences \u2014 capture the argument with its key support\n\u2022 1 sentence \u2014 the core claim only\n\u2022 3 words \u2014 the essence\nEach must be independently understandable. The 3 words aren't a title \u2014 they're the idea distilled to its atoms.",
+    "example": "A chapter on spaced repetition might become:\n3 sentences: 'Spacing study sessions over time produces dramatically better retention than cramming. The effect is one of the most replicated findings in psychology. The optimal spacing interval grows as the memory strengthens.'\n1 sentence: 'Spreading practice over time beats cramming because memory consolidates between sessions.'\n3 words: 'Space beats mass.'",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "compression"
+    ],
+    "prompts": [
+      {
+        "prompt": "Summarize in 3 sentences.",
+        "lines": 3
+      },
+      {
+        "prompt": "Now compress to 1 sentence.",
+        "lines": 2
+      },
+      {
+        "prompt": "Now 3 words.",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "id": "dr-006",
+    "description": "Read for 5 minutes. Close the text. From memory, list every distinct claim the author made. Then reopen and check \u2014 how many did you miss?",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "comprehension",
+    "action": "Read for 5 minutes \u2014 a book, an article, anything with substance. When the time is up, close the text completely. Don't peek.",
+    "context": "This is retrieval practice applied to reading \u2014 the single most effective learning strategy according to 100+ years of research. The gap between what you remember and what was actually there reveals exactly how deeply you read.",
+    "constraint_note": "First: write every distinct claim or point you can recall from memory. Number them. Don't look back.\nThen: reopen the text and check. Write how many you got right, how many you missed, and which ones you missed. The missed ones tell you where your attention dropped.",
+    "example": null,
+    "tools": [
+      "timer",
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "retrieval"
+    ],
+    "prompts": [
+      {
+        "prompt": "Without looking back: list every distinct claim the author made.",
+        "lines": 4
+      },
+      {
+        "prompt": "Now reopen the text. What claims did you miss?",
+        "lines": 3
+      }
+    ]
+  },
+  {
+    "id": "dr-007",
+    "description": "Read one page. What is the author's main claim? What is their strongest piece of evidence for it? Write both separately.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Read one page of non-fiction \u2014 a book, essay, article, or blog post. Something where the author is making a point, not just telling a story.",
+    "context": "Most readers merge claim and evidence into a single vague impression: 'the author said X and it was convincing.' Separating them is the first structural skill \u2014 and it immediately reveals whether the author actually supported their point or just asserted it.",
+    "constraint_note": "Write two clearly labeled parts:\n\u2022 Claim: [the author's main point in one sentence]\n\u2022 Evidence: [their strongest supporting evidence in one sentence]\nIf you can't find evidence separate from the claim, that tells you something about the writing.",
+    "example": "Claim: 'Remote work increases productivity for knowledge workers.' Evidence: 'A Stanford study of 16,000 workers showed a 13% performance increase when working from home.' \u2014 Notice: the claim is an opinion. The evidence is a fact. They're different things.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "argument_mapping"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the author's main claim?",
+        "lines": 2
+      },
+      {
+        "prompt": "What is their strongest piece of evidence for it?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-008",
+    "description": "Read a passage. List every transition word the author uses \u2014 but, however, therefore, because, although. What do they reveal about how the argument moves?",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Read a passage \u2014 two or three paragraphs. This time, don't read for meaning. Read for mechanics. Hunt for the transition words.",
+    "context": "Transition words are the skeleton of an argument. 'But' signals a turn. 'Therefore' signals a conclusion. 'However' signals a concession. Most readers skip right over them. Noticing them makes invisible structure visible.",
+    "constraint_note": "List every transition word you find and what it does:\n\u2022 'but' \u2192 introduces a counterpoint\n\u2022 'therefore' \u2192 draws a conclusion\n\u2022 'although' \u2192 concedes a point\nThen write one sentence: what does the pattern of transitions tell you about how this author argues?",
+    "example": "If a passage has 5 'but's and no 'therefore,' the author is building tension without resolving it. If it's all 'therefore' and 'thus,' they're building a logical chain. The transitions reveal the architecture.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "argument_mapping"
+    ],
+    "prompts": [
+      {
+        "prompt": "List every transition word you found and what each one does (e.g., 'but' \u2192 counterpoint).",
+        "lines": 4
+      },
+      {
+        "prompt": "What does the pattern of transitions tell you about how this author argues?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-009",
+    "description": "Read two paragraphs. Map the argument as a chain: premise \u2192 premise \u2192 conclusion. Write it as a chain, not a summary.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Read two paragraphs of argumentative writing \u2014 an essay, opinion piece, non-fiction chapter, or editorial. Something where the author is trying to convince you of something.",
+    "context": "Argument mapping is the core skill of analytical reading. Adler called it 'X-raying a book' \u2014 seeing the logical skeleton beneath the prose. Most people have never done this once in their lives. It changes how you read everything.",
+    "constraint_note": "Write the argument as a chain using arrows:\nPremise 1 \u2192 Premise 2 \u2192 Premise 3 \u2192 Conclusion\nNot a summary in paragraph form. A chain. Each link should be one short sentence. If a link is missing or weak, note it.",
+    "example": "'People learn better when tested \u2192 Testing forces retrieval from memory \u2192 Retrieval strengthens neural pathways \u2192 Therefore, testing is more effective than rereading.' \u2014 Four links. Each one can be examined independently.",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "argument_mapping"
+    ],
+    "prompts": [
+      {
+        "prompt": "Write the argument as a chain: Premise \u2192 Premise \u2192 Conclusion. Use arrows, not paragraphs.",
+        "lines": 3
+      },
+      {
+        "prompt": "Is any link in the chain weak or missing? Which one and why?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-010",
+    "description": "Read one page. Find the assumption the author never states but the argument depends on. Write the assumption and why the argument needs it.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "structure",
+    "action": "Read one page of non-fiction. This time, don't look for what the author says. Look for what they DON'T say \u2014 the thing they take for granted.",
+    "context": "Every argument rests on unstated assumptions. 'We should teach coding in schools' assumes coding will remain relevant, that schools are the right venue, and that current curriculum has room. The author never argues for these \u2014 they just assume them. Hidden assumptions are where arguments are most vulnerable.",
+    "constraint_note": "Write:\n\u2022 The assumption: [one sentence \u2014 what the author takes for granted]\n\u2022 Why it matters: [one sentence \u2014 what happens to the argument if this assumption is wrong]\nThe best answers find assumptions the author probably doesn't realize they're making.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "assumptions"
+    ],
+    "prompts": [
+      {
+        "prompt": "What assumption does the author never state but the argument depends on?",
+        "lines": 2
+      },
+      {
+        "prompt": "What happens to the argument if this assumption is wrong?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-011",
+    "description": "Read a full section or chapter. Write its structure as an outline: thesis, supporting points, and how each point connects to the thesis. Max 10 lines.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "structure",
+    "action": "Read a full chapter of a book or a complete article. Something long enough to have a real structure \u2014 multiple points building toward a conclusion.",
+    "context": "This is Adler's analytical reading: seeing the architecture of a long argument. A chapter isn't a sequence of paragraphs \u2014 it's a structure. Thesis at the top, supporting pillars underneath, each connected to the thesis in a specific way. Most readers never see this.",
+    "constraint_note": "Write an outline in 10 lines or fewer:\n\u2022 Line 1: The thesis (one sentence)\n\u2022 Lines 2-9: Supporting points, each with a note on HOW it supports the thesis (evidence? example? counterargument addressed?)\n\u2022 Line 10: How the author concludes\nThis is a skeleton, not a summary. If you can't fit it in 10 lines, you haven't found the structure yet.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "structure_analysis"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the thesis? One sentence.",
+        "lines": 2
+      },
+      {
+        "prompt": "What are the supporting points? List each with how it supports the thesis.",
+        "lines": 5
+      },
+      {
+        "prompt": "How does the author conclude?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-012",
+    "description": "Read two passages from different parts of the same text. How does the second passage depend on what the first established? Write the logical dependency.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "structure",
+    "action": "Pick two passages from the same book or article \u2014 one from earlier, one from later. Read both. Look for how the later passage builds on, assumes, or extends the earlier one.",
+    "context": "Good writing builds arguments across sections. Chapter 5 depends on a concept introduced in Chapter 2. A later paragraph assumes you accepted an earlier claim. Seeing these dependencies is how you read a book as a system, not a sequence.",
+    "constraint_note": "Write:\n\u2022 What the first passage establishes (1 sentence)\n\u2022 What the second passage argues (1 sentence)\n\u2022 The dependency: how does the second NEED the first? What breaks if you remove the first passage?\nIf there's no dependency, that tells you something about the text's structure too.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "structure_analysis"
+    ],
+    "prompts": [
+      {
+        "prompt": "What does the first passage establish?",
+        "lines": 2
+      },
+      {
+        "prompt": "What does the second passage argue?",
+        "lines": 2
+      },
+      {
+        "prompt": "How does the second depend on the first? What breaks if you remove the first?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-013",
+    "description": "Read a passage. Is the author using evidence, anecdote, or authority to support their point? Write which type and whether it actually convinces you.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "evaluation",
+    "action": "Read a passage where the author is making a claim and supporting it. Pay attention to HOW they support it \u2014 not whether you agree.",
+    "context": "There are three fundamentally different types of support: evidence (data, studies, facts), anecdote (stories, examples, personal experience), and authority ('experts say,' 'research shows' without citing it). Most readers don't distinguish between them. An anecdote feels like evidence but isn't.",
+    "constraint_note": "Write:\n\u2022 The claim (1 sentence)\n\u2022 Support type: evidence, anecdote, or authority\n\u2022 Does it convince you? Why or why not? (2 sentences)\nBe specific about what makes the support strong or weak. 'It's convincing' isn't enough.",
+    "example": "'Studies show meditation reduces anxiety' (authority \u2014 which studies?). 'A 2019 meta-analysis of 47 trials found meditation reduced anxiety scores by 0.3 standard deviations' (evidence \u2014 specific, verifiable). 'My friend started meditating and feels calmer' (anecdote \u2014 one person, no controls).",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "evidence_evaluation"
+    ],
+    "prompts": [
+      {
+        "prompt": "Is the author using evidence, anecdote, or authority to support their point?",
+        "lines": 1
+      },
+      {
+        "prompt": "Does it convince you? Why or why not?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-014",
+    "description": "Read one page. Find one claim the author presents as obvious that actually isn't. Write why someone could reasonably disagree.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "evaluation",
+    "action": "Read one page. This time, watch for moments where the author says something as if everyone agrees \u2014 'of course,' 'clearly,' 'obviously,' 'it goes without saying,' or just states it flatly without argument.",
+    "context": "Authors smuggle controversial claims past you by presenting them as self-evident. 'Of course education is the path to success' \u2014 is it? 'Clearly, technology improves our lives' \u2014 does it always? The word 'obviously' is often a red flag that something isn't obvious at all.",
+    "constraint_note": "Write:\n\u2022 The claim presented as obvious (quote or paraphrase it)\n\u2022 Why it's not obvious: a reasonable person could disagree because... (2-3 sentences)\nThe goal isn't to be contrarian. It's to notice where the author skips the argument.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "critical_analysis"
+    ],
+    "prompts": [
+      {
+        "prompt": "Find a claim the author presents as obvious. Quote or paraphrase it.",
+        "lines": 2
+      },
+      {
+        "prompt": "Why could someone reasonably disagree with this?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-015",
+    "description": "Read a passage. What is the author NOT saying? What perspective, counterargument, or evidence do they leave out? Write what's missing and whether it matters.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "evaluation",
+    "action": "Read a passage \u2014 ideally something persuasive or argumentative. Read it once for content. Then read it again asking: what's absent?",
+    "context": "What's omitted is often more revealing than what's included. A business book about successful founders that never mentions luck. A health article that cites benefits but not side effects. A political argument that ignores the strongest opposing view. Noticing absence is the hardest evaluation skill.",
+    "constraint_note": "Write:\n\u2022 What the author argues (1 sentence)\n\u2022 What they leave out: a perspective, counterargument, piece of evidence, or affected group they don't mention (1-2 sentences)\n\u2022 Does the omission matter? Does it weaken their argument or is it a reasonable scope choice? (1 sentence)",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "critical_analysis"
+    ],
+    "prompts": [
+      {
+        "prompt": "What does the author argue?",
+        "lines": 2
+      },
+      {
+        "prompt": "What perspective, counterargument, or evidence do they leave out?",
+        "lines": 2
+      },
+      {
+        "prompt": "Does the omission weaken their argument, or is it a reasonable scope choice?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-016",
+    "description": "Read an argumentative passage. Rate the argument's strength from 1 to 5. Write your rating and the specific reason \u2014 not 'I disagree' but 'the evidence is insufficient because...'",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "evaluation",
+    "action": "Read a passage where the author is trying to convince you of something \u2014 an opinion piece, editorial, essay, or argumentative chapter.",
+    "context": "Most people evaluate arguments by whether they agree with the conclusion. That's not evaluation \u2014 that's confirmation bias. A strong argument for a conclusion you dislike is still a strong argument. A weak argument for something you believe is still weak. This task separates agreement from assessment.",
+    "constraint_note": "Write:\n\u2022 Rating: 1 (very weak) to 5 (very strong)\n\u2022 Reason: specifically why this rating. Address the ARGUMENT, not the conclusion.\n  - Weak because: evidence is anecdotal? Logic has gaps? Key counterargument ignored?\n  - Strong because: evidence is specific and verifiable? Logic is tight? Counterarguments addressed?\n'I disagree with the conclusion' is not a valid reason for a low rating.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "evidence_evaluation"
+    ],
+    "prompts": [
+      {
+        "prompt": "Rate this argument's strength from 1 (very weak) to 5 (very strong).",
+        "lines": 1
+      },
+      {
+        "prompt": "Why this rating? Address the argument, not whether you agree with the conclusion.",
+        "lines": 3
+      }
+    ]
+  },
+  {
+    "id": "dr-017",
+    "description": "Read a passage. Write the strongest counterargument the author doesn't address. Then evaluate: does it defeat their point, or can their argument survive it?",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "evaluation",
+    "action": "Read a passage with a clear argument. First understand it fully. Then attack it \u2014 find the best objection the author didn't anticipate or chose not to address.",
+    "context": "This is the full evaluation cycle: understand \u2192 critique \u2192 meta-critique. Most people stop at critique ('here's why they're wrong'). The meta-critique ('but does my objection actually defeat their point?') is where real thinking happens. Sometimes your counterargument is strong but the original argument survives it anyway.",
+    "constraint_note": "Write three parts:\n\u2022 The author's argument (1 sentence)\n\u2022 Your strongest counterargument (2-3 sentences \u2014 make it genuinely strong, not a straw man)\n\u2022 Your verdict: does the counterargument defeat the original point, weaken it, or leave it standing? Why? (1-2 sentences)",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "counterargument"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the author's argument? One sentence.",
+        "lines": 2
+      },
+      {
+        "prompt": "Write the strongest counterargument they don't address.",
+        "lines": 3
+      },
+      {
+        "prompt": "Does your counterargument defeat their point, or can their argument survive it?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-018",
+    "description": "Read a passage that makes a prediction or recommendation. What would have to be true for the author to be wrong? Write the conditions under which their conclusion fails.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "evaluation",
+    "action": "Find a passage where the author predicts something ('AI will...', 'the economy will...') or recommends something ('you should...', 'companies need to...'). Read it carefully.",
+    "context": "Karl Popper argued that the mark of a real claim is that it can be falsified \u2014 you can say what would prove it wrong. Knowing the failure conditions of an argument is the deepest form of understanding it. If nothing could prove the author wrong, they haven't said anything meaningful.",
+    "constraint_note": "Write:\n\u2022 The prediction or recommendation (1 sentence)\n\u2022 Falsification conditions: what specific things would have to happen for this to be wrong? (2-3 conditions)\n\u2022 How likely are those conditions? Is the author making a safe bet or a bold claim?\nThe best answers find conditions the author probably hasn't considered.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "critical_analysis"
+    ],
+    "prompts": [
+      {
+        "prompt": "What prediction or recommendation does the author make?",
+        "lines": 2
+      },
+      {
+        "prompt": "What would have to be true for them to be wrong? List 2-3 conditions.",
+        "lines": 3
+      }
+    ]
+  },
+  {
+    "id": "dr-019",
+    "description": "Read for 5 minutes. Write one thing the author would disagree with you about. Then argue their side \u2014 why might they be right?",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 10,
+    "skill_area": "connection",
+    "action": "Read for 5 minutes. As you read, notice where the author's perspective differs from yours \u2014 where they see the world differently.",
+    "context": "The easiest reading is reading that confirms what you already believe. The most valuable reading challenges it. This task forces you to find the friction point between the author's worldview and yours \u2014 and then take their side. That's where reading changes you.",
+    "constraint_note": "Write:\n\u2022 The disagreement: one thing the author believes that you don't (1 sentence)\n\u2022 Their case: argue FOR the author's position as if you believed it (2-3 sentences)\nThe test: could the author read your summary of their position and say 'yes, that's what I mean'?",
+    "example": null,
+    "tools": [
+      "timer",
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "belief_update"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is one thing the author believes that you don't?",
+        "lines": 2
+      },
+      {
+        "prompt": "Argue their side \u2014 why might they be right?",
+        "lines": 3
+      }
+    ]
+  },
+  {
+    "id": "dr-020",
+    "description": "Read a passage. Write one sentence connecting this idea to something from a completely different domain \u2014 a different field, a personal experience, a conversation you had.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "connection",
+    "action": "Read a passage. Then think sideways \u2014 not deeper into the text, but outward. Where else have you encountered something like this idea?",
+    "context": "Cross-domain connections are where original thinking comes from. Darwin connected economics to biology. Steve Jobs connected calligraphy to computing. The ability to see 'this is like that' across unrelated fields is a trainable skill, and reading is the best training ground.",
+    "constraint_note": "Write:\n\u2022 The idea from the text (1 sentence)\n\u2022 The connection to something unrelated (1 sentence)\n\u2022 Why the connection works \u2014 what do they share? (1 sentence)\nThe more surprising the connection, the better. 'This reminds me of another book about the same topic' doesn't count.",
+    "example": "Reading about how ant colonies make decisions without a leader might connect to: 'This is how good engineering teams work \u2014 no one decides, but the right thing emerges from local interactions and shared rules.'",
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "cross_domain"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the idea from the text?",
+        "lines": 2
+      },
+      {
+        "prompt": "What does it connect to from a completely different domain?",
+        "lines": 2
+      },
+      {
+        "prompt": "Why does the connection work? What do they share?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-021",
+    "description": "Read a passage. If you had to teach this idea to a friend over coffee, what analogy would you use? Write the analogy and where it breaks down.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "connection",
+    "action": "Read a passage with a concept worth explaining. Then imagine you're sitting across from a friend who hasn't read it. They ask: 'What's that about?'",
+    "context": "Analogies are the bridge between what someone knows and what they don't. Creating one forces you to understand the deep structure of an idea \u2014 what's essential vs. what's surface detail. And finding where the analogy breaks down reveals the limits of your own understanding.",
+    "constraint_note": "Write:\n\u2022 The analogy: 'This idea is like...' (2-3 sentences \u2014 make it vivid enough that your friend would get it)\n\u2022 Where it breaks down: 'But the analogy fails because...' (1-2 sentences)\nEvery analogy breaks somewhere. Finding that boundary is the real exercise.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "cross_domain"
+    ],
+    "prompts": [
+      {
+        "prompt": "If you had to explain this idea to a friend, what analogy would you use?",
+        "lines": 3
+      },
+      {
+        "prompt": "Where does the analogy break down?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-022",
+    "description": "Read one page. Has this changed your mind about anything \u2014 even slightly? Write what shifted and why. If nothing shifted, write why you resisted.",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "connection",
+    "action": "Read one page. Then sit with it for a moment before writing. Don't rush to the keyboard. Ask yourself honestly: did anything move?",
+    "context": "Tracking belief change is the highest form of active reading. Most people read to confirm, not to update. Noticing 'I used to think X, now I think Y' is rare and valuable. Equally valuable: noticing 'nothing shifted, and here's why' \u2014 because sometimes resistance is justified and sometimes it's just stubbornness.",
+    "constraint_note": "Write one of:\n\u2022 What shifted: 'Before reading this, I thought... Now I think... because...' (2-3 sentences)\n\u2022 Why you resisted: 'Nothing changed because...' \u2014 and be honest about whether your resistance is based on evidence or comfort (2-3 sentences)\nBoth answers are valid. The exercise is the honesty.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "belief_update"
+    ],
+    "prompts": [
+      {
+        "prompt": "Has this changed your mind about anything \u2014 even slightly?",
+        "lines": 1
+      },
+      {
+        "prompt": "What shifted and why? If nothing shifted, why did you resist?",
+        "lines": 3
+      }
+    ]
+  },
+  {
+    "id": "dr-023",
+    "description": "Read a passage. Connect it to something you've read before \u2014 a different book, article, or text. Where do the two authors agree? Where do they diverge?",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "connection",
+    "action": "Read a passage. Then think back to other things you've read \u2014 not just recently, but ever. Find a connection to a different author or text.",
+    "context": "This is Adler's syntopical reading \u2014 the highest level. You're not just understanding one text anymore. You're building a web of ideas across texts, seeing where authors agree, where they contradict, and where they're talking past each other. This is how expertise forms.",
+    "constraint_note": "Write:\n\u2022 The idea in the current text (1 sentence)\n\u2022 The related idea from a different text (1 sentence \u2014 name the source if you can)\n\u2022 Agreement: where do they align? (1 sentence)\n\u2022 Divergence: where do they part ways? (1 sentence)\nIf you can't think of a connection, that's useful data \u2014 it might mean you're reading in a silo.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "synthesis"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the idea in the current text?",
+        "lines": 2
+      },
+      {
+        "prompt": "What related idea from a different text does it connect to?",
+        "lines": 2
+      },
+      {
+        "prompt": "Where do the two authors agree?",
+        "lines": 2
+      },
+      {
+        "prompt": "Where do they diverge?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-024",
+    "description": "Read a passage about any topic. Write a decision you're currently facing where this idea applies \u2014 even if the text has nothing to do with your situation.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 10,
+    "skill_area": "connection",
+    "action": "Read a passage. Then think about your own life \u2014 specifically, a decision or situation you're navigating right now. Find the bridge between the text and your reality.",
+    "context": "The ultimate test of reading: does it change how you act? A book about evolutionary biology might inform a hiring decision. An article about bridge engineering might clarify how you think about redundancy in your relationships. The connection doesn't have to be literal \u2014 it has to be real.",
+    "constraint_note": "Write:\n\u2022 The idea from the text (1 sentence)\n\u2022 Your decision or situation (1 sentence)\n\u2022 How the idea applies \u2014 specifically, what would you do differently? (2-3 sentences)\nIf the application feels forced, pick a different decision. The right connection will feel like a small revelation.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "application"
+    ],
+    "prompts": [
+      {
+        "prompt": "What is the idea from the text?",
+        "lines": 2
+      },
+      {
+        "prompt": "What decision or situation in your life does it apply to?",
+        "lines": 2
+      },
+      {
+        "prompt": "How does the idea change your approach? What would you do differently?",
+        "lines": 3
+      }
+    ]
+  },
+  {
+    "id": "dr-025",
+    "description": "Read for 5 minutes. The moment you notice your mind wandering, stop. Write what you were reading when it happened and what pulled you away.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "metacognition",
+    "action": "Start reading anything \u2014 a book, an article, a blog post. Set a timer for 5 minutes. Your only job: catch the moment your attention leaves the text.",
+    "context": "Most people read for 20 minutes without noticing they stopped comprehending 15 minutes ago. Their eyes move across words but their mind is elsewhere \u2014 planning dinner, replaying a conversation, worrying about tomorrow. Catching the exact moment of departure is the first metacognitive skill.",
+    "constraint_note": "Write:\n\u2022 What you were reading when your mind wandered (the specific sentence or topic)\n\u2022 What pulled you away (a thought, a worry, boredom, a notification, hunger \u2014 be specific)\n\u2022 How long you think you read before it happened\nIf you read the full 5 minutes without wandering, write what kept you engaged. That's equally useful data.",
+    "example": null,
+    "tools": [
+      "timer",
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "attention"
+    ],
+    "prompts": [
+      {
+        "prompt": "What were you reading when your mind wandered?",
+        "lines": 2
+      },
+      {
+        "prompt": "What pulled you away?",
+        "lines": 2
+      },
+      {
+        "prompt": "How long did you read before it happened?",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "id": "dr-026",
+    "description": "Read one page twice. Write what you noticed the second time that you completely missed the first time.",
+    "type": "practice",
+    "difficulty": "easy",
+    "time_minutes": 5,
+    "skill_area": "metacognition",
+    "action": "Read one page of anything. Then immediately read the same page again. Don't skim the second time \u2014 read it with the same attention.",
+    "context": "The gap between your first and second reading reveals your default reading depth. If you notice a lot on the second pass, your first pass was shallower than you thought. This isn't a failure \u2014 it's calibration. Now you know what 'one read' actually gives you.",
+    "constraint_note": "Write:\n\u2022 What you noticed on the second read that you missed the first time (be specific \u2014 a word, a nuance, a connection, a tone)\n\u2022 Why you think you missed it: were you reading too fast? Did you assume you knew what was coming? Were you focused on something else in the text?\nThe WHY matters more than the WHAT.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "self_assessment"
+    ],
+    "prompts": [
+      {
+        "prompt": "What did you notice on the second read that you missed the first time?",
+        "lines": 3
+      },
+      {
+        "prompt": "Why did you miss it? Reading too fast? Assumed you knew? Focused elsewhere?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-027",
+    "description": "Read for 3 minutes. Stop. Without looking back, write which parts you remember clearly and which are already fuzzy. What does the pattern tell you?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "metacognition",
+    "action": "Read for 3 minutes. When the timer goes off, immediately stop and look away from the text. Don't review. Don't peek.",
+    "context": "Retention patterns reveal attention patterns. If you remember the opening but not the middle, your attention faded. If you remember vivid examples but not abstract claims, you're a concrete thinker. If you remember the last thing but not the first, you have a recency bias. These patterns are invisible until you look for them.",
+    "constraint_note": "Write:\n\u2022 What you remember clearly (specific ideas, phrases, images)\n\u2022 What's already fuzzy (topics you know were there but can't reconstruct)\n\u2022 The pattern: what does this tell you about how YOUR attention works when you read? (1-2 sentences)\nThis isn't a memory test. It's a mirror.",
+    "example": null,
+    "tools": [
+      "timer",
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "self_assessment"
+    ],
+    "prompts": [
+      {
+        "prompt": "What do you remember clearly?",
+        "lines": 3
+      },
+      {
+        "prompt": "What's already fuzzy?",
+        "lines": 2
+      },
+      {
+        "prompt": "What does this pattern tell you about how your attention works?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-028",
+    "description": "Read a passage you find difficult. Pinpoint exactly where you got confused \u2014 the specific sentence or idea. Then diagnose why: unfamiliar word? Complex structure? Missing context?",
+    "type": "practice",
+    "difficulty": "medium",
+    "time_minutes": 5,
+    "skill_area": "metacognition",
+    "action": "Deliberately choose something challenging to read \u2014 a dense paragraph, a technical passage, something above your comfort level. Read it slowly.",
+    "context": "Most people push through confusion without noticing it. They finish a paragraph feeling vaguely lost and just keep going. Diagnosing confusion \u2014 pinpointing WHERE it starts and WHY \u2014 is the skill that makes you a self-correcting reader. It's the difference between 'I didn't get it' and 'I lost the thread at this specific sentence because the author assumed I knew X.'",
+    "constraint_note": "Write:\n\u2022 The exact point of confusion (quote or describe the sentence/idea)\n\u2022 The diagnosis \u2014 why it's confusing:\n  - Unfamiliar word or concept?\n  - Sentence structure too complex?\n  - Author assumed knowledge you don't have?\n  - Logical leap you can't follow?\n  - Too many ideas packed into one sentence?\n\u2022 What would fix it: what would you need to know or reread to understand it?",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "reading_process"
+    ],
+    "prompts": [
+      {
+        "prompt": "Where exactly did you get confused? Quote or describe the sentence.",
+        "lines": 2
+      },
+      {
+        "prompt": "Why is it confusing? Unfamiliar word? Complex structure? Missing context?",
+        "lines": 2
+      },
+      {
+        "prompt": "What would you need to know or reread to understand it?",
+        "lines": 2
+      }
+    ]
+  },
+  {
+    "id": "dr-029",
+    "description": "Read a passage. Before writing anything, predict: what will you remember from this tomorrow? Write your prediction. Check tomorrow.",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 5,
+    "skill_area": "metacognition",
+    "action": "Read a passage \u2014 something with enough substance that remembering it tomorrow isn't trivial. Before you write anything, pause and predict.",
+    "context": "Most people are wildly overconfident about what they'll retain. 'I'll definitely remember this' is almost always wrong. Calibrating your sense of 'this will stick' against reality is the deepest metacognitive skill. Over time, you learn which reading experiences actually produce lasting memory \u2014 and you start reading differently.",
+    "constraint_note": "Write:\n\u2022 What you predict you'll remember tomorrow (be specific \u2014 which ideas, which details)\n\u2022 What you predict will be gone by tomorrow\n\u2022 Your confidence level (high/medium/low)\nTomorrow (or next time you open Forge), check: were you right? The gap between prediction and reality is the lesson.",
+    "example": null,
+    "tools": [
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "self_assessment"
+    ],
+    "prompts": [
+      {
+        "prompt": "What do you predict you'll remember tomorrow?",
+        "lines": 2
+      },
+      {
+        "prompt": "What do you predict will be gone?",
+        "lines": 2
+      },
+      {
+        "prompt": "How confident are you? (high / medium / low)",
+        "lines": 1
+      }
+    ]
+  },
+  {
+    "id": "dr-030",
+    "description": "Read for 10 minutes. Afterward, write a reading process journal: how fast did you read? Did your speed change? Where did you slow down or speed up? Why?",
+    "type": "practice",
+    "difficulty": "stretch",
+    "time_minutes": 15,
+    "skill_area": "metacognition",
+    "action": "Read for a full 10 minutes. As you read, try to maintain a background awareness of your own reading \u2014 like watching yourself read from over your own shoulder.",
+    "context": "Self-observation over a longer session reveals patterns invisible in short bursts. You might discover you speed up through difficult sections (avoidance), slow down for stories but rush through arguments (preference), or lose focus at predictable intervals. These patterns, once seen, can be changed.",
+    "constraint_note": "Write a brief reading journal:\n\u2022 Overall pace: fast, medium, or slow?\n\u2022 Did it change? Where did you speed up? Where did you slow down?\n\u2022 Why? Were the speed changes deliberate (slowing for difficulty) or unconscious (rushing through boredom)?\n\u2022 One thing you'd do differently next time you read for 10 minutes\nThis is the most honest conversation you can have with yourself about how you read.",
+    "example": null,
+    "tools": [
+      "timer",
+      "text_input"
+    ],
+    "completion": "text_submitted",
+    "tags": [
+      "reading_process"
+    ],
+    "prompts": [
+      {
+        "prompt": "How fast did you read overall \u2014 fast, medium, or slow?",
+        "lines": 1
+      },
+      {
+        "prompt": "Did your speed change? Where did you speed up or slow down?",
+        "lines": 2
+      },
+      {
+        "prompt": "Why? Were the speed changes deliberate or unconscious?",
+        "lines": 2
+      },
+      {
+        "prompt": "One thing you'd do differently next time.",
+        "lines": 2
+      }
+    ]
+  }
+]

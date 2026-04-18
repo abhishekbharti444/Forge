@@ -96,9 +96,10 @@ export function parseTab(text: string): NoteEvent[] {
 interface TabPlayerProps {
   tabText: string
   bpm?: number
+  subdivision?: number // notes per beat (e.g., 2 for eighth notes in 4/4, 3 for 6/8)
 }
 
-export function TabPlayer({ tabText, bpm = 80 }: TabPlayerProps) {
+export function TabPlayer({ tabText, bpm = 80, subdivision }: TabPlayerProps) {
   const [state, setState] = useState<'idle' | 'loading' | 'playing'>('idle')
   const [currentIdx, setCurrentIdx] = useState(-1)
   const playerRef = useRef<Soundfont.Player | null>(null)
@@ -122,20 +123,27 @@ export function TabPlayer({ tabText, bpm = 80 }: TabPlayerProps) {
     const guitar = playerRef.current
 
     setState('playing')
-    const beatDuration = 60 / bpm
+    const baseSpacing = subdivision
+      ? (60 / bpm) / subdivision
+      : 60 / bpm // fallback: 1 note per beat
 
     for (let i = 0; i < events.length; i++) {
       if (stopRef.current) break
       setCurrentIdx(i)
+      // Use column distance to next note for variable rhythm
+      const colGap = i < events.length - 1
+        ? events[i + 1].column - events[i].column
+        : 1
+      const noteSpacing = baseSpacing * Math.max(colGap, 1)
       for (const note of events[i].notes) {
-        guitar.play(note, ac.currentTime, { duration: beatDuration * 0.9 })
+        guitar.play(note, ac.currentTime, { duration: noteSpacing * 0.9 })
       }
-      await new Promise(r => setTimeout(r, beatDuration * 1000))
+      await new Promise(r => setTimeout(r, noteSpacing * 1000))
     }
 
     setCurrentIdx(-1)
     setState('idle')
-  }, [tabText, bpm])
+  }, [tabText, bpm, subdivision])
 
   const stop = useCallback(() => {
     stopRef.current = true
