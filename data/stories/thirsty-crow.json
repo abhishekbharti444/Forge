@@ -4,6 +4,13 @@
   "title_kn": "ಬಾಯಾರಿದ ಕಾಗೆ",
   "tier": 1,
   "description": "A classic Panchatantra tale about a clever crow who finds water using stones.",
+  "comprehension": [
+    { "after_sentence": 4, "question": "What was the crow looking for?" },
+    { "after_sentence": 9, "question": "Why couldn't the crow drink from the pot?" },
+    { "after_sentence": 13, "question": "What was the crow's idea?" },
+    { "after_sentence": 17, "question": "What happened when the crow dropped stones in the pot?" },
+    { "after_sentence": 21, "question": "How does the story end?" }
+  ],
   "vocabulary": [
     { "kn": "ಕಾಗೆ", "en": "crow", "tr": "kāge", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_0.mp3" },
     { "kn": "ನೀರು", "en": "water", "tr": "nīru", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_1.mp3" },

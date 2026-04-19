@@ -17,7 +17,7 @@ export interface DisplaySegment {
  * Build display segments from a task's reference.
  * Uses narrator_before_url / audio_url / narrator_after_url for all audio.
  */
-export type StoryMode = 'guided' | 'delayed' | 'selective'
+export type StoryMode = 'guided' | 'delayed' | 'selective' | 'immersive' | 'production'
 
 // Word frequency tracker — how many times each Kannada word has been heard
 function getWordFreqs(): Record<string, number> {
@@ -213,8 +213,24 @@ function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode
   const freqs = mode === 'selective' ? getWordFreqs() : null
   const KNOWN_THRESHOLD = 5
 
-  // Vocabulary preview
-  if (ref.vocabulary?.length) {
+  // Production mode: EN prompt → pause → KN answer
+  if (mode === 'production') {
+    for (const s of ref.sentences || []) {
+      out.push({
+        english: s.en,
+        kannada: s.kn,
+        transliteration: s.tr,
+        utterances: [
+          { text: '', pauseAfter: 4.0, role: 'prompt', audioUrl: s.en_audio_url },
+          { text: '', pauseAfter: 1.5, role: 'answer', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
+        ],
+      })
+    }
+    return
+  }
+
+  // Vocabulary preview (skip for immersive — you should know these by now)
+  if (ref.vocabulary?.length && mode !== 'immersive') {
     for (const v of ref.vocabulary) {
       out.push({
         kannada: v.kn,
@@ -228,12 +244,37 @@ function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode
       })
     }
   }
+
+  // Build comprehension question lookup for immersive mode
+  const compMap = new Map<number, string>()
+  if (mode === 'immersive') {
+    for (const c of ref.comprehension || []) compMap.set(c.after_sentence, c.question)
+  }
+
   // Story sentences
-  for (const s of ref.sentences || []) {
+  const sentences = ref.sentences || []
+  for (let i = 0; i < sentences.length; i++) {
+    const s = sentences[i]
     const utts: Utterance[] = [
-      { text: '', pauseAfter: mode === 'selective' ? 2.0 : enPause, role: 'example', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
+      { text: '', pauseAfter: mode === 'selective' ? 2.0 : mode === 'immersive' ? 1.5 : enPause, role: 'example', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
     ]
-    // In selective mode, skip EN if all words are known
+
+    // In immersive mode: KN only, no EN
+    if (mode === 'immersive') {
+      out.push({ kannada: s.kn, transliteration: s.tr, utterances: utts })
+      // Insert comprehension question after this sentence
+      const q = compMap.get(i)
+      if (q) {
+        out.push({
+          english: q,
+          label: 'Comprehension',
+          utterances: [{ text: q, pauseAfter: 4.0, role: 'prompt' }],
+        })
+      }
+      continue
+    }
+
+    // Selective: skip EN if all words known
     const allKnown = freqs && s.kn.replace(/[.!?,;:।]/g, '').split(/\s+/).filter(Boolean)
       .every((w: string) => (freqs[w] || 0) >= KNOWN_THRESHOLD)
     if (!allKnown) {

@@ -197,7 +197,7 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
           <div className="flex items-center gap-2">
             {isStoryEpisode && (
               <div className="flex rounded-lg border border-border overflow-hidden">
-                {(['guided', 'delayed', 'selective'] as StoryMode[]).map(m => (
+                {(['guided', 'delayed', 'selective', 'immersive', 'production'] as StoryMode[]).map(m => (
                   <button key={m} onClick={() => { setStoryMode(m); localStorage.setItem(`forge_story_mode_${episode.taskIds[0]}`, m); playerRef.current?.stop(); setPlaying(false); setSegIdx(0); setUttIdx(0); setFinished(false) }}
                     className={`text-xs px-2 py-1 capitalize transition-colors ${storyMode === m ? 'bg-accent-amber/20 text-accent-amber' : 'text-text-secondary/30'}`}>
                     {m}
@@ -322,7 +322,7 @@ function storyToTask(story: any): any {
     id: story.id,
     description: story.description,
     action: `${story.title_kn} — ${story.title}`,
-    reference: { type: 'bilingual_story', sentences: story.sentences, vocabulary: story.vocabulary },
+    reference: { type: 'bilingual_story', sentences: story.sentences, vocabulary: story.vocabulary, comprehension: story.comprehension },
   }
 }
 
