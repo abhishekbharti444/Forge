@@ -219,7 +219,18 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
         {finished ? (
           <div className="text-center">
             <p className="text-3xl mb-3">🎉</p>
-            <p className="text-text-primary text-lg">Episode complete!</p>
+            <p className="text-text-primary text-lg mb-4">Episode complete!</p>
+            {isStoryEpisode && (() => {
+              const NEXT: Record<string, StoryMode> = { guided: 'delayed', delayed: 'selective', selective: 'immersive', immersive: 'production' }
+              const next = NEXT[storyMode]
+              if (!next) return null
+              return (
+                <button onClick={() => { setStoryMode(next); localStorage.setItem(`forge_story_mode_${episode.taskIds[0]}`, next); setFinished(false); setSegIdx(0); setUttIdx(0) }}
+                  className="text-sm text-accent-amber border border-accent-amber/30 rounded-xl px-4 py-2 hover:bg-accent-amber/10 transition-colors">
+                  Try {next} mode →
+                </button>
+              )
+            })()}
           </div>
         ) : seg ? (
           <div className="text-center px-2 w-full">
