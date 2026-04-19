@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import type { Utterance } from '../lib/speechEngine'
 import { SpeechPlayer } from '../lib/speechPlayer'
-import { buildSegments, type DisplaySegment, type StoryMode } from '../lib/podcastEngine'
+import { buildSegments, type DisplaySegment, type StoryMode, updateWordFreqs } from '../lib/podcastEngine'
 
 interface Episode {
   title: string
@@ -112,6 +112,11 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
     player.onComplete = () => {
       const lastTaskId = episode.taskIds[episode.taskIds.length - 1]
       if (lastTaskId) onTaskComplete?.(lastTaskId)
+      // Update word frequency tracker for selective mode
+      if (isStoryEpisode) {
+        const storyTask = getStoryTask(episode.taskIds[0])
+        if (storyTask?.reference?.sentences) updateWordFreqs(storyTask.reference.sentences)
+      }
       setPlaying(false)
       setFinished(true)
     }
@@ -192,7 +197,7 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
           <div className="flex items-center gap-2">
             {isStoryEpisode && (
               <div className="flex rounded-lg border border-border overflow-hidden">
-                {(['guided', 'delayed'] as StoryMode[]).map(m => (
+                {(['guided', 'delayed', 'selective'] as StoryMode[]).map(m => (
                   <button key={m} onClick={() => { setStoryMode(m); localStorage.setItem(`forge_story_mode_${episode.taskIds[0]}`, m); playerRef.current?.stop(); setPlaying(false); setSegIdx(0); setUttIdx(0); setFinished(false) }}
                     className={`text-xs px-2 py-1 capitalize transition-colors ${storyMode === m ? 'bg-accent-amber/20 text-accent-amber' : 'text-text-secondary/30'}`}>
                     {m}

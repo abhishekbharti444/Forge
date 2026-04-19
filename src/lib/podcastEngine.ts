@@ -17,7 +17,21 @@ export interface DisplaySegment {
  * Build display segments from a task's reference.
  * Uses narrator_before_url / audio_url / narrator_after_url for all audio.
  */
-export type StoryMode = 'guided' | 'delayed'
+export type StoryMode = 'guided' | 'delayed' | 'selective'
+
+// Word frequency tracker — how many times each Kannada word has been heard
+function getWordFreqs(): Record<string, number> {
+  try { return JSON.parse(localStorage.getItem('forge_word_freq') || '{}') } catch { return {} }
+}
+export function updateWordFreqs(sentences: { kn: string }[]) {
+  const freqs = getWordFreqs()
+  for (const s of sentences) {
+    for (const w of s.kn.replace(/[.!?,;:।]/g, '').split(/\s+/).filter(Boolean)) {
+      freqs[w] = (freqs[w] || 0) + 1
+    }
+  }
+  localStorage.setItem('forge_word_freq', JSON.stringify(freqs))
+}
 
 export function buildSegments(task: any, storyMode?: StoryMode): DisplaySegment[] {
   const segments: DisplaySegment[] = []
@@ -196,6 +210,8 @@ function segmentsStructuredList(ref: any, out: DisplaySegment[]) {
 
 function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode) {
   const enPause = mode === 'delayed' ? 3.5 : 0.5
+  const freqs = mode === 'selective' ? getWordFreqs() : null
+  const KNOWN_THRESHOLD = 5
 
   // Vocabulary preview
   if (ref.vocabulary?.length) {
@@ -214,14 +230,15 @@ function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode
   }
   // Story sentences
   for (const s of ref.sentences || []) {
-    out.push({
-      kannada: s.kn,
-      english: s.en,
-      transliteration: s.tr,
-      utterances: [
-        { text: '', pauseAfter: enPause, role: 'example', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
-        { text: '', pauseAfter: 1.0, role: 'answer', audioUrl: s.en_audio_url },
-      ],
-    })
+    const utts: Utterance[] = [
+      { text: '', pauseAfter: mode === 'selective' ? 2.0 : enPause, role: 'example', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
+    ]
+    // In selective mode, skip EN if all words are known
+    const allKnown = freqs && s.kn.replace(/[.!?,;:।]/g, '').split(/\s+/).filter(Boolean)
+      .every((w: string) => (freqs[w] || 0) >= KNOWN_THRESHOLD)
+    if (!allKnown) {
+      utts.push({ text: '', pauseAfter: 1.0, role: 'answer', audioUrl: s.en_audio_url })
+    }
+    out.push({ kannada: s.kn, english: allKnown ? undefined : s.en, transliteration: s.tr, utterances: utts })
   }
 }
