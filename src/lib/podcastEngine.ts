@@ -17,7 +17,9 @@ export interface DisplaySegment {
  * Build display segments from a task's reference.
  * Uses narrator_before_url / audio_url / narrator_after_url for all audio.
  */
-export function buildSegments(task: any): DisplaySegment[] {
+export type StoryMode = 'guided' | 'delayed'
+
+export function buildSegments(task: any, storyMode?: StoryMode): DisplaySegment[] {
   const segments: DisplaySegment[] = []
   const ref = task.reference
 
@@ -39,7 +41,7 @@ export function buildSegments(task: any): DisplaySegment[] {
     case 'sound_exercise': segmentsSoundExercise(ref, segments); break
     case 'dialogue': segmentsDialogue(ref, segments); break
     case 'structured_list': segmentsStructuredList(ref, segments); break
-    case 'bilingual_story': segmentsBilingualStory(ref, segments); break
+    case 'bilingual_story': segmentsBilingualStory(ref, segments, storyMode || 'guided'); break
   }
 
   return segments
@@ -192,7 +194,9 @@ function segmentsStructuredList(ref: any, out: DisplaySegment[]) {
   }
 }
 
-function segmentsBilingualStory(ref: any, out: DisplaySegment[]) {
+function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode) {
+  const enPause = mode === 'delayed' ? 3.5 : 0.5
+
   // Vocabulary preview
   if (ref.vocabulary?.length) {
     for (const v of ref.vocabulary) {
@@ -215,7 +219,7 @@ function segmentsBilingualStory(ref: any, out: DisplaySegment[]) {
       english: s.en,
       transliteration: s.tr,
       utterances: [
-        { text: '', pauseAfter: 0.5, role: 'example', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
+        { text: '', pauseAfter: enPause, role: 'example', audioUrl: s.kn_audio_url, lang: 'kn-IN' },
         { text: '', pauseAfter: 1.0, role: 'answer', audioUrl: s.en_audio_url },
       ],
     })

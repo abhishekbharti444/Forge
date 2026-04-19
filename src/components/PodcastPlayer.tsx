@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import type { Utterance } from '../lib/speechEngine'
 import { SpeechPlayer } from '../lib/speechPlayer'
-import { buildSegments, type DisplaySegment } from '../lib/podcastEngine'
+import { buildSegments, type DisplaySegment, type StoryMode } from '../lib/podcastEngine'
 
 interface Episode {
   title: string
@@ -38,12 +38,17 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
   const [uttIdx, setUttIdx] = useState(0)
   const [finished, setFinished] = useState(false)
   const [showTranslit, setShowTranslit] = useState(() => localStorage.getItem('forge_translit') !== 'hide')
+  const [storyMode, setStoryMode] = useState<StoryMode>(() => {
+    const storyId = episode.taskIds[0]
+    return (localStorage.getItem(`forge_story_mode_${storyId}`) as StoryMode) || 'guided'
+  })
+  const isStoryEpisode = episode.taskIds[0]?.startsWith('kn-story-')
 
   const segmentsRef = useRef<DisplaySegment[]>([])
   const flatRef = useRef<FlatItem[]>([])
   const taskBoundaries = useRef<number[]>([]) // segIdx where each task starts
 
-  // Build segments on mount
+  // Build segments on mount or mode change
   useEffect(() => {
     const episodeTasks = episode.taskIds
       .map(id => tasks.find(t => (t.id || t.task_id) === id) || getStoryTask(id))
@@ -55,7 +60,7 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
 
     episodeTasks.forEach((task, tIdx) => {
       boundaries.push(allSegments.length)
-      const taskSegs = buildSegments(task)
+      const taskSegs = buildSegments(task, isStoryEpisode ? storyMode : undefined)
       taskSegs.forEach(seg => {
         const segI = allSegments.length
         allSegments.push(seg)
@@ -73,7 +78,7 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
     segmentsRef.current = allSegments
     flatRef.current = flat
     taskBoundaries.current = boundaries
-  }, [episode, tasks])
+  }, [episode, tasks, storyMode])
 
   const startPlaying = useCallback(() => {
     if (!flatRef.current.length) return
@@ -184,10 +189,22 @@ export function PodcastPlayer({ episode, tasks, onDone, onTaskComplete }: Podcas
       <div className="pt-8 pb-4">
         <div className="flex items-center justify-between">
           <p className="text-text-secondary/40 text-xs uppercase tracking-wide">{episode.title}</p>
-          <button onClick={() => setShowTranslit(v => { const next = !v; localStorage.setItem('forge_translit', next ? 'show' : 'hide'); return next })}
-            className={`text-xs px-2 py-1 rounded-lg border transition-colors ${showTranslit ? 'border-accent-amber/30 text-accent-amber' : 'border-border text-text-secondary/30'}`}>
-            Aa
-          </button>
+          <div className="flex items-center gap-2">
+            {isStoryEpisode && (
+              <div className="flex rounded-lg border border-border overflow-hidden">
+                {(['guided', 'delayed'] as StoryMode[]).map(m => (
+                  <button key={m} onClick={() => { setStoryMode(m); localStorage.setItem(`forge_story_mode_${episode.taskIds[0]}`, m); playerRef.current?.stop(); setPlaying(false); setSegIdx(0); setUttIdx(0); setFinished(false) }}
+                    className={`text-xs px-2 py-1 capitalize transition-colors ${storyMode === m ? 'bg-accent-amber/20 text-accent-amber' : 'text-text-secondary/30'}`}>
+                    {m}
+                  </button>
+                ))}
+              </div>
+            )}
+            <button onClick={() => setShowTranslit(v => { const next = !v; localStorage.setItem('forge_translit', next ? 'show' : 'hide'); return next })}
+              className={`text-xs px-2 py-1 rounded-lg border transition-colors ${showTranslit ? 'border-accent-amber/30 text-accent-amber' : 'border-border text-text-secondary/30'}`}>
+              Aa
+            </button>
+          </div>
         </div>
         <p className="text-text-secondary/30 text-xs mt-0.5">Task {currentTaskIdx + 1} of {taskCount}</p>
       </div>
