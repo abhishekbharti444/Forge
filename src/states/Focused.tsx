@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ReferenceRenderer, ChordReference } from '../components/ReferenceRenderer'
 import { FretboardDiagram } from '../components/FretboardDiagram'
 import { Timer, Metronome } from '../components/WorkspaceTools'
+import { saveFocusedState, restoreFocusedState } from '../lib/sessionRecovery'
 
 
 // Split long text into visual paragraphs (~2-3 sentences each)
@@ -132,11 +133,45 @@ function reflectPrompt(task: Props['task']): { question: string; hint: string } 
 export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
   const steps = buildSteps(task)
   const prompt = reflectPrompt(task)
-  const [current, setCurrent] = useState(0)
-  const [reflection, setReflection] = useState('')
-  const [promptResponses, setPromptResponses] = useState<string[]>(
-    () => new Array(task.prompts?.length || 0).fill('')
-  )
+  const taskId = (task as any).task_id || ''
+
+  // Restore saved state if available (survives tab eviction)
+  const saved = taskId ? restoreFocusedState(taskId) : null
+
+  const [current, setCurrent] = useState(() => {
+    if (saved && saved.stepIndex >= 0 && saved.stepIndex < steps.length) return saved.stepIndex
+    return 0
+  })
+  const [reflection, setReflection] = useState(() => saved?.reflection || '')
+  const [promptResponses, setPromptResponses] = useState<string[]>(() => {
+    const len = task.prompts?.length || 0
+    if (saved?.promptResponses?.length === len) return saved.promptResponses
+    return new Array(len).fill('')
+  })
+
+  // Refs for visibilitychange flush (always has latest values)
+  const stateRef = useRef({ current, reflection, promptResponses })
+  stateRef.current = { current, reflection, promptResponses }
+
+  // Persist on step transitions (immediate)
+  function saveNow(stepOverride?: number) {
+    const s = stateRef.current
+    saveFocusedState(taskId, stepOverride ?? s.current, s.reflection, s.promptResponses)
+  }
+
+  // Debounced save for text input (1s)
+  useEffect(() => {
+    const t = setTimeout(() => saveNow(), 1000)
+    return () => clearTimeout(t)
+  }, [reflection, promptResponses])
+
+  // visibilitychange: flush immediately when page goes hidden
+  useEffect(() => {
+    const onHidden = () => { if (document.visibilityState === 'hidden') saveNow() }
+    document.addEventListener('visibilitychange', onHidden)
+    return () => document.removeEventListener('visibilitychange', onHidden)
+  }, [])
+
   const step = steps[current]
   const isLast = current === steps.length - 1
 
@@ -153,7 +188,9 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         : reflection
       onDone(text ? { text } : undefined)
     } else {
-      setCurrent(c => c + 1)
+      const nextStep = current + 1
+      saveNow(nextStep)
+      setCurrent(nextStep)
     }
   }
 
@@ -336,7 +373,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
 
         {/* Back */}
         {current > 0 && (
-          <button onClick={() => setCurrent(c => c - 1)}
+          <button onClick={() => { const prev = current - 1; saveNow(prev); setCurrent(prev) }}
             className="w-full text-text-secondary/40 text-sm hover:text-text-secondary transition-colors py-1">
             ← Back
           </button>

@@ -162,6 +162,10 @@ Single source of truth. Consolidated from UX audit findings, content audit, and 
 
 ### Kannada Bilingual Stories — Scaffolded Progression
 
+**Strategic decision (April 19, 2026):** Stories are the audio-first learning modality. Standalone podcast episodes (structured vocabulary drills with narration) are deprecated as a user-facing format. The vocabulary and phrases from those episodes remain accessible through the visual modality (Focused.tsx with structured lists, fill-blank, dialogue). Only story audio is served in production — committed to git, served via Vercel CDN.
+
+Research basis: combining incidental learning (stories in context) with intentional learning (scaffolded active recall) produces significantly greater gains than either alone. Stories provide engagement and contextual memory; the scaffolded progression adds the active recall and production that passive listening lacks.
+
 Prototype built: "The Thirsty Crow" — 22 sentence pairs, KN→EN audio, progressive reveal, toggleable transliteration. Research-backed scaffolding with fading (d=0.71 vs d=0.32 for constant support, Belland et al. 2024).
 
 | # | Phase | Description | Effort |

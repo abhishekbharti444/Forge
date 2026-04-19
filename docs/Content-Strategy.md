@@ -146,6 +146,12 @@ The narration-based tasks ("Listen to Ramu's first auto ride") are engaging cont
 
 **Fix needed:** Every "Learn 10 words" task needs a paired "Recall those 10 words" retrieval task. The narration tasks need comprehension questions that require written answers.
 
+**Two-modality split (April 2026):** Learn Kannada now has two distinct learning paths:
+- **Visual modality** (existing tasks in Focused.tsx): structured lists, fill-blank, dialogue, script practice. Screen-first, no pre-generated audio. This is where explicit vocabulary instruction and active recall live.
+- **Audio modality** (bilingual stories in PodcastPlayer): sentence-by-sentence Kannada→English narratives with scaffolded progression. Eyes-free, podcast-style. This is where contextual exposure and incidental acquisition live.
+
+Stories are initially passive (consumption), which conflicts with the "production over consumption" principle. The scaffolded progression addresses this: guided → delayed translation → selective translation → KN-only with comprehension checks → production prompts. By Phase 4-5, the learner is actively producing and recalling — the story format just provides a more engaging container than isolated vocabulary drills.
+
 #### Philosophy (146 tasks) — ⚠️ 32% Passive
 
 47 tasks are "Learn about X" with structured lists. The 81 practice tasks are genuinely strong — "Should AI have rights? Argue your position in 5 sentences." "Pick a common belief. Use Socratic questioning to expose hidden assumptions."

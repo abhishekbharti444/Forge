@@ -18,6 +18,7 @@ import { PodcastPlayer, KANNADA_EPISODES } from './components/PodcastPlayer'
 import { recordCompletion } from './lib/momentum'
 import { recordCompletion as recordProgress, getTasksCompletedToday as getProgressToday, getLastCategory as getProgressLastCategory } from './lib/progress'
 import { getCompletedIds } from './lib/progress'
+import { saveSession, restoreSession, clearSession } from './lib/sessionRecovery'
 
 const IS_REVIEW = new URLSearchParams(window.location.search).has('review')
 
@@ -56,21 +57,45 @@ const SKIP_AUTH = import.meta.env.VITE_SKIP_AUTH === 'true'
 function App() {
   const [_session, setSession] = useState<Session | null>(null)
   const [appState, setAppState] = useState<AppState>(() => {
-    const saved = sessionStorage.getItem('forge_appState')
-    return (saved as AppState) || 'loading'
+    const saved = restoreSession()
+    return (saved?.appState as AppState) || 'loading'
   })
   const [currentTask, setCurrentTask] = useState<TaskData | null>(() => {
-    const saved = sessionStorage.getItem('forge_currentTask')
-    return saved ? JSON.parse(saved) : null
+    const saved = restoreSession()
+    return saved?.currentTask || null
   })
-  const [audioMode, setAudioMode] = useState<'speak' | 'listen'>('speak')
+  const [audioMode, setAudioMode] = useState<'speak' | 'listen'>(() => {
+    const saved = restoreSession()
+    return saved?.audioMode || 'speak'
+  })
   const [tasksCompletedToday, setTasksCompletedToday] = useState(getProgressToday)
   const [lastCategory, setLastCategory] = useState(getProgressLastCategory)
   const [podcastEpisode, setPodcastEpisode] = useState(0)
   const [podcastTasks, setPodcastTasks] = useState<any[]>([])
 
-  useEffect(() => { sessionStorage.setItem('forge_appState', appState) }, [appState])
-  useEffect(() => { sessionStorage.setItem('forge_currentTask', JSON.stringify(currentTask)) }, [currentTask])
+  // Clean up legacy sessionStorage keys (one-time migration)
+  useEffect(() => {
+    sessionStorage.removeItem('forge_appState')
+    sessionStorage.removeItem('forge_currentTask')
+  }, [])
+
+  // Persist session to localStorage on state changes
+  useEffect(() => {
+    if (appState === 'focused' || appState === 'audio') {
+      saveSession(appState, currentTask, audioMode)
+    }
+  }, [appState, currentTask, audioMode])
+
+  // visibilitychange: last reliable event on mobile — flush state when page goes hidden
+  useEffect(() => {
+    const onHidden = () => {
+      if (document.visibilityState === 'hidden' && (appState === 'focused' || appState === 'audio')) {
+        saveSession(appState, currentTask, audioMode)
+      }
+    }
+    document.addEventListener('visibilitychange', onHidden)
+    return () => document.removeEventListener('visibilitychange', onHidden)
+  }, [appState, currentTask, audioMode])
 
   useEffect(() => {
     if (appState !== 'loading') return // restored from sessionStorage
@@ -141,6 +166,7 @@ function App() {
   }
 
   function handleDone() {
+    clearSession()
     recordCompletion()
     if (currentTask) recordProgress(currentTask)
     const newCount = tasksCompletedToday + 1
@@ -209,10 +235,10 @@ function App() {
       return <Journeys category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} onStartTask={handleStartTask} onHome={() => setAppState('home')} />
 
     if (appState === 'focused' && currentTask)
-      return <Focused task={currentTask} onDone={handleDone} onHome={() => setAppState('journeys')} onNextInSequence={handleNextInSequence} />
+      return <Focused task={currentTask} onDone={handleDone} onHome={() => { clearSession(); setAppState('journeys') }} onNextInSequence={handleNextInSequence} />
 
     if (appState === 'audio' && currentTask)
-      return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => setAppState('journeys')} />
+      return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => { clearSession(); setAppState('journeys') }} />
 
     if (appState === 'podcast')
       return <PodcastPlayer episode={KANNADA_EPISODES[podcastEpisode]} tasks={podcastTasks}

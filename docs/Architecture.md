@@ -73,6 +73,32 @@
 
 ---
 
+## Audio Infrastructure
+
+Kannada bilingual stories require pre-generated audio (browser TTS can't produce quality Kannada). Two local TTS models generate audio offline:
+
+- **IndicF5** — Kannada audio. Runs in conda env `indicf5`. ~1 min/sentence on CPU.
+- **Kokoro-82M** — English audio. Runs in system Python. ~1 sec/sentence.
+
+All audio normalized to -23 LUFS via ffmpeg loudnorm.
+
+**Two-modality decision:** Only story audio is served in production. Visual tasks (vocabulary, grammar, script, phrases) don't need pre-generated audio — they're screen-first.
+
+**Serving:** Story audio lives in `public/audio/stories/`, committed to git, served as static assets via Vercel CDN. At ~1MB per story (25 sentences × 2 languages × ~20KB each), this scales to 200+ stories before reaching any limits.
+
+```
+public/audio/stories/
+├── kn-story-001/          # The Thirsty Crow
+│   ├── kn_0.mp3 ... kn_21.mp3   # Kannada (IndicF5)
+│   └── en_0.mp3 ... en_21.mp3   # English (Kokoro)
+├── kn-story-002/          # next story
+│   └── ...
+```
+
+Story metadata (sentences, translations, transliterations, audio URLs) lives in `data/stories/*.json`.
+
+---
+
 ## Auth Flow
 
 ```
@@ -283,7 +309,7 @@ The suggestion engine is the core IP. Keeping it in its own file means:
 
 Different goal categories need fundamentally different things from the UI:
 - **Creative writing**: just a prompt — user writes elsewhere. The app is a launcher.
-- **Learn Kannada**: structured word lists, script display, tap-to-reveal self-testing. The app must BE the learning tool.
+- **Learn Kannada**: two modalities. Visual: structured word lists, script display, tap-to-reveal self-testing (the app is the learning tool). Audio: bilingual stories with sentence-by-sentence Kannada→English playback (the app is a podcast). Stories use pre-generated audio (IndicF5 for Kannada, Kokoro for English) committed to git and served as static assets. Visual tasks use no pre-generated audio.
 - **Public speaking**: a visible timer, the prompt staying on screen while speaking. The app supports the performance.
 - **Guitar**: chord diagrams, BPM reference, timer. The app is the practice companion.
 - **Fitness**: exercise descriptions, rep counts, rest timers. The app is the coach.
@@ -576,6 +602,7 @@ Tasks tagged with `concepts: string[]` feed a Concept Bank — a growing list of
 | Learn Kannada (grammar) | `fill_blank` | none | `self_report` | **In-app** |
 | Learn Kannada (phrases) | `dialogue` | `timer` | `self_report` | **In-app** |
 | Learn Kannada (script) | `structured_list` | `reveal_hide` | `self_report` | In-app + paper |
+| Learn Kannada (stories) | `bilingual_story` JSON | audio playback | `self_report` | **Audio-first** (eyes-free) |
 | Public speaking | `text` | `timer` | `timer_end` | In-app (speaking aloud) |
 | Philosophy | `structured_list` + `fill_blank` + `text_input` + `steps` + `pairs` | `reveal_hide`, `text_input` | `self_report`, `text_submitted` | **In-app** |
 | Guitar practice | `structured_list` + details + body | `timer` | `timer_end` | Guided external |

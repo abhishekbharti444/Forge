@@ -18,6 +18,7 @@ dist-ssr
 *.sw?
 .vercel
 .env*.local
-public/audio/
+public/audio/*
+!public/audio/stories/
 scripts/*.onnx
 scripts/*.bin

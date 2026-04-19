@@ -24,7 +24,7 @@ src/
 │   ├── DoneForToday.tsx   — Completion rest state (sage green dots, exhale)
 │   ├── IntentCapture.tsx  — "What do you want to get better at?"
 │   ├── AudioPlayerScreen  — Listen/Speak mode for audio-native tasks
-│   ├── PodcastPlayer.tsx  — Podcast-style Kannada lessons
+│   ├── PodcastPlayer.tsx  — Bilingual story player (Kannada→English, sentence-by-sentence)
 │   ├── History.tsx        — Completed tasks with reflections
 │   ├── ConceptBank.tsx    — Concepts encountered, grouped by skill area
 │   ├── Coach.tsx          — Smart task recommendation

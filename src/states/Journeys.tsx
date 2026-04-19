@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { apiFetch } from '../lib/api'
 import { organizeJourneys, organizeCollections, organizeStages, organizeByPhase, COLLECTION_CONFIGS, STAGE_EMOJI, type Journey, type JourneyTask } from '../lib/journeys'
 import { getCompletedIds } from '../lib/progress'
+import { touchRecent, getRecent } from '../lib/sessionRecovery'
 
 import { PodcastPlayer, KANNADA_EPISODES, KANNADA_STORIES } from '../components/PodcastPlayer'
 
@@ -65,8 +66,14 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
 
   function continueJourney(j: Journey) {
     const next = j.tasks.find(t => !completedIds.has(t.id))
+    touchRecent(category, j.key)
     if (next) onStartTask(next, 'screen')
     else onStartTask(j.tasks[0], 'screen') // all done — restart from first
+  }
+
+  function startFromJourney(j: Journey, t: any) {
+    touchRecent(category, j.key)
+    onStartTask(t, 'screen')
   }
 
   if (loading) return (
@@ -126,7 +133,7 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
                 return (
                   <button
                     key={t.id}
-                    onClick={() => onStartTask(t, 'screen')}
+                    onClick={() => startFromJourney(j, t)}
                     className={`w-full px-4 py-2.5 text-left flex items-center gap-3 border-b border-border/50 last:border-b-0 hover:bg-bg-primary/50 transition-colors ${done ? 'opacity-50' : ''}`}
                   >
                     <span className="text-xs shrink-0 w-5 text-center">
@@ -214,6 +221,31 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
           <p className="text-text-secondary/50 text-xs uppercase tracking-wide mt-8 mb-3">📱 Browse & Study</p>
         </div>
       )}
+
+      {/* Recent journeys — LRU pinned at top */}
+      {(() => {
+        const recentKeys = getRecent(category)
+        if (!recentKeys.length) return null
+        const allItems = [...stages, ...journeys, ...collections]
+        const recentItems = recentKeys.map(k => allItems.find(j => j.key === k)).filter(Boolean) as Journey[]
+        if (!recentItems.length) return null
+        const getEmoji = (j: Journey) => {
+          if (j.key.startsWith('stage:')) return STAGE_EMOJI[parseInt(j.key.split(':')[1]) || 1] || '📋'
+          if (j.key.startsWith('collection:')) {
+            const tag = j.key.replace('collection:', '')
+            return (COLLECTION_CONFIGS[category] || []).find(x => x.tag === tag)?.emoji || '📋'
+          }
+          return JOURNEY_EMOJI[j.key] || '📋'
+        }
+        return (
+          <>
+            <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">Recent</p>
+            <div className="space-y-3 mb-8">
+              {recentItems.map(j => renderCard(j, getEmoji(j)))}
+            </div>
+          </>
+        )
+      })()}
 
       {stages.length > 0 && (
         <>
