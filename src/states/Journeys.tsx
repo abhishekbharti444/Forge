@@ -4,7 +4,7 @@ import { organizeJourneys, organizeCollections, organizeStages, organizeByPhase,
 import { getCompletedIds } from '../lib/progress'
 import { touchRecent, getRecent } from '../lib/sessionRecovery'
 
-import { PodcastPlayer, KANNADA_EPISODES, KANNADA_STORIES } from '../components/PodcastPlayer'
+import { PodcastPlayer, KANNADA_STORIES } from '../components/PodcastPlayer'
 
 interface Props {
   category: string
@@ -155,10 +155,9 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
     )
   }
 
-  // Podcast player mode
+  // Story player mode
   if (podcastEpisode !== null && category === 'learn_kannada') {
-    const isStory = podcastEpisode < 0
-    const ep = isStory ? KANNADA_STORIES[-(podcastEpisode + 1)] : KANNADA_EPISODES[podcastEpisode]
+    const ep = KANNADA_STORIES[-(podcastEpisode + 1)]
     return (
       <PodcastPlayer
         episode={ep}
@@ -182,30 +181,10 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
         {totalCompleted}/{totalTasks} tasks completed · {journeys.length} journeys
       </p>
 
-      {/* Podcast episodes for Kannada */}
+      {/* Stories for Kannada — primary audio experience */}
       {category === 'learn_kannada' && (
         <div className="mb-8">
-          <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">🎧 Listen & Learn</p>
-          <div className="space-y-2">
-            {KANNADA_EPISODES.map((ep, i) => {
-              const epCompleted = ep.taskIds.filter(id => completedIds.has(id)).length
-              const pct = ep.taskIds.length > 0 ? (epCompleted / ep.taskIds.length) * 100 : 0
-              return (
-                <button key={i} onClick={() => setPodcastEpisode(i)}
-                  className="w-full bg-bg-surface border border-border rounded-xl px-4 py-3 text-left hover:border-accent-amber/30 transition-colors">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-text-primary text-sm font-medium">{ep.title}</span>
-                    <span className="text-accent-amber text-lg">▶</span>
-                  </div>
-                  <p className="text-text-secondary/50 text-xs mb-2">{ep.description}</p>
-                  <div className="w-full h-1 bg-border rounded-full overflow-hidden">
-                    <div className="h-full bg-accent-amber rounded-full" style={{ width: `${pct}%` }} />
-                  </div>
-                </button>
-              )
-            })}
-          </div>
-          <p className="text-text-secondary/50 text-xs uppercase tracking-wide mt-8 mb-3">📖 Stories</p>
+          <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">📖 Stories</p>
           <div className="space-y-2">
             {KANNADA_STORIES.map((ep, i) => (
               <button key={`story-${i}`} onClick={() => setPodcastEpisode(-(i + 1))}

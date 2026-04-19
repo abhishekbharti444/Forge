@@ -300,7 +300,7 @@ function storyToTask(story: any): any {
     id: story.id,
     description: story.description,
     action: `${story.title_kn} — ${story.title}`,
-    reference: { type: 'bilingual_story', sentences: story.sentences },
+    reference: { type: 'bilingual_story', sentences: story.sentences, vocabulary: story.vocabulary },
   }
 }
 

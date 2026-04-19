@@ -193,6 +193,22 @@ function segmentsStructuredList(ref: any, out: DisplaySegment[]) {
 }
 
 function segmentsBilingualStory(ref: any, out: DisplaySegment[]) {
+  // Vocabulary preview
+  if (ref.vocabulary?.length) {
+    for (const v of ref.vocabulary) {
+      out.push({
+        kannada: v.kn,
+        english: v.en,
+        transliteration: v.tr,
+        label: 'Vocabulary',
+        utterances: [
+          { text: '', pauseAfter: 0.8, role: 'example', audioUrl: v.kn_audio_url, lang: 'kn-IN' },
+          { text: '', pauseAfter: 1.0, role: 'answer', audioUrl: v.en_audio_url },
+        ],
+      })
+    }
+  }
+  // Story sentences
   for (const s of ref.sentences || []) {
     out.push({
       kannada: s.kn,

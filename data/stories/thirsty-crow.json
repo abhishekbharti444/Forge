@@ -4,6 +4,14 @@
   "title_kn": "ಬಾಯಾರಿದ ಕಾಗೆ",
   "tier": 1,
   "description": "A classic Panchatantra tale about a clever crow who finds water using stones.",
+  "vocabulary": [
+    { "kn": "ಕಾಗೆ", "en": "crow", "tr": "kāge", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_0.mp3" },
+    { "kn": "ನೀರು", "en": "water", "tr": "nīru", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_1.mp3" },
+    { "kn": "ಮಡಕೆ", "en": "pot", "tr": "maḍake", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_2.mp3" },
+    { "kn": "ಕಲ್ಲು", "en": "stone", "tr": "kallu", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_3.mp3" },
+    { "kn": "ಬಾಯಾರಿಕೆ", "en": "thirst", "tr": "bāyārike", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_4.mp3" },
+    { "kn": "ಉಪಾಯ", "en": "idea", "tr": "upāya", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_5.mp3" }
+  ],
   "sentences": [
     { "kn": "ಒಂದು ಬೇಸಿಗೆಯ ದಿನ.", "en": "One summer day.", "tr": "Ondu bēsigeya dina.", "kn_audio_url": "/audio/stories/kn-story-001/kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_0.mp3" },
     { "kn": "ಒಂದು ಕಾಗೆ ಹಾರುತ್ತಿತ್ತು.", "en": "A crow was flying.", "tr": "Ondu kāge hāruttittu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_1.mp3" },

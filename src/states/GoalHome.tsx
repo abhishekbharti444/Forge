@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getWeeklyMomentum } from '../lib/momentum'
 import { apiFetch } from '../lib/api'
-import { getCompletedIds } from '../lib/progress'
-import { KANNADA_EPISODES } from '../components/PodcastPlayer'
+import { KANNADA_STORIES } from '../components/PodcastPlayer'
 
 interface GoalInfo { id: string; emoji: string; label: string; count: number }
 
@@ -67,25 +66,18 @@ export function GoalHome({ tasksCompletedToday, onPractice, onPodcast, onHistory
         </div>
       </div>
 
-      {/* Continue Listening — podcast quick-launch for Kannada */}
-      {activeIds.includes('learn_kannada') && (() => {
-        const completed = getCompletedIds()
-        const epIdx = KANNADA_EPISODES.findIndex(ep => ep.taskIds.some(id => !completed.has(id)))
-        if (epIdx < 0) return null
-        const ep = KANNADA_EPISODES[epIdx]
-        const done = ep.taskIds.filter(id => completed.has(id)).length
-        const pct = Math.round((done / ep.taskIds.length) * 100)
+      {/* Continue Listening — story quick-launch for Kannada */}
+      {activeIds.includes('learn_kannada') && KANNADA_STORIES.length > 0 && (() => {
+        const storyIdx = 0 // first story for now; later: find next unfinished
+        const ep = KANNADA_STORIES[storyIdx]
         return (
-          <button onClick={() => onPodcast(epIdx)}
+          <button onClick={() => onPodcast(-(storyIdx + 1))}
             className="w-full bg-bg-surface border border-accent-amber/20 rounded-xl px-4 py-4 mb-8 text-left hover:border-accent-amber/40 transition-colors">
             <div className="flex items-center justify-between mb-1">
               <span className="text-text-secondary/50 text-xs uppercase tracking-wide">🎧 Continue Listening</span>
               <span className="text-accent-amber text-xl">▶</span>
             </div>
-            <p className="text-text-primary text-sm font-medium mb-2">{ep.title}</p>
-            <div className="w-full h-1 bg-border rounded-full overflow-hidden">
-              <div className="h-full bg-accent-amber rounded-full" style={{ width: `${pct}%` }} />
-            </div>
+            <p className="text-text-primary text-sm font-medium">{ep.title}</p>
           </button>
         )
       })()}

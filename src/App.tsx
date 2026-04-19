@@ -14,7 +14,7 @@ import { DoneForToday } from './states/DoneForToday'
 import { History } from './states/History'
 import { TaskReview } from './states/TaskReview'
 
-import { PodcastPlayer, KANNADA_EPISODES } from './components/PodcastPlayer'
+import { PodcastPlayer, KANNADA_STORIES } from './components/PodcastPlayer'
 import { recordCompletion } from './lib/momentum'
 import { recordCompletion as recordProgress, getTasksCompletedToday as getProgressToday, getLastCategory as getProgressLastCategory } from './lib/progress'
 import { getCompletedIds } from './lib/progress'
@@ -241,7 +241,7 @@ function App() {
       return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => { clearSession(); setAppState('journeys') }} />
 
     if (appState === 'podcast')
-      return <PodcastPlayer episode={KANNADA_EPISODES[podcastEpisode]} tasks={podcastTasks}
+      return <PodcastPlayer episode={KANNADA_STORIES[-(podcastEpisode + 1)]} tasks={podcastTasks}
         onDone={() => setAppState('home')}
         onTaskComplete={(taskId) => { const ids = getCompletedIds(); ids.add(taskId) }} />
 
