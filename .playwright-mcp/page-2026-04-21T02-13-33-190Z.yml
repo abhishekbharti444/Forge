@@ -1,0 +1,15 @@
+- generic [ref=e720]:
+  - generic [ref=e721]:
+    - button "← Back" [ref=e722]
+    - generic [ref=e723]:
+      - generic [ref=e724]: vocabulary
+      - generic [ref=e725]: · 5 min
+    - generic [ref=e726]: 2/3
+  - paragraph [ref=e727]: Quiz
+  - generic [ref=e741]:
+    - paragraph [ref=e742]: 1 / 10
+    - paragraph [ref=e743]: Shop?
+    - button "Show answer" [ref=e744]
+  - generic [ref=e734]:
+    - button "Next →" [active] [ref=e739]
+    - button "← Back" [ref=e745]

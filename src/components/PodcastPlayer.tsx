@@ -327,6 +327,12 @@ export const KANNADA_EPISODES: Episode[] = [
 
 // Bilingual stories — standalone episodes
 import thirstyCrow from '../../data/stories/thirsty-crow.json'
+import foxAndGrapes from '../../data/stories/fox-and-grapes.json'
+import monkeyAndCroc from '../../data/stories/monkey-and-crocodile.json'
+import antAndGrass from '../../data/stories/ant-and-grasshopper.json'
+import lionAndMouse from '../../data/stories/lion-and-mouse.json'
+
+const ALL_STORIES = [thirstyCrow, foxAndGrapes, monkeyAndCroc, antAndGrass, lionAndMouse]
 
 function storyToTask(story: any): any {
   return {
@@ -337,15 +343,13 @@ function storyToTask(story: any): any {
   }
 }
 
-export const KANNADA_STORIES: Episode[] = [
-  {
-    title: `📖 ${thirstyCrow.title_kn}`,
-    description: thirstyCrow.description,
-    taskIds: [thirstyCrow.id],
-  },
-]
+export const KANNADA_STORIES: Episode[] = ALL_STORIES.map(s => ({
+  title: `📖 ${s.title_kn}`,
+  description: s.description,
+  taskIds: [s.id],
+}))
 
 export function getStoryTask(id: string): any | undefined {
-  const map: Record<string, any> = { [thirstyCrow.id]: thirstyCrow }
-  return map[id] ? storyToTask(map[id]) : undefined
+  const story = ALL_STORIES.find(s => s.id === id)
+  return story ? storyToTask(story) : undefined
 }

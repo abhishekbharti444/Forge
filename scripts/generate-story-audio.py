@@ -13,7 +13,7 @@ import numpy as np, soundfile as sf
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 APP_DIR = os.path.dirname(SCRIPT_DIR)
-AUDIO_BASE = os.path.join(APP_DIR, 'public', 'audio', 'kn')
+AUDIO_BASE = os.path.join(APP_DIR, 'public', 'audio', 'stories')
 
 # IndicF5 paths
 HF_BASE = os.path.expanduser('~/.cache/huggingface/hub/models--ai4bharat--IndicF5/snapshots/ba85abedf18dc479a447eaa0eccbd76ab78a47d5')

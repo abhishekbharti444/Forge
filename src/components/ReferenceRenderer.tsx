@@ -7,14 +7,19 @@ interface StructuredListProps {
   items: ListItem[]
   revealEnabled?: boolean
   mode?: 'learn' | 'review' | 'quiz' | 'reverse'
+  onComplete?: () => void
 }
 
-export function StructuredList({ items, revealEnabled, mode = 'learn' }: StructuredListProps) {
+export function StructuredList({ items, revealEnabled, mode = 'learn', onComplete }: StructuredListProps) {
   const [quizIndex, setQuizIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [answered, setAnswered] = useState(false)
   const [learnIndex, setLearnIndex] = useState(0)
   const [learnRevealed, setLearnRevealed] = useState(false)
+
+  // Signal quiz completion to parent
+  const quizDone = (mode === 'quiz' || mode === 'reverse') && quizIndex >= items.length
+  useEffect(() => { if (quizDone && onComplete) onComplete() }, [quizDone])
 
   if (mode === 'quiz' || mode === 'reverse') {
     if (quizIndex >= items.length) {
@@ -204,8 +209,7 @@ export function Pairs({ pairs }: PairsProps) {
   )
 }
 
-import { useState, useRef } from 'react'
-import { TabPlayer } from './TabPlayer'
+import { useState, useRef, useEffect } from 'react'
 import { ChordDiagramSVG as _ChordDiagramSVG, lookupChord as _lookupChord } from './ChordDiagram'
 
 interface FillBlankProps {
@@ -405,6 +409,8 @@ interface ReferenceRendererProps {
   reference: { type: string; [key: string]: any }
   tools?: string[]
   bpm?: number
+  onComplete?: () => void
+  forcedMode?: 'learn' | 'review' | 'quiz' | 'reverse'
 }
 
 function PlayButton({ url }: { url?: string }) {
@@ -471,9 +477,11 @@ function SoundExercise({ reference }: { reference: any }) {
   )
 }
 
-function GraduatedRecall({ prompts }: { prompts: any[] }) {
+function GraduatedRecall({ prompts, onComplete }: { prompts: any[]; onComplete?: () => void }) {
   const [index, setIndex] = useState(0)
   const [showAnswer, setShowAnswer] = useState(false)
+  const done = index >= prompts.length
+  useEffect(() => { if (done && onComplete) onComplete() }, [done])
   if (index >= prompts.length) {
     return (
       <div className="w-full text-center py-6">
@@ -604,24 +612,24 @@ function ContextGuess({ items }: { items: any[] }) {
   )
 }
 
-function TextReference({ body, mono, bpm, subdivision }: { body: string; mono?: boolean; bpm?: number; subdivision?: number }) {
+function TextReference({ body, mono }: { body: string; mono?: boolean }) {
   return (
     <div className="w-full">
       <div className={mono ? 'font-mono text-sm bg-bg-surface border border-border rounded-xl px-4 py-3 overflow-x-auto whitespace-pre' : ''}>
         <p className={`text-text-primary leading-relaxed ${mono ? '' : 'text-base'}`}>{body}</p>
       </div>
-      {mono && <TabPlayer tabText={body} bpm={bpm} subdivision={subdivision} />}
     </div>
   )
 }
 
-export function ReferenceRenderer({ reference, tools, bpm }: ReferenceRendererProps) {
+export function ReferenceRenderer({ reference, tools, onComplete, forcedMode }: ReferenceRendererProps) {
   const revealEnabled = tools?.includes('reveal_hide')
   const hasBody = reference.type === 'structured_list' && reference.items?.some((i: any) => i.body)
   const hasReveal = reference.type === 'structured_list' && reference.items?.some((i: any) => i.reveal)
   const [mode, setMode] = useState<'learn' | 'review' | 'quiz' | 'reverse'>(hasReveal ? 'quiz' : hasBody ? 'learn' : 'review')
 
-  const showModeToggle = reference.type === 'structured_list' && reference.items?.some((i: any) => i.reveal)
+  const activeMode = forcedMode || mode
+  const showModeToggle = !forcedMode && reference.type === 'structured_list' && reference.items?.some((i: any) => i.reveal)
 
   return (
     <div className="w-full">
@@ -635,9 +643,9 @@ export function ReferenceRenderer({ reference, tools, bpm }: ReferenceRendererPr
           ))}
         </div>
       )}
-      {reference.type === 'text' && <TextReference body={reference.body} mono={reference.mono} bpm={bpm} subdivision={reference.subdivision} />}
+      {reference.type === 'text' && <TextReference body={reference.body} mono={reference.mono} />}
       {reference.type === 'structured_list' && (
-        <StructuredList items={reference.items} revealEnabled={revealEnabled} mode={mode} />
+        <StructuredList items={reference.items} revealEnabled={revealEnabled} mode={activeMode} onComplete={onComplete} />
       )}
       {reference.type === 'steps' && <Steps steps={reference.steps} />}
       {reference.type === 'pairs' && <Pairs pairs={reference.pairs} />}
@@ -645,7 +653,7 @@ export function ReferenceRenderer({ reference, tools, bpm }: ReferenceRendererPr
       {reference.type === 'dialogue' && <Dialogue lines={reference.lines} />}
       {reference.type === 'narration' && <Narration segments={reference.segments} questions={reference.questions} />}
       {reference.type === 'sound_exercise' && <SoundExercise reference={reference} />}
-      {reference.type === 'graduated_recall' && <GraduatedRecall prompts={reference.prompts} />}
+      {reference.type === 'graduated_recall' && <GraduatedRecall prompts={reference.prompts} onComplete={onComplete} />}
       {reference.type === 'circling' && <Circling prompts={reference.prompts} target={reference.target_structure} />}
       {reference.type === 'shadowing' && <Shadowing phrases={reference.phrases} />}
       {reference.type === 'context_guess' && <ContextGuess items={reference.items} />}

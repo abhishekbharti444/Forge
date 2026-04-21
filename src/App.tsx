@@ -72,7 +72,7 @@ function App() {
   const [lastCategory, setLastCategory] = useState(getProgressLastCategory)
   const [podcastEpisode, setPodcastEpisode] = useState(0)
   const [podcastTasks, setPodcastTasks] = useState<any[]>([])
-
+  const [previousScreen, setPreviousScreen] = useState<AppState>('home')
   // Clean up legacy sessionStorage keys (one-time migration)
   useEffect(() => {
     sessionStorage.removeItem('forge_appState')
@@ -161,8 +161,8 @@ function App() {
       song: task.song || ref.song,
       songSuggestions: task.songSuggestions || ref.songSuggestions,
     })
-    if (mode === 'screen') setAppState('focused')
-    else { setAudioMode(mode); setAppState('audio') }
+    if (mode === 'screen') { setPreviousScreen(appState); setAppState('focused') }
+    else { setPreviousScreen(appState); setAudioMode(mode); setAppState('audio') }
   }
 
   function handleDone() {
@@ -235,10 +235,10 @@ function App() {
       return <Journeys category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} onStartTask={handleStartTask} onHome={() => setAppState('home')} />
 
     if (appState === 'focused' && currentTask)
-      return <Focused task={currentTask} onDone={handleDone} onHome={() => { clearSession(); setAppState('journeys') }} onNextInSequence={handleNextInSequence} />
+      return <Focused task={currentTask} onDone={handleDone} onHome={() => { clearSession(); setAppState(previousScreen) }} onNextInSequence={handleNextInSequence} />
 
     if (appState === 'audio' && currentTask)
-      return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => { clearSession(); setAppState('journeys') }} />
+      return <AudioPlayerScreen task={currentTask} mode={audioMode} onDone={handleDone} onHome={() => { clearSession(); setAppState(previousScreen) }} />
 
     if (appState === 'podcast')
       return <PodcastPlayer episode={KANNADA_STORIES[-(podcastEpisode + 1)]} tasks={podcastTasks}

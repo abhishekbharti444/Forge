@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { apiFetch } from '../lib/api'
-import { organizeJourneys, organizeCollections, organizeStages, organizeByPhase, COLLECTION_CONFIGS, STAGE_EMOJI, type Journey, type JourneyTask } from '../lib/journeys'
+import { organizeJourneys, organizeCollections, organizeStages, organizeByPhase, COLLECTION_CONFIGS, STAGE_EMOJI, TIER_LABELS, TIER_EMOJI, type Journey, type JourneyTask } from '../lib/journeys'
 import { getCompletedIds } from '../lib/progress'
 import { touchRecent, getRecent } from '../lib/sessionRecovery'
 
@@ -74,6 +74,15 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
   function startFromJourney(j: Journey, t: any) {
     touchRecent(category, j.key)
     onStartTask(t, 'screen')
+  }
+
+  function getCollectionEmoji(j: Journey): string {
+    if (j.key.startsWith('collection:')) {
+      const tag = j.key.replace('collection:', '')
+      return (COLLECTION_CONFIGS[category] || []).find(x => x.tag === tag)?.emoji || '📋'
+    }
+    if (j.key.startsWith('stage:')) return STAGE_EMOJI[parseInt(j.key.split(':')[1]) || 1] || '📋'
+    return JOURNEY_EMOJI[j.key] || '📋'
   }
 
   if (loading) return (
@@ -201,59 +210,97 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
         </div>
       )}
 
-      {/* Recent journeys — LRU pinned at top */}
+      {/* CONTINUE — active/recent journeys */}
       {(() => {
         const recentKeys = getRecent(category)
         if (!recentKeys.length) return null
         const allItems = [...stages, ...journeys, ...collections]
         const recentItems = recentKeys.map(k => allItems.find(j => j.key === k)).filter(Boolean) as Journey[]
         if (!recentItems.length) return null
-        const getEmoji = (j: Journey) => {
-          if (j.key.startsWith('stage:')) return STAGE_EMOJI[parseInt(j.key.split(':')[1]) || 1] || '📋'
-          if (j.key.startsWith('collection:')) {
-            const tag = j.key.replace('collection:', '')
-            return (COLLECTION_CONFIGS[category] || []).find(x => x.tag === tag)?.emoji || '📋'
-          }
-          return JOURNEY_EMOJI[j.key] || '📋'
-        }
         return (
           <>
-            <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">Recent</p>
+            <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">Continue</p>
             <div className="space-y-3 mb-8">
-              {recentItems.map(j => renderCard(j, getEmoji(j)))}
+              {recentItems.map(j => renderCard(j, getCollectionEmoji(j)))}
             </div>
           </>
         )
       })()}
 
-      {stages.length > 0 && (
-        <>
-          <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">Your Path</p>
-          <div className="space-y-3">
-            {stages.map(s => {
-              const lvl = parseInt(s.key.split(':')[1]) || 1
-              return renderCard(s, STAGE_EMOJI[lvl] || '📋')
-            })}
-          </div>
-          <p className="text-text-secondary/50 text-xs uppercase tracking-wide mt-8 mb-3">By Topic</p>
-        </>
-      )}
+      {/* RECOMMENDED — suggest next journeys based on progress */}
+      {(() => {
+        const configs = COLLECTION_CONFIGS[category]
+        if (!configs) return null
+        // Find collections with progress but not complete, or first untouched per tier
+        const inProgress = collections.filter(c => c.completed > 0 && c.completed < c.total)
+        const recentKeys = new Set(getRecent(category))
+        const notStarted = collections.filter(c => c.completed === 0 && !recentKeys.has(c.key))
+        // Recommend: in-progress first, then first untouched from lowest tier
+        const recs: Journey[] = [...inProgress]
+        if (recs.length < 3 && notStarted.length) {
+          for (const c of notStarted) {
+            if (recs.length >= 3) break
+            if (!recs.find(r => r.key === c.key)) recs.push(c)
+          }
+        }
+        if (!recs.length) return null
+        return (
+          <>
+            <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">Recommended for you</p>
+            <div className="space-y-3 mb-8">
+              {recs.slice(0, 3).map(j => renderCard(j, getCollectionEmoji(j)))}
+            </div>
+          </>
+        )
+      })()}
 
-      <div className="space-y-3">
-        {journeys.map(j => renderCard(j, JOURNEY_EMOJI[j.key] || '📋'))}
-      </div>
-
-      {collections.length > 0 && (
-        <>
-          <p className="text-text-secondary/50 text-xs uppercase tracking-wide mt-8 mb-3">Collections</p>
-          <div className="space-y-3">
-            {collections.map(c => {
-              const tag = c.key.replace('collection:', '')
-              const cfg = (COLLECTION_CONFIGS[category] || []).find(x => x.tag === tag)
-              return renderCard(c, cfg?.emoji || '📋')
+      {/* ALL JOURNEYS — grouped by tier */}
+      {(() => {
+        const configs = COLLECTION_CONFIGS[category]
+        if (!configs || !collections.length) return null
+        const tiers = [1, 2, 3] as const
+        return (
+          <>
+            {tiers.map(tier => {
+              const tierConfigs = configs.filter(c => c.tier === tier)
+              const tierCollections = tierConfigs
+                .map(c => collections.find(col => col.key === `collection:${c.tag}`))
+                .filter(Boolean) as Journey[]
+              if (!tierCollections.length) return null
+              return (
+                <div key={tier} className="mb-6">
+                  <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">
+                    {TIER_EMOJI[tier]} {TIER_LABELS[tier]}
+                  </p>
+                  <div className="space-y-3">
+                    {tierCollections.map(j => renderCard(j, getCollectionEmoji(j)))}
+                  </div>
+                </div>
+              )
             })}
-          </div>
-        </>
+          </>
+        )
+      })()}
+
+      {/* EXPLORE BY TOPIC — collapsed if journeys exist above, open otherwise */}
+      {journeys.length > 0 && (
+        collections.length > 0 ? (
+          <details className="mb-6">
+            <summary className="text-text-secondary/50 text-xs uppercase tracking-wide cursor-pointer select-none mb-3">
+              Explore by topic ▸
+            </summary>
+            <div className="space-y-3 mt-3">
+              {journeys.map(j => renderCard(j, JOURNEY_EMOJI[j.key] || '📋'))}
+            </div>
+          </details>
+        ) : (
+          <>
+            <p className="text-text-secondary/50 text-xs uppercase tracking-wide mb-3">By topic</p>
+            <div className="space-y-3">
+              {journeys.map(j => renderCard(j, JOURNEY_EMOJI[j.key] || '📋'))}
+            </div>
+          </>
+        )
       )}
     </div>
   )

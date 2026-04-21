@@ -43,6 +43,23 @@ People who want direction, not distraction. Self-learners, career switchers, hob
 
 What they lack: the micro-decision layer — "I have 12 minutes, what's the highest-value thing I can do right now?"
 
+### The Larger Market: Wasted Motivation
+
+*Added April 19, 2026*
+
+The audience is bigger than "self-learners." It's everyone whose motivation gets wasted on passive consumption:
+
+- The person who watches 50 guitar tutorials and still can't play a clean chord change
+- The person who listens to 10 hours of podcasts a week and can barely recall 3 ideas
+- The person who buys courses on public speaking and still freezes in meetings
+- The person who reads 20 books a year and forms only vague impressions
+
+These people don't lack motivation — they spend enormous time and money trying to get better. Guitar tutorials get billions of views. Fitness influencers have tens of millions of followers. Online courses are a $400B market. The motivation is clearly there. What's missing is the structure that converts consumption into practice.
+
+Forge doesn't create motivation. It converts existing motivation into actual progress. The target isn't "people who want to learn" — it's "people who are already trying to learn and failing because everything they use optimizes for consumption, not production."
+
+This reframe matters for positioning: Forge isn't competing with entertainment for attention. It's competing with tutorials, courses, and content platforms for the time people already dedicate to improvement — and offering a better return on that time.
+
 ---
 
 ## Key Risks
@@ -54,6 +71,15 @@ What they lack: the micro-decision layer — "I have 12 minutes, what's the high
 ### Cold Start
 - First 5 sessions determine if someone stays. Task quality must be excellent from day one.
 - **Mitigation:** Hand-curate task banks. Don't rely on raw LLM output.
+- **Sharpened mitigation (April 19, 2026):** Task quality is necessary but not sufficient. The real mitigation is delivering a *felt difference* in the first 3 sessions. The user must experience a micro-proof: "I just wrote the author's argument from memory and I actually could" or "I just identified an unstated assumption I would have missed yesterday." That moment of "this is actually working" is what converts a trial into a habit. The task must produce it, not just be well-written.
+
+### Visible Growth (missing, critical)
+*Added April 19, 2026*
+- Forge currently has momentum dots and completion counts. It lacks a **growth mirror** — concrete evidence that the user can do something today they couldn't do last month.
+- Examples: "Your reading recall went from 40% to 70% over 6 weeks." "You've identified unstated assumptions in 12 passages." "Your pushup count went from 12 to 22."
+- This is not gamification. It's a mirror. Gamification says "don't break the streak." A growth mirror says "look at what you've become." One produces anxiety, the other produces the serotonergic payoff the Philosophy doc describes.
+- Without visible growth, felt competence is invisible. The user practices, improves, but can't see it. The growth mirror is the feature that makes the product self-reinforcing without any dopaminergic mechanics.
+- **Priority:** Should be elevated from implicit to explicit. Currently not on any tier.
 
 ### Monetization
 - Only ~3% of AI app users pay for premium.
@@ -76,10 +102,10 @@ What they lack: the micro-decision layer — "I have 12 minutes, what's the high
 
 ### What's Built
 
-- 1,319 tasks across 8 categories:
+- 1,349 tasks across 9 categories:
   - Creative Writing: 175 | Learn Kannada: 261 | Public Speaking: 150
   - Guitar Practice: 261 | Philosophy: 146 | Distributed Systems: 173
-  - Guided Thinking: 8 | Active Listening: 5
+  - Deep Reading: 30 | Guided Thinking: 8 | Active Listening: 5
 - 30+ skill areas across all categories
 - 8 reference types: text, structured_list, steps, pairs, fill_blank, dialogue, narration, sound_exercise
 - 6 workspace tools: timer, reveal_hide, text_input, checklist, quiz mode, chord diagram
@@ -88,6 +114,7 @@ What they lack: the micro-decision layer — "I have 12 minutes, what's the high
 - Level sequencing, concept tracking, momentum tracking (localStorage)
 - ChordDiagram + FretboardDiagram + TabPlayer components
 - PWA, mobile-ready
+- Multi-prompt writing system: `prompts` array on tasks, rendered as sequential focused screens (one prompt per step, can't peek ahead)
 
 ### What's Not Built Yet
 
@@ -97,7 +124,7 @@ What they lack: the micro-decision layer — "I have 12 minutes, what's the high
 - Audio recording (public speaking)
 - Progressive BPM tracking (guitar)
 - Weekly reflection mirror
-- 3 new categories (Deep Reading, Bodyweight Fitness, Conversation)
+- 3 new categories (~~Deep Reading~~, Bodyweight Fitness, Conversation) — Deep Reading shipped Apr 18 (30 tasks, multi-prompt writing UI)
 
 ---
 
@@ -109,7 +136,7 @@ Single source of truth. Consolidated from UX audit findings, content audit, and 
 
 | # | Task | Type | Effort |
 |---|---|---|---|
-| 1 | Author Deep Reading task bank (~30 tasks) | Content | 1 day |
+| 1 | ~~Author Deep Reading task bank (~30 tasks)~~ | Content | ✅ Done (Apr 18) |
 | 2 | Author Bodyweight Fitness task bank (~30 tasks) | Content | 1 day |
 | 3 | Author Conversation/Connection task bank (~30 tasks) | Content | 1 day |
 | 4 | Rewrite Distributed Systems passive tasks as scenario-based practice | Content | 3-4 days |
@@ -159,6 +186,7 @@ Single source of truth. Consolidated from UX audit findings, content audit, and 
 | 28 | Extract API to standalone server | Infrastructure |
 | 29 | Native mobile app | Feature |
 | 30 | Monetization (freemium, $10-15/mo) | Business |
+| 31 | **Podcast Retention / Deep Listening** — active recall prompts for podcast consumption. Pre-listen lens, post-listen multi-prompt retrieval, spaced resurfacing of user's own notes, cross-episode pattern recognition. Strategy and prompt design NOT finalized — needs further debate on UX, prompt quality, and differentiation from plain journaling. See discussion notes in Content-Strategy.md. | Feature (exploration) |
 
 ### Kannada Bilingual Stories — Scaffolded Progression
 
@@ -220,8 +248,12 @@ Key decisions captured during development:
 - **Metadata-driven rendering** — `buildSteps()` branches on task metadata, not goal type
 - **Serotonergic design shift (April 18, 2026)** — removed Hook Model, streaks, variable rewards from design philosophy; replaced with serotonergic principles (see [Philosophy.md](./Philosophy.md))
 - **Three new categories (April 18, 2026)** — Deep Reading, Bodyweight Fitness, Conversation/Connection added to test whether Forge works beyond structured skill-building (see [Content-Strategy.md](./Content-Strategy.md))
+- **Audience reframe: wasted motivation (April 19, 2026)** — the target audience isn't a niche of "self-learners." It's everyone whose motivation gets wasted on passive consumption — tutorial watchers, course buyers, podcast listeners who retain nothing. Forge converts existing motivation into progress. The market is much larger than originally framed.
+- **Keep categories bundled (April 19, 2026)** — debated whether strong categories (Guitar, Public Speaking, Podcast Retention) should be standalone products. Decision: no. The bundle IS the product. Categories cross-pollinate, standalone products fragment effort, and the "practice layer across your life" positioning only works with breadth. Individual categories can have branded entry points for marketing without splitting the codebase.
+- **Visible growth mirror identified as critical gap (April 19, 2026)** — Forge has momentum dots and completion counts but no evidence of actual capability growth. A growth mirror ("your recall went from 40% to 70%") is the missing feature that makes the product self-reinforcing without gamification. Elevated to explicit priority.
+- **Podcast Retention added to roadmap (April 19, 2026)** — potentially the highest-impact unbuilt feature. Universal audience, zero-friction adoption (upgrades existing habit), unoccupied competitive gap (all existing tools capture/summarize; none do forced retrieval). Strategy not finalized — needs prompt design work. See Content-Strategy.md appendix.
 
 ---
 
 *Created: March 29, 2026*
-*Last updated: April 18, 2026*
+*Last updated: April 19, 2026*

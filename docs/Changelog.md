@@ -67,6 +67,19 @@ Narration reference renderer. 10 Kannada story tasks, 8 guided thinking tasks, 5
 ## Philosophy Shift — Apr 18
 Removed Hook Model, streaks, variable rewards from all docs. Replaced with serotonergic design principles. Created Philosophy.md, Content-Strategy.md. Added 3 new categories: Deep Reading, Bodyweight Fitness, Conversation/Connection.
 
+## Session 21 — Apr 18 (Deep Reading)
+
+30 Deep Reading tasks across 5 skill areas (comprehension, structure, evaluation, connection, metacognition). Research-grounded in Maryanne Wolf, Adler's 4 levels, Bloom's taxonomy. Multi-prompt writing system: each task has a `prompts` array rendering as sequential focused inputs (one prompt per screen, can't peek ahead). New `prompt` step type in Focused.tsx. Wired into goal parser, category picker, local server, seed script. Fixed Supabase categories API pagination bug (1000-row limit).
+
+## Session 22 — Apr 19 (Product Strategy)
+
+No code. Deep product discussion captured in docs:
+- Podcast Retention / Deep Listening explored as potential highest-impact unbuilt feature. Competitive landscape researched (Snipd, Margin, PodQuiz — all capture tools, none do forced retrieval). Added to Roadmap Tier 4 and Content-Strategy appendix with open questions.
+- Audience reframe: "wasted motivation" — target is everyone whose motivation gets wasted on passive consumption, not just self-learners. Market is much larger than originally framed.
+- Visible Growth Mirror identified as critical missing feature — the serotonergic alternative to gamification.
+- Decided to keep categories bundled (not spin out as standalone products).
+- Enriched Roadmap.md (target audience, cold start, growth mirror, 4 evolution decisions), Philosophy.md (competitive reframe), Content-Strategy.md (podcast retention appendix).
+
 ---
 
-*1,319 tasks. 12 screens. 8 categories. $22 total spend.*
+*1,349 tasks. 12 screens. 9 categories. $22 total spend.*

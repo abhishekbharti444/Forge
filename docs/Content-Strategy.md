@@ -460,3 +460,95 @@ No timer. No reference material. No quiz. Just a nudge and a space to process wh
 
 *Document created: April 18, 2026*
 *Based on: Content audit of 1,319 tasks + serotonergic design research*
+
+---
+
+## Appendix: Podcast Retention / Deep Listening (Exploration)
+
+> Status: Early exploration. Strategy NOT finalized. Needs further debate on prompt design, UX flow, and differentiation from plain journaling.
+
+### The Problem
+
+People listen to hours of podcasts weekly and retain almost nothing. Passive audio consumption creates an illusion of learning — recognition ("I heard about that") without knowledge ("here's how it works and why"). No podcast platform addresses this because their business model optimizes for listening hours, not retention.
+
+### Why No One Else Builds This
+
+- **Spotify, Apple Podcasts** won't — their metric is listening hours. A "did you actually learn anything?" feature would reduce consumption. Retention is irrelevant to ad revenue.
+- **Education startups** can't — they don't have podcast distribution or listening context.
+- **Standalone "podcast learning" apps** fail — the value proposition sounds like homework. "Quiz yourself after podcasts" doesn't sell.
+- Forge sidesteps all three: it's not a podcast app, it's a practice tool that happens to make podcast listening count. The framing is "get better at things you care about," not "take a quiz."
+
+### Why This Might Be Forge's Most Important Unbuilt Feature
+
+- **Universal audience.** Deep Reading requires someone who reads books. Guitar requires a guitar. Almost everyone listens to podcasts. Largest addressable audience of any Forge category.
+- **Zero-friction adoption.** Every other category asks users to BEGIN a new activity. This asks for 2 minutes MORE with something they already do for hours. Upgrading a habit is dramatically easier than adding one.
+- **Validates the core thesis.** Tests whether Forge can make existing daily habits more valuable without changing them. If yes, Forge isn't a learning app or even a living-better app — it's a consumption-upgrading tool. Different product category entirely.
+- **Compounds over time.** After 6 months: 180+ distilled ideas from podcasts. "I listened to 500 hours" means nothing. "I captured 180 ideas and can recall 150 of them" means something.
+- **Small audience is the right audience.** Not everyone will write after listening. But the people who do will notice results within a week — remembering episodes, referencing ideas in conversations. Forge doesn't need millions of users. 20 regular users proving retention is enough signal.
+
+### Why Forge, Not a Journal
+
+A blank journal asks "what do you want to write?" Forge asks "can you answer THIS?" Five specific ways Forge goes beyond journaling:
+
+1. **Spaced retrieval** — journal sits there, never reopened. Forge resurfaces your own notes days later and tests recall.
+2. **Pre-listen lens** — journal is post-hoc. Forge changes HOW you listen by setting a focus directive before you start.
+3. **Cross-episode patterns** — journal is 30 disconnected pages. Forge surfaces connections and contradictions across entries.
+4. **Skill progression** — journal stays the same blank page forever. Forge prompts evolve from basic recall to argument evaluation to cross-source synthesis.
+5. **Accountability of a specific question** — a blank page lets you decide effort level. A specific prompt holds you accountable: you either know or you don't.
+
+### Conceptual Features (not designed yet)
+
+1. **Post-listen recall** — 2-3 prompts immediately after listening. Forces retrieval when memory is freshest.
+2. **Pre-listen lens** — one focus directive before listening. Changes HOW you listen, not just what you write after.
+3. **Spaced resurfacing** — Forge resurfaces your own notes days later and tests whether you can still recall the reasoning behind them.
+4. **Cross-episode patterns** — after enough entries, surface connections and contradictions across episodes.
+5. **Skill progression** — prompts evolve from basic recall to argument evaluation to cross-source synthesis.
+
+### Open Questions
+
+- How do we make prompts feel like a conversation, not a quiz? Prompt tone and framing are the entire product.
+- What's the right number of prompts per session? Too few = journal. Too many = homework.
+- How do we handle the "can't rewind" constraint? Prompts must work with imperfect recall — the gaps ARE the learning signal.
+- Should this be a new category or an extension of Deep Reading / Active Listening?
+- How do we differentiate from structured journaling? The answer is: spaced retrieval, pre-listen lenses, cross-episode patterns, and progressive difficulty. But these need to be designed, not assumed.
+- What does the writing space look like? Input size, placeholder text, and prompt sequencing all shape the quality of responses.
+
+### Prompt Design Principles (early thinking, not finalized)
+
+1. **No right answer, but can't fake it.** "What's one thing the speaker said that you're not sure you agree with?" — no correct response, but requires having actually listened and thought.
+2. **Small input, high signal.** 1-2 sentences per prompt. The constraint forces compression, which forces understanding. The size of the input box shapes the response.
+3. **First prompt easy, last prompt personal.** "What was this episode about? One sentence." → everyone can answer, builds momentum. End with "What's one thing from this you'd actually use?" → serotonergic payoff.
+4. **Prompts vary, don't repeat.** Same 3 questions every time = a form to fill out. Rotating prompts across skills prevents autopilot.
+5. **The 3-second rule.** Every prompt should make the user think "I'm not sure I can answer that" for about 3 seconds, then realize they can. That gap is where learning happens. Too easy = busywork. Too hard = discouraging.
+6. **Writing space IS the constraint.** A large textarea says "write an essay." A small sequential input says "answer this one thing." The multi-step pattern from Deep Reading is the right model.
+
+*Added: April 19, 2026*
+*Status: Roadmap item #31 (Tier 4). Needs design work before implementation.*
+
+### Competitive Landscape (April 2026)
+
+Three categories of existing apps, none doing what Forge would do:
+
+**AI Capture Tools (largest category)**
+- **Snipd** — AI podcast player. Tap headphones to save "snips," AI transcripts/summaries, export to Notion/Readwise/Obsidian. 4.8 stars, well-built. The market leader.
+- **Margin** — detects rewinds/replays and auto-saves those moments. Has spaced repetition for review. On-device AI. iOS beta. Closest to Forge's philosophy but resurfaces AI's clips, not user's own words.
+- **Onda** — AI note-taker. Summaries, searchable notes, export.
+- **Podwise** — AI summaries to "scan an episode in minutes."
+
+**AI Quiz Generators**
+- **PodQuiz** — paste episode, get auto-generated quiz + study notes.
+- **StudyChat** — AI quizzes from podcast content.
+- **Recite** — "turns every podcast into reusable knowledge." Chat with your archive.
+
+**Domain-Specific**
+- **MedPod Learn** — medical podcasts → MCQs, reflections, learning outcomes for clinicians.
+
+**The gap:** Every app is a capture-and-summarize tool. AI extracts information FROM the podcast FOR the user. The user's job is to save, highlight, and organize. The AI does the thinking.
+
+Forge's approach is the opposite: the AI does nothing with the podcast content. No transcription, no summary, no auto-generated quiz. Instead, Forge asks the USER to produce something from THEIR memory. The struggle to recall is the learning mechanism.
+
+Research supports this: AI-structured notes showed 91% retrieval success at 30 days, but only when paired with spaced-retrieval prompts (Journal of Learning Analytics, 2022-2024 meta-review). Capture alone isn't enough. Retrieval practice is what makes it stick. None of the existing apps do genuine retrieval practice — they all stop at capture.
+
+Margin comes closest with spaced repetition, but resurfaces the AI's saved clips — not the user's own words. That's recognition (re-reading what AI captured), not retrieval (producing from memory). The distinction is the same one Forge makes between quiz mode (recognition) and retrieval mode (production).
+
+**The gap is real and unoccupied.** "Forced production after listening" is harder to sell than "AI saves everything for you" — but it's the version that actually works for long-term retention.

@@ -1,0 +1,13 @@
+- generic [ref=e470]:
+  - generic [ref=e471]:
+    - button "← Home" [ref=e472]
+    - generic [ref=e473]:
+      - generic [ref=e474]: pronunciation
+      - generic [ref=e475]: · 5 min
+    - generic [ref=e476]: 1/3
+  - paragraph [ref=e477]: What to do
+  - generic [ref=e479]:
+    - paragraph [ref=e480]: Listen to Kannada vowel sounds.
+    - group [ref=e481]:
+      - generic "Details ▸" [ref=e482] [cursor=pointer]
+  - button "Next →" [ref=e489]

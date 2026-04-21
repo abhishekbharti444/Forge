@@ -1,0 +1,13 @@
+- generic [ref=e720]:
+  - generic [ref=e721]:
+    - button "← Back" [ref=e722]
+    - generic [ref=e723]:
+      - generic [ref=e724]: vocabulary
+      - generic [ref=e725]: · 5 min
+    - generic [ref=e726]: 1/3
+  - paragraph [ref=e727]: What to do
+  - generic [ref=e729]:
+    - paragraph [ref=e730]: "Quick review: Tier 1 story vocabulary."
+    - group [ref=e731]:
+      - generic "Details ▸" [ref=e732] [cursor=pointer]
+  - button "Next →" [ref=e739]

@@ -50,10 +50,16 @@ function buildSteps(task: Props['task']): Step[] {
   const tools = task.tools || []
   const refType = task.reference?.type
 
-  // Retrieval tasks: quiz first, no study step
+  // Retrieval tasks: study first, then quiz (structured_list only)
+  // Fill_blank retrieval tasks are already interactive — show directly
   if (task.type === 'retrieval') {
     steps.push({ type: 'instruction', title: 'What to do' })
-    if (refType) steps.push({ type: 'reference', title: 'Quiz' })
+    if (refType === 'structured_list') {
+      steps.push({ type: 'reference', title: 'Study' })
+      steps.push({ type: 'exercise', title: 'Quiz' })
+    } else if (refType) {
+      steps.push({ type: 'reference', title: 'Exercise' })
+    }
     steps.push({ type: 'reflect', title: 'Reflect' })
     return steps
   }
@@ -89,11 +95,11 @@ function buildSteps(task: Props['task']): Step[] {
     return steps
   }
 
-  // Structured list with reveal — study then quiz
+  // Structured list with reveal — study first, then quiz
   if (refType === 'structured_list' && tools.includes('reveal_hide')) {
     steps.push({ type: 'instruction', title: 'What to do' })
     steps.push({ type: 'reference', title: 'Study' })
-    steps.push({ type: 'exercise', title: 'Practice' })
+    steps.push({ type: 'exercise', title: 'Quiz' })
     steps.push({ type: 'reflect', title: 'Reflect' })
     return steps
   }
@@ -148,6 +154,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
     if (saved?.promptResponses?.length === len) return saved.promptResponses
     return new Array(len).fill('')
   })
+  const [quizDone, setQuizDone] = useState(false)
 
   // Refs for visibilitychange flush (always has latest values)
   const stateRef = useRef({ current, reflection, promptResponses })
@@ -191,15 +198,28 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
       const nextStep = current + 1
       saveNow(nextStep)
       setCurrent(nextStep)
+      setQuizDone(false)
     }
   }
+
+  // Determine if this step has an active quiz that blocks Next
+  const isQuizStep = step.type === 'exercise' &&
+    (task.type === 'retrieval' || (task.reference?.type === 'structured_list' && task.tools?.includes('reveal_hide')))
+  const showNext = !isQuizStep || quizDone
+
+  // Button label logic
+  const nextLabel = (() => {
+    if (isLast) return (reflection || hasPromptContent) ? 'Save & finish' : 'Finish'
+    if (step.type === 'reference' && steps[current + 1]?.type === 'exercise') return 'Ready for quiz →'
+    return 'Next →'
+  })()
 
   return (
     <div className="min-h-screen bg-bg-primary flex flex-col px-6 pt-8 pb-44 max-w-md mx-auto">
       {/* Top bar */}
       <div className="flex items-center justify-between mb-6">
         {onHome && (
-          <button onClick={onHome} className="text-text-secondary/40 text-xs hover:text-text-secondary transition-colors">← Home</button>
+          <button onClick={onHome} className="text-text-secondary text-sm hover:text-text-primary transition-colors">← Back</button>
         )}
         <div className="text-text-secondary/40 text-xs flex gap-2">
           {task.skill_area && <span>{task.skill_area.replace('_', ' ')}</span>}
@@ -283,7 +303,8 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         )}
 
         {step.type === 'reference' && task.reference && (
-          <ReferenceRenderer reference={task.reference} tools={task.tools} bpm={task.bpm} />
+          <ReferenceRenderer reference={task.reference} tools={task.tools} bpm={task.bpm}
+            forcedMode={task.reference.type === 'structured_list' && step.title === 'Study' ? 'learn' : undefined} />
         )}
 
         {step.type === 'prompt' && task.prompts && step.promptIndex != null && (
@@ -306,11 +327,8 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
             {task.tools?.includes('timer') && (
               <Timer seconds={task.time_minutes * 60} onEnd={() => {}} />
             )}
-            {task.reference?.type === 'structured_list' && task.tools?.includes('reveal_hide') && (
-              <div>
-                <p className="text-text-secondary text-sm mb-3">Switch to Quiz mode and test yourself:</p>
-                <ReferenceRenderer reference={task.reference} tools={task.tools} />
-              </div>
+            {task.reference?.type === 'structured_list' && (
+              <ReferenceRenderer reference={task.reference} tools={task.tools} forcedMode="quiz" onComplete={() => setQuizDone(true)} />
             )}
           </div>
         )}
@@ -353,7 +371,7 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         </div>
 
         {/* Next / Done / Continue in sequence */}
-        {isLast && task.sequence && task.sequence.order < task.sequence.total && onNextInSequence ? (
+        {showNext && (isLast && task.sequence && task.sequence.order < task.sequence.total && onNextInSequence ? (
           <div className="space-y-2">
             <button onClick={() => { onDone(reflection ? { text: reflection } : undefined); onNextInSequence() }}
               className="w-full py-3.5 bg-purple-500 text-white font-semibold rounded-xl hover:bg-purple-600 transition-colors">
@@ -367,13 +385,13 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
         ) : (
           <button onClick={next}
             className="w-full py-3.5 bg-accent-amber text-bg-primary font-semibold rounded-xl hover:bg-accent-amber-hover transition-colors">
-            {isLast ? ((reflection || hasPromptContent) ? 'Save & finish' : 'Finish') : 'Next →'}
+            {isLast ? ((reflection || hasPromptContent) ? 'Save & finish' : 'Finish') : nextLabel}
           </button>
-        )}
+        ))}
 
         {/* Back */}
         {current > 0 && (
-          <button onClick={() => { const prev = current - 1; saveNow(prev); setCurrent(prev) }}
+          <button onClick={() => { const prev = current - 1; saveNow(prev); setCurrent(prev); setQuizDone(false) }}
             className="w-full text-text-secondary/40 text-sm hover:text-text-secondary transition-colors py-1">
             ← Back
           </button>

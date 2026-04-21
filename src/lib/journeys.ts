@@ -105,21 +105,27 @@ export function organizeJourneys(tasks: JourneyTask[], completedIds: Set<string>
 
 // --- Cross-cutting collections (tag-based groupings) ---
 
-export interface CollectionConfig { tag: string; label: string; emoji: string }
+export interface CollectionConfig { tag: string; label: string; emoji: string; tier: 1 | 2 | 3 }
 
 export const COLLECTION_CONFIGS: Record<string, CollectionConfig[]> = {
   guitar_practice: [
-    { tag: 'theory_sequence', label: 'Music Theory', emoji: '🧠' },
-    { tag: 'progressions', label: 'Progressions', emoji: '🎵' },
-    { tag: 'improvisation', label: 'Improvisation', emoji: '🎤' },
-    { tag: 'composition', label: 'Composition', emoji: '✍️' },
-    { tag: 'warm_up', label: 'Warm-ups', emoji: '🔥' },
-    { tag: 'pentatonic_soloing', label: 'Fretboard Soloing', emoji: '🎯' },
-    { tag: 'pentatonic_boxes', label: 'Pentatonic Boxes', emoji: '🎸' },
-    { tag: 'caged_system', label: 'CAGED System', emoji: '🗺️' },
-    { tag: 'strumming_patterns', label: 'Strumming Patterns', emoji: '🥁' },
+    // Tier 1: Foundations
+    { tag: 'warm_up', label: 'Warm-Ups', emoji: '🔥', tier: 1 },
+    { tag: 'strumming_patterns', label: 'Strumming Patterns', emoji: '🥁', tier: 1 },
+    // Tier 2: Building Skills
+    { tag: 'theory_sequence', label: 'Music Theory', emoji: '🧠', tier: 2 },
+    { tag: 'pentatonic_boxes', label: 'Pentatonic Boxes', emoji: '🎸', tier: 2 },
+    { tag: 'caged_system', label: 'CAGED System', emoji: '🗺️', tier: 2 },
+    // Tier 3: Making Music
+    { tag: 'pentatonic_soloing', label: 'Fretboard Soloing', emoji: '🎯', tier: 3 },
+    { tag: 'progressions', label: 'Progressions', emoji: '🎵', tier: 3 },
+    { tag: 'improvisation', label: 'Improvisation', emoji: '🎤', tier: 3 },
+    { tag: 'composition', label: 'Composition', emoji: '✍️', tier: 3 },
   ],
 }
+
+export const TIER_LABELS: Record<number, string> = { 1: 'Foundations', 2: 'Building Skills', 3: 'Making Music' }
+export const TIER_EMOJI: Record<number, string> = { 1: '🟢', 2: '🔵', 3: '🟣' }
 
 export function organizeCollections(tasks: JourneyTask[], completedIds: Set<string>, category: string): Journey[] {
   const configs = COLLECTION_CONFIGS[category]

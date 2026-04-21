@@ -148,6 +148,23 @@ Forge's task design aims for flow conditions: clear instruction, bounded time, a
 
 Forge is not a blocker, not a replacement, not a detox tool. It's a **practice tool that makes real-world action the product.** The closest analog isn't another app — it's a good coach who says "here's one thing to do in the next 10 minutes" and makes that thing so clear and so bounded that you actually do it.
 
+### The Real Competition (April 19, 2026)
+
+The product landscape above frames Forge against social media and dopaminergic products. That's the philosophical competition — the worldview Forge opposes. But the practical competition is different.
+
+The people who will use Forge aren't choosing between Forge and Instagram. They're choosing between Forge and the tutorials, courses, and content they already consume in pursuit of improvement:
+
+- YouTube tutorials (billions of views on guitar, fitness, cooking, coding)
+- Online courses (Coursera, Skillshare, MasterClass — $400B market)
+- Podcasts (hours of consumption, near-zero retention)
+- Books and articles (read passively, forgotten within days)
+
+These aren't dopaminergic traps. They're genuine attempts at self-improvement that fail because they optimize for consumption, not production. The user watches, listens, reads — and retains almost nothing. The motivation was real. The structure was missing.
+
+Forge's practical competition is the gap between consuming learning content and actually retaining it. Every tutorial watched without practice, every podcast listened to without recall, every book read without output — that's the gap Forge fills.
+
+This reframe matters because it changes the pitch. Not "use Forge instead of scrolling" (replacement) but "use Forge to actually get value from the learning you're already doing" (upgrade). The user doesn't need to change their habits — they need 5 minutes of structured output after the habits they already have.
+
 ---
 
 ## Design Principles (Derived from Research)

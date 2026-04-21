@@ -873,6 +873,7 @@ Landing → Auth (Google) → GoalHome
 | Distributed Systems | 173 | fundamentals, replication, partitioning, transactions, consensus, fault_tolerance, estimation | sequence field, tags, fill_blank, structured_list |
 | Guided Thinking | 8 | decision_making, goal_setting, creative_ideation, self_awareness, problem_solving, gratitude, perspective, career | Narration with long pauses (10-20s), audio-native |
 | Active Listening | 5 | comprehension | Narration passages + comprehension questions, audio-native |
+| Deep Reading | 30 | comprehension, structure, evaluation, connection, metacognition | Multi-prompt writing, text_input, timer, bring-your-own-content |
 | **Total** | **1,036** | **30+** | |
 
 ### Task Data Fields

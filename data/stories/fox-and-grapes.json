@@ -1,0 +1,215 @@
+{
+  "id": "kn-story-002",
+  "title": "The Fox and the Grapes",
+  "title_kn": "ನರಿ ಮತ್ತು ದ್ರಾಕ್ಷಿ",
+  "tier": 1,
+  "description": "An Aesop's fable about a fox who can't reach the grapes and pretends they're sour.",
+  "comprehension": [
+    {
+      "after_sentence": 4,
+      "question": "What did the fox see?"
+    },
+    {
+      "after_sentence": 8,
+      "question": "Could the fox reach the grapes?"
+    },
+    {
+      "after_sentence": 12,
+      "question": "How many times did the fox try?"
+    },
+    {
+      "after_sentence": 16,
+      "question": "What did the fox say about the grapes?"
+    },
+    {
+      "after_sentence": 19,
+      "question": "What is the lesson of this story?"
+    }
+  ],
+  "vocabulary": [
+    {
+      "kn": "ನರಿ",
+      "en": "fox",
+      "tr": "nari",
+      "kn_audio_url": "/audio/stories/kn-story-002/vocab_kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/vocab_en_0.mp3"
+    },
+    {
+      "kn": "ದ್ರಾಕ್ಷಿ",
+      "en": "grapes",
+      "tr": "drākshi",
+      "kn_audio_url": "/audio/stories/kn-story-002/vocab_kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/vocab_en_1.mp3"
+    },
+    {
+      "kn": "ಹಸಿವು",
+      "en": "hunger",
+      "tr": "hasivu",
+      "kn_audio_url": "/audio/stories/kn-story-002/vocab_kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/vocab_en_2.mp3"
+    },
+    {
+      "kn": "ಜಿಗಿ",
+      "en": "jump",
+      "tr": "jigi",
+      "kn_audio_url": "/audio/stories/kn-story-002/vocab_kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/vocab_en_3.mp3"
+    },
+    {
+      "kn": "ಹುಳಿ",
+      "en": "sour",
+      "tr": "huḷi",
+      "kn_audio_url": "/audio/stories/kn-story-002/vocab_kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/vocab_en_4.mp3"
+    },
+    {
+      "kn": "ಬಳ್ಳಿ",
+      "en": "vine",
+      "tr": "baḷḷi",
+      "kn_audio_url": "/audio/stories/kn-story-002/vocab_kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/vocab_en_5.mp3"
+    }
+  ],
+  "sentences": [
+    {
+      "kn": "ಒಂದು ಕಾಡಿನಲ್ಲಿ ಒಂದು ನರಿ ಇತ್ತು.",
+      "en": "There was a fox in a forest.",
+      "tr": "Ondu kāḍinalli ondu nari ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_0.mp3"
+    },
+    {
+      "kn": "ನರಿಗೆ ತುಂಬಾ ಹಸಿವಾಗಿತ್ತು.",
+      "en": "The fox was very hungry.",
+      "tr": "Narige tumbā hasivāgittu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_1.mp3"
+    },
+    {
+      "kn": "ನರಿ ಆಹಾರ ಹುಡುಕಿತು.",
+      "en": "The fox searched for food.",
+      "tr": "Nari āhāra huḍukitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_2.mp3"
+    },
+    {
+      "kn": "ಆಗ ನರಿಗೆ ಒಂದು ಬಳ್ಳಿ ಕಾಣಿಸಿತು.",
+      "en": "Then the fox saw a vine.",
+      "tr": "Āga narige ondu baḷḷi kāṇisitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_3.mp3"
+    },
+    {
+      "kn": "ಬಳ್ಳಿಯಲ್ಲಿ ದ್ರಾಕ್ಷಿ ಇತ್ತು.",
+      "en": "There were grapes on the vine.",
+      "tr": "Baḷḷiyalli drākshi ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_4.mp3"
+    },
+    {
+      "kn": "ದ್ರಾಕ್ಷಿ ತುಂಬಾ ಚೆನ್ನಾಗಿ ಕಾಣುತ್ತಿತ್ತು.",
+      "en": "The grapes looked very nice.",
+      "tr": "Drākshi tumbā chennāgi kāṇuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_5.mp3"
+    },
+    {
+      "kn": "ಆದರೆ ದ್ರಾಕ್ಷಿ ತುಂಬಾ ಎತ್ತರದಲ್ಲಿ ಇತ್ತು.",
+      "en": "But the grapes were very high up.",
+      "tr": "Ādare drākshi tumbā ettaradalli ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_6.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_6.mp3"
+    },
+    {
+      "kn": "ನರಿ ಜಿಗಿಯಿತು.",
+      "en": "The fox jumped.",
+      "tr": "Nari jigiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_7.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_7.mp3"
+    },
+    {
+      "kn": "ದ್ರಾಕ್ಷಿ ಸಿಗಲಿಲ್ಲ.",
+      "en": "It could not reach the grapes.",
+      "tr": "Drākshi sigalilla.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_8.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_8.mp3"
+    },
+    {
+      "kn": "ನರಿ ಮತ್ತೆ ಜಿಗಿಯಿತು.",
+      "en": "The fox jumped again.",
+      "tr": "Nari matte jigiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_9.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_9.mp3"
+    },
+    {
+      "kn": "ಮತ್ತೆ ಸಿಗಲಿಲ್ಲ.",
+      "en": "Again it could not reach.",
+      "tr": "Matte sigalilla.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_10.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_10.mp3"
+    },
+    {
+      "kn": "ನರಿ ಮೂರನೇ ಸಲ ಜಿಗಿಯಿತು.",
+      "en": "The fox jumped a third time.",
+      "tr": "Nari mūranē sala jigiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_11.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_11.mp3"
+    },
+    {
+      "kn": "ಈ ಸಲವೂ ಸಿಗಲಿಲ್ಲ.",
+      "en": "This time also it could not reach.",
+      "tr": "Ī salavū sigalilla.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_12.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_12.mp3"
+    },
+    {
+      "kn": "ನರಿ ತುಂಬಾ ದಣಿದಿತ್ತು.",
+      "en": "The fox was very tired.",
+      "tr": "Nari tumbā daṇidittu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_13.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_13.mp3"
+    },
+    {
+      "kn": "ನರಿ ಕೋಪಗೊಂಡಿತು.",
+      "en": "The fox got angry.",
+      "tr": "Nari kōpagoṇḍitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_14.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_14.mp3"
+    },
+    {
+      "kn": "ನರಿ ಹೇಳಿತು.",
+      "en": "The fox said.",
+      "tr": "Nari hēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_15.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_15.mp3"
+    },
+    {
+      "kn": "\"ಆ ದ್ರಾಕ್ಷಿ ಹುಳಿ ಇರಬೇಕು.\"",
+      "en": "\"Those grapes must be sour.\"",
+      "tr": "\"Ā drākshi huḷi irabēku.\"",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_16.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_16.mp3"
+    },
+    {
+      "kn": "\"ನನಗೆ ಹುಳಿ ದ್ರಾಕ್ಷಿ ಬೇಡ.\"",
+      "en": "\"I don't want sour grapes.\"",
+      "tr": "\"Nanage huḷi drākshi bēḍa.\"",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_17.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_17.mp3"
+    },
+    {
+      "kn": "ನರಿ ಹೊರಟು ಹೋಯಿತು.",
+      "en": "The fox walked away.",
+      "tr": "Nari horaṭu hōyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_18.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_18.mp3"
+    },
+    {
+      "kn": "ಸಿಗದಿದ್ದನ್ನು ಕೆಟ್ಟದು ಎಂದು ಹೇಳುವುದು ಸುಲಭ.",
+      "en": "It is easy to say something is bad when you cannot get it.",
+      "tr": "Sigadiddannu keṭṭadu endu hēḷuvudu sulabha.",
+      "kn_audio_url": "/audio/stories/kn-story-002/kn_19.mp3",
+      "en_audio_url": "/audio/stories/kn-story-002/en_19.mp3"
+    }
+  ]
+}
