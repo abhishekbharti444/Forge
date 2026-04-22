@@ -6,10 +6,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
 
   const category = req.query.category as string | undefined
+  const group = req.query.group as string | undefined
+
+  function applyGroup(query: any) {
+    if (group === 'true') return query.eq('group', true)
+    if (group === 'false') return query.eq('group', false)
+    return query
+  }
 
   // If category specified, use it directly
   if (category) {
-    const { data: tasks, error } = await supabaseAdmin.from('tasks').select('*').eq('goal_category', category)
+    const { data: tasks, error } = await applyGroup(supabaseAdmin.from('tasks').select('*').eq('goal_category', category))
     if (error) return res.status(500).json({ error: error.message })
     return res.status(200).json({ tasks: tasks ?? [], total: tasks?.length ?? 0 })
   }
@@ -25,14 +32,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       .limit(1)
 
     if (goals?.length) {
-      const { data: tasks, error } = await supabaseAdmin.from('tasks').select('*').eq('goal_category', (goals[0] as any).goal_category)
+      const { data: tasks, error } = await applyGroup(supabaseAdmin.from('tasks').select('*').eq('goal_category', (goals[0] as any).goal_category))
       if (error) return res.status(500).json({ error: error.message })
       return res.status(200).json({ tasks: tasks ?? [], total: tasks?.length ?? 0 })
     }
   }
 
   // Fallback: return all tasks
-  const { data: tasks, error } = await supabaseAdmin.from('tasks').select('*').limit(5000)
+  const { data: tasks, error } = await applyGroup(supabaseAdmin.from('tasks').select('*').limit(5000))
   if (error) return res.status(500).json({ error: error.message })
   return res.status(200).json({ tasks: tasks ?? [], total: tasks?.length ?? 0 })
 }

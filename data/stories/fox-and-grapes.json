@@ -7,23 +7,28 @@
   "comprehension": [
     {
       "after_sentence": 4,
-      "question": "What did the fox see?"
+      "question": "What did the fox see?",
+      "audio_url": "/audio/stories/kn-story-002/comp_0.mp3"
     },
     {
       "after_sentence": 8,
-      "question": "Could the fox reach the grapes?"
+      "question": "Could the fox reach the grapes?",
+      "audio_url": "/audio/stories/kn-story-002/comp_1.mp3"
     },
     {
       "after_sentence": 12,
-      "question": "How many times did the fox try?"
+      "question": "How many times did the fox try?",
+      "audio_url": "/audio/stories/kn-story-002/comp_2.mp3"
     },
     {
       "after_sentence": 16,
-      "question": "What did the fox say about the grapes?"
+      "question": "What did the fox say about the grapes?",
+      "audio_url": "/audio/stories/kn-story-002/comp_3.mp3"
     },
     {
       "after_sentence": 19,
-      "question": "What is the lesson of this story?"
+      "question": "What is the lesson of this story?",
+      "audio_url": "/audio/stories/kn-story-002/comp_4.mp3"
     }
   ],
   "vocabulary": [

@@ -32,10 +32,11 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
   const [loading, setLoading] = useState(true)
   const [podcastEpisode, setPodcastEpisode] = useState<number | null>(null)
   const [allTasks, setAllTasks] = useState<any[]>([])
+  const [groupMode, setGroupMode] = useState(false)
   const completedIds = getCompletedIds()
 
   useEffect(() => {
-    apiFetch<{ tasks: any[] }>(`/tasks?category=${category}`)
+    apiFetch<{ tasks: any[] }>(`/tasks?category=${category}${groupMode ? '&group=true' : ''}`)
       .then(d => {
         const tasks: JourneyTask[] = (d.tasks || []).map((t: any) => {
           const ref = t.reference || {}
@@ -62,7 +63,7 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
         setLoading(false)
       })
       .catch(() => setLoading(false))
-  }, [category])
+  }, [category, groupMode])
 
   function continueJourney(j: Journey) {
     const next = j.tasks.find(t => !completedIds.has(t.id))
@@ -186,6 +187,12 @@ export function Journeys({ category, categoryLabel, onStartTask, onHome }: Props
         <button onClick={onHome} className="text-text-secondary/40 text-xs hover:text-text-secondary">← Home</button>
       </div>
       <h1 className="text-xl font-semibold text-text-primary mb-1">{categoryLabel}</h1>
+      {category === 'public_speaking' && (
+        <button onClick={() => setGroupMode(!groupMode)}
+          className={`px-3 py-1 rounded-full text-xs font-medium transition-colors mb-1 ${groupMode ? 'bg-accent-amber text-bg-primary' : 'bg-bg-surface text-text-secondary border border-border'}`}>
+          👥 Group
+        </button>
+      )}
       <p className="text-text-secondary/50 text-xs mb-6">
         {totalCompleted}/{totalTasks} tasks completed · {journeys.length} journeys
       </p>

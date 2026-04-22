@@ -17,9 +17,86 @@ export interface DisplaySegment {
  * Build display segments from a task's reference.
  * Uses narrator_before_url / audio_url / narrator_after_url for all audio.
  */
-export type StoryMode = 'guided' | 'delayed' | 'selective' | 'immersive' | 'production'
+export type StoryMode = 'guided' | 'selective' | 'immersive' | 'production'
+export type StoryTier = 'guided' | 'challenge' | 'produce'
+
+export const TIER_CONFIG: Record<StoryTier, { label: string; emoji: string; modes: StoryMode[]; description: Record<StoryMode, string> }> = {
+  guided: {
+    label: 'Guided', emoji: '🟢',
+    modes: ['guided'],
+    description: {
+      guided: 'Vocabulary preview, then Kannada→English sentence pairs.',
+      selective: '', immersive: '', production: '',
+    },
+  },
+  challenge: {
+    label: 'Challenge', emoji: '🟡',
+    modes: ['selective', 'immersive'],
+    description: {
+      selective: 'English only for sentences with new words. Known words are skipped.',
+      immersive: 'Kannada only — answer comprehension questions to check understanding.',
+      guided: '', production: '',
+    },
+  },
+  produce: {
+    label: 'Produce', emoji: '🔴',
+    modes: ['production'],
+    description: {
+      production: 'Hear English, then produce the Kannada from memory.',
+      guided: '', selective: '', immersive: '',
+    },
+  },
+}
+
+export const TIER_ORDER: StoryTier[] = ['guided', 'challenge', 'produce']
+export const NEXT_TIER: Record<StoryTier, StoryTier | null> = { guided: 'challenge', challenge: 'produce', produce: null }
+
+export function getTierForMode(mode: StoryMode): StoryTier {
+  for (const tier of TIER_ORDER) {
+    if (TIER_CONFIG[tier].modes.includes(mode)) return tier
+  }
+  return 'guided'
+}
+
+export function getDefaultModeForTier(tier: StoryTier): StoryMode {
+  return TIER_CONFIG[tier].modes[0]
+}
+
+export function getUnlockedTiers(storyId: string): Set<StoryTier> {
+  const unlocked = new Set<StoryTier>(['guided']) // guided always unlocked
+  try {
+    const raw = localStorage.getItem(`forge_story_tiers_${storyId}`)
+    if (raw) {
+      const parsed = JSON.parse(raw) as StoryTier[]
+      parsed.forEach(t => unlocked.add(t))
+    }
+  } catch { /* ignore */ }
+  return unlocked
+}
+
+export function unlockNextTier(storyId: string, currentTier: StoryTier): void {
+  const next = NEXT_TIER[currentTier]
+  if (!next) return
+  const unlocked = getUnlockedTiers(storyId)
+  unlocked.add(next)
+  localStorage.setItem(`forge_story_tiers_${storyId}`, JSON.stringify([...unlocked]))
+}
+
+export function getWordKnowledgeStats(sentences: { kn: string }[]): { known: number; total: number } {
+  const freqs = getWordFreqs()
+  const allWords = new Set<string>()
+  const knownWords = new Set<string>()
+  for (const s of sentences) {
+    for (const w of s.kn.replace(/[.!?,;:।]/g, '').split(/\s+/).filter(Boolean)) {
+      allWords.add(w)
+      if ((freqs[w] || 0) >= KNOWN_THRESHOLD) knownWords.add(w)
+    }
+  }
+  return { known: knownWords.size, total: allWords.size }
+}
 
 // Word frequency tracker — how many times each Kannada word has been heard
+const KNOWN_THRESHOLD = 5
 function getWordFreqs(): Record<string, number> {
   try { return JSON.parse(localStorage.getItem('forge_word_freq') || '{}') } catch { return {} }
 }
@@ -33,7 +110,7 @@ export function updateWordFreqs(sentences: { kn: string }[]) {
   localStorage.setItem('forge_word_freq', JSON.stringify(freqs))
 }
 
-export function buildSegments(task: any, storyMode?: StoryMode): DisplaySegment[] {
+export function buildSegments(task: any, storyMode?: StoryMode, enPause?: number): DisplaySegment[] {
   const segments: DisplaySegment[] = []
   const ref = task.reference
 
@@ -55,7 +132,7 @@ export function buildSegments(task: any, storyMode?: StoryMode): DisplaySegment[
     case 'sound_exercise': segmentsSoundExercise(ref, segments); break
     case 'dialogue': segmentsDialogue(ref, segments); break
     case 'structured_list': segmentsStructuredList(ref, segments); break
-    case 'bilingual_story': segmentsBilingualStory(ref, segments, storyMode || 'guided'); break
+    case 'bilingual_story': segmentsBilingualStory(ref, segments, storyMode || 'guided', enPause); break
   }
 
   return segments
@@ -208,10 +285,9 @@ function segmentsStructuredList(ref: any, out: DisplaySegment[]) {
   }
 }
 
-function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode) {
-  const enPause = mode === 'delayed' ? 3.5 : 0.5
+function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode, enPauseOverride?: number) {
+  const enPause = enPauseOverride ?? 0.5
   const freqs = mode === 'selective' ? getWordFreqs() : null
-  const KNOWN_THRESHOLD = 5
 
   // Production mode: EN prompt → pause → KN answer
   if (mode === 'production') {
@@ -246,9 +322,9 @@ function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode
   }
 
   // Build comprehension question lookup for immersive mode
-  const compMap = new Map<number, string>()
+  const compMap = new Map<number, { question: string; audio_url?: string }>()
   if (mode === 'immersive') {
-    for (const c of ref.comprehension || []) compMap.set(c.after_sentence, c.question)
+    for (const c of ref.comprehension || []) compMap.set(c.after_sentence, c)
   }
 
   // Story sentences
@@ -266,9 +342,9 @@ function segmentsBilingualStory(ref: any, out: DisplaySegment[], mode: StoryMode
       const q = compMap.get(i)
       if (q) {
         out.push({
-          english: q,
+          english: q.question,
           label: 'Comprehension',
-          utterances: [{ text: q, pauseAfter: 4.0, role: 'prompt' }],
+          utterances: [{ text: q.question, pauseAfter: 4.0, role: 'prompt', audioUrl: q.audio_url }],
         })
       }
       continue

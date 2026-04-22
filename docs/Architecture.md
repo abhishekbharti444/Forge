@@ -867,14 +867,14 @@ Landing → Auth (Google) → GoalHome
 |---|---|---|---|
 | Creative Writing | 175 | observation, structure, voice, dialogue, reflection, imagery | Text prompts, self_report |
 | Learn Kannada | 160 | vocabulary, grammar, script, phrases, pronunciation, culture | structured_list + quiz, fill_blank, dialogue, narration stories |
-| Public Speaking | 150 | vocal_delivery, clarity, impromptu, presence, storytelling, persuasion | Timer, speaking prompts |
+| Public Speaking | 160 | vocal_delivery, clarity, impromptu, presence, storytelling, persuasion | Timer, speaking prompts, group exercises (👥 toggle) |
 | Guitar Practice | 219 | technique, chords, scales_fretboard, rhythm, fingerpicking, ear_training | ChordDiagram, TabPlayer, bpm, needs_guitar flag |
 | Philosophy | 146 | philosophical_literacy, ethics, argumentation, critical_thinking, applied_philosophy | Level sequencing (1-3), concepts array, teach-then-test |
 | Distributed Systems | 173 | fundamentals, replication, partitioning, transactions, consensus, fault_tolerance, estimation | sequence field, tags, fill_blank, structured_list |
 | Guided Thinking | 8 | decision_making, goal_setting, creative_ideation, self_awareness, problem_solving, gratitude, perspective, career | Narration with long pauses (10-20s), audio-native |
 | Active Listening | 5 | comprehension | Narration passages + comprehension questions, audio-native |
 | Deep Reading | 30 | comprehension, structure, evaluation, connection, metacognition | Multi-prompt writing, text_input, timer, bring-your-own-content |
-| **Total** | **1,036** | **30+** | |
+| **Total** | **1,046** | **30+** | |
 
 ### Task Data Fields
 
@@ -897,6 +897,7 @@ Landing → Auth (Google) → GoalHome
 | concepts | string[] | | Concepts taught, used by philosophy |
 | sequence | number | | Ordering within skill area, used by distributed_systems |
 | tags | string[] | | Searchable tags |
+| group | boolean | | Whether this is a group exercise (default: false) |
 | bpm | number | | Tempo for guitar tasks |
 | needs_guitar | boolean | | Whether physical guitar is required |
 

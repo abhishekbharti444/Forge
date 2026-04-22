@@ -1,0 +1,6 @@
+- generic [ref=e82]:
+  - heading "Forge" [level=1] [ref=e83]
+  - paragraph [ref=e84]: Small actions, real progress.
+  - button "Continue with Google" [ref=e85]:
+    - img [ref=e86]
+    - text: Continue with Google

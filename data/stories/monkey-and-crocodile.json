@@ -5,45 +5,251 @@
   "tier": 1,
   "description": "A Panchatantra tale about a clever monkey who outwits a crocodile.",
   "comprehension": [
-    { "after_sentence": 5, "question": "Where did the monkey live?" },
-    { "after_sentence": 10, "question": "What did the monkey give the crocodile?" },
-    { "after_sentence": 15, "question": "What did the crocodile's wife want?" },
-    { "after_sentence": 19, "question": "How did the monkey trick the crocodile?" },
-    { "after_sentence": 22, "question": "What happened at the end?" }
+    {
+      "after_sentence": 5,
+      "question": "Where did the monkey live?",
+      "audio_url": "/audio/stories/kn-story-003/comp_0.mp3"
+    },
+    {
+      "after_sentence": 10,
+      "question": "What did the monkey give the crocodile?",
+      "audio_url": "/audio/stories/kn-story-003/comp_1.mp3"
+    },
+    {
+      "after_sentence": 15,
+      "question": "What did the crocodile's wife want?",
+      "audio_url": "/audio/stories/kn-story-003/comp_2.mp3"
+    },
+    {
+      "after_sentence": 19,
+      "question": "How did the monkey trick the crocodile?",
+      "audio_url": "/audio/stories/kn-story-003/comp_3.mp3"
+    },
+    {
+      "after_sentence": 22,
+      "question": "What happened at the end?",
+      "audio_url": "/audio/stories/kn-story-003/comp_4.mp3"
+    }
   ],
   "vocabulary": [
-    { "kn": "ಕೋತಿ", "en": "monkey", "tr": "kōti", "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-003/vocab_en_0.mp3" },
-    { "kn": "ಮೊಸಳೆ", "en": "crocodile", "tr": "mosaḷe", "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-003/vocab_en_1.mp3" },
-    { "kn": "ನದಿ", "en": "river", "tr": "nadi", "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-003/vocab_en_2.mp3" },
-    { "kn": "ಮರ", "en": "tree", "tr": "mara", "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-003/vocab_en_3.mp3" },
-    { "kn": "ಹಣ್ಣು", "en": "fruit", "tr": "haṇṇu", "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-003/vocab_en_4.mp3" },
-    { "kn": "ಹೃದಯ", "en": "heart", "tr": "hṛdaya", "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-003/vocab_en_5.mp3" }
+    {
+      "kn": "ಕೋತಿ",
+      "en": "monkey",
+      "tr": "kōti",
+      "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/vocab_en_0.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆ",
+      "en": "crocodile",
+      "tr": "mosaḷe",
+      "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/vocab_en_1.mp3"
+    },
+    {
+      "kn": "ನದಿ",
+      "en": "river",
+      "tr": "nadi",
+      "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/vocab_en_2.mp3"
+    },
+    {
+      "kn": "ಮರ",
+      "en": "tree",
+      "tr": "mara",
+      "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/vocab_en_3.mp3"
+    },
+    {
+      "kn": "ಹಣ್ಣು",
+      "en": "fruit",
+      "tr": "haṇṇu",
+      "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/vocab_en_4.mp3"
+    },
+    {
+      "kn": "ಹೃದಯ",
+      "en": "heart",
+      "tr": "hṛdaya",
+      "kn_audio_url": "/audio/stories/kn-story-003/vocab_kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/vocab_en_5.mp3"
+    }
   ],
   "sentences": [
-    { "kn": "ಒಂದು ನದಿಯ ಬಳಿ ಒಂದು ಮರ ಇತ್ತು.", "en": "There was a tree near a river.", "tr": "Ondu nadiya baḷi ondu mara ittu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_0.mp3" },
-    { "kn": "ಆ ಮರದಲ್ಲಿ ಒಂದು ಕೋತಿ ವಾಸವಾಗಿತ್ತು.", "en": "A monkey lived in that tree.", "tr": "Ā maradalli ondu kōti vāsavāgittu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_1.mp3" },
-    { "kn": "ಮರದಲ್ಲಿ ಸಿಹಿ ಹಣ್ಣುಗಳು ಇದ್ದವು.", "en": "There were sweet fruits on the tree.", "tr": "Maradalli sihi haṇṇugaḷu iddavu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_2.mp3" },
-    { "kn": "ನದಿಯಲ್ಲಿ ಒಂದು ಮೊಸಳೆ ಇತ್ತು.", "en": "There was a crocodile in the river.", "tr": "Nadiyalli ondu mosaḷe ittu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_3.mp3" },
-    { "kn": "ಒಂದು ದಿನ ಮೊಸಳೆ ಮರದ ಬಳಿ ಬಂತು.", "en": "One day the crocodile came near the tree.", "tr": "Ondu dina mosaḷe marada baḷi bantu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_4.mp3" },
-    { "kn": "ಕೋತಿ ಮೊಸಳೆಗೆ ಹಣ್ಣು ಕೊಟ್ಟಿತು.", "en": "The monkey gave the crocodile a fruit.", "tr": "Kōti mosaḷege haṇṇu koṭṭitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_5.mp3" },
-    { "kn": "ಮೊಸಳೆಗೆ ಹಣ್ಣು ತುಂಬಾ ಇಷ್ಟವಾಯಿತು.", "en": "The crocodile liked the fruit very much.", "tr": "Mosaḷege haṇṇu tumbā ishṭavāyitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_6.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_6.mp3" },
-    { "kn": "ಮೊಸಳೆ ಪ್ರತಿ ದಿನ ಬರುತ್ತಿತ್ತು.", "en": "The crocodile came every day.", "tr": "Mosaḷe prati dina baruttittu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_7.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_7.mp3" },
-    { "kn": "ಕೋತಿ ಮತ್ತು ಮೊಸಳೆ ಒಳ್ಳೆಯ ಗೆಳೆಯರಾದರು.", "en": "The monkey and the crocodile became good friends.", "tr": "Kōti mattu mosaḷe oḷḷeya geḷeyarādaru.", "kn_audio_url": "/audio/stories/kn-story-003/kn_8.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_8.mp3" },
-    { "kn": "ಮೊಸಳೆ ಹಣ್ಣನ್ನು ಮನೆಗೆ ತೆಗೆದುಕೊಂಡು ಹೋಯಿತು.", "en": "The crocodile took the fruit home.", "tr": "Mosaḷe haṇṇannu manege tegedukoṇḍu hōyitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_9.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_9.mp3" },
-    { "kn": "ಮೊಸಳೆಯ ಹೆಂಡತಿ ಹಣ್ಣು ತಿಂದಳು.", "en": "The crocodile's wife ate the fruit.", "tr": "Mosaḷeya heṇḍati haṇṇu tindaḷu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_10.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_10.mp3" },
-    { "kn": "ಹೆಂಡತಿ ಹೇಳಿದಳು.", "en": "The wife said.", "tr": "Heṇḍati hēḷidaḷu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_11.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_11.mp3" },
-    { "kn": "\"ಈ ಹಣ್ಣು ತಿನ್ನುವ ಕೋತಿಯ ಹೃದಯ ಎಷ್ಟು ಸಿಹಿ ಇರಬೇಕು!\"", "en": "\"The heart of the monkey who eats these fruits must be so sweet!\"", "tr": "\"Ī haṇṇu tinnuva kōtiya hṛdaya eshṭu sihi irabēku!\"", "kn_audio_url": "/audio/stories/kn-story-003/kn_12.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_12.mp3" },
-    { "kn": "\"ನನಗೆ ಕೋತಿಯ ಹೃದಯ ಬೇಕು.\"", "en": "\"I want the monkey's heart.\"", "tr": "\"Nanage kōtiya hṛdaya bēku.\"", "kn_audio_url": "/audio/stories/kn-story-003/kn_13.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_13.mp3" },
-    { "kn": "ಮೊಸಳೆ ಕೋತಿಯ ಬಳಿ ಹೋಯಿತು.", "en": "The crocodile went to the monkey.", "tr": "Mosaḷe kōtiya baḷi hōyitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_14.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_14.mp3" },
-    { "kn": "\"ನನ್ನ ಬೆನ್ನ ಮೇಲೆ ಕೂತುಕೋ. ನನ್ನ ಮನೆಗೆ ಹೋಗೋಣ.\"", "en": "\"Sit on my back. Let's go to my home.\"", "tr": "\"Nanna benna mēle kūtukō. Nanna manege hōgōṇa.\"", "kn_audio_url": "/audio/stories/kn-story-003/kn_15.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_15.mp3" },
-    { "kn": "ಕೋತಿ ಮೊಸಳೆಯ ಬೆನ್ನ ಮೇಲೆ ಕೂತಿತು.", "en": "The monkey sat on the crocodile's back.", "tr": "Kōti mosaḷeya benna mēle kūtitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_16.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_16.mp3" },
-    { "kn": "ನದಿಯ ಮಧ್ಯದಲ್ಲಿ ಮೊಸಳೆ ನಿಜ ಹೇಳಿತು.", "en": "In the middle of the river, the crocodile told the truth.", "tr": "Nadiya madhyadalli mosaḷe nija hēḷitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_17.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_17.mp3" },
-    { "kn": "\"ನನ್ನ ಹೆಂಡತಿಗೆ ನಿನ್ನ ಹೃದಯ ಬೇಕು.\"", "en": "\"My wife wants your heart.\"", "tr": "\"Nanna heṇḍatige ninna hṛdaya bēku.\"", "kn_audio_url": "/audio/stories/kn-story-003/kn_18.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_18.mp3" },
-    { "kn": "ಕೋತಿ ಬುದ್ಧಿವಂತವಾಗಿತ್ತು.", "en": "The monkey was clever.", "tr": "Kōti buddhivantavāgittu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_19.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_19.mp3" },
-    { "kn": "\"ಅಯ್ಯೋ! ನನ್ನ ಹೃದಯ ಮರದ ಮೇಲೆ ಇದೆ. ಹಿಂದೆ ಹೋಗೋಣ.\"", "en": "\"Oh no! My heart is on the tree. Let's go back.\"", "tr": "\"Ayyō! Nanna hṛdaya marada mēle ide. Hinde hōgōṇa.\"", "kn_audio_url": "/audio/stories/kn-story-003/kn_20.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_20.mp3" },
-    { "kn": "ಮೊಸಳೆ ಹಿಂದೆ ಹೋಯಿತು.", "en": "The crocodile went back.", "tr": "Mosaḷe hinde hōyitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_21.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_21.mp3" },
-    { "kn": "ಕೋತಿ ಮರದ ಮೇಲೆ ಜಿಗಿಯಿತು.", "en": "The monkey jumped onto the tree.", "tr": "Kōti marada mēle jigiyitu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_22.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_22.mp3" },
-    { "kn": "\"ಮೂರ್ಖ ಮೊಸಳೆ! ಹೃದಯ ಮರದ ಮೇಲೆ ಇರುತ್ತದೆಯೇ?\"", "en": "\"Foolish crocodile! Can a heart be on a tree?\"", "tr": "\"Mūrkha mosaḷe! Hṛdaya marada mēle iruttadeyē?\"", "kn_audio_url": "/audio/stories/kn-story-003/kn_23.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_23.mp3" },
-    { "kn": "ಬುದ್ಧಿ ಇದ್ದರೆ, ಯಾವ ಕಷ್ಟವನ್ನೂ ಗೆಲ್ಲಬಹುದು.", "en": "With cleverness, you can overcome any difficulty.", "tr": "Buddhi iddare, yāva kashṭavannū gellbahudu.", "kn_audio_url": "/audio/stories/kn-story-003/kn_24.mp3", "en_audio_url": "/audio/stories/kn-story-003/en_24.mp3" }
+    {
+      "kn": "ಒಂದು ನದಿಯ ಬಳಿ ಒಂದು ಮರ ಇತ್ತು.",
+      "en": "There was a tree near a river.",
+      "tr": "Ondu nadiya baḷi ondu mara ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_0.mp3"
+    },
+    {
+      "kn": "ಆ ಮರದಲ್ಲಿ ಒಂದು ಕೋತಿ ವಾಸವಾಗಿತ್ತು.",
+      "en": "A monkey lived in that tree.",
+      "tr": "Ā maradalli ondu kōti vāsavāgittu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_1.mp3"
+    },
+    {
+      "kn": "ಮರದಲ್ಲಿ ಸಿಹಿ ಹಣ್ಣುಗಳು ಇದ್ದವು.",
+      "en": "There were sweet fruits on the tree.",
+      "tr": "Maradalli sihi haṇṇugaḷu iddavu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_2.mp3"
+    },
+    {
+      "kn": "ನದಿಯಲ್ಲಿ ಒಂದು ಮೊಸಳೆ ಇತ್ತು.",
+      "en": "There was a crocodile in the river.",
+      "tr": "Nadiyalli ondu mosaḷe ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_3.mp3"
+    },
+    {
+      "kn": "ಒಂದು ದಿನ ಮೊಸಳೆ ಮರದ ಬಳಿ ಬಂತು.",
+      "en": "One day the crocodile came near the tree.",
+      "tr": "Ondu dina mosaḷe marada baḷi bantu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_4.mp3"
+    },
+    {
+      "kn": "ಕೋತಿ ಮೊಸಳೆಗೆ ಹಣ್ಣು ಕೊಟ್ಟಿತು.",
+      "en": "The monkey gave the crocodile a fruit.",
+      "tr": "Kōti mosaḷege haṇṇu koṭṭitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_5.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆಗೆ ಹಣ್ಣು ತುಂಬಾ ಇಷ್ಟವಾಯಿತು.",
+      "en": "The crocodile liked the fruit very much.",
+      "tr": "Mosaḷege haṇṇu tumbā ishṭavāyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_6.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_6.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆ ಪ್ರತಿ ದಿನ ಬರುತ್ತಿತ್ತು.",
+      "en": "The crocodile came every day.",
+      "tr": "Mosaḷe prati dina baruttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_7.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_7.mp3"
+    },
+    {
+      "kn": "ಕೋತಿ ಮತ್ತು ಮೊಸಳೆ ಒಳ್ಳೆಯ ಗೆಳೆಯರಾದರು.",
+      "en": "The monkey and the crocodile became good friends.",
+      "tr": "Kōti mattu mosaḷe oḷḷeya geḷeyarādaru.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_8.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_8.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆ ಹಣ್ಣನ್ನು ಮನೆಗೆ ತೆಗೆದುಕೊಂಡು ಹೋಯಿತು.",
+      "en": "The crocodile took the fruit home.",
+      "tr": "Mosaḷe haṇṇannu manege tegedukoṇḍu hōyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_9.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_9.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆಯ ಹೆಂಡತಿ ಹಣ್ಣು ತಿಂದಳು.",
+      "en": "The crocodile's wife ate the fruit.",
+      "tr": "Mosaḷeya heṇḍati haṇṇu tindaḷu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_10.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_10.mp3"
+    },
+    {
+      "kn": "ಹೆಂಡತಿ ಹೇಳಿದಳು.",
+      "en": "The wife said.",
+      "tr": "Heṇḍati hēḷidaḷu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_11.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_11.mp3"
+    },
+    {
+      "kn": "\"ಈ ಹಣ್ಣು ತಿನ್ನುವ ಕೋತಿಯ ಹೃದಯ ಎಷ್ಟು ಸಿಹಿ ಇರಬೇಕು!\"",
+      "en": "\"The heart of the monkey who eats these fruits must be so sweet!\"",
+      "tr": "\"Ī haṇṇu tinnuva kōtiya hṛdaya eshṭu sihi irabēku!\"",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_12.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_12.mp3"
+    },
+    {
+      "kn": "\"ನನಗೆ ಕೋತಿಯ ಹೃದಯ ಬೇಕು.\"",
+      "en": "\"I want the monkey's heart.\"",
+      "tr": "\"Nanage kōtiya hṛdaya bēku.\"",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_13.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_13.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆ ಕೋತಿಯ ಬಳಿ ಹೋಯಿತು.",
+      "en": "The crocodile went to the monkey.",
+      "tr": "Mosaḷe kōtiya baḷi hōyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_14.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_14.mp3"
+    },
+    {
+      "kn": "\"ನನ್ನ ಬೆನ್ನ ಮೇಲೆ ಕೂತುಕೋ. ನನ್ನ ಮನೆಗೆ ಹೋಗೋಣ.\"",
+      "en": "\"Sit on my back. Let's go to my home.\"",
+      "tr": "\"Nanna benna mēle kūtukō. Nanna manege hōgōṇa.\"",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_15.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_15.mp3"
+    },
+    {
+      "kn": "ಕೋತಿ ಮೊಸಳೆಯ ಬೆನ್ನ ಮೇಲೆ ಕೂತಿತು.",
+      "en": "The monkey sat on the crocodile's back.",
+      "tr": "Kōti mosaḷeya benna mēle kūtitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_16.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_16.mp3"
+    },
+    {
+      "kn": "ನದಿಯ ಮಧ್ಯದಲ್ಲಿ ಮೊಸಳೆ ನಿಜ ಹೇಳಿತು.",
+      "en": "In the middle of the river, the crocodile told the truth.",
+      "tr": "Nadiya madhyadalli mosaḷe nija hēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_17.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_17.mp3"
+    },
+    {
+      "kn": "\"ನನ್ನ ಹೆಂಡತಿಗೆ ನಿನ್ನ ಹೃದಯ ಬೇಕು.\"",
+      "en": "\"My wife wants your heart.\"",
+      "tr": "\"Nanna heṇḍatige ninna hṛdaya bēku.\"",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_18.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_18.mp3"
+    },
+    {
+      "kn": "ಕೋತಿ ಬುದ್ಧಿವಂತವಾಗಿತ್ತು.",
+      "en": "The monkey was clever.",
+      "tr": "Kōti buddhivantavāgittu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_19.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_19.mp3"
+    },
+    {
+      "kn": "\"ಅಯ್ಯೋ! ನನ್ನ ಹೃದಯ ಮರದ ಮೇಲೆ ಇದೆ. ಹಿಂದೆ ಹೋಗೋಣ.\"",
+      "en": "\"Oh no! My heart is on the tree. Let's go back.\"",
+      "tr": "\"Ayyō! Nanna hṛdaya marada mēle ide. Hinde hōgōṇa.\"",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_20.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_20.mp3"
+    },
+    {
+      "kn": "ಮೊಸಳೆ ಹಿಂದೆ ಹೋಯಿತು.",
+      "en": "The crocodile went back.",
+      "tr": "Mosaḷe hinde hōyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_21.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_21.mp3"
+    },
+    {
+      "kn": "ಕೋತಿ ಮರದ ಮೇಲೆ ಜಿಗಿಯಿತು.",
+      "en": "The monkey jumped onto the tree.",
+      "tr": "Kōti marada mēle jigiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_22.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_22.mp3"
+    },
+    {
+      "kn": "\"ಮೂರ್ಖ ಮೊಸಳೆ! ಹೃದಯ ಮರದ ಮೇಲೆ ಇರುತ್ತದೆಯೇ?\"",
+      "en": "\"Foolish crocodile! Can a heart be on a tree?\"",
+      "tr": "\"Mūrkha mosaḷe! Hṛdaya marada mēle iruttadeyē?\"",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_23.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_23.mp3"
+    },
+    {
+      "kn": "ಬುದ್ಧಿ ಇದ್ದರೆ, ಯಾವ ಕಷ್ಟವನ್ನೂ ಗೆಲ್ಲಬಹುದು.",
+      "en": "With cleverness, you can overcome any difficulty.",
+      "tr": "Buddhi iddare, yāva kashṭavannū gellbahudu.",
+      "kn_audio_url": "/audio/stories/kn-story-003/kn_24.mp3",
+      "en_audio_url": "/audio/stories/kn-story-003/en_24.mp3"
+    }
   ]
 }

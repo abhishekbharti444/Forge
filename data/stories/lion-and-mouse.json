@@ -5,42 +5,230 @@
   "tier": 1,
   "description": "An Aesop's fable about how even the smallest can help the mightiest.",
   "comprehension": [
-    { "after_sentence": 4, "question": "What was the lion doing?" },
-    { "after_sentence": 9, "question": "Why did the lion let the mouse go?" },
-    { "after_sentence": 13, "question": "What happened to the lion?" },
-    { "after_sentence": 17, "question": "How did the mouse help the lion?" },
-    { "after_sentence": 20, "question": "What is the lesson of this story?" }
+    {
+      "after_sentence": 4,
+      "question": "What was the lion doing?",
+      "audio_url": "/audio/stories/kn-story-005/comp_0.mp3"
+    },
+    {
+      "after_sentence": 9,
+      "question": "Why did the lion let the mouse go?",
+      "audio_url": "/audio/stories/kn-story-005/comp_1.mp3"
+    },
+    {
+      "after_sentence": 13,
+      "question": "What happened to the lion?",
+      "audio_url": "/audio/stories/kn-story-005/comp_2.mp3"
+    },
+    {
+      "after_sentence": 17,
+      "question": "How did the mouse help the lion?",
+      "audio_url": "/audio/stories/kn-story-005/comp_3.mp3"
+    },
+    {
+      "after_sentence": 20,
+      "question": "What is the lesson of this story?",
+      "audio_url": "/audio/stories/kn-story-005/comp_4.mp3"
+    }
   ],
   "vocabulary": [
-    { "kn": "ಸಿಂಹ", "en": "lion", "tr": "simha", "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-005/vocab_en_0.mp3" },
-    { "kn": "ಇಲಿ", "en": "mouse", "tr": "ili", "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-005/vocab_en_1.mp3" },
-    { "kn": "ಬಲೆ", "en": "net", "tr": "bale", "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-005/vocab_en_2.mp3" },
-    { "kn": "ನಿದ್ದೆ", "en": "sleep", "tr": "nidde", "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-005/vocab_en_3.mp3" },
-    { "kn": "ಸಹಾಯ", "en": "help", "tr": "sahāya", "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-005/vocab_en_4.mp3" },
-    { "kn": "ಸ್ನೇಹ", "en": "friendship", "tr": "snēha", "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-005/vocab_en_5.mp3" }
+    {
+      "kn": "ಸಿಂಹ",
+      "en": "lion",
+      "tr": "simha",
+      "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/vocab_en_0.mp3"
+    },
+    {
+      "kn": "ಇಲಿ",
+      "en": "mouse",
+      "tr": "ili",
+      "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/vocab_en_1.mp3"
+    },
+    {
+      "kn": "ಬಲೆ",
+      "en": "net",
+      "tr": "bale",
+      "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/vocab_en_2.mp3"
+    },
+    {
+      "kn": "ನಿದ್ದೆ",
+      "en": "sleep",
+      "tr": "nidde",
+      "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/vocab_en_3.mp3"
+    },
+    {
+      "kn": "ಸಹಾಯ",
+      "en": "help",
+      "tr": "sahāya",
+      "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/vocab_en_4.mp3"
+    },
+    {
+      "kn": "ಸ್ನೇಹ",
+      "en": "friendship",
+      "tr": "snēha",
+      "kn_audio_url": "/audio/stories/kn-story-005/vocab_kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/vocab_en_5.mp3"
+    }
   ],
   "sentences": [
-    { "kn": "ಒಂದು ಕಾಡಿನಲ್ಲಿ ಒಂದು ಸಿಂಹ ಇತ್ತು.", "en": "There was a lion in a forest.", "tr": "Ondu kāḍinalli ondu simha ittu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_0.mp3" },
-    { "kn": "ಸಿಂಹ ಮರದ ಕೆಳಗೆ ನಿದ್ದೆ ಮಾಡುತ್ತಿತ್ತು.", "en": "The lion was sleeping under a tree.", "tr": "Simha marada keḷage nidde māḍuttittu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_1.mp3" },
-    { "kn": "ಒಂದು ಸಣ್ಣ ಇಲಿ ಬಂತು.", "en": "A small mouse came.", "tr": "Ondu saṇṇa ili bantu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_2.mp3" },
-    { "kn": "ಇಲಿ ಸಿಂಹದ ಮೇಲೆ ಓಡಿತು.", "en": "The mouse ran over the lion.", "tr": "Ili simhada mēle ōḍitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_3.mp3" },
-    { "kn": "ಸಿಂಹ ಎದ್ದಿತು.", "en": "The lion woke up.", "tr": "Simha edditu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_4.mp3" },
-    { "kn": "ಸಿಂಹ ಇಲಿಯನ್ನು ಹಿಡಿಯಿತು.", "en": "The lion caught the mouse.", "tr": "Simha iliyannu hiḍiyitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_5.mp3" },
-    { "kn": "ಸಿಂಹ ತುಂಬಾ ಕೋಪಗೊಂಡಿತು.", "en": "The lion was very angry.", "tr": "Simha tumbā kōpagoṇḍitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_6.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_6.mp3" },
-    { "kn": "ಇಲಿ ಹೇಳಿತು.", "en": "The mouse said.", "tr": "Ili hēḷitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_7.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_7.mp3" },
-    { "kn": "\"ದಯವಿಟ್ಟು ಬಿಡಿ. ಒಂದು ದಿನ ನಾನು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇನೆ.\"", "en": "\"Please let me go. One day I will help you.\"", "tr": "\"Dayaviṭṭu biḍi. Ondu dina nānu nimage sahāya māḍuttēne.\"", "kn_audio_url": "/audio/stories/kn-story-005/kn_8.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_8.mp3" },
-    { "kn": "ಸಿಂಹ ನಕ್ಕಿತು.", "en": "The lion laughed.", "tr": "Simha nakkitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_9.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_9.mp3" },
-    { "kn": "\"ಸಣ್ಣ ಇಲಿ ನನಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆಯೇ?\"", "en": "\"A small mouse will help me?\"", "tr": "\"Saṇṇa ili nanage sahāya māḍuttadeyē?\"", "kn_audio_url": "/audio/stories/kn-story-005/kn_10.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_10.mp3" },
-    { "kn": "ಆದರೂ ಸಿಂಹ ಇಲಿಯನ್ನು ಬಿಟ್ಟಿತು.", "en": "But the lion let the mouse go.", "tr": "Ādarū simha iliyannu biṭṭitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_11.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_11.mp3" },
-    { "kn": "ಕೆಲವು ದಿನಗಳ ನಂತರ.", "en": "A few days later.", "tr": "Kelavu dinagaḷa nantara.", "kn_audio_url": "/audio/stories/kn-story-005/kn_12.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_12.mp3" },
-    { "kn": "ಬೇಟೆಗಾರರು ಒಂದು ಬಲೆ ಹಾಕಿದರು.", "en": "Hunters set a net.", "tr": "Bēṭegāraru ondu bale hākidaru.", "kn_audio_url": "/audio/stories/kn-story-005/kn_13.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_13.mp3" },
-    { "kn": "ಸಿಂಹ ಬಲೆಯಲ್ಲಿ ಸಿಕ್ಕಿತು.", "en": "The lion got caught in the net.", "tr": "Simha baleyalli sikkitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_14.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_14.mp3" },
-    { "kn": "ಸಿಂಹ ಜೋರಾಗಿ ಕೂಗಿತು.", "en": "The lion roared loudly.", "tr": "Simha jōrāgi kūgitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_15.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_15.mp3" },
-    { "kn": "ಇಲಿ ಆ ಕೂಗು ಕೇಳಿತು.", "en": "The mouse heard the roar.", "tr": "Ili ā kūgu kēḷitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_16.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_16.mp3" },
-    { "kn": "ಇಲಿ ಓಡಿ ಬಂತು.", "en": "The mouse came running.", "tr": "Ili ōḍi bantu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_17.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_17.mp3" },
-    { "kn": "ಇಲಿ ಬಲೆಯನ್ನು ಕಡಿಯಿತು.", "en": "The mouse chewed through the net.", "tr": "Ili baleyannu kaḍiyitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_18.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_18.mp3" },
-    { "kn": "ಸಿಂಹ ಮುಕ್ತವಾಯಿತು!", "en": "The lion was free!", "tr": "Simha muktavāyitu!", "kn_audio_url": "/audio/stories/kn-story-005/kn_19.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_19.mp3" },
-    { "kn": "ಸಿಂಹ ಇಲಿಗೆ ಧನ್ಯವಾದ ಹೇಳಿತು.", "en": "The lion thanked the mouse.", "tr": "Simha ilige dhanyavāda hēḷitu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_20.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_20.mp3" },
-    { "kn": "ಸಣ್ಣವರನ್ನು ಕಡೆಗಣಿಸಬಾರದು.", "en": "Never underestimate the small.", "tr": "Saṇṇavarannu kaḍegaṇisabāradu.", "kn_audio_url": "/audio/stories/kn-story-005/kn_21.mp3", "en_audio_url": "/audio/stories/kn-story-005/en_21.mp3" }
+    {
+      "kn": "ಒಂದು ಕಾಡಿನಲ್ಲಿ ಒಂದು ಸಿಂಹ ಇತ್ತು.",
+      "en": "There was a lion in a forest.",
+      "tr": "Ondu kāḍinalli ondu simha ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_0.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಮರದ ಕೆಳಗೆ ನಿದ್ದೆ ಮಾಡುತ್ತಿತ್ತು.",
+      "en": "The lion was sleeping under a tree.",
+      "tr": "Simha marada keḷage nidde māḍuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_1.mp3"
+    },
+    {
+      "kn": "ಒಂದು ಸಣ್ಣ ಇಲಿ ಬಂತು.",
+      "en": "A small mouse came.",
+      "tr": "Ondu saṇṇa ili bantu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_2.mp3"
+    },
+    {
+      "kn": "ಇಲಿ ಸಿಂಹದ ಮೇಲೆ ಓಡಿತು.",
+      "en": "The mouse ran over the lion.",
+      "tr": "Ili simhada mēle ōḍitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_3.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಎದ್ದಿತು.",
+      "en": "The lion woke up.",
+      "tr": "Simha edditu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_4.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಇಲಿಯನ್ನು ಹಿಡಿಯಿತು.",
+      "en": "The lion caught the mouse.",
+      "tr": "Simha iliyannu hiḍiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_5.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ತುಂಬಾ ಕೋಪಗೊಂಡಿತು.",
+      "en": "The lion was very angry.",
+      "tr": "Simha tumbā kōpagoṇḍitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_6.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_6.mp3"
+    },
+    {
+      "kn": "ಇಲಿ ಹೇಳಿತು.",
+      "en": "The mouse said.",
+      "tr": "Ili hēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_7.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_7.mp3"
+    },
+    {
+      "kn": "\"ದಯವಿಟ್ಟು ಬಿಡಿ. ಒಂದು ದಿನ ನಾನು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇನೆ.\"",
+      "en": "\"Please let me go. One day I will help you.\"",
+      "tr": "\"Dayaviṭṭu biḍi. Ondu dina nānu nimage sahāya māḍuttēne.\"",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_8.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_8.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ನಕ್ಕಿತು.",
+      "en": "The lion laughed.",
+      "tr": "Simha nakkitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_9.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_9.mp3"
+    },
+    {
+      "kn": "\"ಸಣ್ಣ ಇಲಿ ನನಗೆ ಸಹಾಯ ಮಾಡುತ್ತದೆಯೇ?\"",
+      "en": "\"A small mouse will help me?\"",
+      "tr": "\"Saṇṇa ili nanage sahāya māḍuttadeyē?\"",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_10.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_10.mp3"
+    },
+    {
+      "kn": "ಆದರೂ ಸಿಂಹ ಇಲಿಯನ್ನು ಬಿಟ್ಟಿತು.",
+      "en": "But the lion let the mouse go.",
+      "tr": "Ādarū simha iliyannu biṭṭitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_11.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_11.mp3"
+    },
+    {
+      "kn": "ಕೆಲವು ದಿನಗಳ ನಂತರ.",
+      "en": "A few days later.",
+      "tr": "Kelavu dinagaḷa nantara.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_12.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_12.mp3"
+    },
+    {
+      "kn": "ಬೇಟೆಗಾರರು ಒಂದು ಬಲೆ ಹಾಕಿದರು.",
+      "en": "Hunters set a net.",
+      "tr": "Bēṭegāraru ondu bale hākidaru.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_13.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_13.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಬಲೆಯಲ್ಲಿ ಸಿಕ್ಕಿತು.",
+      "en": "The lion got caught in the net.",
+      "tr": "Simha baleyalli sikkitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_14.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_14.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಜೋರಾಗಿ ಕೂಗಿತು.",
+      "en": "The lion roared loudly.",
+      "tr": "Simha jōrāgi kūgitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_15.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_15.mp3"
+    },
+    {
+      "kn": "ಇಲಿ ಆ ಕೂಗು ಕೇಳಿತು.",
+      "en": "The mouse heard the roar.",
+      "tr": "Ili ā kūgu kēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_16.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_16.mp3"
+    },
+    {
+      "kn": "ಇಲಿ ಓಡಿ ಬಂತು.",
+      "en": "The mouse came running.",
+      "tr": "Ili ōḍi bantu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_17.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_17.mp3"
+    },
+    {
+      "kn": "ಇಲಿ ಬಲೆಯನ್ನು ಕಡಿಯಿತು.",
+      "en": "The mouse chewed through the net.",
+      "tr": "Ili baleyannu kaḍiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_18.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_18.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಮುಕ್ತವಾಯಿತು!",
+      "en": "The lion was free!",
+      "tr": "Simha muktavāyitu!",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_19.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_19.mp3"
+    },
+    {
+      "kn": "ಸಿಂಹ ಇಲಿಗೆ ಧನ್ಯವಾದ ಹೇಳಿತು.",
+      "en": "The lion thanked the mouse.",
+      "tr": "Simha ilige dhanyavāda hēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_20.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_20.mp3"
+    },
+    {
+      "kn": "ಸಣ್ಣವರನ್ನು ಕಡೆಗಣಿಸಬಾರದು.",
+      "en": "Never underestimate the small.",
+      "tr": "Saṇṇavarannu kaḍegaṇisabāradu.",
+      "kn_audio_url": "/audio/stories/kn-story-005/kn_21.mp3",
+      "en_audio_url": "/audio/stories/kn-story-005/en_21.mp3"
+    }
   ]
 }

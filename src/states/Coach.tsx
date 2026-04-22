@@ -49,9 +49,10 @@ export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea,
   const [skippedIds, setSkippedIds] = useState<Set<string>>(new Set())
   const [showReasons, setShowReasons] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [groupMode, setGroupMode] = useState(false)
 
   useEffect(() => {
-    apiFetch<{ tasks: Task[] }>(`/tasks?category=${category}`)
+    apiFetch<{ tasks: Task[] }>(`/tasks?category=${category}${groupMode ? '&group=true' : ''}`)
       .then(d => {
         const t = d.tasks || []
         setTasks(t)
@@ -59,7 +60,7 @@ export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea,
         setLoading(false)
       })
       .catch(() => setLoading(false))
-  }, [category])
+  }, [category, groupMode])
 
   function skip(_reason: string) {
     if (!current) return
@@ -90,6 +91,12 @@ export function Coach({ category, categoryLabel, lastCompletedId, lastSkillArea,
       {/* Top bar */}
       <div className="flex items-center justify-between mb-12">
         <button onClick={onHome} className="text-text-secondary/40 text-xs hover:text-text-secondary transition-colors">← Home</button>
+        {category === 'public_speaking' && (
+          <button onClick={() => setGroupMode(!groupMode)}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${groupMode ? 'bg-accent-amber text-bg-primary' : 'bg-bg-surface text-text-secondary border border-border'}`}>
+            👥 Group
+          </button>
+        )}
         <span className="text-text-secondary/40 text-xs">{categoryLabel}</span>
       </div>
 

@@ -206,8 +206,11 @@ app.get('/api/categories', (_req, res) => {
 
 app.get('/api/tasks', (req, res) => {
   const category = req.query.category as string | undefined
+  const group = req.query.group as string | undefined
   const goalCategory = category || state.goal
-  const filtered = goalCategory ? tasks.filter((t: any) => t.goal_category === goalCategory) : tasks
+  let filtered = goalCategory ? tasks.filter((t: any) => t.goal_category === goalCategory) : tasks
+  if (group === 'true') filtered = filtered.filter((t: any) => t.group === true)
+  else if (group === 'false') filtered = filtered.filter((t: any) => !t.group)
   res.json({ tasks: filtered, total: filtered.length })
 })
 

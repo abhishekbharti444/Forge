@@ -57,6 +57,7 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
   const [categories, setCategories] = useState<{ id: string; label: string }[]>([{ id: '', label: 'All' }])
 
   const [category, setCategory] = useState<string>(initialCategory || '')
+  const [groupMode, setGroupMode] = useState(false)
 
   useEffect(() => {
     apiFetch<{ categories: { id: string; label: string }[] }>('/categories')
@@ -66,7 +67,8 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
 
   useEffect(() => {
     const cat = category ? `?category=${category}` : ''
-    apiFetch<{ tasks: Task[] }>(`/tasks${cat}`)
+    const grp = groupMode ? `${cat ? '&' : '?'}group=true` : ''
+    apiFetch<{ tasks: Task[] }>(`/tasks${cat}${grp}`)
       .then(d => {
         // Unpack extra fields from reference (sequence, song, tags etc.)
         // These are packed into reference jsonb in Supabase but top-level in local server
@@ -90,7 +92,7 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
         setLoading(false)
       })
       .catch(() => setLoading(false))
-  }, [category])
+  }, [category, groupMode])
 
   // Separate sequences, songs, and independent tasks
   const sequenceMap = new Map<string, Task[]>()
@@ -163,7 +165,7 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
       )}
 
       {/* Category picker */}
-      <div className="flex gap-2 mb-6 flex-wrap">
+      <div className="flex gap-2 mb-4 flex-wrap">
         {categories.map(c => (
           <button key={c.id} onClick={() => changeCategory(c.id)}
             className={`px-3 py-1.5 rounded-lg text-sm ${category === c.id ? 'bg-accent-amber text-bg-primary' : 'bg-bg-surface text-text-secondary'}`}>
@@ -171,6 +173,14 @@ export function Suggestion({ onStartTask, onHistory, onHome, tasksCompletedToday
           </button>
         ))}
       </div>
+      {category === 'public_speaking' && (
+        <div className="mb-6">
+          <button onClick={() => setGroupMode(!groupMode)}
+            className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${groupMode ? 'bg-accent-amber text-bg-primary' : 'bg-bg-surface text-text-secondary border border-border'}`}>
+            👥 Group
+          </button>
+        </div>
+      )}
 
       {/* Journeys */}
       {sequenceMap.size > 0 && (

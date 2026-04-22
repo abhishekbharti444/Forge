@@ -5,41 +5,223 @@
   "tier": 1,
   "description": "An Aesop's fable about a hardworking ant and a lazy grasshopper.",
   "comprehension": [
-    { "after_sentence": 4, "question": "What was the ant doing?" },
-    { "after_sentence": 9, "question": "What was the grasshopper doing?" },
-    { "after_sentence": 13, "question": "What season came?" },
-    { "after_sentence": 17, "question": "Did the ant have food in winter?" },
-    { "after_sentence": 20, "question": "What is the lesson of this story?" }
+    {
+      "after_sentence": 4,
+      "question": "What was the ant doing?",
+      "audio_url": "/audio/stories/kn-story-004/comp_0.mp3"
+    },
+    {
+      "after_sentence": 9,
+      "question": "What was the grasshopper doing?",
+      "audio_url": "/audio/stories/kn-story-004/comp_1.mp3"
+    },
+    {
+      "after_sentence": 13,
+      "question": "What season came?",
+      "audio_url": "/audio/stories/kn-story-004/comp_2.mp3"
+    },
+    {
+      "after_sentence": 17,
+      "question": "Did the ant have food in winter?",
+      "audio_url": "/audio/stories/kn-story-004/comp_3.mp3"
+    },
+    {
+      "after_sentence": 20,
+      "question": "What is the lesson of this story?",
+      "audio_url": "/audio/stories/kn-story-004/comp_4.mp3"
+    }
   ],
   "vocabulary": [
-    { "kn": "ಇರುವೆ", "en": "ant", "tr": "iruve", "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-004/vocab_en_0.mp3" },
-    { "kn": "ಮಿಡತೆ", "en": "grasshopper", "tr": "miḍate", "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-004/vocab_en_1.mp3" },
-    { "kn": "ಬೇಸಿಗೆ", "en": "summer", "tr": "bēsige", "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-004/vocab_en_2.mp3" },
-    { "kn": "ಚಳಿಗಾಲ", "en": "winter", "tr": "chaḷigāla", "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-004/vocab_en_3.mp3" },
-    { "kn": "ಆಹಾರ", "en": "food", "tr": "āhāra", "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-004/vocab_en_4.mp3" },
-    { "kn": "ಕೆಲಸ", "en": "work", "tr": "kelasa", "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-004/vocab_en_5.mp3" }
+    {
+      "kn": "ಇರುವೆ",
+      "en": "ant",
+      "tr": "iruve",
+      "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/vocab_en_0.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆ",
+      "en": "grasshopper",
+      "tr": "miḍate",
+      "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/vocab_en_1.mp3"
+    },
+    {
+      "kn": "ಬೇಸಿಗೆ",
+      "en": "summer",
+      "tr": "bēsige",
+      "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/vocab_en_2.mp3"
+    },
+    {
+      "kn": "ಚಳಿಗಾಲ",
+      "en": "winter",
+      "tr": "chaḷigāla",
+      "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/vocab_en_3.mp3"
+    },
+    {
+      "kn": "ಆಹಾರ",
+      "en": "food",
+      "tr": "āhāra",
+      "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/vocab_en_4.mp3"
+    },
+    {
+      "kn": "ಕೆಲಸ",
+      "en": "work",
+      "tr": "kelasa",
+      "kn_audio_url": "/audio/stories/kn-story-004/vocab_kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/vocab_en_5.mp3"
+    }
   ],
   "sentences": [
-    { "kn": "ಒಂದು ಬೇಸಿಗೆಯ ದಿನ.", "en": "One summer day.", "tr": "Ondu bēsigeya dina.", "kn_audio_url": "/audio/stories/kn-story-004/kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_0.mp3" },
-    { "kn": "ಒಂದು ಇರುವೆ ಕೆಲಸ ಮಾಡುತ್ತಿತ್ತು.", "en": "An ant was working.", "tr": "Ondu iruve kelasa māḍuttittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_1.mp3" },
-    { "kn": "ಇರುವೆ ಆಹಾರ ಸಂಗ್ರಹಿಸುತ್ತಿತ್ತು.", "en": "The ant was collecting food.", "tr": "Iruve āhāra sangrahisuttittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_2.mp3" },
-    { "kn": "ಇರುವೆ ಆಹಾರವನ್ನು ಮನೆಗೆ ಒಯ್ಯುತ್ತಿತ್ತು.", "en": "The ant was carrying food home.", "tr": "Iruve āhāravannu manege oyyuttittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_3.mp3" },
-    { "kn": "ಇರುವೆ ಪ್ರತಿ ದಿನ ಕೆಲಸ ಮಾಡುತ್ತಿತ್ತು.", "en": "The ant worked every day.", "tr": "Iruve prati dina kelasa māḍuttittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_4.mp3" },
-    { "kn": "ಒಂದು ಮಿಡತೆ ಅಲ್ಲಿ ಇತ್ತು.", "en": "A grasshopper was there.", "tr": "Ondu miḍate alli ittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_5.mp3" },
-    { "kn": "ಮಿಡತೆ ಹಾಡುತ್ತಿತ್ತು.", "en": "The grasshopper was singing.", "tr": "Miḍate hāḍuttittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_6.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_6.mp3" },
-    { "kn": "ಮಿಡತೆ ಆಟ ಆಡುತ್ತಿತ್ತು.", "en": "The grasshopper was playing.", "tr": "Miḍate āṭa āḍuttittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_7.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_7.mp3" },
-    { "kn": "ಮಿಡತೆ ಇರುವೆಗೆ ಹೇಳಿತು.", "en": "The grasshopper said to the ant.", "tr": "Miḍate iruvege hēḷitu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_8.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_8.mp3" },
-    { "kn": "\"ಯಾಕೆ ಕೆಲಸ ಮಾಡುತ್ತೀಯ? ಬಾ, ಆಟ ಆಡೋಣ!\"", "en": "\"Why are you working? Come, let's play!\"", "tr": "\"Yāke kelasa māḍuttīya? Bā, āṭa āḍōṇa!\"", "kn_audio_url": "/audio/stories/kn-story-004/kn_9.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_9.mp3" },
-    { "kn": "ಇರುವೆ ಹೇಳಿತು.", "en": "The ant said.", "tr": "Iruve hēḷitu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_10.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_10.mp3" },
-    { "kn": "\"ಚಳಿಗಾಲ ಬರುತ್ತದೆ. ಆಹಾರ ಬೇಕು.\"", "en": "\"Winter is coming. We need food.\"", "tr": "\"Chaḷigāla baruttade. Āhāra bēku.\"", "kn_audio_url": "/audio/stories/kn-story-004/kn_11.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_11.mp3" },
-    { "kn": "ಮಿಡತೆ ನಕ್ಕಿತು.", "en": "The grasshopper laughed.", "tr": "Miḍate nakkitu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_12.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_12.mp3" },
-    { "kn": "ಚಳಿಗಾಲ ಬಂತು.", "en": "Winter came.", "tr": "Chaḷigāla bantu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_13.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_13.mp3" },
-    { "kn": "ತುಂಬಾ ಚಳಿ ಇತ್ತು.", "en": "It was very cold.", "tr": "Tumbā chaḷi ittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_14.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_14.mp3" },
-    { "kn": "ಎಲ್ಲಿಯೂ ಆಹಾರ ಇರಲಿಲ್ಲ.", "en": "There was no food anywhere.", "tr": "Elliyū āhāra iralilla.", "kn_audio_url": "/audio/stories/kn-story-004/kn_15.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_15.mp3" },
-    { "kn": "ಇರುವೆಯ ಮನೆಯಲ್ಲಿ ಆಹಾರ ಇತ್ತು.", "en": "The ant's home had food.", "tr": "Iruveya maneyalli āhāra ittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_16.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_16.mp3" },
-    { "kn": "ಇರುವೆ ಬೆಚ್ಚಗೆ ಇತ್ತು.", "en": "The ant was warm.", "tr": "Iruve bechchage ittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_17.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_17.mp3" },
-    { "kn": "ಮಿಡತೆಗೆ ಆಹಾರ ಇರಲಿಲ್ಲ.", "en": "The grasshopper had no food.", "tr": "Miḍatege āhāra iralilla.", "kn_audio_url": "/audio/stories/kn-story-004/kn_18.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_18.mp3" },
-    { "kn": "ಮಿಡತೆಗೆ ತುಂಬಾ ಹಸಿವಾಗಿತ್ತು.", "en": "The grasshopper was very hungry.", "tr": "Miḍatege tumbā hasivāgittu.", "kn_audio_url": "/audio/stories/kn-story-004/kn_19.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_19.mp3" },
-    { "kn": "ಇಂದು ಕೆಲಸ ಮಾಡಿದರೆ, ನಾಳೆ ನೆಮ್ಮದಿ.", "en": "If you work today, tomorrow will be peaceful.", "tr": "Indu kelasa māḍidare, nāḷe nemmadi.", "kn_audio_url": "/audio/stories/kn-story-004/kn_20.mp3", "en_audio_url": "/audio/stories/kn-story-004/en_20.mp3" }
+    {
+      "kn": "ಒಂದು ಬೇಸಿಗೆಯ ದಿನ.",
+      "en": "One summer day.",
+      "tr": "Ondu bēsigeya dina.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_0.mp3"
+    },
+    {
+      "kn": "ಒಂದು ಇರುವೆ ಕೆಲಸ ಮಾಡುತ್ತಿತ್ತು.",
+      "en": "An ant was working.",
+      "tr": "Ondu iruve kelasa māḍuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_1.mp3"
+    },
+    {
+      "kn": "ಇರುವೆ ಆಹಾರ ಸಂಗ್ರಹಿಸುತ್ತಿತ್ತು.",
+      "en": "The ant was collecting food.",
+      "tr": "Iruve āhāra sangrahisuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_2.mp3"
+    },
+    {
+      "kn": "ಇರುವೆ ಆಹಾರವನ್ನು ಮನೆಗೆ ಒಯ್ಯುತ್ತಿತ್ತು.",
+      "en": "The ant was carrying food home.",
+      "tr": "Iruve āhāravannu manege oyyuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_3.mp3"
+    },
+    {
+      "kn": "ಇರುವೆ ಪ್ರತಿ ದಿನ ಕೆಲಸ ಮಾಡುತ್ತಿತ್ತು.",
+      "en": "The ant worked every day.",
+      "tr": "Iruve prati dina kelasa māḍuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_4.mp3"
+    },
+    {
+      "kn": "ಒಂದು ಮಿಡತೆ ಅಲ್ಲಿ ಇತ್ತು.",
+      "en": "A grasshopper was there.",
+      "tr": "Ondu miḍate alli ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_5.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆ ಹಾಡುತ್ತಿತ್ತು.",
+      "en": "The grasshopper was singing.",
+      "tr": "Miḍate hāḍuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_6.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_6.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆ ಆಟ ಆಡುತ್ತಿತ್ತು.",
+      "en": "The grasshopper was playing.",
+      "tr": "Miḍate āṭa āḍuttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_7.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_7.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆ ಇರುವೆಗೆ ಹೇಳಿತು.",
+      "en": "The grasshopper said to the ant.",
+      "tr": "Miḍate iruvege hēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_8.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_8.mp3"
+    },
+    {
+      "kn": "\"ಯಾಕೆ ಕೆಲಸ ಮಾಡುತ್ತೀಯ? ಬಾ, ಆಟ ಆಡೋಣ!\"",
+      "en": "\"Why are you working? Come, let's play!\"",
+      "tr": "\"Yāke kelasa māḍuttīya? Bā, āṭa āḍōṇa!\"",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_9.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_9.mp3"
+    },
+    {
+      "kn": "ಇರುವೆ ಹೇಳಿತು.",
+      "en": "The ant said.",
+      "tr": "Iruve hēḷitu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_10.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_10.mp3"
+    },
+    {
+      "kn": "\"ಚಳಿಗಾಲ ಬರುತ್ತದೆ. ಆಹಾರ ಬೇಕು.\"",
+      "en": "\"Winter is coming. We need food.\"",
+      "tr": "\"Chaḷigāla baruttade. Āhāra bēku.\"",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_11.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_11.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆ ನಕ್ಕಿತು.",
+      "en": "The grasshopper laughed.",
+      "tr": "Miḍate nakkitu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_12.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_12.mp3"
+    },
+    {
+      "kn": "ಚಳಿಗಾಲ ಬಂತು.",
+      "en": "Winter came.",
+      "tr": "Chaḷigāla bantu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_13.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_13.mp3"
+    },
+    {
+      "kn": "ತುಂಬಾ ಚಳಿ ಇತ್ತು.",
+      "en": "It was very cold.",
+      "tr": "Tumbā chaḷi ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_14.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_14.mp3"
+    },
+    {
+      "kn": "ಎಲ್ಲಿಯೂ ಆಹಾರ ಇರಲಿಲ್ಲ.",
+      "en": "There was no food anywhere.",
+      "tr": "Elliyū āhāra iralilla.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_15.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_15.mp3"
+    },
+    {
+      "kn": "ಇರುವೆಯ ಮನೆಯಲ್ಲಿ ಆಹಾರ ಇತ್ತು.",
+      "en": "The ant's home had food.",
+      "tr": "Iruveya maneyalli āhāra ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_16.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_16.mp3"
+    },
+    {
+      "kn": "ಇರುವೆ ಬೆಚ್ಚಗೆ ಇತ್ತು.",
+      "en": "The ant was warm.",
+      "tr": "Iruve bechchage ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_17.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_17.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆಗೆ ಆಹಾರ ಇರಲಿಲ್ಲ.",
+      "en": "The grasshopper had no food.",
+      "tr": "Miḍatege āhāra iralilla.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_18.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_18.mp3"
+    },
+    {
+      "kn": "ಮಿಡತೆಗೆ ತುಂಬಾ ಹಸಿವಾಗಿತ್ತು.",
+      "en": "The grasshopper was very hungry.",
+      "tr": "Miḍatege tumbā hasivāgittu.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_19.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_19.mp3"
+    },
+    {
+      "kn": "ಇಂದು ಕೆಲಸ ಮಾಡಿದರೆ, ನಾಳೆ ನೆಮ್ಮದಿ.",
+      "en": "If you work today, tomorrow will be peaceful.",
+      "tr": "Indu kelasa māḍidare, nāḷe nemmadi.",
+      "kn_audio_url": "/audio/stories/kn-story-004/kn_20.mp3",
+      "en_audio_url": "/audio/stories/kn-story-004/en_20.mp3"
+    }
   ]
 }

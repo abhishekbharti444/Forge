@@ -5,42 +5,230 @@
   "tier": 1,
   "description": "A classic Panchatantra tale about a clever crow who finds water using stones.",
   "comprehension": [
-    { "after_sentence": 4, "question": "What was the crow looking for?" },
-    { "after_sentence": 9, "question": "Why couldn't the crow drink from the pot?" },
-    { "after_sentence": 13, "question": "What was the crow's idea?" },
-    { "after_sentence": 17, "question": "What happened when the crow dropped stones in the pot?" },
-    { "after_sentence": 21, "question": "How does the story end?" }
+    {
+      "after_sentence": 4,
+      "question": "What was the crow looking for?",
+      "audio_url": "/audio/stories/kn-story-001/comp_0.mp3"
+    },
+    {
+      "after_sentence": 9,
+      "question": "Why couldn't the crow drink from the pot?",
+      "audio_url": "/audio/stories/kn-story-001/comp_1.mp3"
+    },
+    {
+      "after_sentence": 13,
+      "question": "What was the crow's idea?",
+      "audio_url": "/audio/stories/kn-story-001/comp_2.mp3"
+    },
+    {
+      "after_sentence": 17,
+      "question": "What happened when the crow dropped stones in the pot?",
+      "audio_url": "/audio/stories/kn-story-001/comp_3.mp3"
+    },
+    {
+      "after_sentence": 21,
+      "question": "How does the story end?",
+      "audio_url": "/audio/stories/kn-story-001/comp_4.mp3"
+    }
   ],
   "vocabulary": [
-    { "kn": "ಕಾಗೆ", "en": "crow", "tr": "kāge", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_0.mp3" },
-    { "kn": "ನೀರು", "en": "water", "tr": "nīru", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_1.mp3" },
-    { "kn": "ಮಡಕೆ", "en": "pot", "tr": "maḍake", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_2.mp3" },
-    { "kn": "ಕಲ್ಲು", "en": "stone", "tr": "kallu", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_3.mp3" },
-    { "kn": "ಬಾಯಾರಿಕೆ", "en": "thirst", "tr": "bāyārike", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_4.mp3" },
-    { "kn": "ಉಪಾಯ", "en": "idea", "tr": "upāya", "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-001/vocab_en_5.mp3" }
+    {
+      "kn": "ಕಾಗೆ",
+      "en": "crow",
+      "tr": "kāge",
+      "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/vocab_en_0.mp3"
+    },
+    {
+      "kn": "ನೀರು",
+      "en": "water",
+      "tr": "nīru",
+      "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/vocab_en_1.mp3"
+    },
+    {
+      "kn": "ಮಡಕೆ",
+      "en": "pot",
+      "tr": "maḍake",
+      "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/vocab_en_2.mp3"
+    },
+    {
+      "kn": "ಕಲ್ಲು",
+      "en": "stone",
+      "tr": "kallu",
+      "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/vocab_en_3.mp3"
+    },
+    {
+      "kn": "ಬಾಯಾರಿಕೆ",
+      "en": "thirst",
+      "tr": "bāyārike",
+      "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/vocab_en_4.mp3"
+    },
+    {
+      "kn": "ಉಪಾಯ",
+      "en": "idea",
+      "tr": "upāya",
+      "kn_audio_url": "/audio/stories/kn-story-001/vocab_kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/vocab_en_5.mp3"
+    }
   ],
   "sentences": [
-    { "kn": "ಒಂದು ಬೇಸಿಗೆಯ ದಿನ.", "en": "One summer day.", "tr": "Ondu bēsigeya dina.", "kn_audio_url": "/audio/stories/kn-story-001/kn_0.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_0.mp3" },
-    { "kn": "ಒಂದು ಕಾಗೆ ಹಾರುತ್ತಿತ್ತು.", "en": "A crow was flying.", "tr": "Ondu kāge hāruttittu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_1.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_1.mp3" },
-    { "kn": "ಕಾಗೆಗೆ ತುಂಬಾ ಬಾಯಾರಿಕೆ ಆಗಿತ್ತು.", "en": "The crow was very thirsty.", "tr": "Kāgege tumbā bāyārike āgittu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_2.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_2.mp3" },
-    { "kn": "ಕಾಗೆ ನೀರು ಹುಡುಕಿತು.", "en": "The crow searched for water.", "tr": "Kāge nīru huḍukitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_3.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_3.mp3" },
-    { "kn": "ಎಲ್ಲಿಯೂ ನೀರು ಇರಲಿಲ್ಲ.", "en": "There was no water anywhere.", "tr": "Elliyū nīru iralilla.", "kn_audio_url": "/audio/stories/kn-story-001/kn_4.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_4.mp3" },
-    { "kn": "ಕಾಗೆ ತುಂಬಾ ದಣಿದಿತ್ತು.", "en": "The crow was very tired.", "tr": "Kāge tumbā daṇidittu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_5.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_5.mp3" },
-    { "kn": "ಆಗ ಕಾಗೆಗೆ ಒಂದು ಮಡಕೆ ಕಾಣಿಸಿತು.", "en": "Then the crow saw a pot.", "tr": "Āga kāgege ondu maḍake kāṇisitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_6.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_6.mp3" },
-    { "kn": "ಮಡಕೆಯಲ್ಲಿ ಸ್ವಲ್ಪ ನೀರು ಇತ್ತು.", "en": "There was a little water in the pot.", "tr": "Maḍakeyalli svalpa nīru ittu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_7.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_7.mp3" },
-    { "kn": "ಆದರೆ ನೀರು ತುಂಬಾ ಕೆಳಗೆ ಇತ್ತು.", "en": "But the water was very low.", "tr": "Ādare nīru tumbā keḷage ittu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_8.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_8.mp3" },
-    { "kn": "ಕಾಗೆಯ ಕೊಕ್ಕು ನೀರನ್ನು ಮುಟ್ಟಲಿಲ್ಲ.", "en": "The crow's beak could not reach the water.", "tr": "Kāgeya kokku nīrannu muṭṭalilla.", "kn_audio_url": "/audio/stories/kn-story-001/kn_9.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_9.mp3" },
-    { "kn": "ಕಾಗೆ ಯೋಚಿಸಿತು.", "en": "The crow thought.", "tr": "Kāge yōchisitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_10.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_10.mp3" },
-    { "kn": "ಕಾಗೆಗೆ ಒಂದು ಉಪಾಯ ಹೊಳೆಯಿತು!", "en": "The crow had an idea!", "tr": "Kāgege ondu upāya hoḷeyitu!", "kn_audio_url": "/audio/stories/kn-story-001/kn_11.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_11.mp3" },
-    { "kn": "ಕಾಗೆ ಒಂದು ಕಲ್ಲು ತಂದಿತು.", "en": "The crow brought a stone.", "tr": "Kāge ondu kallu tanditu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_12.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_12.mp3" },
-    { "kn": "ಕಲ್ಲನ್ನು ಮಡಕೆಯಲ್ಲಿ ಹಾಕಿತು.", "en": "It dropped the stone in the pot.", "tr": "Kallannu maḍakeyalli hākitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_13.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_13.mp3" },
-    { "kn": "ನೀರು ಸ್ವಲ್ಪ ಮೇಲೆ ಬಂತು.", "en": "The water came up a little.", "tr": "Nīru svalpa mēle bantu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_14.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_14.mp3" },
-    { "kn": "ಕಾಗೆ ಇನ್ನೊಂದು ಕಲ್ಲು ಹಾಕಿತು.", "en": "The crow dropped another stone.", "tr": "Kāge innondu kallu hākitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_15.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_15.mp3" },
-    { "kn": "ಇನ್ನೊಂದು. ಇನ್ನೊಂದು. ಇನ್ನೊಂದು.", "en": "Another. Another. Another.", "tr": "Innondu. Innondu. Innondu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_16.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_16.mp3" },
-    { "kn": "ನೀರು ಮೇಲೆ ಮೇಲೆ ಬಂತು.", "en": "The water came up and up.", "tr": "Nīru mēle mēle bantu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_17.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_17.mp3" },
-    { "kn": "ಕೊನೆಗೆ ನೀರು ಮೇಲೆ ಬಂತು!", "en": "Finally the water reached the top!", "tr": "Konege nīru mēle bantu!", "kn_audio_url": "/audio/stories/kn-story-001/kn_18.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_18.mp3" },
-    { "kn": "ಕಾಗೆ ನೀರು ಕುಡಿಯಿತು.", "en": "The crow drank the water.", "tr": "Kāge nīru kuḍiyitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_19.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_19.mp3" },
-    { "kn": "ಕಾಗೆ ತುಂಬಾ ಖುಷಿಯಾಯಿತು.", "en": "The crow was very happy.", "tr": "Kāge tumbā khushiyāyitu.", "kn_audio_url": "/audio/stories/kn-story-001/kn_20.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_20.mp3" },
-    { "kn": "ಬುದ್ಧಿ ಇದ್ದರೆ, ದಾರಿ ಸಿಗುತ್ತದೆ.", "en": "Where there is a will, there is a way.", "tr": "Buddhi iddare, dāri siguttade.", "kn_audio_url": "/audio/stories/kn-story-001/kn_21.mp3", "en_audio_url": "/audio/stories/kn-story-001/en_21.mp3" }
+    {
+      "kn": "ಒಂದು ಬೇಸಿಗೆಯ ದಿನ.",
+      "en": "One summer day.",
+      "tr": "Ondu bēsigeya dina.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_0.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_0.mp3"
+    },
+    {
+      "kn": "ಒಂದು ಕಾಗೆ ಹಾರುತ್ತಿತ್ತು.",
+      "en": "A crow was flying.",
+      "tr": "Ondu kāge hāruttittu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_1.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_1.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆಗೆ ತುಂಬಾ ಬಾಯಾರಿಕೆ ಆಗಿತ್ತು.",
+      "en": "The crow was very thirsty.",
+      "tr": "Kāgege tumbā bāyārike āgittu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_2.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_2.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ನೀರು ಹುಡುಕಿತು.",
+      "en": "The crow searched for water.",
+      "tr": "Kāge nīru huḍukitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_3.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_3.mp3"
+    },
+    {
+      "kn": "ಎಲ್ಲಿಯೂ ನೀರು ಇರಲಿಲ್ಲ.",
+      "en": "There was no water anywhere.",
+      "tr": "Elliyū nīru iralilla.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_4.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_4.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ತುಂಬಾ ದಣಿದಿತ್ತು.",
+      "en": "The crow was very tired.",
+      "tr": "Kāge tumbā daṇidittu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_5.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_5.mp3"
+    },
+    {
+      "kn": "ಆಗ ಕಾಗೆಗೆ ಒಂದು ಮಡಕೆ ಕಾಣಿಸಿತು.",
+      "en": "Then the crow saw a pot.",
+      "tr": "Āga kāgege ondu maḍake kāṇisitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_6.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_6.mp3"
+    },
+    {
+      "kn": "ಮಡಕೆಯಲ್ಲಿ ಸ್ವಲ್ಪ ನೀರು ಇತ್ತು.",
+      "en": "There was a little water in the pot.",
+      "tr": "Maḍakeyalli svalpa nīru ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_7.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_7.mp3"
+    },
+    {
+      "kn": "ಆದರೆ ನೀರು ತುಂಬಾ ಕೆಳಗೆ ಇತ್ತು.",
+      "en": "But the water was very low.",
+      "tr": "Ādare nīru tumbā keḷage ittu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_8.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_8.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆಯ ಕೊಕ್ಕು ನೀರನ್ನು ಮುಟ್ಟಲಿಲ್ಲ.",
+      "en": "The crow's beak could not reach the water.",
+      "tr": "Kāgeya kokku nīrannu muṭṭalilla.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_9.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_9.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ಯೋಚಿಸಿತು.",
+      "en": "The crow thought.",
+      "tr": "Kāge yōchisitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_10.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_10.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆಗೆ ಒಂದು ಉಪಾಯ ಹೊಳೆಯಿತು!",
+      "en": "The crow had an idea!",
+      "tr": "Kāgege ondu upāya hoḷeyitu!",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_11.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_11.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ಒಂದು ಕಲ್ಲು ತಂದಿತು.",
+      "en": "The crow brought a stone.",
+      "tr": "Kāge ondu kallu tanditu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_12.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_12.mp3"
+    },
+    {
+      "kn": "ಕಲ್ಲನ್ನು ಮಡಕೆಯಲ್ಲಿ ಹಾಕಿತು.",
+      "en": "It dropped the stone in the pot.",
+      "tr": "Kallannu maḍakeyalli hākitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_13.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_13.mp3"
+    },
+    {
+      "kn": "ನೀರು ಸ್ವಲ್ಪ ಮೇಲೆ ಬಂತು.",
+      "en": "The water came up a little.",
+      "tr": "Nīru svalpa mēle bantu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_14.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_14.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ಇನ್ನೊಂದು ಕಲ್ಲು ಹಾಕಿತು.",
+      "en": "The crow dropped another stone.",
+      "tr": "Kāge innondu kallu hākitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_15.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_15.mp3"
+    },
+    {
+      "kn": "ಇನ್ನೊಂದು. ಇನ್ನೊಂದು. ಇನ್ನೊಂದು.",
+      "en": "Another. Another. Another.",
+      "tr": "Innondu. Innondu. Innondu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_16.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_16.mp3"
+    },
+    {
+      "kn": "ನೀರು ಮೇಲೆ ಮೇಲೆ ಬಂತು.",
+      "en": "The water came up and up.",
+      "tr": "Nīru mēle mēle bantu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_17.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_17.mp3"
+    },
+    {
+      "kn": "ಕೊನೆಗೆ ನೀರು ಮೇಲೆ ಬಂತು!",
+      "en": "Finally the water reached the top!",
+      "tr": "Konege nīru mēle bantu!",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_18.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_18.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ನೀರು ಕುಡಿಯಿತು.",
+      "en": "The crow drank the water.",
+      "tr": "Kāge nīru kuḍiyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_19.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_19.mp3"
+    },
+    {
+      "kn": "ಕಾಗೆ ತುಂಬಾ ಖುಷಿಯಾಯಿತು.",
+      "en": "The crow was very happy.",
+      "tr": "Kāge tumbā khushiyāyitu.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_20.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_20.mp3"
+    },
+    {
+      "kn": "ಬುದ್ಧಿ ಇದ್ದರೆ, ದಾರಿ ಸಿಗುತ್ತದೆ.",
+      "en": "Where there is a will, there is a way.",
+      "tr": "Buddhi iddare, dāri siguttade.",
+      "kn_audio_url": "/audio/stories/kn-story-001/kn_21.mp3",
+      "en_audio_url": "/audio/stories/kn-story-001/en_21.mp3"
+    }
   ]
 }

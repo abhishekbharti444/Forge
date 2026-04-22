@@ -82,4 +82,14 @@ No code. Deep product discussion captured in docs:
 
 ---
 
-*1,349 tasks. 12 screens. 9 categories. $22 total spend.*
+## Session 23 — Apr 22 (Group Exercises)
+
+10 group public speaking exercises — hypothesis test for whether group practice makes speaking skills more fun and effective. Tasks are completely self-contained: read aloud and the group starts in 10 seconds. Each includes setup instructions, specific topic options, timing, rotation rules, and a learning lens.
+
+New `group` boolean field on tasks. API filtering via `?group=true` query param (local server + Vercel). 👥 Group toggle pill on Journeys, Coach, and Suggestion screens (public_speaking only). WhatsNext filters out group tasks from solo random picks.
+
+Skill areas covered: impromptu (3), storytelling (2), persuasion (2), presence (2), vocal_delivery (1). All use timer tool with timer_end completion.
+
+---
+
+*1,359 tasks. 15 screens. 9 categories. $22 total spend.*

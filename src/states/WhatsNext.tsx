@@ -48,7 +48,7 @@ export function WhatsNext({ completedSkillArea, category, categoryLabel, tasksCo
   useEffect(() => {
     apiFetch<{ tasks: Task[] }>(`/tasks?category=${category}`)
       .then(d => {
-        const tasks = d.tasks || []
+        const tasks = (d.tasks || []).filter((t: any) => !t.group)
         // Pick a random task (simple for now)
         if (tasks.length) setNextTask(tasks[Math.floor(Math.random() * tasks.length)])
         setLoading(false)

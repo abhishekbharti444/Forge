@@ -49,6 +49,7 @@ for (const bank of banks) {
     type: t.type,
     difficulty: t.difficulty,
     time_minutes: t.time_minutes,
+    group: t.group || false,
   }))
 
   for (let i = 0; i < rows.length; i += 50) {
