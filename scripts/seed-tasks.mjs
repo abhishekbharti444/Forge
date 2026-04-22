@@ -35,22 +35,36 @@ let total = 0
 for (const bank of banks) {
   const tasks = JSON.parse(readFileSync(bank.file, 'utf-8'))
 
-  const rows = tasks.map(t => ({
-    goal_category: bank.category,
-    skill_area: t.skill_area,
-    description: t.description,
-    action: t.action || null,
-    context: t.context || null,
-    constraint_note: t.constraint_note || null,
-    example: t.example || null,
-    reference: t.reference || null,
-    tools: t.tools || null,
-    completion: t.completion || 'self_report',
-    type: t.type,
-    difficulty: t.difficulty,
-    time_minutes: t.time_minutes,
-    group: t.group || false,
-  }))
+  const rows = tasks.map(t => {
+    // Pack extra fields into reference jsonb (Supabase doesn't have top-level columns for these)
+    const ref = { ...(t.reference || {}) }
+    if (t.tags) ref.tags = t.tags
+    if (t.sequence) ref.sequence = t.sequence
+    if (t.bpm) ref.bpm = t.bpm
+    if (t.chords) ref.chords = t.chords
+    if (t.needs_guitar) ref.needs_guitar = t.needs_guitar
+    if (t.scale) ref.scale = t.scale
+    if (t.scales) ref.scales = t.scales
+    if (t.songSuggestions) ref.songSuggestions = t.songSuggestions
+    if (t.audioUrl) ref.audioUrl = t.audioUrl
+    if (t.song) ref.song = t.song
+    return {
+      goal_category: bank.category,
+      skill_area: t.skill_area,
+      description: t.description,
+      action: t.action || null,
+      context: t.context || null,
+      constraint_note: t.constraint_note || null,
+      example: t.example || null,
+      reference: Object.keys(ref).length ? ref : null,
+      tools: t.tools || null,
+      completion: t.completion || 'self_report',
+      type: t.type,
+      difficulty: t.difficulty,
+      time_minutes: t.time_minutes,
+      group: t.group || false,
+    }
+  })
 
   for (let i = 0; i < rows.length; i += 50) {
     const batch = rows.slice(i, i + 50)

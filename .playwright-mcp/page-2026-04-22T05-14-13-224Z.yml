@@ -1,0 +1,26 @@
+- generic [ref=e204]:
+  - button "← Home" [ref=e206]
+  - heading "Public Speaking" [level=1] [ref=e207]
+  - button "👥 Group" [ref=e208]
+  - paragraph [ref=e209]: 0/160 tasks completed · 6 journeys
+  - paragraph [ref=e210]: Recommended for you
+  - button "👥 Group Exercises 0/10 ▸" [ref=e213]:
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - generic [ref=e216]: 👥
+        - generic [ref=e217]: Group Exercises
+      - generic [ref=e218]:
+        - generic [ref=e219]: 0/10
+        - generic [ref=e220]: ▸
+  - generic [ref=e222]:
+    - paragraph [ref=e223]: 🟢 Foundations
+    - button "👥 Group Exercises 0/10 ▸" [ref=e226]:
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]: 👥
+          - generic [ref=e230]: Group Exercises
+        - generic [ref=e231]:
+          - generic [ref=e232]: 0/10
+          - generic [ref=e233]: ▸
+  - group [ref=e235]:
+    - generic "Explore by topic ▸" [ref=e236] [cursor=pointer]

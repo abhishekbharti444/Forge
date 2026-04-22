@@ -122,6 +122,9 @@ export const COLLECTION_CONFIGS: Record<string, CollectionConfig[]> = {
     { tag: 'improvisation', label: 'Improvisation', emoji: '🎤', tier: 3 },
     { tag: 'composition', label: 'Composition', emoji: '✍️', tier: 3 },
   ],
+  public_speaking: [
+    { tag: 'group', label: 'Group Exercises', emoji: '👥', tier: 1 },
+  ],
 }
 
 export const TIER_LABELS: Record<number, string> = { 1: 'Foundations', 2: 'Building Skills', 3: 'Making Music' }
@@ -134,6 +137,7 @@ export function organizeCollections(tasks: JourneyTask[], completedIds: Set<stri
   return configs.map(c => {
     const matched = tasks.filter(t => (t.tags as string[] | undefined)?.includes(c.tag))
     matched.sort((a, b) => {
+      if (a.sequence && b.sequence) return a.sequence.order - b.sequence.order
       if (a.level !== b.level) return (a.level || 0) - (b.level || 0)
       return (DIFF_ORDER[a.difficulty || 'medium'] || 1) - (DIFF_ORDER[b.difficulty || 'medium'] || 1)
     })

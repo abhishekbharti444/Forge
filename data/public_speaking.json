@@ -2410,9 +2410,19 @@
     "context": "Impromptu speaking under absurd constraints trains the most important real-world skill: thinking on your feet when the stakes feel high. The absurdity lowers fear while the audience creates real pressure.",
     "constraint_note": "60 seconds per person. No preparation beyond 10 seconds. No breaking character — commit fully. Judge on conviction, not comedy.",
     "example": "Topic: 'Pigeons are the most intelligent species.' Speaker: 'Consider this — pigeons navigate thousands of miles without GPS. They were humanity's first internet, carrying messages across empires. They've survived every extinction event. They live rent-free in every major city on Earth. Name one other species with that real estate portfolio.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "quick_response"]
+    "tags": [
+      "group",
+      "quick_response"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 2,
+      "total": 10
+    }
   },
   {
     "id": "ps-152",
@@ -2426,9 +2436,19 @@
     "context": "Collaborative storytelling trains you to listen, build on others' ideas, and think narratively under time pressure — the same skills that make you compelling in meetings and conversations.",
     "constraint_note": "Exactly ONE sentence per turn. Must connect to the previous sentence. 3 full rounds. No cop-out endings.",
     "example": "Opening: 'Nobody told me the package would be ticking.' → 'I set it on the kitchen table and called my neighbor, who happened to be a retired bomb technician.' → 'She walked in, listened for three seconds, and started laughing.' → 'It was a clock — but not just any clock...'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "narrative"]
+    "tags": [
+      "group",
+      "narrative"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 1,
+      "total": 10
+    }
   },
   {
     "id": "ps-153",
@@ -2442,9 +2462,19 @@
     "context": "The ability to argue a position you disagree with is the highest form of persuasion skill. It forces you to understand opposing views deeply — not just dismiss them.",
     "constraint_note": "90 seconds per side. Must switch sides in Round 2. Judges vote on most convincing argument, not most agreeable position.",
     "example": "Topic: 'Is social media a net positive?' Round 1 FOR: 'Social media connected 4 billion people, enabled revolutions, and gave a voice to the voiceless.' Round 2 (same person, now AGAINST): 'Those 4 billion connections are shallow — studies show social media increases loneliness, anxiety, and political polarization.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "argumentation"]
+    "tags": [
+      "group",
+      "argumentation"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 7,
+      "total": 10
+    }
   },
   {
     "id": "ps-154",
@@ -2458,9 +2488,19 @@
     "context": "The most powerful speakers pause before they begin. That silence signals confidence and commands attention. Most people rush past it because silence feels uncomfortable — this exercise makes you sit in it.",
     "constraint_note": "5 full seconds of silence — count in your head. Real eye contact with each person, not a sweep. 60 seconds of speaking after the opening line.",
     "example": "Speaker walks to center. Stands still. Looks at person 1 (2 seconds), person 2 (2 seconds), person 3 (2 seconds). Then: 'I have a confession to make.' Pause. 'I've been terrified of public speaking my entire life. And right now, standing here in silence, I just proved I can handle it.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "body_language"]
+    "tags": [
+      "group",
+      "body_language"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 6,
+      "total": 10
+    }
   },
   {
     "id": "ps-155",
@@ -2474,9 +2514,19 @@
     "context": "This trains the core impromptu skill: speaking with conviction about something you haven't prepared for. The lie forces you to manufacture authenticity — which is exactly what you do when presenting ideas you're still uncertain about.",
     "constraint_note": "30 seconds per fact — 3 facts per person. Must speak with equal conviction on all three. Group votes after all 3 speeches, not after each one.",
     "example": "Fact 1 (true): 'When I was 12, I accidentally set my kitchen on fire making toast. Not the toaster — I was using a candle because the power was out. The fire department came. My mom still brings it up at every family dinner.' Fact 2 (lie, but delivered with same energy): 'I once won a local chess tournament without knowing how the knight moves. I just copied what my opponent did, one move behind.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "quick_response"]
+    "tags": [
+      "group",
+      "quick_response"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 4,
+      "total": 10
+    }
   },
   {
     "id": "ps-156",
@@ -2490,9 +2540,19 @@
     "context": "Audience energy directly shapes speaker performance. This exercise proves it — when someone is genuinely engaged, you become a better storyteller without trying. Understanding this dynamic makes you better at reading and feeding off real audiences.",
     "constraint_note": "90 seconds per story. Hype person must react with genuine energy — no half-hearted responses. Pick a truly mundane event, not something already interesting.",
     "example": "Storyteller: 'So I'm standing in the kitchen, and I realize we're out of coffee filters...' Hype person: 'Oh no. No. What did you do?' Storyteller (now adding drama): 'I had exactly 4 minutes before my meeting. I looked at the paper towels. I looked at the coffee. I made a decision that would change my morning forever.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "narrative"]
+    "tags": [
+      "group",
+      "narrative"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 3,
+      "total": 10
+    }
   },
   {
     "id": "ps-157",
@@ -2506,9 +2566,19 @@
     "context": "The ability to instantly find the weakness in any argument is the foundation of critical thinking and persuasion. This exercise builds that muscle by forcing you to argue against positions you might agree with.",
     "constraint_note": "30 seconds for the opening statement, 60 seconds for each counter. Must argue against the previous person's position specifically — not just change the topic. 2 full rounds minimum.",
     "example": "Person 1: 'Everyone should learn to code — it's the literacy of the 21st century.' Person 2: 'That's like saying everyone should learn plumbing because every house has pipes. We need people who understand technology, not everyone writing JavaScript.' Person 3: 'But understanding and doing are different — you wouldn't trust a manager who's never written a line of code to lead a tech team.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "argumentation"]
+    "tags": [
+      "group",
+      "argumentation"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 8,
+      "total": 10
+    }
   },
   {
     "id": "ps-158",
@@ -2522,9 +2592,19 @@
     "context": "Research shows 55% of communication is body language, yet most speakers stand still and rely entirely on words. This exercise forces you to discover how much you can say without speaking — and that awareness transforms how you use your body when you do speak.",
     "constraint_note": "60 seconds. Absolutely no words or sounds — not even 'hmm' or 'ah.' Audience guesses only after the full 60 seconds, not during.",
     "example": "Scenario: 'Job interview, chair breaking.' Performer sits confidently, then subtly shifts weight. Tries to maintain composure while slowly sinking. Grips the armrests. Smiles at the 'interviewer' while clearly panicking. Attempts to casually stand up mid-sentence. The contrast between the calm face and desperate body tells the whole story.",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "body_language"]
+    "tags": [
+      "group",
+      "body_language"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 9,
+      "total": 10
+    }
   },
   {
     "id": "ps-159",
@@ -2538,9 +2618,19 @@
     "context": "Structured improvisation is the highest-level speaking skill. This exercise forces you to organize thoughts instantly (product name, problem, value, price) while being entertaining — the same skill set that makes someone brilliant in Q&A sessions and boardroom presentations.",
     "constraint_note": "15 seconds to think, 90 seconds to pitch. Must hit all 4 elements: name, problem, value, price. Each investor gets ONE question. Pitcher cannot say 'I don't know' — must answer something.",
     "example": "Items: Shoes + weather forecast. 'Introducing StormSoles — shoes with a built-in LED strip that changes color based on tomorrow's weather. Blue means rain, bring an umbrella. Orange means sunny. Your shoes become your morning weather check. No more opening apps. $89, available in 6 colors. We're seeking $500K for 10% equity.' Investor: 'What happens when the battery dies?' Pitcher: 'Great question — they're solar-charged from the top of the shoe. You're literally walking on your power source.'",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "quick_response"]
+    "tags": [
+      "group",
+      "quick_response"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 10,
+      "total": 10
+    }
   },
   {
     "id": "ps-160",
@@ -2554,8 +2644,18 @@
     "context": "Volume variation is what separates captivating speakers from monotone ones. A whisper pulls people in. A sudden increase signals importance. Most speakers never vary — this exercise forces dynamic range and builds the muscle memory to use it naturally.",
     "constraint_note": "60 seconds per speaker. Conductor changes volume every 10-15 seconds. Speaker must adjust within 2-3 words — no finishing the sentence at the old volume. Rotate all three roles.",
     "example": "Speaker (loud): 'THE MOST IMPORTANT THING I LEARNED THIS YEAR—' Conductor drops hand low. Speaker (instant whisper): '...is that nobody is paying as much attention to you as you think.' Conductor raises hand. Speaker (loud again): 'AND THAT IS THE MOST FREEING REALIZATION.' The contrast between loud and whisper makes both hit harder.",
-    "tools": ["timer"],
+    "tools": [
+      "timer"
+    ],
     "completion": "timer_end",
-    "tags": ["group", "pace_volume"]
+    "tags": [
+      "group",
+      "pace_volume"
+    ],
+    "sequence": {
+      "name": "Group Exercises",
+      "order": 5,
+      "total": 10
+    }
   }
 ]
