@@ -18,9 +18,10 @@ interface Props {
   onPodcast: (episodeIdx: number) => void
   onHistory: () => void
   onEditGoals: () => void
+  onDistill: () => void
 }
 
-export function GoalHome({ tasksCompletedToday, onPractice, onPodcast, onHistory, onEditGoals }: Props) {
+export function GoalHome({ tasksCompletedToday, onPractice, onPodcast, onHistory, onEditGoals, onDistill }: Props) {
   const [allGoals, setAllGoals] = useState<GoalInfo[]>([])
 
   useEffect(() => {
@@ -65,6 +66,16 @@ export function GoalHome({ tasksCompletedToday, onPractice, onPodcast, onHistory
           ))}
         </div>
       </div>
+
+      {/* Distill — podcast retention */}
+      <button onClick={onDistill}
+        className="w-full bg-bg-surface border border-border rounded-xl px-4 py-3 mb-8 text-left hover:border-accent-amber/40 transition-colors flex items-center gap-3">
+        <span className="text-lg">🎧</span>
+        <div>
+          <p className="text-text-primary text-sm font-medium">Distill</p>
+          <p className="text-text-secondary/40 text-xs">Capture what stuck from a listen</p>
+        </div>
+      </button>
 
       {/* Continue Listening — story quick-launch for Kannada */}
       {activeIds.includes('learn_kannada') && KANNADA_STORIES.length > 0 && (() => {

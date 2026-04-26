@@ -1,0 +1,147 @@
+{
+  "tags": [
+    { "id": "business", "label": "Business" },
+    { "id": "science", "label": "Science" },
+    { "id": "tech", "label": "Tech" },
+    { "id": "ideas", "label": "Ideas" },
+    { "id": "psychology", "label": "Psychology" },
+    { "id": "history", "label": "History" },
+    { "id": "career", "label": "Career" },
+    { "id": "finance", "label": "Finance" },
+    { "id": "growth", "label": "Growth" },
+    { "id": "spirituality", "label": "Spirituality" },
+    { "id": "creativity", "label": "Creativity" }
+  ],
+  "recall": [
+    { "id": "r-01", "prompt": "What's the one idea from this you'd actually tell a friend about?" },
+    { "id": "r-02", "prompt": "If you had to summarize this in one sentence for someone who hasn't heard it, what would you say?" },
+    { "id": "r-03", "prompt": "What's something you heard that you didn't know before?" },
+    { "id": "r-04", "prompt": "What stuck with you most? Why that and not something else?" },
+    { "id": "r-05", "prompt": "What's one thing the speaker said that made you pause, even for a second?" },
+    { "id": "r-06", "prompt": "If you could only remember one thing from this a month from now, what should it be?" },
+    { "id": "r-07", "prompt": "What surprised you?" },
+    { "id": "r-08", "prompt": "What was this really about — not the topic, but the deeper question underneath?" }
+  ],
+  "challenge": {
+    "business": [
+      { "id": "c-biz-01", "prompt": "What's one decision the speaker described that you would have made differently? Why?" },
+      { "id": "c-biz-02", "prompt": "What assumption is the speaker's argument built on? Would it still hold in a different market or era?" },
+      { "id": "c-biz-03", "prompt": "What's the biggest risk in what they described that nobody mentioned?" },
+      { "id": "c-biz-04", "prompt": "If you had to argue the opposite of the speaker's main point, what would you say?" },
+      { "id": "c-biz-05", "prompt": "What's one thing from this that applies to something you're working on right now? Be specific about how." },
+      { "id": "c-biz-06", "prompt": "What would have to be true for the speaker's advice to be completely wrong?" },
+      { "id": "c-biz-07", "prompt": "What's the difference between what the speaker said and what they actually did? Is there a gap?" },
+      { "id": "c-biz-08", "prompt": "Who would disagree with this the most, and what would their strongest argument be?" }
+    ],
+    "science": [
+      { "id": "c-sci-01", "prompt": "What's one claim you'd want to see the actual study for before believing?" },
+      { "id": "c-sci-02", "prompt": "Can you explain the key mechanism without using any jargon? If not, what's the gap in your understanding?" },
+      { "id": "c-sci-03", "prompt": "What's one thing from this that contradicts something you previously believed?" },
+      { "id": "c-sci-04", "prompt": "If you were designing a study to test the main claim, what would you measure and how?" },
+      { "id": "c-sci-05", "prompt": "What's the difference between what the research actually showed and how the speaker framed it?" },
+      { "id": "c-sci-06", "prompt": "What's one limitation of the evidence that wasn't mentioned?" },
+      { "id": "c-sci-07", "prompt": "How would you explain the key finding to someone with no science background, in 2 sentences?" },
+      { "id": "c-sci-08", "prompt": "What's one thing from this you'd want to verify before actually changing your behavior?" }
+    ],
+    "tech": [
+      { "id": "c-tech-01", "prompt": "What's one thing mentioned that you'd actually want to try or build? What's stopping you?" },
+      { "id": "c-tech-02", "prompt": "What trade-off is being made that nobody explicitly named?" },
+      { "id": "c-tech-03", "prompt": "What problem does this solve, and what new problems does it create?" },
+      { "id": "c-tech-04", "prompt": "If this technology succeeds wildly, what breaks? What becomes obsolete?" },
+      { "id": "c-tech-05", "prompt": "What's the strongest argument against adopting what the speaker recommends?" },
+      { "id": "c-tech-06", "prompt": "How would this work differently at 10x the scale? What assumptions break?" },
+      { "id": "c-tech-07", "prompt": "What's the speaker assuming about their users that might not be true?" },
+      { "id": "c-tech-08", "prompt": "What's one thing from this that changes how you think about something you're building or using?" }
+    ],
+    "ideas": [
+      { "id": "c-ideas-01", "prompt": "What's one idea you heard that conflicts with something you already believe? Sit with the tension — which side are you on?" },
+      { "id": "c-ideas-02", "prompt": "What's the strongest version of the argument you disagree with?" },
+      { "id": "c-ideas-03", "prompt": "What question did this raise that it didn't answer?" },
+      { "id": "c-ideas-04", "prompt": "If you had to live by the speaker's main idea for one week, what would actually change in your daily life?" },
+      { "id": "c-ideas-05", "prompt": "What's the hidden assumption in the speaker's worldview that they never stated?" },
+      { "id": "c-ideas-06", "prompt": "What would someone from a completely different background think of this argument?" },
+      { "id": "c-ideas-07", "prompt": "What's the most uncomfortable implication of what the speaker said?" },
+      { "id": "c-ideas-08", "prompt": "How does this connect to something you've been thinking about lately?" }
+    ],
+    "psychology": [
+      { "id": "c-psy-01", "prompt": "What's one behavior pattern the speaker described that you recognize in yourself?" },
+      { "id": "c-psy-02", "prompt": "What's the difference between knowing this and actually doing it? What makes the gap so hard to close?" },
+      { "id": "c-psy-03", "prompt": "If you explained this to someone struggling with the exact problem discussed, what would you say to them?" },
+      { "id": "c-psy-04", "prompt": "What's one thing from this that challenges how you think about your own habits or decisions?" },
+      { "id": "c-psy-05", "prompt": "What would the speaker say about a specific decision you made recently?" },
+      { "id": "c-psy-06", "prompt": "What's the gap between the research finding and how people actually behave? Why does that gap exist?" },
+      { "id": "c-psy-07", "prompt": "What's one thing from this you've heard before but never actually applied? What stopped you?" },
+      { "id": "c-psy-08", "prompt": "If this is true, what should you stop doing?" }
+    ],
+    "history": [
+      { "id": "c-hist-01", "prompt": "What's one thing about this you didn't know? Why does it matter now?" },
+      { "id": "c-hist-02", "prompt": "What parallel do you see between what was described and something happening today?" },
+      { "id": "c-hist-03", "prompt": "Whose perspective is missing from this story? What would they say?" },
+      { "id": "c-hist-04", "prompt": "What would someone living through these events think of how we talk about them now?" },
+      { "id": "c-hist-05", "prompt": "What's one assumption about this period that the episode challenged?" },
+      { "id": "c-hist-06", "prompt": "If you had to explain why this matters to someone who doesn't care about history, what would you say?" },
+      { "id": "c-hist-07", "prompt": "What decision from this story would you have made differently — with only the information they had at the time?" },
+      { "id": "c-hist-08", "prompt": "What's the most important cause-and-effect chain in what you heard? Follow it to its end." }
+    ],
+    "career": [
+      { "id": "c-car-01", "prompt": "What's one piece of advice from this that contradicts something you've been told before? Which do you believe?" },
+      { "id": "c-car-02", "prompt": "What's the speaker's actual edge — the thing that made them successful that they might not even realize?" },
+      { "id": "c-car-03", "prompt": "If you applied the speaker's main lesson to your current work, what would you do differently this week?" },
+      { "id": "c-car-04", "prompt": "What's the difference between the speaker's path and the advice they're giving? Are they the same thing?" },
+      { "id": "c-car-05", "prompt": "What's one skill or habit mentioned that you've been avoiding? Why?" },
+      { "id": "c-car-06", "prompt": "What would the speaker say about where you are in your career right now?" },
+      { "id": "c-car-07", "prompt": "What's the hardest thing about what the speaker recommends that they made sound easy?" },
+      { "id": "c-car-08", "prompt": "If you could ask the speaker one follow-up question, what would it be and why?" }
+    ],
+    "finance": [
+      { "id": "c-fin-01", "prompt": "What's one claim about money or markets that you'd want to verify before acting on?" },
+      { "id": "c-fin-02", "prompt": "What's the speaker's incentive? How might that shape their advice?" },
+      { "id": "c-fin-03", "prompt": "If you followed this advice, what's the worst realistic outcome?" },
+      { "id": "c-fin-04", "prompt": "What's the difference between this advice and what you're actually doing with your money?" },
+      { "id": "c-fin-05", "prompt": "What assumption about the economy is the speaker making that might not hold?" },
+      { "id": "c-fin-06", "prompt": "What would someone with the opposite financial philosophy say about this?" },
+      { "id": "c-fin-07", "prompt": "What's one thing from this that made you uncomfortable about your own financial decisions?" },
+      { "id": "c-fin-08", "prompt": "If this advice is right, what should you do this week? Be specific." }
+    ],
+    "growth": [
+      { "id": "c-grow-01", "prompt": "What's the gap between the advice you just heard and what you actually do day-to-day? Be honest about why." },
+      { "id": "c-grow-02", "prompt": "What's one habit or routine mentioned that you've tried before and quit? What went wrong last time?" },
+      { "id": "c-grow-03", "prompt": "Is the speaker selling you on the outcome or showing you the process? What's the hard part they glossed over?" },
+      { "id": "c-grow-04", "prompt": "What would you have to give up to actually follow this advice? Is that trade-off worth it?" },
+      { "id": "c-grow-05", "prompt": "What's the smallest version of this advice you could test in the next 24 hours?" },
+      { "id": "c-grow-06", "prompt": "Who do you know that already lives this way? What do they actually do that the speaker didn't mention?" },
+      { "id": "c-grow-07", "prompt": "What's the difference between understanding this idea and embodying it? Where are you on that spectrum?" },
+      { "id": "c-grow-08", "prompt": "If you'd heard this exact advice 5 years ago, would you have acted on it? What's different now?" }
+    ],
+    "spirituality": [
+      { "id": "c-spi-01", "prompt": "What's one thing from this that challenged your sense of what matters?" },
+      { "id": "c-spi-02", "prompt": "Was there a moment where you felt the speaker was pointing at something you've felt but never named?" },
+      { "id": "c-spi-03", "prompt": "What's the tension between what was said and how you actually live? Don't resolve it — just describe it." },
+      { "id": "c-spi-04", "prompt": "What would change in your daily life if you took the speaker's core idea seriously — not intellectually, but practically?" },
+      { "id": "c-spi-05", "prompt": "What's one question this raised about how you spend your attention or your time?" },
+      { "id": "c-spi-06", "prompt": "Did anything the speaker said make you uncomfortable? Sit with why." },
+      { "id": "c-spi-07", "prompt": "What's the difference between agreeing with this idea and actually experiencing what the speaker described?" },
+      { "id": "c-spi-08", "prompt": "If you could only carry one idea from this into tomorrow morning, which one and why?" }
+    ],
+    "creativity": [
+      { "id": "c-cre-01", "prompt": "What's one thing about the speaker's creative process that's different from yours? What can you steal?" },
+      { "id": "c-cre-02", "prompt": "What constraint or limitation did the speaker describe that actually made the work better?" },
+      { "id": "c-cre-03", "prompt": "What's the difference between the speaker's taste and their process? Which one matters more?" },
+      { "id": "c-cre-04", "prompt": "What's one thing from this that makes you want to make something? What would you make?" },
+      { "id": "c-cre-05", "prompt": "What's the speaker's relationship with failure or bad work? How does it compare to yours?" },
+      { "id": "c-cre-06", "prompt": "What's one creative choice the speaker made that you wouldn't have? Why did it work for them?" },
+      { "id": "c-cre-07", "prompt": "What's the most useful thing you heard about the gap between the idea and the finished work?" },
+      { "id": "c-cre-08", "prompt": "If you applied one principle from this to whatever you're working on right now, what would change?" }
+    ]
+  },
+  "apply": [
+    { "id": "a-01", "prompt": "What's one thing from this you'd actually do or change? Be specific — not 'be more mindful' but 'meditate for 5 minutes before checking email tomorrow.'" },
+    { "id": "a-02", "prompt": "What's one thing you want to remember from this a month from now?" },
+    { "id": "a-03", "prompt": "If you could send one sentence from this to someone specific, who would it be and what would you send?" },
+    { "id": "a-04", "prompt": "What's one question this raised that you want to keep thinking about?" },
+    { "id": "a-05", "prompt": "What's the one thing from this that's most relevant to your life right now? Why now?" },
+    { "id": "a-06", "prompt": "Did this change your mind about anything? If yes, what? If no, why not?" },
+    { "id": "a-07", "prompt": "What's one thing you heard that you want to bring up in your next conversation with someone?" },
+    { "id": "a-08", "prompt": "Write one sentence that captures what this meant to you personally." }
+  ]
+}

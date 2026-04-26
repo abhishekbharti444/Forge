@@ -587,6 +587,154 @@ Tasks with a `level` field are gated by the user's progress in that skill area. 
 
 This ensures beginners see foundational content first (learn the concept) before advancing to application and synthesis tasks.
 
+### Practice Routines — Discovery vs Practice Mode
+
+*Added April 25, 2026. Status: Design resolved. Ready to build after data infrastructure.*
+
+#### The Problem
+
+The current suggestion engine treats every task as one-shot: once completed, it's excluded from future suggestions. This works for **exercise-type tasks** ("Write a scene using only dialogue") where the value is in variety. But it breaks for **drill-type tasks** ("Pushups to failure — write your count") where the value is in repetition with progression.
+
+#### Drills vs Exercises vs Reusable Tasks
+
+Three distinct task behaviors:
+
+| Type | Definition | Example | Progress signal | Engine behavior |
+|---|---|---|---|---|
+| **Exercise** | One-shot. Do it, move on. | "Write a scene using only dialogue" | Variety — doing many different exercises | Exclude after completion (current behavior) |
+| **Drill** | Same action repeated. Measurable outcome trends over time. | "Pushups to failure — write your count" | The number: 12 → 16 → 22 | Re-serve with recency spacing. Show last result. |
+| **Reusable** (future) | Same template, different content each time. | "Speak for 90 seconds on a random topic" | Built into task design (different topic each time) | Don't exclude after completion. No outcome tracking needed. |
+
+**Drills are the core concept we build first.** A drill is any task the user should be able to do again because repetition builds the skill. The common thread isn't "produces a number" — it's "this specific action is worth repeating."
+
+Drills vary in outcome type:
+
+| Category | Drill task | Outcome type | What progress looks like |
+|---|---|---|---|
+| Fitness | Pushups to failure | Number (reps) | 12 → 16 → 22 |
+| Fitness | Plank hold | Number (seconds) | 45s → 60s → 90s |
+| Fitness | Deep squat hold | Seconds + observation | 30s, ankles tight → 50s, easier |
+| Guitar | Am→G chord change | BPM + quality | 60 BPM sloppy → 60 BPM clean → 80 BPM |
+| Guitar | Scale run | BPM | 40 → 60 → 80 |
+| Kannada | Recall 10 vocabulary words | Score | 6/10 → 8/10 → 10/10 |
+| Speaking | Speak for 60 seconds without fillers | Self-assessment | "5 fillers" → "2 fillers" → "none" |
+
+Some produce clean numbers. Some produce qualitative observations. Some are just "I practiced this again and it felt different." All are drills — the user wants to come back to them.
+
+Reusable tasks (speaking prompts, reading exercises) are a separate, simpler problem for later — they just need to not be excluded after completion. No outcome tracking or trend visualization needed.
+
+#### The Insight: Repetition + Progressive Challenge
+
+Real practice isn't pure repetition (treadmill → plateau). It's **the same movement pattern with progressive challenge.** Regular pushups → tempo pushups → pause pushups → diamond pushups. Same push pattern, evolving constraint.
+
+But the user also needs an **ever-present practice space** — the ability to return to any drill they've done before, whenever they want. "I have 10 minutes and I want to do pushups" is a valid use of Forge.
+
+The "Last time: 14" display transforms repetition into challenge. You don't need a different task to create novelty — you need a different number. The novelty is in your own progression.
+
+#### Philosophy Alignment
+
+This doesn't contradict the product philosophy. It fulfills it:
+
+- **"Progress measured in capability, not points"** — the drill outcome IS capability. The pushup count is a living number, not a point.
+- **"The app celebrates you leaving"** — the user does their drill, logs their number, and leaves.
+- **"The app is a doorway to action"** — the practice space is a doorway to the same action, revisited.
+
+The current "completed = gone forever" model actually contradicts the philosophy — it treats every task as a consumable instead of a practice ground.
+
+#### Resolved Design Decisions
+
+| Question | Decision |
+|---|---|
+| Engine auto-decide vs user choose? | User chooses from their drills. Smart suggestion engine comes later. |
+| Fitness only or cross-category? | Cross-category from day one. Any task with a measurable, repeatable outcome can be a drill. |
+| What about tasks done for months? | User decides what to practice. Rotation/staleness is a suggestion engine problem for later. |
+| Where does "My Drills" live? | Separate screen inside each goal (not on GoalHome). When you're in Guitar, you see guitar drills. |
+| Show "Last time" on the card? | Yes — show last outcome briefly. The data drives motivation by showing potential progress. |
+| What's a drill vs what's not? | Drill = same action, measurable outcome that trends. Reusable templates (speaking, reading) are a separate concept for later. |
+
+#### Data Requirements
+
+Per drill completion, store:
+
+| Field | Example | Purpose |
+|---|---|---|
+| `task_id` | bf-001 | Which drill |
+| `outcome` | "14" | The number (reps, seconds, BPM, score) |
+| `timestamp` | 2026-04-25T10:30:00Z | When |
+
+Three data points per drill. No ML, no complex algorithm. Just recency + count + last result.
+
+**Blocked by:** Server-side event tracking (Tier 2, item #13). Outcomes must persist across sessions and devices for the trend line to exist.
+
+#### Task Field
+
+```json
+{
+  "drill": true,
+  "outcome_label": "reps"
+}
+```
+
+- `drill: true` — engine re-serves this task instead of excluding it after completion. Shows in "My Drills."
+- `outcome_label` (optional) — what the tracked metric represents ("reps", "seconds", "BPM", "score out of 10"). When present, display shows "Last time: 14 reps." When absent, display shows "Last practiced: 3 days ago." Not every drill needs a clean metric — qualitative drills (observations, self-assessments) work without it.
+
+Tasks without `drill` field behave exactly as today (excluded after completion). Fully backward compatible.
+
+#### UX Flow
+
+**Accessing drills:**
+```
+GoalHome → tap goal card → Goal screen
+  ├── Coach suggestion (current behavior)
+  ├── Browse all tasks (current catalog)
+  └── My Drills (new section)
+        ├── Pushups to failure — Last: 14 reps, 3 days ago
+        ├── Plank hold — Last: 52 sec, 5 days ago
+        ├── Am→G chord change — Last practiced: 2 days ago
+        └── Deep squat hold — Last practiced: 1 week ago
+```
+
+**Doing a drill:**
+```
+Tap drill → Focused screen (same as today)
+  → "Last time: 14 reps" or "Last practiced: 3 days ago" shown subtly at top
+  → Do the exercise
+  → Log outcome (text_input, same as today)
+  → Completion screen: "Pushups: 16 reps. Up from 14 last time. 💪"
+     — or for non-metric drills: "Am→G practiced. 3rd time this week."
+```
+
+**Trend view (future, needs data):**
+```
+Tap drill → hold or expand → see history:
+  Apr 25: 16 reps
+  Apr 22: 14 reps
+  Apr 18: 12 reps
+  ↑ trend line
+```
+
+#### Implementation Layers
+
+| Layer | What | Blocked by | Effort |
+|---|---|---|---|
+| **Content** | Add `drill: true` + `outcome_label` to fitness tasks | Nothing | 1 hour |
+| **Engine** | Don't exclude `drill: true` tasks after completion | Nothing | Small code change |
+| **UX** | "My Drills" section inside goal screen | Nothing | Half day |
+| **UX** | Show "Last time: X" on drill cards and Focused screen | Outcome storage | Half day |
+| **Data** | Store outcomes in `user_task_events.outcome` field | Server-side events (#13) | Part of infra sprint |
+| **UX** | Trend visualization per drill | Data + design | 1 day |
+| **UX** | Completion message with comparison ("Up from 14") | Outcome storage | 1 hour |
+
+Layers 1-3 can ship without any infrastructure. The user won't see their trend line yet, but drills will stop disappearing after completion and will be accessible from "My Drills." Layers 4-7 come after the data infrastructure sprint.
+
+#### References
+
+- Scott H. Young, "Designing the Perfect Practice Loop" (2020) — practice loops are activities repeated with progressive challenge
+- Daniel Coyle, R.E.P.S. gauge — effective practice requires Reaching/Repeating, Engagement, Purposefulness, Strong feedback
+- Fitbod algorithm — exercise selector (what to do) + capability recommender (how hard), learns from user overrides
+- Duolingo algorithm — interleaves new content with review based on forgetting curve, adaptive difficulty
+- Progressive overload principle — the same movement with incrementally increasing demand is how physical adaptation works
+
 ### Concept Bank
 
 *Added April 5, 2026*

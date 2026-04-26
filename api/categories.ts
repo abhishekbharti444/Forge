@@ -5,6 +5,8 @@ const EMOJI_MAP: Record<string, string> = {
   learn_kannada: '🇮🇳', guitar_practice: '🎸', creative_writing: '✍️',
   public_speaking: '🗣', guided_thinking: '🧠', active_listening: '🎧',
   philosophy: '📖', distributed_systems: '🧩', deep_reading: '📕',
+  bodyweight_fitness: '💪',
+  conversation: '💬',
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {

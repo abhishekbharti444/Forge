@@ -13,6 +13,7 @@ import { WhatsNext } from './states/WhatsNext'
 import { DoneForToday } from './states/DoneForToday'
 import { History } from './states/History'
 import { TaskReview } from './states/TaskReview'
+import { Distill } from './states/Distill'
 
 import { PodcastPlayer, KANNADA_STORIES } from './components/PodcastPlayer'
 import { recordCompletion } from './lib/momentum'
@@ -22,7 +23,7 @@ import { saveSession, restoreSession, clearSession } from './lib/sessionRecovery
 
 const IS_REVIEW = new URLSearchParams(window.location.search).has('review')
 
-type AppState = 'loading' | 'auth' | 'intent' | 'home' | 'journeys' | 'focused' | 'audio' | 'whatsnext' | 'donefortoday' | 'history' | 'podcast' | 'error'
+type AppState = 'loading' | 'auth' | 'intent' | 'home' | 'journeys' | 'focused' | 'audio' | 'whatsnext' | 'donefortoday' | 'history' | 'podcast' | 'distill' | 'error'
 
 interface TaskData {
   task_id: string
@@ -150,7 +151,7 @@ function App() {
       reference: task.reference,
       tools: task.tools,
       completion: task.completion,
-      prompts: task.prompts,
+      prompts: task.prompts || ref.prompts,
       needs_guitar: task.needs_guitar || ref.needs_guitar,
       bpm: task.bpm || ref.bpm,
       chords: task.chords || ref.chords,
@@ -229,7 +230,7 @@ function App() {
     if (appState === 'intent') return <IntentCapture onGoalSet={handleGoalSet} />
 
     if (appState === 'home')
-      return <GoalHome tasksCompletedToday={tasksCompletedToday} onPractice={handlePractice} onPodcast={handlePodcast} onHistory={() => setAppState('history')} onEditGoals={() => setAppState('intent')} />
+      return <GoalHome tasksCompletedToday={tasksCompletedToday} onPractice={handlePractice} onPodcast={handlePodcast} onHistory={() => setAppState('history')} onEditGoals={() => setAppState('intent')} onDistill={() => setAppState('distill')} />
 
     if (appState === 'journeys')
       return <Journeys category={lastCategory} categoryLabel={catLabels[lastCategory] || lastCategory} onStartTask={handleStartTask} onHome={() => setAppState('home')} />
@@ -252,6 +253,8 @@ function App() {
       return <DoneForToday count={tasksCompletedToday} onOneMore={() => setAppState('whatsnext')} onHistory={() => setAppState('history')} />
 
     if (appState === 'history') return <History onBack={() => setAppState('home')} />
+
+    if (appState === 'distill') return <Distill onHome={() => setAppState('home')} />
 
     return <div className="min-h-screen bg-bg-primary flex items-center justify-center"><p className="text-text-secondary">Loading...</p></div>
   }

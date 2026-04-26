@@ -33,7 +33,13 @@ const distributedTasks = JSON.parse(readFileSync('./data/distributed_systems.jso
 const deepReadingTasks = JSON.parse(readFileSync('./data/deep_reading.json', 'utf-8')).map((t: any, i: number) => ({
   id: `dr-task-${i}`, goal_category: 'deep_reading', ...t,
 }))
-const tasks = [...creativeTasks, ...kannadaTasks, ...speakingTasks, ...guitarTasks, ...thinkingTasks, ...listeningTasks, ...philosophyTasks, ...distributedTasks, ...deepReadingTasks]
+const bodyweightFitnessTasks = JSON.parse(readFileSync('./data/bodyweight_fitness.json', 'utf-8')).map((t: any, i: number) => ({
+  id: t.id || `bf-task-${i}`, goal_category: 'bodyweight_fitness', ...t,
+}))
+const conversationTasks = JSON.parse(readFileSync('./data/conversation.json', 'utf-8')).map((t: any, i: number) => ({
+  id: t.id || `conv-task-${i}`, goal_category: 'conversation', ...t,
+}))
+const tasks = [...creativeTasks, ...kannadaTasks, ...speakingTasks, ...guitarTasks, ...thinkingTasks, ...listeningTasks, ...philosophyTasks, ...distributedTasks, ...deepReadingTasks, ...bodyweightFitnessTasks, ...conversationTasks]
 
 // In-memory state
 const state = {
@@ -69,6 +75,8 @@ app.post('/api/goals/parse', (req, res) => {
     philosophy: ['philosophy', 'philosopher', 'ethics', 'morality', 'stoicism', 'existentialism', 'logic', 'fallacy', 'metaphysics', 'epistemology', 'critical thinking', 'argumentation'],
     distributed_systems: ['distributed', 'system design', 'scalability', 'consensus', 'replication', 'cap theorem', 'raft', 'paxos', 'fault tolerance', 'architecture', 'microservice', 'partitioning', 'sharding'],
     deep_reading: ['reading', 'read', 'deep reading', 'comprehension', 'books', 'book', 'articles', 'analytical reading', 'critical reading'],
+    bodyweight_fitness: ['fitness', 'bodyweight', 'exercise', 'workout', 'pushup', 'pushups', 'squat', 'squats', 'plank', 'planks', 'strength', 'calisthenics', 'body weight', 'core', 'mobility'],
+    conversation: ['conversation', 'conversations', 'connection', 'connecting', 'social skills', 'listening', 'empathy', 'vulnerability', 'communicate', 'relationships', 'people skills', 'small talk', 'deeper conversations'],
   }
 
   for (const [category, keywords] of Object.entries(goals)) {

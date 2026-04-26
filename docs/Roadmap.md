@@ -96,25 +96,27 @@ This reframe matters for positioning: Forge isn't competing with entertainment f
 
 ---
 
-## Current State (April 18, 2026)
+## Current State (April 25, 2026)
 
 **Live URL:** https://app-mu-nine-97.vercel.app (stale — local is ahead)
 
 ### What's Built
 
-- 1,349 tasks across 9 categories:
-  - Creative Writing: 175 | Learn Kannada: 261 | Public Speaking: 150
-  - Guitar Practice: 261 | Philosophy: 146 | Distributed Systems: 173
-  - Deep Reading: 30 | Guided Thinking: 8 | Active Listening: 5
-- 30+ skill areas across all categories
+- 1,302 tasks across 11 categories:
+  - Creative Writing: 175 | Learn Kannada: 261 | Public Speaking: 160
+  - Guitar Practice: 284 | Philosophy: 146 | Distributed Systems: 173
+  - Deep Reading: 30 | Bodyweight Fitness: 30 | Conversation: 30
+  - Guided Thinking: 8 | Active Listening: 5
+- 35+ skill areas across all categories
 - 8 reference types: text, structured_list, steps, pairs, fill_blank, dialogue, narration, sound_exercise
 - 6 workspace tools: timer, reveal_hide, text_input, checklist, quiz mode, chord diagram
-- 12 screens: Landing, Auth, IntentCapture, GoalHome, Coach, Journeys, Focused (step-based), AudioPlayer, PodcastPlayer, WhatsNext, DoneForToday, History, ConceptBank
+- 16 screens: Landing, Auth, IntentCapture, GoalHome, Coach, Journeys, Focused (step-based), AudioPlayer, PodcastPlayer, WhatsNext, DoneForToday, History, ConceptBank, TaskReview, Distill
 - Audio mode: Screen / Listen+Speak / Listen only (Web Speech API + SpeechEngine)
 - Level sequencing, concept tracking, momentum tracking (localStorage)
 - ChordDiagram + FretboardDiagram + TabPlayer components
 - PWA, mobile-ready
 - Multi-prompt writing system: `prompts` array on tasks, rendered as sequential focused screens (one prompt per step, can't peek ahead)
+- Distill: podcast/audio retention via forced production. 3 guided prompts (recall → challenge → apply), 80 authored prompts, 8 topic tags, shuffle, localStorage, past distills with tag filtering. User-initiated from GoalHome.
 
 ### What's Not Built Yet
 
@@ -124,7 +126,6 @@ This reframe matters for positioning: Forge isn't competing with entertainment f
 - Audio recording (public speaking)
 - Progressive BPM tracking (guitar)
 - Weekly reflection mirror
-- 3 new categories (~~Deep Reading~~, Bodyweight Fitness, Conversation) — Deep Reading shipped Apr 18 (30 tasks, multi-prompt writing UI)
 
 ---
 
@@ -137,8 +138,8 @@ Single source of truth. Consolidated from UX audit findings, content audit, and 
 | # | Task | Type | Effort |
 |---|---|---|---|
 | 1 | ~~Author Deep Reading task bank (~30 tasks)~~ | Content | ✅ Done (Apr 18) |
-| 2 | Author Bodyweight Fitness task bank (~30 tasks) | Content | 1 day |
-| 3 | Author Conversation/Connection task bank (~30 tasks) | Content | 1 day |
+| 2 | ~~Author Bodyweight Fitness task bank (~30 tasks)~~ | Content | ✅ Done (Apr 25) |
+| 3 | ~~Author Conversation/Connection task bank (~30 tasks)~~ | Content | ✅ Done (Apr 25) |
 | 4 | Rewrite Distributed Systems passive tasks as scenario-based practice | Content | 3-4 days |
 | 5 | Add retrieval twins for Kannada vocabulary tasks | Content | 2 days |
 | 6 | Add "apply it" follow-ups for Philosophy learning tasks | Content | 1-2 days |
@@ -186,7 +187,7 @@ Single source of truth. Consolidated from UX audit findings, content audit, and 
 | 28 | Extract API to standalone server | Infrastructure |
 | 29 | Native mobile app | Feature |
 | 30 | Monetization (freemium, $10-15/mo) | Business |
-| 31 | **Podcast Retention / Deep Listening** — active recall prompts for podcast consumption. Pre-listen lens, post-listen multi-prompt retrieval, spaced resurfacing of user's own notes, cross-episode pattern recognition. Strategy and prompt design NOT finalized — needs further debate on UX, prompt quality, and differentiation from plain journaling. See discussion notes in Content-Strategy.md. | Feature (exploration) |
+| 31 | ~~**Distill** — podcast/audio retention via forced production. 3 guided prompts (recall → challenge → apply) after listening. 8 topic tags drive prompt selection. User-initiated from GoalHome. 80 prompts authored (8 recall + 64 tag-specific challenge + 8 apply). **Shipped Apr 25.**~~ | ✅ Done |
 
 ### Kannada Bilingual Stories — Scaffolded Progression
 
@@ -252,8 +253,14 @@ Key decisions captured during development:
 - **Keep categories bundled (April 19, 2026)** — debated whether strong categories (Guitar, Public Speaking, Podcast Retention) should be standalone products. Decision: no. The bundle IS the product. Categories cross-pollinate, standalone products fragment effort, and the "practice layer across your life" positioning only works with breadth. Individual categories can have branded entry points for marketing without splitting the codebase.
 - **Visible growth mirror identified as critical gap (April 19, 2026)** — Forge has momentum dots and completion counts but no evidence of actual capability growth. A growth mirror ("your recall went from 40% to 70%") is the missing feature that makes the product self-reinforcing without gamification. Elevated to explicit priority.
 - **Podcast Retention added to roadmap (April 19, 2026)** — potentially the highest-impact unbuilt feature. Universal audience, zero-friction adoption (upgrades existing habit), unoccupied competitive gap (all existing tools capture/summarize; none do forced retrieval). Strategy not finalized — needs prompt design work. See Content-Strategy.md appendix.
+- **Distill fully designed (April 24, 2026)** — renamed from "Podcast Retention" to "Distill." All open questions resolved: 3-prompt sequence (recall → challenge → apply), 8 topic tags, 80 authored prompts, user-initiated from GoalHome, unlimited shuffle within difficulty tier, no skipping, variable input sizes, localStorage for MVP with Supabase migration planned. Separate data model (not tasks/events). See Content-Strategy.md § Distill.
+- **Priority reorder (April 24, 2026)** — after discussion on product direction, reordered priorities: (1) content for broad appeal categories (Fitness, Conversation, Distill), (2) data infrastructure (server-side events, store reflections), (3) suggestion engine rewrite, (4) spaced repetition. Content quality improvements to existing categories (DS rewrite, Kannada retrieval twins, Philosophy follow-ups) deferred until data shows which categories retain users.
+- **Discovery vs Practice mode identified (April 25, 2026)** — Forge currently treats all tasks as one-shot (completed = excluded forever). But drill-type tasks (pushups, chord changes, vocabulary recall) are meant to be repeated with progressive challenge. Drills defined narrowly: same action, measurable outcome that trends over time (reps, seconds, BPM, score). Distinct from reusable templates (speaking prompts, reading exercises) which vary content each time. "My Drills" lives inside each goal screen. User chooses what to practice; smart suggestion comes later. Show "Last time: X" on drill cards. Task fields: `drill: true` + `outcome_label`. Layers 1-3 (content tagging, engine change, My Drills UI) can ship without data infrastructure. Trend visualization needs server-side events. Full design in Architecture.md § Practice Routines.
+- **Broad-appeal content complete (April 25, 2026)** — All three new categories shipped: Deep Reading (Apr 18), Bodyweight Fitness (Apr 25), Conversation/Connection (Apr 25). Together they cover the three non-dopaminergic neurochemical pathways: serotonin (reading/depth), endorphins (physical effort), oxytocin (human connection). Distill also shipped (Apr 25) — podcast retention via forced production. Content breadth phase is complete. Next priority shifts to data infrastructure and suggestion engine.
+- **Conversation skill areas research-grounded (April 25, 2026)** — Conversation category designed from communication science research: ICCS 10 dimensions, Motivational Interviewing OARS, Chris Voss tactical empathy, Gottman bids for connection, improv "yes and." 5 skill areas: listening, asking, empathy, vulnerability, responding. Every task uses 4-prompt multi-prompt system with specificity test (prompts must be harder to answer without doing the task). 20 of 30 tasks are drills (repeatable daily).
+- **Seed script infrastructure fix (April 25, 2026)** — `prompts` and `drill` fields were not being packed into reference jsonb by the seed script. Deep Reading's multi-prompt flow was silently broken in production. Fixed seed script, App.tsx fallback, and Focused.tsx guard. All prompt-based tasks now work from Supabase.
 
 ---
 
 *Created: March 29, 2026*
-*Last updated: April 19, 2026*
+*Last updated: April 25, 2026*

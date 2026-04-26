@@ -12,6 +12,8 @@ const GOAL_KEYWORDS: Record<string, string[]> = {
   philosophy: ['philosophy', 'philosopher', 'ethics', 'morality', 'stoicism', 'existentialism', 'logic', 'fallacy', 'metaphysics', 'epistemology', 'critical thinking', 'argumentation'],
   distributed_systems: ['distributed', 'system design', 'scalability', 'consensus', 'replication', 'cap theorem', 'raft', 'paxos', 'fault tolerance', 'architecture', 'microservice', 'partitioning', 'sharding'],
   deep_reading: ['reading', 'read', 'deep reading', 'comprehension', 'books', 'book', 'articles', 'analytical reading', 'critical reading'],
+  bodyweight_fitness: ['fitness', 'bodyweight', 'exercise', 'workout', 'pushup', 'pushups', 'squat', 'squats', 'plank', 'planks', 'strength', 'calisthenics', 'body weight', 'core', 'mobility'],
+  conversation: ['conversation', 'conversations', 'connection', 'connecting', 'social skills', 'listening', 'empathy', 'vulnerability', 'communicate', 'relationships', 'people skills', 'small talk', 'deeper conversations'],
 }
 
 function matchGoal(text: string): string | null {
