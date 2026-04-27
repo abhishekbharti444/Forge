@@ -947,6 +947,68 @@ Pre-generated audio stored as static files in `/public/audio/` or Supabase Stora
 
 ---
 
+## Read Aloud (Universal Feature)
+
+*Added April 27, 2026. Status: Designed, ready to build.*
+
+### Overview
+
+A universal read-aloud toggle on the Focused screen that narrates the current step's text content via Web Speech API. Not a separate audio mode — it's a layer on top of the existing screen experience. The user sees the same UI, but the app reads it aloud.
+
+Designed for tasks with dense reading content (Philosophy concepts, Distributed Systems explanations, structured lists) where listening is easier than reading. Works for every task type — reads whatever text is visible, waits when user input is required.
+
+### How It Works
+
+- **Toggle:** 🔊 button in the top-right corner of the Focused screen. Tap to start reading, icon changes to 🔇, tap to stop.
+- **Voice:** Auto-selects the best English voice available on the device (first non-compact `en-` voice).
+- **Speed:** 1.0 (browser default).
+- **Wake lock:** Screen stays on while audio is active via Screen Wake Lock API. Released when audio is toggled off or task completes.
+
+### Reading Behavior Per Step Type
+
+The audio reads everything on the current step until user input is required, then waits.
+
+| Step content | Audio reads | Then... |
+|---|---|---|
+| Instruction (action + constraint + context) | All text sequentially | Auto-advances to next step |
+| Reference: `text` | Body text | Auto-advances |
+| Reference: `structured_list` | Each item: primary → secondary → reveal → details | Auto-advances |
+| Reference: `steps` | Each step sequentially | Auto-advances |
+| Reference: `fill_blank` | Prompt, pause, then answer | Auto-advances |
+| Reference: `pairs` | Left, then right, for each pair | Auto-advances |
+| Reference: `dialogue` | Each line with speaker attribution | Auto-advances |
+| Quiz/reveal (interactive) | Reads the question | Waits for user to tap reveal |
+| Text input (reflection, writing) | Reads the prompt | Waits for user to type |
+| Timer step | Reads the instruction | Waits for timer interaction |
+
+### Auto-Advance
+
+When audio finishes reading a pure-text step (no user interaction needed), it automatically advances to the next step and begins reading. This creates a continuous listening experience through instruction → reference → content steps.
+
+Interactive steps (quiz, text_input, timer) break the auto-advance — audio reads the prompt and waits. After the user completes the interaction and advances manually, audio resumes reading the next step.
+
+### Toggle Persistence
+
+- Toggle state persists for the current task session only (not across tasks, not across app restarts).
+- If the user toggles audio on, it stays on for all remaining steps of that task.
+- Toggling off cancels speech immediately via `speechSynthesis.cancel()`.
+
+### Technical Implementation
+
+- **Web Speech API:** `SpeechSynthesis.speak()` for narration, `SpeechSynthesisUtterance.onend` for auto-advance trigger.
+- **Screen Wake Lock API:** `navigator.wakeLock.request('screen')` while audio is active. Released on toggle off or task completion.
+- **Voice selection:** `speechSynthesis.getVoices()` → filter for `lang.startsWith('en')` → prefer non-local/non-compact voices → fallback to default.
+- **Text extraction:** A function that takes the current step's data and returns a flat string (or array of strings with pauses) for the speech engine.
+
+### What This Is NOT
+
+- Not a separate audio mode or screen (like AudioPlayerScreen for Kannada stories)
+- Not background playback — requires screen to stay on
+- Not pre-generated audio — uses runtime TTS
+- Not voice interaction — user still interacts via touch on screen
+
+---
+
 ## App Flow
 
 *Updated April 7, 2026*
@@ -1208,6 +1270,198 @@ The API contract, frontend, and data model don't change. You're swapping one sco
 **When:** Need to separate analytics from main DB, add caching for hot suggestions.
 
 **How:** Add Redis (Upstash has a free tier) for caching. Add a read replica or separate analytics DB. The Express API (once extracted) connects to multiple data sources. Frontend still talks to one API.
+
+---
+
+## Data Migration: localStorage → Supabase
+
+*Designed April 27, 2026. Status: Ready to build.*
+
+### The Problem
+
+All user progress lives in localStorage. One cleared browser = everything gone. No cross-device sync. Reflections are discarded entirely. 5 of 8 API routes are dead code — the frontend never calls them.
+
+| Data | Current storage | Survives clear? | Survives device switch? |
+|---|---|---|---|
+| Task completions | `localStorage: forge_completions` | ❌ | ❌ |
+| Reflections | **Nowhere** — discarded in handleDone | ❌ | ❌ |
+| Prompt responses | **Nowhere** — discarded in handleDone | ❌ | ❌ |
+| Active goals | `localStorage: activeGoals` | ❌ | ❌ |
+| Weekly momentum | `localStorage: weeklyActivity` | ❌ | ❌ |
+| Distill entries | `localStorage: forge_distills` | ❌ | ❌ |
+| Session recovery | `localStorage: forge_session` | ❌ (4hr TTL) | ❌ |
+
+### Design Principles
+
+1. **Dual-write.** Every write goes to localStorage (instant, offline) AND Supabase (async, persistent). localStorage is the speed/offline layer. Supabase is the source of truth.
+2. **API routes for all writes.** No direct Supabase client calls from frontend for data mutations. Business logic stays server-side. Frontend calls endpoints.
+3. **Silent reconciliation on load.** When the app loads, compare localStorage with Supabase. Upload anything missing. Download anything the other device wrote. No user-visible sync UI.
+4. **Offline-first.** If the API call fails, localStorage has the data. Reconciliation catches it on next load.
+5. **Session recovery stays in localStorage.** `forge_session` and `forge_focused` are ephemeral (4hr TTL), device-specific. They don't belong in Supabase.
+
+### Schema Changes
+
+#### Enhanced: `user_task_events`
+
+Add `response_data` jsonb column for prompt responses and drill outcomes:
+
+```sql
+ALTER TABLE user_task_events ADD COLUMN response_data jsonb;
+```
+
+The `response_data` field stores:
+- **Multi-prompt tasks** (Deep Reading, Conversation): `{ prompts: [{prompt: "...", text: "..."}] }`
+- **Drill outcomes** (Fitness, Guitar): `{ reps: 12 }` or `{ hold_seconds: 45 }` or `{ bpm: 80 }`
+- **Regular tasks**: null (reflection goes in `reflection_text`)
+
+#### New: `distills` table
+
+Distill is a first-class concept — forced production from memory. Covers both external content (podcasts, articles) and spaced retrieval of Forge tasks.
+
+```sql
+CREATE TABLE distills (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id uuid NOT NULL REFERENCES profiles(id) ON DELETE CASCADE,
+  source_type text NOT NULL CHECK (source_type IN ('external', 'task')),
+  task_id uuid REFERENCES tasks(id) ON DELETE SET NULL,
+  title text NOT NULL,
+  link text,
+  tag text NOT NULL,
+  responses jsonb NOT NULL,
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+
+CREATE INDEX idx_distills_user ON distills(user_id, created_at DESC);
+
+ALTER TABLE distills ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Users can read own distills" ON distills FOR SELECT USING (auth.uid() = user_id);
+CREATE POLICY "Users can insert own distills" ON distills FOR INSERT WITH CHECK (auth.uid() = user_id);
+```
+
+| Column | Type | Purpose |
+|---|---|---|
+| `source_type` | `'external' \| 'task'` | External = user-provided content. Task = spaced retrieval of a Forge task. |
+| `task_id` | uuid, nullable | Links to `tasks.id` for task distills. Null for external. |
+| `title` | text | Podcast name (external) or task description (task distill). |
+| `link` | text, nullable | URL for external content. |
+| `tag` | text | Topic tag (business, science, tech, etc.). For task distills, auto-mapped from goal_category. |
+| `responses` | jsonb | `[{prompt: "...", text: "..."}, ...]` — always 3 entries. |
+
+#### Existing: `user_goals` (start using it)
+
+The table exists. RLS policies exist. The `/api/goals/parse` endpoint exists. Just need to wire the frontend to use it.
+
+### Write Paths
+
+#### Task completion (handleDone)
+
+```
+User taps "I'm done" in Focused.tsx
+  ↓
+App.handleDone() fires:
+  1. localStorage: recordCompletion(task)     ← existing, keep
+  2. localStorage: recordMomentum()           ← existing, keep
+  3. API: POST /api/events                    ← NEW: wire this call
+     { task_id, event: 'completed',
+       reflection_text, response_data,
+       duration_seconds }
+  ↓
+/api/events handler:
+  1. Insert into user_task_events
+  2. Upsert daily_summary (increment tasks_completed)
+```
+
+The API call is fire-and-forget — don't await it, don't block the UX. If it fails, reconciliation catches it.
+
+#### Task skip
+
+```
+User taps "Skip" in Coach/Suggestion
+  ↓
+API: POST /api/events
+  { task_id, event: 'skipped', skip_reason }
+```
+
+#### Goal selection (IntentCapture)
+
+```
+User picks goals in IntentCapture
+  ↓
+1. localStorage: setItem('activeGoals', [...])   ← existing, keep
+2. API: sync goals to user_goals table           ← NEW
+   DELETE existing goals for user
+   INSERT new goals
+```
+
+On app load: read goals from Supabase, fall back to localStorage.
+
+#### Distill completion
+
+```
+User finishes 3 prompts in Distill.tsx
+  ↓
+1. localStorage: saveDistills(updated)            ← existing, keep
+2. API: POST /api/distills                        ← NEW
+   { source_type: 'external', title, link, tag, responses }
+```
+
+### Read Paths
+
+| Data | Primary source | Fallback |
+|---|---|---|
+| Goals | `GET /api/goals` → `user_goals` | `localStorage: activeGoals` |
+| Momentum | Computed from `user_task_events` (today's count) | `localStorage: weeklyActivity` |
+| History | `GET /api/history` → `user_task_events` + `tasks` | `localStorage: forge_completions` |
+| Distills | `GET /api/distills` → `distills` table | `localStorage: forge_distills` |
+| Completed task IDs | `GET /api/events?type=completed` → `user_task_events` | `localStorage: forge_completions` |
+
+### Reconciliation (on app load)
+
+```
+App loads → user authenticated
+  ↓
+1. Fetch server completions: GET /api/completions → Set<task_id + timestamp>
+2. Read localStorage completions: forge_completions
+3. Find local-only: completions in localStorage not in Supabase
+4. Upload missing: POST /api/events for each (batch)
+5. Find server-only: completions in Supabase not in localStorage
+6. Download missing: add to localStorage forge_completions
+  ↓
+Same for distills:
+7. Fetch server distills: GET /api/distills
+8. Compare with localStorage forge_distills (match by title + created_at)
+9. Upload/download missing
+  ↓
+Same for goals:
+10. Fetch server goals: GET /api/goals
+11. If server has goals → use them (server wins)
+12. If server empty but localStorage has goals → upload them
+```
+
+Matching rule for dedup: `(task_id, created_at within 60 seconds)` = same event.
+
+### Distill as Retention Layer (Future Extension)
+
+The `distills` table supports `source_type: 'task'` for spaced retrieval of Forge tasks:
+
+1. User completes a task → event in `user_task_events`
+2. After N days, Forge surfaces a "revisit this" prompt
+3. User answers 3 recall prompts → entry in `distills` with `source_type: 'task'`, `task_id` linking to original
+4. The growth mirror shows: "You've distilled 15 podcasts and revisited 23 Forge tasks"
+
+Prompts for task distills can be generic (from the existing pool) or task-specific (generated from task metadata). Generic works for MVP.
+
+### Implementation Phases
+
+| Phase | What | Effort | Unlocks |
+|---|---|---|---|
+| 1 | Add `response_data` column. Wire `handleDone()` → `POST /api/events`. Store reflections + prompt responses. | 2 hr | Reflections saved, history works, usage data |
+| 2 | Create `distills` table. Wire Distill.tsx → `POST /api/distills`. | 2 hr | Distills persist across devices |
+| 3 | Sync goals: IntentCapture writes to `user_goals`. App load reads from Supabase. | 1 hr | Goals persist across devices |
+| 4 | Reconciliation on load: compare localStorage ↔ Supabase, sync missing. | 3 hr | Offline completions eventually sync, device switch works |
+| 5 | Read from server: momentum, progress, completed IDs from Supabase instead of localStorage. | 2 hr | Server is source of truth |
+
+Total: ~10 hours across 5 phases. Each phase is independently deployable.
 
 ---
 

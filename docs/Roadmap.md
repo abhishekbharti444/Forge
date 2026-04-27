@@ -144,22 +144,33 @@ Single source of truth. Consolidated from UX audit findings, content audit, and 
 | 5 | Add retrieval twins for Kannada vocabulary tasks | Content | 2 days |
 | 6 | Add "apply it" follow-ups for Philosophy learning tasks | Content | 1-2 days |
 
-### Tier 1 — Code Fixes (align code with philosophy)
+### Tier 1 — Data Infrastructure (the foundation)
+
+*Designed April 27, 2026. Full technical design in Architecture.md § Data Migration.*
 
 | # | Task | Type | Effort |
 |---|---|---|---|
-| 7 | Fix: Store reflections (currently discarded in handleDone) | Bug | 30 min |
+| 7a | Wire `handleDone()` → `POST /api/events` (store reflections + prompt responses + duration) | Infrastructure | 2 hr |
+| 7b | Add `response_data` jsonb column to `user_task_events` | Migration | 30 min |
+| 7c | Create `distills` table, wire Distill.tsx → `POST /api/distills` | Infrastructure | 2 hr |
+| 7d | Sync goals: IntentCapture writes to `user_goals`, app load reads from Supabase | Infrastructure | 1 hr |
+| 7e | Reconciliation on load: compare localStorage ↔ Supabase, sync missing | Infrastructure | 3 hr |
+| 7f | Read from server: momentum, progress, completed IDs from Supabase | Infrastructure | 2 hr |
+
+### Tier 1b — Code Fixes (align code with philosophy)
+
+| # | Task | Type | Effort |
+|---|---|---|---|
 | 8 | Fix: Wire DoneForToday screen (currently unreachable) | Bug | 30 min |
 | 9 | Fix: WhatsNext task selection (currently random) | Bug | 2 hr |
 | 10 | Fix: Flip WhatsNext default (completion primary, continuation secondary) | Philosophy | 30 min |
 | 11 | Make completion messages contextual (replace Math.random with task-aware selection) | Philosophy | 1 hr |
-| 12 | Sync deployment (re-seed Supabase with all tasks, redeploy) | Infrastructure | 2 hr |
+| 12 | ~~Sync deployment (re-seed Supabase with all tasks, redeploy)~~ | Infrastructure | ✅ Done (Apr 25) |
 
 ### Tier 2 — Learning Effectiveness
 
 | # | Task | Type | Effort |
 |---|---|---|---|
-| 13 | Migrate progress to Supabase (dual-write, schema exists) | Infrastructure | 1 day |
 | 14 | Session-opening recall checks | Learning | 1 day |
 | 15 | Basic spaced repetition (3-bucket Leitner system) | Learning | 2-3 days |
 | 16 | Progressive BPM tracking for guitar | Learning | 1 day |
@@ -256,11 +267,13 @@ Key decisions captured during development:
 - **Distill fully designed (April 24, 2026)** — renamed from "Podcast Retention" to "Distill." All open questions resolved: 3-prompt sequence (recall → challenge → apply), 8 topic tags, 80 authored prompts, user-initiated from GoalHome, unlimited shuffle within difficulty tier, no skipping, variable input sizes, localStorage for MVP with Supabase migration planned. Separate data model (not tasks/events). See Content-Strategy.md § Distill.
 - **Priority reorder (April 24, 2026)** — after discussion on product direction, reordered priorities: (1) content for broad appeal categories (Fitness, Conversation, Distill), (2) data infrastructure (server-side events, store reflections), (3) suggestion engine rewrite, (4) spaced repetition. Content quality improvements to existing categories (DS rewrite, Kannada retrieval twins, Philosophy follow-ups) deferred until data shows which categories retain users.
 - **Discovery vs Practice mode identified (April 25, 2026)** — Forge currently treats all tasks as one-shot (completed = excluded forever). But drill-type tasks (pushups, chord changes, vocabulary recall) are meant to be repeated with progressive challenge. Drills defined narrowly: same action, measurable outcome that trends over time (reps, seconds, BPM, score). Distinct from reusable templates (speaking prompts, reading exercises) which vary content each time. "My Drills" lives inside each goal screen. User chooses what to practice; smart suggestion comes later. Show "Last time: X" on drill cards. Task fields: `drill: true` + `outcome_label`. Layers 1-3 (content tagging, engine change, My Drills UI) can ship without data infrastructure. Trend visualization needs server-side events. Full design in Architecture.md § Practice Routines.
+- **Read Aloud designed (April 27, 2026)** — universal 🔊 toggle on Focused screen that narrates step content via Web Speech API. Not a separate audio mode — a layer on top of the existing screen. Reads everything until user input is required, then waits. Auto-advances pure-text steps. Wake lock keeps screen on. Works for all task types. Designed for dense reading content (Philosophy, Distributed Systems) but available everywhere. No pre-generated audio, no background playback. Full design in Architecture.md § Read Aloud.
 - **Broad-appeal content complete (April 25, 2026)** — All three new categories shipped: Deep Reading (Apr 18), Bodyweight Fitness (Apr 25), Conversation/Connection (Apr 25). Together they cover the three non-dopaminergic neurochemical pathways: serotonin (reading/depth), endorphins (physical effort), oxytocin (human connection). Distill also shipped (Apr 25) — podcast retention via forced production. Content breadth phase is complete. Next priority shifts to data infrastructure and suggestion engine.
 - **Conversation skill areas research-grounded (April 25, 2026)** — Conversation category designed from communication science research: ICCS 10 dimensions, Motivational Interviewing OARS, Chris Voss tactical empathy, Gottman bids for connection, improv "yes and." 5 skill areas: listening, asking, empathy, vulnerability, responding. Every task uses 4-prompt multi-prompt system with specificity test (prompts must be harder to answer without doing the task). 20 of 30 tasks are drills (repeatable daily).
 - **Seed script infrastructure fix (April 25, 2026)** — `prompts` and `drill` fields were not being packed into reference jsonb by the seed script. Deep Reading's multi-prompt flow was silently broken in production. Fixed seed script, App.tsx fallback, and Focused.tsx guard. All prompt-based tasks now work from Supabase.
+- **Data migration designed (April 27, 2026)** — Full design for migrating from localStorage to Supabase. Dual-write model: localStorage for speed/offline, Supabase as source of truth, silent reconciliation on load. API routes for all writes (no direct Supabase from frontend). Schema: add `response_data` jsonb to `user_task_events`, new `distills` table with `source_type` ('external' for podcasts, 'task' for spaced retrieval of Forge tasks). Goals sync via existing `user_goals` table. 5 phases, ~10 hours total, each independently deployable. Distill designed as a retention layer that extends beyond podcasts — future spaced retrieval of Forge tasks uses the same table and prompt pattern. Full technical design in Architecture.md § Data Migration.
 
 ---
 
 *Created: March 29, 2026*
-*Last updated: April 25, 2026*
+*Last updated: April 27, 2026*

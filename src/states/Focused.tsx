@@ -1,8 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { ReferenceRenderer, ChordReference } from '../components/ReferenceRenderer'
 import { FretboardDiagram } from '../components/FretboardDiagram'
 import { Timer, Metronome } from '../components/WorkspaceTools'
 import { saveFocusedState, restoreFocusedState } from '../lib/sessionRecovery'
+import { startReading, stopReading, isSupported, setupWakeLockReacquire, preloadVoices } from '../lib/readAloud'
 
 
 // Split long text into visual paragraphs (~2-3 sentences each)
@@ -72,7 +73,7 @@ function buildSteps(task: Props['task']): Step[] {
   }
 
   // Multi-prompt writing (deep reading, structured reflection)
-  if (task.prompts?.length && tools.includes('text_input') && !task.reference) {
+  if (task.prompts?.length && tools.includes('text_input')) {
     steps.push({ type: 'instruction', title: 'What to do' })
     task.prompts.forEach((_, i) => {
       steps.push({ type: 'prompt', title: `${i + 1} of ${task.prompts!.length}`, promptIndex: i })
@@ -155,6 +156,35 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
     return new Array(len).fill('')
   })
   const [quizDone, setQuizDone] = useState(false)
+  const [audioOn, setAudioOn] = useState(false)
+  const cancelRef = useRef<(() => void) | null>(null)
+
+  // Preload voices once
+  useEffect(() => { if (isSupported()) { preloadVoices(); setupWakeLockReacquire() } }, [])
+
+  // Read aloud when audio is on and step changes
+  const handleAutoAdvance = useCallback(() => {
+    if (current < steps.length - 1) {
+      const next = current + 1
+      setCurrent(next)
+      saveNow(next)
+    }
+  }, [current, steps.length])
+
+  useEffect(() => {
+    if (!audioOn) { cancelRef.current?.(); cancelRef.current = null; return }
+    const cancel = startReading(steps[current], task, handleAutoAdvance)
+    cancelRef.current = cancel
+    return () => { cancel() }
+  }, [audioOn, current])
+
+  // Stop reading on unmount
+  useEffect(() => () => stopReading(), [])
+
+  function toggleAudio() {
+    if (audioOn) { stopReading(); setAudioOn(false) }
+    else { setAudioOn(true) }
+  }
 
   // Refs for visibilitychange flush (always has latest values)
   const stateRef = useRef({ current, reflection, promptResponses })
@@ -189,7 +219,10 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
   const hasPromptContent = promptResponses.some(r => r.trim())
 
   function next() {
+    cancelRef.current?.() // cancel any in-progress speech before advancing
     if (isLast) {
+      stopReading()
+      setAudioOn(false)
       const text = task.prompts?.length
         ? promptResponses.map((r, i) => `${task.prompts![i].prompt}\n${r}`).filter((_, i) => promptResponses[i].trim()).join('\n\n')
         : reflection
@@ -219,13 +252,18 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
       {/* Top bar */}
       <div className="flex items-center justify-between mb-6">
         {onHome && (
-          <button onClick={onHome} className="text-text-secondary text-sm hover:text-text-primary transition-colors">← Back</button>
+          <button onClick={() => { stopReading(); setAudioOn(false); onHome() }} className="text-text-secondary text-sm hover:text-text-primary transition-colors">← Back</button>
         )}
         <div className="text-text-secondary/40 text-xs flex gap-2">
           {task.skill_area && <span>{task.skill_area.replace('_', ' ')}</span>}
           <span>· {task.time_minutes} min</span>
         </div>
         <span className="text-text-secondary/30 text-xs">{current + 1}/{steps.length}</span>
+        {isSupported() && (
+          <button onClick={toggleAudio} className="text-lg ml-2 opacity-40 hover:opacity-100 transition-opacity">
+            {audioOn ? '🔇' : '🔊'}
+          </button>
+        )}
       </div>
 
       {/* Step title */}

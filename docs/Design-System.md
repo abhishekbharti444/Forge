@@ -187,7 +187,7 @@ Background: #171412
 ### Screen 4: Focused (Task in Progress)
 ```
 ┌─────────────────────────┐
-│                         │
+│                    🔊   │  ← Read Aloud toggle, top-right, subtle
 │  This usually takes     │  ← 13px, warm grey
 │  about 10 minutes       │
 │                         │
@@ -209,6 +209,9 @@ Background: #171412
 │                         │
 └─────────────────────────┘
 Maximum whitespace. Quiet room feeling.
+🔊 toggle: tap to start reading step content aloud.
+Changes to 🔇 when active. Auto-advances pure-text steps.
+Waits on interactive steps (quiz, text input, timer).
 ```
 
 ### Screen 5: Completion (Reflection)
