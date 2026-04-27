@@ -85,13 +85,17 @@ function App() {
     if (appState === 'focused' || appState === 'audio') {
       saveSession(appState, currentTask, audioMode)
     }
+    if (appState === 'distill') {
+      saveSession('distill', null)
+    }
   }, [appState, currentTask, audioMode])
 
   // visibilitychange: last reliable event on mobile — flush state when page goes hidden
   useEffect(() => {
     const onHidden = () => {
-      if (document.visibilityState === 'hidden' && (appState === 'focused' || appState === 'audio')) {
-        saveSession(appState, currentTask, audioMode)
+      if (document.visibilityState === 'hidden') {
+        if (appState === 'focused' || appState === 'audio') saveSession(appState, currentTask, audioMode)
+        if (appState === 'distill') saveSession('distill', null)
       }
     }
     document.addEventListener('visibilitychange', onHidden)
