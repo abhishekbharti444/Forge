@@ -9,6 +9,7 @@ interface DistillEntry {
   tags: string[]
   tag?: string
   responses: { prompt: string; text: string }[]
+  freeWrite?: string
   created_at: string
 }
 
@@ -29,12 +30,13 @@ interface InProgress {
   a1: string
   a2: string
   a3: string
+  freeWrite: string
 }
 
 const EMPTY: InProgress = {
   step: 'home', title: '', link: '', tags: [],
   p1: { id: '', prompt: '' }, p2: { id: '', prompt: '' }, p3: { id: '', prompt: '' },
-  a1: '', a2: '', a3: '',
+  a1: '', a2: '', a3: '', freeWrite: '',
 }
 
 function getTags(d: DistillEntry): string[] {
@@ -111,6 +113,7 @@ export function Distill({ onHome }: Props) {
         { prompt: s.p2.prompt, text: s.a2 },
         { prompt: s.p3.prompt, text: s.a3 },
       ],
+      freeWrite: s.freeWrite || undefined,
       created_at: new Date().toISOString(),
     }
     const updated = [entry, ...distills]
@@ -223,6 +226,20 @@ export function Distill({ onHome }: Props) {
         🔀 Different question
       </button>
 
+      {current.num === 3 && (
+        <div className="mb-6">
+          <button onClick={() => set({ freeWrite: s.freeWrite || ' ' })}
+            className={`text-text-secondary/40 text-xs hover:text-text-secondary transition-colors ${s.freeWrite ? 'hidden' : ''}`}>
+            + Anything else on your mind?
+          </button>
+          {s.freeWrite && (
+            <textarea value={s.freeWrite.trim() === '' ? '' : s.freeWrite} onChange={e => set({ freeWrite: e.target.value })}
+              rows={4} placeholder="Free thoughts, connections, ideas..."
+              className="w-full bg-bg-surface border border-border rounded-xl px-4 py-3 text-text-primary text-sm leading-relaxed mt-2 placeholder:text-text-secondary/30 focus:outline-none focus:border-accent-amber/40 resize-none" />
+          )}
+        </div>
+      )}
+
       <button onClick={current.next} disabled={!current.answer.trim()}
         className="w-full py-3 rounded-xl font-semibold transition-colors disabled:opacity-30 disabled:cursor-not-allowed bg-accent-amber text-bg-primary">
         {current.num === 3 ? 'Distill' : 'Next'}
@@ -272,6 +289,12 @@ function DistillCard({ distill }: { distill: DistillEntry }) {
               <p className="text-text-primary text-sm leading-relaxed">{r.text}</p>
             </div>
           ))}
+          {distill.freeWrite && (
+            <div>
+              <p className="text-text-secondary text-xs mb-1">Free thoughts</p>
+              <p className="text-text-primary text-sm leading-relaxed">{distill.freeWrite}</p>
+            </div>
+          )}
         </div>
       )}
     </button>
