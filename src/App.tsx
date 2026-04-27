@@ -59,7 +59,13 @@ function App() {
   const [_session, setSession] = useState<Session | null>(null)
   const [appState, setAppState] = useState<AppState>(() => {
     const saved = restoreSession()
-    return (saved?.appState as AppState) || 'loading'
+    if (saved?.appState) return saved.appState as AppState
+    // Check if Distill has an in-progress session
+    try {
+      const ds = JSON.parse(localStorage.getItem('forge_distill_session') || 'null')
+      if (ds?.data?.step && ds.data.step !== 'home' && ds.data.step !== 'done') return 'distill' as AppState
+    } catch {}
+    return 'loading'
   })
   const [currentTask, setCurrentTask] = useState<TaskData | null>(() => {
     const saved = restoreSession()
