@@ -38,8 +38,9 @@ export function extractStepText(step: Step, task: Task): string[] {
       for (const item of ref.items) {
         let line = item.primary || ''
         if (item.secondary) line += `. ${item.secondary}`
-        if (item.reveal) line += `. ${item.reveal}`
         texts.push(line)
+        if (item.body) texts.push(item.body)
+        if (item.reveal) texts.push(`Key takeaway: ${item.reveal}`)
         if (item.details) {
           for (const d of item.details) texts.push(`${d.label}: ${d.value}`)
         }
@@ -47,9 +48,10 @@ export function extractStepText(step: Step, task: Task): string[] {
     } else if (ref.type === 'steps' && ref.steps) {
       ref.steps.forEach((s: string, i: number) => texts.push(`Step ${i + 1}. ${s}`))
     } else if (ref.type === 'fill_blank' && ref.items) {
+      // Only read the prompt, NOT the answer — user should think of it
       for (const item of ref.items) {
         texts.push(item.prompt)
-        if (item.answer) texts.push(`Answer: ${item.answer}`)
+        if (item.hint) texts.push(`Hint: ${item.hint}`)
       }
     } else if (ref.type === 'pairs' && ref.pairs) {
       for (const p of ref.pairs) texts.push(`${p.left}. versus. ${p.right}`)
@@ -60,8 +62,8 @@ export function extractStepText(step: Step, task: Task): string[] {
   }
 
   if (step.type === 'reflect') {
-    // Just read the prompt, then wait for user input
-    return texts // empty — reflect prompt is rendered by Focused.tsx, not extracted here
+    // Read the reflection prompt so the user knows what to think about
+    return texts // prompt is dynamic from reflectPrompt() — not accessible here, handled by Focused.tsx
   }
 
   if (step.type === 'prompt' && task.prompts && step.promptIndex != null) {
@@ -73,14 +75,26 @@ export function extractStepText(step: Step, task: Task): string[] {
   return texts
 }
 
-/** Returns true if the step is pure-text (no user interaction needed) */
+/** Returns true if the step should auto-advance after audio finishes */
 export function isAutoAdvanceStep(step: Step, task: Task): boolean {
+  // Never auto-advance interactive steps
   if (step.type === 'reflect' || step.type === 'prompt' || step.type === 'exercise') return false
+
+  // Instruction with interactive tools — don't auto-advance
   if (step.type === 'instruction') {
-    // If instruction has interactive tools (metronome, timer), don't auto-advance
     const tools = task.tools || []
     if (tools.includes('metronome') || tools.includes('timer')) return false
   }
+
+  // Reference steps: depends on the reference type
+  if (step.type === 'reference' && task.reference) {
+    const refType = task.reference.type
+    // Paginated/interactive reference types — user controls the pace
+    if (refType === 'structured_list') return false // learn mode is paginated
+    if (refType === 'fill_blank') return false // user needs to fill in
+    if (refType === 'dialogue') return false // user may practice along
+  }
+
   return true
 }
 
