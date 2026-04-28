@@ -41,7 +41,7 @@ interface Props {
     songSuggestions?: string[]
     audioUrl?: string
   }
-  onDone: (extra?: { text?: string }) => void
+  onDone: (extra?: { text?: string; promptResponses?: { prompt: string; text: string }[] }) => void
   onHome?: () => void
   onNextInSequence?: () => void
 }
@@ -158,11 +158,15 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
   const [quizDone, setQuizDone] = useState(false)
   const [audioOn, setAudioOn] = useState(false)
   const cancelRef = useRef<(() => void) | null>(null)
+  const [learnIndex, setLearnIndex] = useState(0)
 
   // Preload voices once
   useEffect(() => { if (isSupported()) { preloadVoices(); setupWakeLockReacquire() } }, [])
 
-  // Read aloud when audio is on and step changes
+  // Reset learnIndex when step changes
+  useEffect(() => { setLearnIndex(0) }, [current])
+
+  // Read aloud when audio is on and step or learnIndex changes
   const handleAutoAdvance = useCallback(() => {
     if (current < steps.length - 1) {
       const next = current + 1
@@ -173,10 +177,10 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
 
   useEffect(() => {
     if (!audioOn) { cancelRef.current?.(); cancelRef.current = null; return }
-    const cancel = startReading(steps[current], task, handleAutoAdvance)
+    const cancel = startReading(steps[current], task, handleAutoAdvance, learnIndex)
     cancelRef.current = cancel
     return () => { cancel() }
-  }, [audioOn, current])
+  }, [audioOn, current, learnIndex])
 
   // Stop reading on unmount
   useEffect(() => () => stopReading(), [])
@@ -226,7 +230,10 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
       const text = task.prompts?.length
         ? promptResponses.map((r, i) => `${task.prompts![i].prompt}\n${r}`).filter((_, i) => promptResponses[i].trim()).join('\n\n')
         : reflection
-      onDone(text ? { text } : undefined)
+      const structured = task.prompts?.length
+        ? promptResponses.map((r, i) => ({ prompt: task.prompts![i].prompt, text: r })).filter(r => r.text.trim())
+        : undefined
+      onDone(text ? { text, promptResponses: structured } : undefined)
     } else {
       const nextStep = current + 1
       saveNow(nextStep)
@@ -342,7 +349,8 @@ export function Focused({ task, onDone, onHome, onNextInSequence }: Props) {
 
         {step.type === 'reference' && task.reference && (
           <ReferenceRenderer reference={task.reference} tools={task.tools} bpm={task.bpm}
-            forcedMode={task.reference.type === 'structured_list' && step.title === 'Study' ? 'learn' : undefined} />
+            forcedMode={task.reference.type === 'structured_list' && step.title === 'Study' ? 'learn' : undefined}
+            onLearnIndexChange={setLearnIndex} />
         )}
 
         {step.type === 'prompt' && task.prompts && step.promptIndex != null && (

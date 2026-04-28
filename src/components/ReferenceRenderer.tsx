@@ -8,9 +8,10 @@ interface StructuredListProps {
   revealEnabled?: boolean
   mode?: 'learn' | 'review' | 'quiz' | 'reverse'
   onComplete?: () => void
+  onLearnIndexChange?: (index: number) => void
 }
 
-export function StructuredList({ items, revealEnabled, mode = 'learn', onComplete }: StructuredListProps) {
+export function StructuredList({ items, revealEnabled, mode = 'learn', onComplete, onLearnIndexChange }: StructuredListProps) {
   const [quizIndex, setQuizIndex] = useState(0)
   const [score, setScore] = useState(0)
   const [answered, setAnswered] = useState(false)
@@ -107,9 +108,9 @@ export function StructuredList({ items, revealEnabled, mode = 'learn', onComplet
           )}
         </div>
         <div className="flex items-center justify-between mt-4">
-          <button onClick={() => { setLearnIndex(i => i - 1); setLearnRevealed(false) }} disabled={learnIndex === 0}
+          <button onClick={() => { const n = learnIndex - 1; setLearnIndex(n); setLearnRevealed(false); onLearnIndexChange?.(n) }} disabled={learnIndex === 0}
             className="px-4 py-2 text-text-secondary text-sm disabled:opacity-20">← Back</button>
-          <button onClick={() => { setLearnIndex(i => i + 1); setLearnRevealed(false) }} disabled={learnIndex >= items.length - 1}
+          <button onClick={() => { const n = learnIndex + 1; setLearnIndex(n); setLearnRevealed(false); onLearnIndexChange?.(n) }} disabled={learnIndex >= items.length - 1}
             className="px-4 py-2 bg-accent-amber text-bg-primary rounded-lg text-sm font-semibold disabled:opacity-30">
             Next →
           </button>
@@ -411,6 +412,7 @@ interface ReferenceRendererProps {
   bpm?: number
   onComplete?: () => void
   forcedMode?: 'learn' | 'review' | 'quiz' | 'reverse'
+  onLearnIndexChange?: (index: number) => void
 }
 
 function PlayButton({ url }: { url?: string }) {
@@ -622,7 +624,7 @@ function TextReference({ body, mono }: { body: string; mono?: boolean }) {
   )
 }
 
-export function ReferenceRenderer({ reference, tools, onComplete, forcedMode }: ReferenceRendererProps) {
+export function ReferenceRenderer({ reference, tools, onComplete, forcedMode, onLearnIndexChange }: ReferenceRendererProps) {
   const revealEnabled = tools?.includes('reveal_hide')
   const hasBody = reference.type === 'structured_list' && reference.items?.some((i: any) => i.body)
   const hasReveal = reference.type === 'structured_list' && reference.items?.some((i: any) => i.reveal)
@@ -645,7 +647,7 @@ export function ReferenceRenderer({ reference, tools, onComplete, forcedMode }: 
       )}
       {reference.type === 'text' && <TextReference body={reference.body} mono={reference.mono} />}
       {reference.type === 'structured_list' && (
-        <StructuredList items={reference.items} revealEnabled={revealEnabled} mode={activeMode} onComplete={onComplete} />
+        <StructuredList items={reference.items} revealEnabled={revealEnabled} mode={activeMode} onComplete={onComplete} onLearnIndexChange={onLearnIndexChange} />
       )}
       {reference.type === 'steps' && <Steps steps={reference.steps} />}
       {reference.type === 'pairs' && <Pairs pairs={reference.pairs} />}

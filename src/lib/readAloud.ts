@@ -18,7 +18,7 @@ interface Task {
   prompts?: { prompt: string; lines: number }[]
 }
 
-export function extractStepText(step: Step, task: Task): string[] {
+export function extractStepText(step: Step, task: Task, learnIndex?: number): string[] {
   const texts: string[] = []
 
   if (step.type === 'instruction') {
@@ -35,7 +35,9 @@ export function extractStepText(step: Step, task: Task): string[] {
     if (ref.type === 'text') {
       if (ref.body) texts.push(ref.body)
     } else if (ref.type === 'structured_list' && ref.items) {
-      for (const item of ref.items) {
+      // If learnIndex provided, read only that card; otherwise read all
+      const items = learnIndex != null ? [ref.items[learnIndex]].filter(Boolean) : ref.items
+      for (const item of items) {
         let line = item.primary || ''
         if (item.secondary) line += `. ${item.secondary}`
         texts.push(line)
@@ -185,8 +187,8 @@ export function setupWakeLockReacquire() {
 
 // --- High-level API ---
 
-export function startReading(step: Step, task: Task, onStepDone: () => void): () => void {
-  const texts = extractStepText(step, task)
+export function startReading(step: Step, task: Task, onStepDone: () => void, learnIndex?: number): () => void {
+  const texts = extractStepText(step, task, learnIndex)
   acquireWakeLock()
   return speakTexts(texts, () => {
     if (isAutoAdvanceStep(step, task)) onStepDone()
