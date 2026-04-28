@@ -24,9 +24,9 @@ export function extractStepText(step: Step, task: Task): string[] {
   if (step.type === 'instruction') {
     const action = task.action || task.description || ''
     if (action) texts.push(action)
-    if (task.constraint_note) texts.push(task.constraint_note)
-    if (task.context) texts.push(task.context)
-    if (task.example) texts.push(task.example)
+    if (task.constraint_note) texts.push(`Rules: ${task.constraint_note}`)
+    if (task.context) texts.push(`Why this matters: ${task.context}`)
+    if (task.example) texts.push(`Example: ${task.example}`)
     return texts
   }
 
